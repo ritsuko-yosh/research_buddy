@@ -137,9 +137,11 @@ const AMBIGUOUS_RE =
 
 // Simple self-answerable facts: age / sex. Kept deliberately narrow.
 const SIMPLE_AGE_RE = /\bage[sd]?\b|\byears? old\b|\baged\b/i;
-// A standalone age requirement (e.g. "Age > 18 years"), with no lab/records
-// context. This is the canonical self_answer example (brief §5 Category 1).
-const STANDALONE_AGE_RE = /\bage\b[^.]{0,40}\b\d{1,3}\s*years?\b/i;
+// A standalone age requirement (e.g. "Age > 18 years", "Participant is ≥ 18
+// years old"), with no lab/records context. This is the canonical self_answer
+// example (brief §5 Category 1).
+const STANDALONE_AGE_RE =
+  /(\bage\b[^.]{0,40}\b\d{1,3}\s*years?\b|\b(≥|>=|>|at least)\s*\d{1,3}\s*years?\s*old\b|\b\d{1,3}\s*years?\s*(old|of age)\b)/i;
 const SIMPLE_SEX_RE = /\b(male|female|men|women)\b/i;
 const CONSENT_RE = /\b(informed consent|willing(ness)? to sign|ability to understand)\b/i;
 

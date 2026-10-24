@@ -74,4 +74,47 @@ export const CURATED: Record<string, CuratedExplanation[]> = {
       translationReviewed: true,
     },
   ],
+
+  NCT04986579: [
+    {
+      match: "participant is ≥ 18 years old",
+      explanationEn:
+        "You must be 18 years or older to take part. This is something you can confirm yourself.",
+      explanationEs:
+        "Debe tener 18 años o más para participar. Esto es algo que usted mismo puede confirmar.",
+      translationReviewed: true,
+    },
+    {
+      match: "hair present at baseline",
+      explanationEn:
+        "You need to have hair at the start of the study (this trial studies scalp cooling to reduce hair loss). You can confirm this yourself.",
+      explanationEs:
+        "Debe tener cabello al inicio del estudio (este ensayo estudia el enfriamiento del cuero cabelludo para reducir la caída del cabello). Usted mismo puede confirmarlo.",
+      translationReviewed: true,
+    },
+    {
+      match: "one of the following full dose chemotherapy regimens",
+      explanationEn:
+        "One of several specific chemotherapy regimens (for example sacituzumab govitecan, trastuzumab deruxtecan, or eribulin) must be planned for at least 4 cycles. Your planned treatment is decided with your oncology team — ask the study team whether your regimen fits.",
+      explanationEs:
+        "Debe estar planificado uno de varios regímenes de quimioterapia específicos (por ejemplo, sacituzumab govitecan, trastuzumab deruxtecan o eribulina) durante al menos 4 ciclos. Su tratamiento planificado se decide con su equipo de oncología; pregunte al equipo del estudio si su régimen corresponde.",
+      translationReviewed: false,
+    },
+    {
+      match: "baseline alopecia",
+      explanationEn:
+        "Existing hair loss at the start (graded using CTCAE 5.0, see Appendix B) affects eligibility. The exact grading isn't in the public listing (it points to an appendix), so this is best confirmed with the study team.",
+      explanationEs:
+        "La caída de cabello ya presente al inicio (clasificada con CTCAE 5.0, ver Apéndice B) afecta la elegibilidad. La clasificación exacta no está en la ficha pública (remite a un apéndice), por lo que es mejor confirmarlo con el equipo del estudio.",
+      translationReviewed: false,
+    },
+    {
+      match: "personal history of migraines",
+      explanationEn:
+        "A diagnosed history of migraines or tension/cluster headaches affects eligibility, but there is an exception if a past problem is now resolved — decided at the Principal Investigator's discretion. This is a judgment for the study team, not a simple yes/no.",
+      explanationEs:
+        "Un historial diagnosticado de migrañas o cefaleas tensionales o en racimo afecta la elegibilidad, pero hay una excepción si un problema pasado ya está resuelto, a criterio del Investigador Principal. Esto es un juicio para el equipo del estudio, no un simple sí/no.",
+      translationReviewed: false,
+    },
+  ],
 };

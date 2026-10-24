@@ -65,3 +65,45 @@ describe("sparse fixture (missing-data states)", () => {
     expect(t.criteria[0]!.category).toBe("ask_study_team");
   });
 });
+
+describe("second curated study + uncurated safety", () => {
+  it("curates NCT04986579 (age -> self_answer, bilingual explanations present)", () => {
+    const t = svc.getCachedTrial("NCT04986579");
+    const age = t.criteria.find((c) => /18 years old/i.test(c.sourceText))!;
+    expect(age.category).toBe("self_answer");
+    const curated = t.criteria.filter((c) => c.explanationEn);
+    expect(curated.length).toBeGreaterThanOrEqual(4);
+    expect(curated.some((c) => c.explanationEs !== null)).toBe(true);
+  });
+
+  it("an uncurated study still renders safely: source text + category, null explanations", () => {
+    // Simulate an uncurated study via normalize+enrich (no CURATED entry).
+    const raw = {
+      protocolSection: {
+        identificationModule: { nctId: "NCT11112222", briefTitle: "Uncurated Study" },
+        statusModule: { overallStatus: "RECRUITING", lastUpdatePostDateStruct: { date: "2026-10-01" } },
+        eligibilityModule: {
+          eligibilityCriteria: "Inclusion Criteria:\n\n* Age > 18 years.\n* Prior chemotherapy within 2 weeks.",
+        },
+        contactsLocationsModule: { centralContacts: [], locations: [] },
+      },
+    };
+    const trial = enrichUncurated(raw);
+    for (const c of trial.criteria) {
+      expect(c.sourceText.length).toBeGreaterThan(0);
+      expect(["self_answer", "check_records", "ask_study_team", "cannot_assess"]).toContain(c.category);
+      // No curated content -> explanations are explicitly null, not fabricated.
+      expect(c.explanationEn).toBeNull();
+      expect(c.explanationEs).toBeNull();
+      expect(c.translationReviewed).toBe(false);
+    }
+  });
+});
+
+// Helper that mirrors the service's normalize+enrich for an arbitrary record.
+import { normalizeStudy as _normalize } from "../src/pipeline/normalize.js";
+import { enrichTrial as _enrich } from "../src/pipeline/enrich.js";
+import type { RawStudy } from "../src/pipeline/raw.js";
+function enrichUncurated(raw: RawStudy): Trial {
+  return _enrich(_normalize(raw, { source: "live", fetchedAt: new Date().toISOString(), now: new Date("2026-10-24") }));
+}

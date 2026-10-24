@@ -40,7 +40,7 @@
   - _Req: 8_
 - [x] 17. Cache-refresh script
   - _Req: 1_
-- [ ] 18. Expand to 2–3 curated studies if time permits
-  - _Req: 1, 5_ (optional)
+- [x] 18. Expand curated studies (NCT02896335 + NCT04986579)
+  - _Req: 1, 5_
 - [ ] 19. Final frontend integration + demo rehearsal with Person A
   - _Req: all_ (joint)

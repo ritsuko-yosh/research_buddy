@@ -68,12 +68,19 @@ const card = buildPreparationCard(demo, "en");
 const inquiry = buildCoordinatorInquiry(demo, "es");
 ```
 
-## Demo study
+## Demo studies
 
-`NCT02896335` — *Palbociclib and Pembrolizumab In Central Nervous System
-Metastases* — real, **recruiting at MGH Boston**, with a real study contact and
-criteria that exercise all four Verification Map categories (including complex
-conditional CNS-lesion exclusions with exceptions for previously-treated lesions).
+Two real, recruiting Massachusetts studies ship with cached records and curated
+EN/ES explanations (`CURATED_DEMO_NCT_IDS`):
+
+- **`NCT02896335`** — *Palbociclib and Pembrolizumab In CNS Metastases* —
+  **recruiting at MGH Boston**, real contact, criteria exercising all four
+  Verification Map categories (including complex conditional CNS-lesion
+  exclusions with exceptions for previously-treated lesions).
+- **`NCT04986579`** — *Scalp Cooling in MBC* — **recruiting at Brigham &
+  Women's / Dana-Farber (Boston)**, real contact, shorter clean criteria, and a
+  genuinely **stale** registry listing — useful for demonstrating the staleness
+  warning. Proves curated content is not a one-off hardcode.
 
 ## Commands
 

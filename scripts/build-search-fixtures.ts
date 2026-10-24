@@ -13,11 +13,11 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
 import { CONTRACT_VERSION, type SearchResults, type Trial } from "../src/contract/types.js";
-import { searchStudies } from "../src/pipeline/client.js";
+import { searchStudies, lookupStudy } from "../src/pipeline/client.js";
 import { normalizeStudy } from "../src/pipeline/normalize.js";
 import { enrichTrial } from "../src/pipeline/enrich.js";
 import { toTrialSummary } from "../src/pipeline/summary.js";
-import { DEMO_NCT_ID } from "../src/data/demo.js";
+import { CURATED_DEMO_NCT_IDS } from "../src/data/demo.js";
 
 const root = join(import.meta.dirname, "..");
 const fixturesDir = join(root, "fixtures");
@@ -47,10 +47,23 @@ async function main() {
     }
   }
 
-  // Pin the curated demo study first; keep 5 more for a varied list.
-  const demo = trials.filter((t) => t.nctId === DEMO_NCT_ID);
-  const rest = trials.filter((t) => t.nctId !== DEMO_NCT_ID).slice(0, 5);
-  const ordered = [...demo, ...rest];
+  // Ensure BOTH curated studies are present (fetch any missing from the page),
+  // pinned first, so the list -> detail demo works for every curated study.
+  const byId = new Map(trials.map((t) => [t.nctId, t]));
+  for (const id of CURATED_DEMO_NCT_IDS) {
+    if (!byId.has(id)) {
+      const raw = await lookupStudy(id);
+      byId.set(
+        id,
+        enrichTrial(normalizeStudy(raw, { source: "live", fetchedAt: FIXED_FETCHED_AT, now: FIXED_NOW })),
+      );
+    }
+  }
+  const curatedFirst = CURATED_DEMO_NCT_IDS.map((id) => byId.get(id)!).filter(Boolean);
+  const rest = [...byId.values()]
+    .filter((t) => !CURATED_DEMO_NCT_IDS.includes(t.nctId as (typeof CURATED_DEMO_NCT_IDS)[number]))
+    .slice(0, 4);
+  const ordered = [...curatedFirst, ...rest];
 
   const results = ordered.map(toTrialSummary);
   const searchResults: SearchResults = {
