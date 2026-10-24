@@ -9,6 +9,7 @@ import type { Trial, TrialDataSource } from './types/trial';
 import { SiteHeader } from './components/SiteHeader';
 import { HomePage, type DoorAction } from './components/home/HomePage';
 import { PreparationCard } from './components/PreparationCard';
+import { AboutPage } from './components/pages/AboutPage';
 import { ResultsList, type ResultsState } from './components/ResultsList';
 import { SearchPanel, type NctFormState, type SearchTab } from './components/SearchPanel';
 import { StudyDetail } from './components/StudyDetail';
@@ -16,6 +17,7 @@ import { StudyDetail } from './components/StudyDetail';
 type View =
   | { name: 'home' }
   | { name: 'search' }
+  | { name: 'about' }
   | { name: 'study'; trial: Trial }
   | { name: 'prepare'; trial: Trial };
 
@@ -65,6 +67,18 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
   const searchCounter = useRef(0);
   const previousStatus = useRef<ResultsState['status']>('idle');
   const m = messages[locale];
+
+  // Deep link: #/about opens the About page. Any other hash keeps the current view.
+  useEffect(() => {
+    const onHash = () => {
+      if (window.location.hash === '#/about') {
+        setView({ name: 'about' });
+      }
+    };
+    onHash();
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   // Keep the document language in sync so screen readers pronounce content correctly.
   useEffect(() => {
@@ -306,6 +320,8 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
           />
         )}
 
+        {view.name === 'about' && <AboutPage m={m} />}
+
         {view.name === 'prepare' && (
           <PreparationCard
             m={m}
@@ -334,7 +350,19 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
         />
       )}
 
-      <footer className="no-print" aria-hidden={dialog !== null ? true : undefined}>{m.footer}</footer>
+      <footer className="no-print" aria-hidden={dialog !== null ? true : undefined}>
+        <p>{m.footer}</p>
+        <button
+          type="button"
+          className="link-button"
+          onClick={() => {
+            window.location.hash = '#/about';
+            setView({ name: 'about' });
+          }}
+        >
+          {m.navAbout}
+        </button>
+      </footer>
     </>
   );
 }
