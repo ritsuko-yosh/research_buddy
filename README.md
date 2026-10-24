@@ -142,62 +142,80 @@ text and the Verification Map, without curated plain-language content.
 
 ## How We Used Kiro to Build Visit Ready
 
-We developed Visit Ready using **Kiro IDE and Kiro Web**, with a shared GitHub repository connecting our work.
+We used **Kiro IDE and Kiro Web** throughout development, combining spec-driven development, safety-focused steering, automated testing, and GitHub collaboration to build Visit Ready.
 
-**Kiro IDE and Kiro Web**
+### 1. Kiro IDE + Kiro Web: Two Development Workflows
 
-Ritsuko used Kiro IDE for local frontend development, interface design, integration, and testing. Working directly with the application made it possible to preview changes, refine the patient journey, identify visual and functional issues, and test the website before merging changes.
+- **Ritsuko — Kiro IDE:** Developed and refined the React frontend, tested the interface locally, integrated features, and reviewed functionality before merging changes.
+- **Owen — Kiro Web:** Worked on the clinical trial data pipeline, including ClinicalTrials.gov integration, data processing, and Verification Map classification.
+- **Collaboration:** We connected both workflows through a shared data contract, GitHub branches, pull requests, and integration tests.
 
-Owen used Kiro Web to support development of the clinical trial data pipeline, including data retrieval, processing, and the logic behind the Verification Map.
+This allowed us to develop different components in parallel without losing consistency between the frontend and backend.
 
-Using both environments allowed us to work on different parts of the application while coordinating through shared data contracts, GitHub branches, and pull requests.
+### 2. Spec-Driven Development: Requirements Before Implementation
 
-**Spec-Driven Development**
+We organized our development in `.kiro/specs/` using three components:
 
-Instead of immediately asking Kiro to generate the entire application, we organized the work around documented requirements, technical designs, and implementation tasks.
+- **Requirements:** Defined functionality, acceptance criteria, and safety constraints.
+- **Design:** Documented architecture, data flow, and technical decisions.
+- **Tasks:** Broke implementation into manageable, testable milestones.
 
-Our `.kiro/specs/` directory contains specifications for the clinical trial data pipeline and Open Door homepage. These define the intended functionality, acceptance criteria, architecture, and safety requirements.
+For example, our data pipeline specification required every original eligibility criterion to be preserved and prohibited eligibility predictions.
 
-For example, we explicitly required the application to preserve original eligibility criteria, avoid predicting patient eligibility, and distinguish missing registry information from confirmed information.
+**Why it mattered:** Unlike unrestricted vibe coding, specifications gave us a consistent reference for implementation, testing, and reviewing changes.
 
-Compared with unrestricted prompt-based development, this approach gave us clearer implementation boundaries and a consistent reference when reviewing changes or integrating separately developed components.
+### 3. Steering Documents: Building Safety Into the Workflow
 
-**Steering Documents**
+We created three steering documents in `.kiro/steering/`:
 
-We used three steering documents in `.kiro/steering/` covering patient safety, technical conventions, and design.
+- `safety.md` — No eligibility verdicts, fabricated medical information, or unsupported assumptions.
+- `tech.md` — Consistent TypeScript architecture, shared data contracts, and API conventions.
+- `design.md` — Accessible interface design, motion controls, consistent styling, and honest presentation of study information.
 
-The most important was `safety.md`, which established non-negotiable rules: no eligibility verdicts or match scores, no fabricated study information, no unsupported medical simplifications, and no assumption that a translated interface means a study supports that language.
+**Our most important decision:** Rather than building an AI eligibility predictor, we developed a **four-category Verification Map** that helps patients prepare questions without replacing medical judgment.
 
-These rules shaped our development decisions. Rather than creating an AI system that tells patients whether they qualify, we developed a four-category Verification Map that helps them understand what they can check and what they need to ask the study team.
+### 4. Agent Hooks: Automated Quality Checks
 
-**Agent Hooks**
+We configured two `PostFileSave` hooks in `.kiro/hooks/`:
 
-We configured two Kiro `PostFileSave` hooks:
+- **Frontend hook:** Runs tests when frontend code or styles change.
+- **Pipeline hook:** Runs tests when clinical data processing or contract files change.
 
-- A frontend hook to run automated tests when frontend source files or styles change.
-- A data-pipeline hook to run tests when pipeline, contract, or data files change.
+These checks help identify regressions during development, especially when integrating independently developed features.
 
-These hooks support a workflow where changes are checked against existing requirements, reducing the risk that interface improvements introduce functional or safety regressions.
+### 5. Property-Based Testing: Going Beyond Example Cases
 
-**Property-Based Testing**
+Using **Vitest and fast-check**, we tested system-wide properties across generated inputs.
 
-We used the `fast-check` library alongside Vitest to test important system properties across generated inputs, rather than relying only on a small set of example cases.
+Examples include:
 
-For the clinical data pipeline, these properties include preserving eligibility text during segmentation, keeping classifications within the four allowed categories, and handling missing information without inventing data.
+- Eligibility criteria must retain their source information.
+- Complex medical requirements must not be classified as simple self-answer questions.
+- Missing registry information must not be invented.
+- Research-area counts must exclude studies without Massachusetts locations.
+- Reordering input records must not change the resulting topic index.
 
-For the research-area index, we tested properties such as excluding studies without Massachusetts locations, maintaining consistent topic relationships, and producing equivalent results regardless of input order.
+**Why it mattered:** Instead of testing only our demonstration studies, we could check whether important rules held across many different inputs.
 
-These tests extend our coverage beyond known example studies. They validate engineering behavior, not clinical accuracy.
+These are engineering tests, not clinical validation.
 
-**Integration and Iteration**
+### 6. From Kiro Development to a Working Product
 
-Kiro helped us connect the React and TypeScript frontend with a browser-safe pipeline using the public ClinicalTrials.gov API v2.
+With Kiro's assistance, we integrated:
 
-We iteratively developed the patient experience, including condition search, study-ID lookup, the Verification Map, English and Spanish interface text, and printable preparation materials.
+- **ClinicalTrials.gov API v2** for real clinical trial information.
+- **React + TypeScript** for the patient-facing website.
+- **English/Spanish interface support** and curated plain-language explanations.
+- **The Verification Map** and printable preparation materials.
+- **GitHub pull requests and automated testing** to coordinate integration.
 
-We used GitHub pull requests and automated tests to integrate these components while preserving the approved design and existing safety rules.
+**Our biggest takeaway:** Kiro was not simply a code-generation tool. We used it to structure development, enforce safety constraints, verify functionality, and turn our idea into a working application.
 
-Our main lesson was that effective AI-assisted development requires more than generating code. **We used Kiro to establish requirements, enforce constraints, test assumptions, and iteratively improve the product while keeping patient safety central to our decisions.**
+**Live Demo:** https://ritsuko-yosh.github.io/research_buddy/
+
+**GitHub:** https://github.com/ritsuko-yosh/research_buddy
+
+---
 
 ## A note on the data and the tool
 
