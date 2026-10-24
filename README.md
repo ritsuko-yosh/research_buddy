@@ -166,3 +166,7 @@ Study data is retrieved from the public ClinicalTrials.gov API v2. Visit Ready i
 a preparation tool, not medical advice, and does not make eligibility decisions.
 Automated tests verify application behavior and safety invariants — they are not
 clinical validation.
+
+## License
+
+[MIT](LICENSE) © 2026 Owen Gachuhi and Ritsuko Yoshida.
