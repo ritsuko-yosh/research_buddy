@@ -20,14 +20,24 @@ const FORBIDDEN_PATTERNS: Array<{ label: string; pattern: RegExp }> = [
   { label: 'fixtures import', pattern: /from ['"][^'"]*fixtures\// },
   { label: 'sample records identifier', pattern: /\bSAMPLE_TRIALS\b/ },
   { label: 'literal NCT ID', pattern: /NCT\d{8}/ },
+  // Reference-prototype leftovers. These belong to the design mock, not the product.
+  { label: 'prototype label', pattern: /PROTOTYPE/ },
+  { label: 'sample study title', pattern: /Scalp Cooling/ },
+  { label: 'sample site name', pattern: /Dana-Farber/ },
+  { label: 'sample investigator name', pattern: /Paxman/ },
+  { label: 'hardcoded fetch date', pattern: /fetched 2026-10-24/ },
+  // Counts must come from the data, never typed into the copy.
+  { label: 'numeric example count', pattern: /\b\d+\s+(examples|ejemplos)\b/ },
 ];
 
 /**
- * Colors belong in styles.css as tokens. These files are artwork, not UI, so
- * their colors live inside them. Any other file with a literal hex color fails.
- *  - DoorIllustration.tsx: the homepage illustration (approved artwork).
- *  - BrandMark.tsx: the Visit Ready logo (approved brand artwork).
+ * Colors belong in styles.css as tokens. Artwork is the exception, because
+ * its colors are part of the drawing. Approved artwork is exempt:
+ *  - components/art/: the explainer pictures, search loader, and Verification Map icons.
+ *  - components/home/DoorIllustration.tsx: the homepage illustration.
+ *  - components/BrandMark.tsx: the Visit Ready logo.
  */
+const HEX_COLOR_EXEMPT_DIRECTORIES = ['components/art/'];
 const HEX_COLOR_EXCEPTIONS = new Set(['components/home/DoorIllustration.tsx', 'components/BrandMark.tsx']);
 const HEX_COLOR = /#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/;
 
@@ -74,7 +84,7 @@ describe('hardcoding guard (production source)', () => {
     const violations: string[] = [];
     for (const file of files) {
       const rel = relative(SRC_ROOT, file).split('\\').join('/');
-      if (HEX_COLOR_EXCEPTIONS.has(rel)) {
+      if (HEX_COLOR_EXCEPTIONS.has(rel) || HEX_COLOR_EXEMPT_DIRECTORIES.some((dir) => rel.startsWith(dir))) {
         continue;
       }
       readFileSync(file, 'utf8')

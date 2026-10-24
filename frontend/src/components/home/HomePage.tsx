@@ -1,36 +1,37 @@
-import type { ReactNode } from 'react';
 import type { Locale, Messages } from '../../i18n/strings';
 import type { TopicIndex } from '../../lib/topicIndex';
+import { ExplainerArt } from '../art/ExplainerArt';
 import { DoorIllustration } from './DoorIllustration';
 import { TopicGarden } from './TopicGarden';
+
+/** What each guided entry point does. Search opens the dialog on the matching tab. */
+export type DoorAction = 'explainer' | 'garden' | 'condition' | 'study-id';
 
 interface HomePageProps {
   m: Messages;
   locale: Locale;
   index: TopicIndex | null;
   onSearchTerm: (term: string) => void;
-  /** The existing search form and results. */
-  children: ReactNode;
+  /** Page-wide Pause Animation choice, shared with the search loader. */
+  animationPaused: boolean;
+  onToggleAnimation: () => void;
+  onDoor: (action: DoorAction) => void;
 }
 
-/** Scrolls to the target and focuses it. Smooth scrolling is skipped for reduced motion. */
-function goTo(targetId: string) {
-  const element = document.getElementById(targetId);
-  if (!element) {
-    return;
-  }
-  const prefersReducedMotion =
-    typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  element.scrollIntoView?.({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
-  element.focus({ preventScroll: true });
-}
-
-export function HomePage({ m, locale, index, onSearchTerm, children }: HomePageProps) {
-  const doors = [
-    { id: 'start', title: m.doorStartTitle, description: m.doorStartDesc, target: 'explainer-heading' },
-    { id: 'explore', title: m.doorExploreTitle, description: m.doorExploreDesc, target: 'garden-heading' },
-    { id: 'condition', title: m.doorConditionTitle, description: m.doorConditionDesc, target: 'condition-input' },
-    { id: 'nct', title: m.doorNctTitle, description: m.doorNctDesc, target: 'nct-input' },
+export function HomePage({
+  m,
+  locale,
+  index,
+  onSearchTerm,
+  animationPaused,
+  onToggleAnimation,
+  onDoor,
+}: HomePageProps) {
+  const doors: Array<{ id: string; title: string; description: string; action: DoorAction }> = [
+    { id: 'start', title: m.doorStartTitle, description: m.doorStartDesc, action: 'explainer' },
+    { id: 'explore', title: m.doorExploreTitle, description: m.doorExploreDesc, action: 'garden' },
+    { id: 'cond', title: m.doorConditionTitle, description: m.doorConditionDesc, action: 'condition' },
+    { id: 'nct', title: m.doorNctTitle, description: m.doorNctDesc, action: 'study-id' },
   ];
 
   const explainer = [
@@ -63,7 +64,7 @@ export function HomePage({ m, locale, index, onSearchTerm, children }: HomePageP
             <ul className="od-doors" aria-labelledby="doors-label">
               {doors.map((door) => (
                 <li key={door.id}>
-                  <button type="button" className="od-door" onClick={() => goTo(door.target)}>
+                  <button type="button" className="od-door" onClick={() => onDoor(door.action)}>
                     <span className="od-door-title">{door.title}</span>
                     <span className="od-door-desc">{door.description}</span>
                   </button>
@@ -73,7 +74,7 @@ export function HomePage({ m, locale, index, onSearchTerm, children }: HomePageP
 
             <p className="od-quick">
               {m.quickQ}{' '}
-              <button type="button" className="od-inline-link" onClick={() => goTo('condition-input')}>
+              <button type="button" className="od-inline-link" onClick={() => onDoor('condition')}>
                 {m.quickLink}
               </button>
             </p>
@@ -91,8 +92,11 @@ export function HomePage({ m, locale, index, onSearchTerm, children }: HomePageP
             {m.explainerHeading}
           </h2>
           <div className="od-explain">
-            {explainer.map((block) => (
+            {explainer.map((block, position) => (
               <article key={block.title}>
+                <div className="od-explain-art">
+                  <ExplainerArt index={(position + 1) as 1 | 2 | 3} />
+                </div>
                 <h3>{block.title}</h3>
                 <p>{block.text}</p>
               </article>
@@ -101,16 +105,22 @@ export function HomePage({ m, locale, index, onSearchTerm, children }: HomePageP
         </div>
       </section>
 
-      <TopicGarden m={m} locale={locale} index={index} onSearchTerm={onSearchTerm} />
-
-      {/* A plain container: the SearchPanel inside is the single labeled region for search. */}
-      <div className="od-band alt">
-        <div className="od-wrap">{children}</div>
+      <div id="explore">
+        <TopicGarden
+          m={m}
+          locale={locale}
+          index={index}
+          onSearchTerm={onSearchTerm}
+          animationPaused={animationPaused}
+          onToggleAnimation={onToggleAnimation}
+        />
       </div>
 
-      <section className="od-band" aria-labelledby="how-heading">
+      <section id="how" className="od-band alt" aria-labelledby="how-heading">
         <div className="od-wrap">
-          <h2 id="how-heading">{m.howHeading}</h2>
+          <h2 id="how-heading" tabIndex={-1}>
+            {m.howHeading}
+          </h2>
           <ol className="od-steps">
             {steps.map((step, position) => (
               <li key={step.title}>
@@ -127,3 +137,4 @@ export function HomePage({ m, locale, index, onSearchTerm, children }: HomePageP
     </>
   );
 }
+

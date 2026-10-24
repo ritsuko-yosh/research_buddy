@@ -1,6 +1,8 @@
+import type { CSSProperties } from 'react';
 import type { Locale, Messages } from '../i18n/strings';
 import { formatRegistryDate } from '../lib/format';
 import type { TrialSummary } from '../types/trial';
+import { SearchLoaderArt } from './art/SearchLoaderArt';
 
 export type ResultsState =
   | { status: 'idle' }
@@ -22,10 +24,21 @@ export function ResultsList({ m, locale, results, onOpenStudy, onRetry }: Result
   }
 
   return (
-    <section className="card" aria-labelledby="results-heading">
-      <h2 id="results-heading">{m.resultsHeading}</h2>
+    <section id="search-results" className="card" aria-labelledby="results-heading">
+      <h2 id="results-heading" tabIndex={-1}>
+        {m.resultsHeading}
+      </h2>
 
-      {results.status === 'loading' && <p role="status">{m.resultsLoading}</p>}
+      {results.status === 'loading' && (
+        <div className="od-loader" aria-busy="true">
+          <SearchLoaderArt />
+          <p className="od-loader-text">{m.searchingFor(results.term)}</p>
+          {/* Announces the state once for screen reader users. The picture above is decorative. */}
+          <p role="status" className="sr-only">
+            {m.resultsLoading}
+          </p>
+        </div>
+      )}
 
       {results.status === 'error' && (
         <p role="alert">
@@ -36,21 +49,24 @@ export function ResultsList({ m, locale, results, onOpenStudy, onRetry }: Result
         </p>
       )}
 
-      {results.status === 'ready' && results.items.length === 0 && <p>{m.resultsEmpty}</p>}
+      {results.status === 'ready' && results.items.length === 0 && <p role="status">{m.resultsEmpty}</p>}
 
       {results.status === 'ready' && results.items.length > 0 && (
         <>
+          <p role="status" className="sr-only">
+            {m.resultsFound(results.items.length)}
+          </p>
           <p className="help" role="note">
             {m.resultsLiveNote}
           </p>
           <ul className="study-grid">
-            {results.items.map((item) => {
+            {results.items.map((item, position) => {
               const massachusettsSites = item.locations
                 .filter((location) => location.state === 'Massachusetts')
                 .map((location) => location.city);
 
               return (
-                <li key={item.nctId}>
+                <li key={item.nctId} style={{ '--i': position } as CSSProperties}>
                   <article className="study-card" aria-labelledby={`title-${item.nctId}`}>
                     <p className="nct">{item.nctId}</p>
                     <h3 id={`title-${item.nctId}`}>{item.title}</h3>

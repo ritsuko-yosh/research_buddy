@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { openSearch } from '../../test/navigate';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import axe from 'axe-core';
@@ -100,7 +101,9 @@ describe('homepage without a topic index', () => {
 
     expect(screen.getByText(en.topicsUnavailable)).toBeInTheDocument();
 
+    await openSearch(user);
     await user.type(screen.getByLabelText(en.conditionInputLabel), 'asthma');
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: en.conditionSearch }));
 
     expect(await screen.findByRole('heading', { name: en.resultsHeading })).toBeInTheDocument();
@@ -124,34 +127,49 @@ describe('accessibility', () => {
   });
 });
 
-describe('motion rules (styles.css)', () => {
-  it('every transition and animation declaration sits inside the no-preference media query', () => {
-    const css = readFileSync(resolve(process.cwd(), 'src/styles.css'), 'utf8');
-    const reducedMotionHeader = '(prefers-reduced-motion: no-preference)';
-    const violations: string[] = [];
+describe('motion rules (styles.css and open-door.css)', () => {
+  const reducedMotionHeader = '(prefers-reduced-motion: no-preference)';
 
-    // Line-based check: find each declaration and confirm an enclosing block mentions the query.
-    const lines = css.split('\n');
+  /** Returns a violation message for each transition/animation declaration outside the no-preference query. */
+  function findMotionViolations(file: string, css: string): string[] {
+    const violations: string[] = [];
     const blockStack: string[] = [];
-    lines.forEach((line, index) => {
-      const opens = (line.match(/\{/g) ?? []).length;
-      const closes = (line.match(/\}/g) ?? []).length;
-      // Declarations that switch motion off (value "none") are allowed anywhere.
-      if (/^\s*(transition|animation)\s*:/.test(line) && !/:\s*none\s*;/.test(line)) {
+    css.split('\n').forEach((line, index) => {
+      // Check every declaration on the line, including rules written on one line.
+      const declarations = line.match(/(^|[{;\s])(transition|animation)\s*:[^;}]*/g) ?? [];
+      const isOff = (text: string) => /:\s*none\s*$/.test(text.trim());
+      for (const declaration of declarations) {
+        if (isOff(declaration)) {
+          continue;
+        }
         const enclosed = blockStack.some((header) => header.includes(reducedMotionHeader));
         if (!enclosed) {
-          violations.push(`line ${index + 1}: ${line.trim()}`);
+          violations.push(`${file} line ${index + 1}: ${line.trim()}`);
         }
       }
-      for (let k = 0; k < opens; k++) {
-        blockStack.push(line.includes('{') ? line.slice(0, line.indexOf('{')) : line);
-      }
-      for (let k = 0; k < closes; k++) {
-        blockStack.pop();
+      // Track block nesting. Each "{" pushes its header; each "}" pops one.
+      for (const char of line) {
+        if (char === '{') {
+          blockStack.push(line.slice(0, line.indexOf('{')));
+        } else if (char === '}') {
+          blockStack.pop();
+        }
       }
     });
+    return violations;
+  }
 
+  it('every transition and animation declaration sits inside the no-preference media query', () => {
+    const violations = ['src/styles.css', 'src/styles/open-door.css'].flatMap((file) =>
+      findMotionViolations(file, readFileSync(resolve(process.cwd(), file), 'utf8')),
+    );
     expect(violations).toEqual([]);
+  });
+
+  it('catches a motion declaration that is outside the query, even when written on one line', () => {
+    const sample = '.bad { animation: spin 1s; }\n@media (prefers-reduced-motion: no-preference) {\n  .ok { transition: none; animation: spin 1s; }\n}\n';
+    const violations = findMotionViolations('sample.css', sample);
+    expect(violations).toEqual(['sample.css line 1: .bad { animation: spin 1s; }']);
   });
 });
 
@@ -161,7 +179,6 @@ describe('search error is never shown before submit', () => {
     renderHome();
 
     expect(screen.queryByText(en.conditionInvalid)).not.toBeInTheDocument();
-    expect(document.getElementById('condition-input')).toHaveAttribute('aria-invalid', 'false');
 
     await user.click(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) }));
 

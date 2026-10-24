@@ -1,5 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { openSearch } from './test/navigate';
 import { describe, expect, it } from 'vitest';
 import App from './App';
 import { TEST_TOPIC_INDEX } from './test/topicIndex.fixture';
@@ -14,7 +15,9 @@ describe('condition search (free text and presets)', () => {
     const user = userEvent.setup();
     render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
 
+    await openSearch(user);
     await user.type(screen.getByLabelText(en.conditionInputLabel), 'x');
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: en.conditionSearch }));
 
     expect(screen.getByText(en.conditionInvalid)).toBeInTheDocument();
@@ -25,7 +28,9 @@ describe('condition search (free text and presets)', () => {
     const user = userEvent.setup();
     render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
 
+    await openSearch(user);
     await user.type(screen.getByLabelText(en.conditionInputLabel), 'ulcerative colitis');
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: en.conditionSearch }));
 
     expect(await screen.findByText(en.resultsEmpty)).toBeInTheDocument();
@@ -35,9 +40,12 @@ describe('condition search (free text and presets)', () => {
     const user = userEvent.setup();
     render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
 
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: 'Asthma' }));
 
     expect(await screen.findByRole('heading', { name: en.resultsHeading })).toBeInTheDocument();
+    // The dialog closes once results arrive. Revising the search reopens it with the same term.
+    await user.click(screen.getByRole('button', { name: en.reviseSearch }));
     expect(screen.getByLabelText(en.conditionInputLabel)).toHaveValue('asthma');
   });
 
@@ -45,6 +53,7 @@ describe('condition search (free text and presets)', () => {
     const user = userEvent.setup();
     render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
 
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: 'Type 2 diabetes' }));
 
     expect(await screen.findByText(en.resultsLiveNote)).toBeInTheDocument();
@@ -65,6 +74,7 @@ describe('condition search (free text and presets)', () => {
     };
     render(<App dataSource={flaky} topicIndex={TEST_TOPIC_INDEX} />);
 
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: 'Type 2 diabetes' }));
     await user.click(await screen.findByRole('button', { name: en.retry }));
 
