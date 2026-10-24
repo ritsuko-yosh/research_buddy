@@ -5,7 +5,7 @@
   "description": "This research study is studying This research study is studying the efficacy and safety of the following study drugs as a possible treatment for recurrent central nervous system (CNS) metastases:\n\n* Palbociclib alone (Cohort 1)\n* The combination of palbociclib and pembrolizumab (Cohort 2) Pfizer and Merck, pharmaceutical companies, are supporting this research study by providing the study drugs as well as funding for research activities.",
   "recruitmentStatus": "RECRUITING",
   "lastRegistryUpdate": "2026-07-21",
-  "lastFetched": "2026-10-24T21:14:25.824Z",
+  "lastFetched": "2026-10-24T21:30:47.243Z",
   "locations": [
     {
       "facility": "Massachusetts General Hospital",
@@ -754,7 +754,7 @@
   "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335",
   "dataSource": {
     "kind": "cache",
-    "fetchedAt": "2026-10-24T21:14:25.824Z",
+    "fetchedAt": "2026-10-24T21:30:47.243Z",
     "staleThresholdDays": 120,
     "stale": false
   },

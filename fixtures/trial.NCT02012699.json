@@ -5,7 +5,7 @@
   "description": "The iCaRe2 is a multi-institutional resource created and maintained by the Fred \\& Pamela Buffett Cancer Center to collect and manage standardized, multi-dimensional, longitudinal data and biospecimens on consented adult cancer patients, high-risk individuals, and normal controls. The distinct characteristic of the iCaRe2 is its geographical coverage, with a significant percentage of small and rural hospitals and cancer centers. The iCaRe2 advances comprehensive studies of risk factors of cancer development and progression and enables the design of novel strategies for prevention, screening, early detection and personalized treatment of cancer. Centers with expertise in cancer epidemiology, genetics, biology, early detection, and patient care can collaborate by using the iCaRe2 as a platform for cohort and population studies.",
   "recruitmentStatus": "RECRUITING",
   "lastRegistryUpdate": "2026-06-29",
-  "lastFetched": "2026-10-24T21:14:25.836Z",
+  "lastFetched": "2026-10-24T21:30:47.258Z",
   "locations": [
     {
       "facility": "Advent Health",
@@ -1124,7 +1124,7 @@
   "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699",
   "dataSource": {
     "kind": "cache",
-    "fetchedAt": "2026-10-24T21:14:25.836Z",
+    "fetchedAt": "2026-10-24T21:30:47.258Z",
     "staleThresholdDays": 120,
     "stale": false
   },

@@ -28,4 +28,5 @@ export const CURATED_DEMO_NCT_IDS = [
   "NCT05349227", // Comprehensive Outcomes for After Cancer Health (Dana-Farber)
   "NCT06052488", // Strength After Breast Cancer (MGH IHP)
   "NCT02012699", // Integrated Cancer Repository (iCaRe2) (Holyoke)
+  "NCT07728695", // Cannabinoid product for gynecologic pain (fully curated criteria)
 ] as const;

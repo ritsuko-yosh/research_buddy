@@ -6,7 +6,7 @@
     "status": "RECRUITING"
   },
   "fetchedAt": "2026-10-24T00:00:00.000Z",
-  "totalReturned": 9,
+  "totalReturned": 10,
   "results": [
     {
       "nctId": "NCT02896335",
@@ -77,6 +77,20 @@
       "languageRequirement": "ambiguous",
       "hasCuratedContent": false,
       "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699"
+    },
+    {
+      "nctId": "NCT07728695",
+      "title": "Assessing the Mechanisms and Impact of a Novel Cannabinoid Product for Gynecologic Pain",
+      "recruitmentStatus": "RECRUITING",
+      "primaryLocation": "Belmont, Massachusetts",
+      "massachusettsSiteCount": 1,
+      "hasRecruitingMaSite": true,
+      "hasContact": true,
+      "lastRegistryUpdate": "2026-07-27",
+      "stale": false,
+      "languageRequirement": "not_stated",
+      "hasCuratedContent": true,
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695"
     },
     {
       "nctId": "NCT06998407",

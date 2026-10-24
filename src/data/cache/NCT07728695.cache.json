@@ -1,0 +1,296 @@
+{
+  "raw": {
+    "protocolSection": {
+      "identificationModule": {
+        "nctId": "NCT07728695",
+        "orgStudyIdInfo": {
+          "id": "2026P000409"
+        },
+        "organization": {
+          "fullName": "Mclean Hospital",
+          "class": "OTHER"
+        },
+        "briefTitle": "Assessing the Mechanisms and Impact of a Novel Cannabinoid Product for Gynecologic Pain",
+        "officialTitle": "PAIN-GP: Project Assessing the Mechanisms and Impact of a Novel Cannabinoid Product for Gynecologic Pain",
+        "acronym": "PAIN-GP"
+      },
+      "statusModule": {
+        "statusVerifiedDate": "2026-07",
+        "overallStatus": "RECRUITING",
+        "expandedAccessInfo": {
+          "hasExpandedAccess": false
+        },
+        "startDateStruct": {
+          "date": "2026-09",
+          "type": "ESTIMATED"
+        },
+        "primaryCompletionDateStruct": {
+          "date": "2029-01",
+          "type": "ESTIMATED"
+        },
+        "completionDateStruct": {
+          "date": "2029-01",
+          "type": "ESTIMATED"
+        },
+        "studyFirstSubmitDate": "2026-07-22",
+        "studyFirstSubmitQcDate": "2026-07-22",
+        "studyFirstPostDateStruct": {
+          "date": "2026-07-27",
+          "type": "ACTUAL"
+        },
+        "lastUpdateSubmitDate": "2026-07-22",
+        "lastUpdatePostDateStruct": {
+          "date": "2026-07-27",
+          "type": "ACTUAL"
+        }
+      },
+      "sponsorCollaboratorsModule": {
+        "responsibleParty": {
+          "type": "SPONSOR_INVESTIGATOR",
+          "investigatorFullName": "Staci Gruber, Ph.D.",
+          "investigatorTitle": "Director, MIND and CCNC at McLean Hospital; Associate Professor of Psychiatry, Harvard Medical School",
+          "investigatorAffiliation": "Mclean Hospital"
+        },
+        "leadSponsor": {
+          "name": "Staci Gruber, Ph.D.",
+          "class": "OTHER"
+        },
+        "collaborators": [
+          {
+            "name": "National Center for Complementary and Integrative Health (NCCIH)",
+            "class": "NIH"
+          }
+        ]
+      },
+      "oversightModule": {
+        "oversightHasDmc": true,
+        "isFdaRegulatedDrug": true,
+        "isFdaRegulatedDevice": false
+      },
+      "descriptionModule": {
+        "briefSummary": "Despite recent increases in both medical and recreational cannabis use in the United States and globally, little research has been conducted to determine the potential applications for womens health. A variety of medical cannabis and hemp-derived products on the marketplace claim to hold efficacy for many womens health-related conditions, including gynecologic pain. This 7-day study of individuals living with endometriosis, adenomyosis, or chronic pelvic inflammatory disease (PID), will identify specific targets and mechanisms underlying the potential impact of a hemp-derived, full-spectrum, high-CBD product in individuals with gynecologic pain.",
+        "detailedDescription": "This study is a double-blind, placebo-controlled clinical trial of a high-cannabidiol (CBD) sublingual product in individuals with gynecologic pain relating to endometriosis, adenomyosis, or chronic pelvic inflammatory disease (PID). The study consists of 3 visits. Participants will be pre-screened by phone to determine initial eligibility, then will come to McLean Hospital for a screening visit. During the screening visit, participants will complete a clinical interview, medical screening, a urine sample, blood draw, and a questionnaire. If approved, participants will come back to the hospital for a baseline visit, and will complete a urine sample, blood draw, questionnaires, and a sensory test. Enrolled participants will be randomized to receive one of two doses of high-CBD study product or placebo, and instructed to self-administer and track their use over the course of one week. Participants will return to the hospital for their final visit consisting of additional urine and blood samples, questionnaires, and sensory testing.\n\nA subset of participants will have the option to complete pharmacokinetic/pharmacodynamic (PK/PD) studies, consisting of additional questionnaires and collection of blood samples through repeated blood draws before and after self-administration of the study product, at the baseline and final study visits. These additional procedures will take up to 8 hours per visit and participants who complete these procedures will receive additional compensation."
+      },
+      "conditionsModule": {
+        "conditions": [
+          "Endometriosis",
+          "Adenomyosis",
+          "Chronic Pelvic Inflammatory Disease"
+        ],
+        "keywords": [
+          "cannabidiol",
+          "gynecologic pain",
+          "cannabinoid",
+          "endometriosis",
+          "adenomyosis",
+          "pelvic inflammatory disease"
+        ]
+      },
+      "designModule": {
+        "studyType": "INTERVENTIONAL",
+        "phases": [
+          "PHASE1",
+          "PHASE2"
+        ],
+        "designInfo": {
+          "allocation": "RANDOMIZED",
+          "interventionModel": "PARALLEL",
+          "primaryPurpose": "TREATMENT",
+          "maskingInfo": {
+            "masking": "QUADRUPLE",
+            "whoMasked": [
+              "PARTICIPANT",
+              "CARE_PROVIDER",
+              "INVESTIGATOR",
+              "OUTCOMES_ASSESSOR"
+            ]
+          }
+        },
+        "enrollmentInfo": {
+          "count": 60,
+          "type": "ESTIMATED"
+        }
+      },
+      "armsInterventionsModule": {
+        "armGroups": [
+          {
+            "label": "CBD study product: 1mL dose",
+            "type": "EXPERIMENTAL",
+            "description": "Participants in this arm will take 1mL of the CBD study product three times per day",
+            "interventionNames": [
+              "Drug: Custom-formulated, high-CBD study product"
+            ]
+          },
+          {
+            "label": "CBD study product: 0.5mL dose",
+            "type": "EXPERIMENTAL",
+            "description": "Participants in this arm will take 0.5mL of the CBD study product three times per day",
+            "interventionNames": [
+              "Drug: Custom-formulated, high-CBD study product"
+            ]
+          },
+          {
+            "label": "Placebo",
+            "type": "PLACEBO_COMPARATOR",
+            "description": "Participants in this arm will take the placebo study product three times per day",
+            "interventionNames": [
+              "Drug: Placebo"
+            ]
+          }
+        ],
+        "interventions": [
+          {
+            "type": "DRUG",
+            "name": "Custom-formulated, high-CBD study product",
+            "description": "2 doses of the high-CBD study product will be used, compared to placebo.",
+            "armGroupLabels": [
+              "CBD study product: 0.5mL dose",
+              "CBD study product: 1mL dose"
+            ]
+          },
+          {
+            "type": "DRUG",
+            "name": "Placebo",
+            "description": "Placebo study product.",
+            "armGroupLabels": [
+              "Placebo"
+            ]
+          }
+        ]
+      },
+      "outcomesModule": {
+        "primaryOutcomes": [
+          {
+            "measure": "Quantification of parent CBD and its primary metabolites, 7-COOH-CBD and 7-OH-CBD, as well as metabolite-to-parent drug exposure ratios (MPR)",
+            "timeFrame": "Baseline, 7 days"
+          },
+          {
+            "measure": "Inflammatory markers",
+            "timeFrame": "Baseline, 7 days"
+          },
+          {
+            "measure": "Circulating anandamide (AEA)",
+            "timeFrame": "Baseline, 7 days"
+          }
+        ]
+      },
+      "eligibilityModule": {
+        "eligibilityCriteria": "Inclusion Criteria:\n\n* Provides informed consent\n* Sex assigned female at birth\n* Capable of having menstrual cycles\n* Aged 21+\n* Endorses one of the following gynecologic pain conditions: endometriosis, adenomyosis, chronic pelvic inflammatory disease (PID)\n* Stable medication/psychotherapy regimens for at least 3 months prior to starting the study, including hormonal contraceptives\n\nAdditional inclusion criteria for those in the PK subgroup:\n\n* Willingness to participate in the PK procedures (i.e., agree to an indwelling catheter with repeated blood collection)\n\nExclusion Criteria:\n\n* Meets criteria for DSM-5 classification of current substance use disorder, psychotic disorder, bipolar disorder, or an eating disorder\n* Currently uses cannabinoid products\n* Positive urine pregnancy test, are trying to become pregnant, or are currently breastfeeding\n* Presence of a serious or unstable medical illness, including liver/kidney disease, cardiovascular disease, neurological disorder, and conditions or medications that impact drug absorption or gastric emptying (e.g., GLP-1 agonists)\n* Comorbid neuropathic pain or cancer-related pain\n* Disclosure of a genetic polymorphism affecting CYP2C9 function\n* Liver function test (LFT) values \\>3x the upper limit of normal (ULN) at the baseline visit",
+        "healthyVolunteers": false,
+        "sex": "FEMALE",
+        "minimumAge": "21 Years",
+        "stdAges": [
+          "ADULT",
+          "OLDER_ADULT"
+        ]
+      },
+      "contactsLocationsModule": {
+        "centralContacts": [
+          {
+            "name": "Staci Gruber, PhD",
+            "role": "CONTACT",
+            "phone": "617-855-2762",
+            "email": "gruber@mclean.harvard.edu"
+          },
+          {
+            "name": "Rosie Smith, M.S.",
+            "role": "CONTACT",
+            "phone": "617-855-2908",
+            "email": "rsmith@mclean.harvard.edu"
+          }
+        ],
+        "locations": [
+          {
+            "facility": "McLean Hospital",
+            "status": "RECRUITING",
+            "city": "Belmont",
+            "state": "Massachusetts",
+            "zip": "02478",
+            "country": "United States",
+            "contacts": [
+              {
+                "name": "Rosemary Smith, M.S.",
+                "role": "CONTACT",
+                "phone": "617-855-2908",
+                "email": "rsmith@mclean.harvard.edu"
+              },
+              {
+                "name": "Staci Gruber, PhD",
+                "role": "PRINCIPAL_INVESTIGATOR"
+              }
+            ],
+            "geoPoint": {
+              "lat": 42.39593,
+              "lon": -71.17867
+            }
+          }
+        ]
+      },
+      "ipdSharingStatementModule": {
+        "ipdSharing": "UNDECIDED",
+        "description": "The study group may provide de-identified IPD to other researchers upon reasonable request."
+      }
+    },
+    "derivedSection": {
+      "miscInfoModule": {
+        "versionHolder": "2026-10-23"
+      },
+      "conditionBrowseModule": {
+        "meshes": [
+          {
+            "id": "D004715",
+            "term": "Endometriosis"
+          },
+          {
+            "id": "D062788",
+            "term": "Adenomyosis"
+          },
+          {
+            "id": "D000292",
+            "term": "Pelvic Inflammatory Disease"
+          }
+        ],
+        "ancestors": [
+          {
+            "id": "D005831",
+            "term": "Genital Diseases, Female"
+          },
+          {
+            "id": "D052776",
+            "term": "Female Urogenital Diseases"
+          },
+          {
+            "id": "D005261",
+            "term": "Female Urogenital Diseases and Pregnancy Complications"
+          },
+          {
+            "id": "D000091642",
+            "term": "Urogenital Diseases"
+          },
+          {
+            "id": "D000091662",
+            "term": "Genital Diseases"
+          },
+          {
+            "id": "D014591",
+            "term": "Uterine Diseases"
+          },
+          {
+            "id": "D034161",
+            "term": "Pelvic Infection"
+          },
+          {
+            "id": "D007239",
+            "term": "Infections"
+          },
+          {
+            "id": "D000291",
+            "term": "Adnexal Diseases"
+          }
+        ]
+      }
+    },
+    "hasResults": false
+  },
+  "fetchedAt": "2026-10-24T21:30:47.259Z"
+}

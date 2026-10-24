@@ -5,7 +5,7 @@
   "description": "This research is being done to compare rates of hair loss of people with metastatic breast who use scalp cooling versus those who do not use scalp cooling after receiving standard of care treatment with either sacituzumab govitecan, trastuzumab deruxtecan, or eribulin.\n\nThe name of the study intervention involved in this study is:\n\n* Paxman Scalp Cooling System",
   "recruitmentStatus": "RECRUITING",
   "lastRegistryUpdate": "2026-06-18",
-  "lastFetched": "2026-10-24T21:14:25.831Z",
+  "lastFetched": "2026-10-24T21:30:47.252Z",
   "locations": [
     {
       "facility": "Brigham and Women's Hospital",
@@ -304,7 +304,7 @@
   "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579",
   "dataSource": {
     "kind": "cache",
-    "fetchedAt": "2026-10-24T21:14:25.831Z",
+    "fetchedAt": "2026-10-24T21:30:47.252Z",
     "staleThresholdDays": 120,
     "stale": true
   },
