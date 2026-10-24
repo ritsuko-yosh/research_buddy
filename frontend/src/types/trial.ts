@@ -90,6 +90,16 @@ export interface Trial {
   sourceUrl: string;
   criteria: Criterion[];
   dataOrigin: DataOrigin;
+  /**
+   * Optional curated plain-language summary of the study description. Additive:
+   * the original `description` is always still shown. `null` when none exists.
+   */
+  plainLanguageSummary?: {
+    en: string;
+    es: string | null;
+    /** false = drafted/unreviewed; the UI labels it accordingly. */
+    reviewed: boolean;
+  } | null;
 }
 
 export interface TrialSummary {

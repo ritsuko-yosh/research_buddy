@@ -1,0 +1,478 @@
+{
+  "contractVersion": "1.0.0",
+  "nctId": "NCT05349227",
+  "title": "Comprehensive Outcomes for After Cancer Health",
+  "description": "This study intends to explore feasibility, acceptability, and outcomes related to the use of a digital health coaching intervention for individuals who have completed primary therapy for cancer. Up to 625 individuals with diverse cancer diagnoses will be enrolled across up to 8 clinical sites to participate in a randomized wait-list control study. Those in the intervention group will receive 6 months of digital coaching up front followed by 6 months of ongoing monitoring via patient reported and clinical outcomes, as well as wearable data. Those in the control group will be monitored via patient reported and clinical outcomes as well as wearable data for the first 6 months followed by 6 months of digital health coaching. Both groups will collect fecal microbiome samples at enrollment and month 6. The study aims to explore if and how digital health coaching may be used to enhance outcomes for individuals following completion of primary cancer therapy.",
+  "recruitmentStatus": "RECRUITING",
+  "lastRegistryUpdate": "2024-12-11",
+  "lastFetched": "2026-10-24T21:14:25.832Z",
+  "locations": [
+    {
+      "facility": "The University of Florida",
+      "city": "Gainesville",
+      "state": "Florida",
+      "zip": "32610",
+      "country": "United States",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "contacts": []
+    },
+    {
+      "facility": "Dana Farber Cancer Institute",
+      "city": "Boston",
+      "state": "Massachusetts",
+      "zip": "02215",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Marilyn Hammer, PhD",
+          "role": "CONTACT",
+          "phone": "347-271-0293",
+          "email": "marilynj_hammer@dfci.harvard.edu"
+        },
+        {
+          "name": "Alexi Wright, MD, MPH",
+          "role": "CONTACT",
+          "phone": "617-632-2334",
+          "email": "Alexi_Wright@dfci.harvard.edu"
+        },
+        {
+          "name": "Marilyn Hammer, PhD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "Alexi Wright, MD, MPH",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "University of Nebraska Medical Center",
+      "city": "Omaha",
+      "state": "Nebraska",
+      "zip": "68106",
+      "country": "United States",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "contacts": []
+    },
+    {
+      "facility": "Memorial Sloan Kettering Cancer Center",
+      "city": "New York",
+      "state": "New York",
+      "zip": "10065",
+      "country": "United States",
+      "status": "NOT_YET_RECRUITING",
+      "contacts": [
+        {
+          "name": "Kristen L Fessele, PhD",
+          "role": "CONTACT",
+          "phone": "646-449-1076",
+          "email": "nuronr@mskcc.org"
+        },
+        {
+          "name": "Kristen L Fessele, PhD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "The Ohio State University Wexner Medical Center",
+      "city": "Columbus",
+      "state": "Ohio",
+      "zip": "43210",
+      "country": "United States",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "contacts": []
+    },
+    {
+      "facility": "The University of Texas MD Anderson Cancer Center",
+      "city": "Houston",
+      "state": "Texas",
+      "zip": "77030",
+      "country": "United States",
+      "status": "NOT_YET_RECRUITING",
+      "contacts": [
+        {
+          "name": "Kathrin Milbury, PhD",
+          "role": "CONTACT",
+          "phone": "713-745-2868",
+          "email": "kmilbury@mdanderson.org"
+        },
+        {
+          "name": "Meagan Whisenant, PhD",
+          "role": "CONTACT",
+          "phone": "713-500-2279",
+          "email": "meagan.whisenant@uth.tmc.edu"
+        },
+        {
+          "name": "Meagan Whisenant, PhD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "Debu Tripathy, MD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "Abbey Kaler, MSN",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "UT Health Houston",
+      "city": "Houston",
+      "state": "Texas",
+      "zip": "77030",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Kaukab I Jafry, MD, MBBS",
+          "role": "CONTACT",
+          "phone": "832 325 6537",
+          "email": "Kaukab.I.Jafry@uth.tmc.edu"
+        },
+        {
+          "name": "Martha Thompson",
+          "role": "CONTACT",
+          "phone": "832-325-7706",
+          "email": "Martha.Thompson@uth.tmc.edu"
+        },
+        {
+          "name": "Anneliese Gonzalez, MD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Kelly J Brassil, PhD",
+      "role": "CONTACT",
+      "phone": "205-721-7542",
+      "email": "dgxpharesearch@questdiagnostics.com"
+    },
+    {
+      "name": "Jennifer Loftis, DNP",
+      "role": "CONTACT",
+      "phone": "205-721-7542",
+      "email": "dgxpharesearch@questdiagnostics.com"
+    }
+  ],
+  "languageRequirement": {
+    "status": "not_stated",
+    "evidence": [],
+    "note": "No explicit language requirement was found in the public registry listing. This is shown as \"not stated\" — it does not indicate whether any particular language is supported. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team."
+  },
+  "criteria": [
+    {
+      "id": "NCT05349227-inclusion-0",
+      "sourceText": "1. Have primary diagnosis of cancer;",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 0,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-inclusion-1",
+      "sourceText": "2. Are within 1 year of completion of primary therapy OR have a diagnosis of metastatic cancer\n\n   1. For the purpose of this study, primary therapy is defined as treatment of curative intent, first-line or later, from which the individual is advancing to active surveillance or follow-up with or without maintenance therapy\n   2. For individuals with metastatic cancer, individuals may be included provided they completed primary therapy for a de novo diagnosis of metastatic disease within the last year, are within one year of completion of initial therapy for their primary cancer diagnosis for which disease progression has occurred, or who are within one year of receiving treatment for metastatic disease (including individuals currently receiving treatment).",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 1,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": [
+        "treatment_history",
+        "medical_threshold"
+      ]
+    },
+    {
+      "id": "NCT05349227-inclusion-2",
+      "sourceText": "3. Are aged 18 years and older;",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "check_records",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 2,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": [
+        "medical_threshold"
+      ]
+    },
+    {
+      "id": "NCT05349227-inclusion-3",
+      "sourceText": "4. Can read and consent to participate in the trial;",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 3,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-inclusion-4",
+      "sourceText": "5. Can read and speak English;",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 4,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-inclusion-5",
+      "sourceText": "6. Can complete study follow-up at pre-specified intervals;",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 5,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-inclusion-6",
+      "sourceText": "7. Have access to mobile technology (e.g. a smart phone or tablet) that would allow engagement in digital health coaching for the collection of PROs and wearable data.",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 6,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-exclusion-0",
+      "sourceText": "1. Have a cognitive impairment (as assessed by their provider) that would prohibit the individual from engaging with the digital health coaching program or complete study assessments;",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 0,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-exclusion-1",
+      "sourceText": "2. Have a neurologic, musculoskeletal, or other comorbid condition that would impede their ability to engage in physical activity (as assessed by their provider)",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 1,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-exclusion-2",
+      "sourceText": "3. Have a life expectancy of \\&lt;6 months, and/or",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "check_records",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 2,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": [
+        "medical_threshold"
+      ]
+    },
+    {
+      "id": "NCT05349227-exclusion-3",
+      "sourceText": "4. Are on active treatment for relapsed disease. a. Individuals with disease progression or relapse which occurs following their consent to participate will be given the option to continue on study if they wish to do so. Data from individuals experiencing disease progression or relapse will be grouped for sub-analysis to explore if and how relapse impacts study outcomes.\n\nHealthy Volunteers must:",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 3,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": [
+        "conditional_logic"
+      ]
+    },
+    {
+      "id": "NCT05349227-exclusion-4",
+      "sourceText": "1. Be adults aged 18 years or older or the age of majority in their state of residence, whichever is older.",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "check_records",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 4,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": [
+        "medical_threshold"
+      ]
+    },
+    {
+      "id": "NCT05349227-exclusion-5",
+      "sourceText": "2. Must reside in the same dwelling as the patient participant",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 5,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-exclusion-6",
+      "sourceText": "3. Can read and consent to participate in the trial;",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 6,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-exclusion-7",
+      "sourceText": "4. Can read and speak English;",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 7,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT05349227-exclusion-8",
+      "sourceText": "5. Can complete study follow-up at pre-specified intervals;",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT05349227",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 8,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+      },
+      "uncertaintyFlags": []
+    }
+  ],
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227",
+  "dataSource": {
+    "kind": "cache",
+    "fetchedAt": "2026-10-24T21:14:25.832Z",
+    "staleThresholdDays": 120,
+    "stale": true
+  },
+  "plainLanguageSummary": {
+    "en": "This study explores whether a digital health coaching program can help people who have finished their main cancer treatment. About 625 people with different cancer types take part. One group gets 6 months of digital coaching first, then 6 months of monitoring; the other group is monitored first, then coached. Both groups share questionnaires, clinical data, wearable-device data, and stool (microbiome) samples. The goal is to see if digital coaching can improve how people do after treatment.",
+    "es": "Este estudio explora si un programa digital de asesoría de salud puede ayudar a las personas que terminaron su tratamiento principal contra el cáncer. Participan unas 625 personas con distintos tipos de cáncer. Un grupo recibe primero 6 meses de asesoría digital y luego 6 meses de seguimiento; el otro grupo se monitorea primero y recibe asesoría después. Ambos grupos comparten cuestionarios, datos clínicos, datos de dispositivos portátiles y muestras de microbioma (heces). El objetivo es ver si la asesoría digital puede mejorar la evolución tras el tratamiento.",
+    "reviewed": false
+  }
+}

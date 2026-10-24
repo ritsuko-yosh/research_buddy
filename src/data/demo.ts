@@ -16,5 +16,16 @@
  */
 export const DEMO_NCT_ID = "NCT02896335" as const;
 
-/** All studies that ship with a cached record and curated EN/ES explanations. */
-export const CURATED_DEMO_NCT_IDS = ["NCT02896335", "NCT04986579"] as const;
+/**
+ * All studies that ship with a cached record and curated EN/ES content. Five
+ * real, recruiting Massachusetts studies for the demo. Each has a curated,
+ * human-reviewable plain-language study summary (see curated.ts STUDY_SUMMARIES)
+ * so the "About this study" section is understandable without a live LLM.
+ */
+export const CURATED_DEMO_NCT_IDS = [
+  "NCT02896335", // Palbociclib + Pembrolizumab in CNS metastases (MGH)
+  "NCT04986579", // Scalp Cooling in MBC (BWH / Dana-Farber)
+  "NCT05349227", // Comprehensive Outcomes for After Cancer Health (Dana-Farber)
+  "NCT06052488", // Strength After Breast Cancer (MGH IHP)
+  "NCT02012699", // Integrated Cancer Repository (iCaRe2) (Holyoke)
+] as const;

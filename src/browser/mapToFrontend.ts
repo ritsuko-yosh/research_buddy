@@ -170,5 +170,12 @@ export function mapTrialToFrontend(trial: Trial): FeTrial {
     sourceUrl: trial.sourceUrl,
     criteria: trial.criteria.map(mapCriterion),
     dataOrigin,
+    plainLanguageSummary: trial.plainLanguageSummary
+      ? {
+          en: trial.plainLanguageSummary.en,
+          es: trial.plainLanguageSummary.es,
+          reviewed: trial.plainLanguageSummary.reviewed,
+        }
+      : null,
   };
 }

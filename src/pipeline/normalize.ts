@@ -137,5 +137,7 @@ export function normalizeStudy(raw: RawStudy, opts: NormalizeOptions): Trial {
     criteria,
     sourceUrl,
     dataSource,
+    // Filled in by enrichTrial when a curated summary exists for this study.
+    plainLanguageSummary: null,
   };
 }

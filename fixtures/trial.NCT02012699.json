@@ -1,0 +1,1136 @@
+{
+  "contractVersion": "1.0.0",
+  "nctId": "NCT02012699",
+  "title": "Integrated Cancer Repository for Cancer Research",
+  "description": "The iCaRe2 is a multi-institutional resource created and maintained by the Fred \\& Pamela Buffett Cancer Center to collect and manage standardized, multi-dimensional, longitudinal data and biospecimens on consented adult cancer patients, high-risk individuals, and normal controls. The distinct characteristic of the iCaRe2 is its geographical coverage, with a significant percentage of small and rural hospitals and cancer centers. The iCaRe2 advances comprehensive studies of risk factors of cancer development and progression and enables the design of novel strategies for prevention, screening, early detection and personalized treatment of cancer. Centers with expertise in cancer epidemiology, genetics, biology, early detection, and patient care can collaborate by using the iCaRe2 as a platform for cohort and population studies.",
+  "recruitmentStatus": "RECRUITING",
+  "lastRegistryUpdate": "2026-06-29",
+  "lastFetched": "2026-10-24T21:14:25.836Z",
+  "locations": [
+    {
+      "facility": "Advent Health",
+      "city": "Greenwood Village",
+      "state": "Colorado",
+      "zip": "80111",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Roseann Johnson",
+          "role": "CONTACT",
+          "phone": "303-765-6840",
+          "email": "roseann.johnson@adventhealth.com"
+        },
+        {
+          "name": "Mohammed Salhab, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Hartford HealthCare Cancer Institute at Manchester Medical Hospital",
+      "city": "Manchester",
+      "state": "Connecticut",
+      "zip": "06040",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Amanda Doughty",
+          "role": "CONTACT",
+          "phone": "860-310-6475",
+          "email": "amanda.doughty@hhchealth.org"
+        },
+        {
+          "name": "Leslie Juliani, BSN, RN, OCN, CBCN",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Florida Hospital Memorial Medical Center",
+      "city": "Daytona Beach",
+      "state": "Florida",
+      "zip": "32117",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Sandy Allten, RN",
+          "role": "CONTACT",
+          "phone": "386-231-4023",
+          "email": "sandra.allten@fhmmc.org"
+        },
+        {
+          "name": "Erik Harris, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Florida Hospital DeLand",
+      "city": "DeLand",
+      "state": "Florida",
+      "zip": "32720",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Sandra Allten, RN,OCN,CCRP",
+          "role": "CONTACT",
+          "phone": "386-231-3267",
+          "email": "sandra.allten@fhmmc.org"
+        },
+        {
+          "name": "Erik Harris, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Florida Hospital FISH",
+      "city": "Orange City",
+      "state": "Florida",
+      "zip": "32763",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Sandy Allten, RN",
+          "role": "CONTACT",
+          "phone": "386-231-4023",
+          "email": "sandra.allten@fhmmc.org"
+        },
+        {
+          "name": "Erik Harris, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Florida Hospital Flagler",
+      "city": "Palm Coast",
+      "state": "Florida",
+      "zip": "32164",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Sandy Allten, RN",
+          "role": "CONTACT",
+          "phone": "386-231-4023",
+          "email": "sandra.allten@fhmmc.org"
+        },
+        {
+          "name": "Erik Harris, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Tallahassee Memorial Hospital",
+      "city": "Tallahassee",
+      "state": "Florida",
+      "zip": "32308",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Justin Lee",
+          "role": "CONTACT",
+          "phone": "701-857-3174",
+          "email": "justin.lee2@tmh.org"
+        }
+      ]
+    },
+    {
+      "facility": "Rush-Copley Cancer Care Center",
+      "city": "Aurora",
+      "state": "Illinois",
+      "zip": "60504",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Joseph Meschi, MD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": "joseph.meschi@rushcopley.com"
+        },
+        {
+          "name": "Amanda Baker, CCRP",
+          "role": "CONTACT",
+          "phone": "630-978-6212",
+          "email": "amanda.baker@rushcopley.com"
+        },
+        {
+          "name": "Joseph T Meschi, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Rush-Copley Healthcare Center",
+      "city": "Yorkville",
+      "state": "Illinois",
+      "zip": "60560",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Amanda Baker, CCRP",
+          "role": "CONTACT",
+          "phone": "630-978-6212",
+          "email": "amanda.baker@rushcopley.com"
+        },
+        {
+          "name": "Joseph T Meschi, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Parkview Research Center",
+      "city": "Fort Wayne",
+      "state": "Indiana",
+      "zip": "46845",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Ellie Ross",
+          "role": "CONTACT",
+          "phone": null,
+          "email": "ellie.ross@parkview.com"
+        },
+        {
+          "name": "Brian Johnson, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "Melanie Clark, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Methodist Jennie Edmundson Hospital",
+      "city": "Council Bluffs",
+      "state": "Iowa",
+      "zip": "51503",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Michael Zlomke, MD",
+          "role": "CONTACT",
+          "phone": "712-396-4117",
+          "email": null
+        },
+        {
+          "name": "Tammy Johnson, CBPN",
+          "role": "CONTACT",
+          "phone": null,
+          "email": "tammy.johnson@nmhs.org"
+        }
+      ]
+    },
+    {
+      "facility": "Covenant Medical Center, Inc",
+      "city": "Waterloo",
+      "state": "Iowa",
+      "zip": "50702",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Karrie Cheeseman, BSN, RN",
+          "role": "CONTACT",
+          "phone": "319-272-2388",
+          "email": "karrie.mccagecheeseman@mercyhealth.com"
+        },
+        {
+          "name": "Mukund Nadipuram, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Saint Luke's Cancer Instititute - South",
+      "city": "Overland Park",
+      "state": "Kansas",
+      "zip": "66213",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Ragan Verelst",
+          "role": "CONTACT",
+          "phone": "816-287-6057",
+          "email": "rverelst@saint-lukes.org"
+        },
+        {
+          "name": "Amy Miller",
+          "role": "CONTACT",
+          "phone": null,
+          "email": "amymiller@sait-lukes.org"
+        },
+        {
+          "name": "Addison Tolentino, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Northwest Hospital",
+      "city": "Randallstown",
+      "state": "Maryland",
+      "zip": "21133",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Judy Bosley",
+          "role": "CONTACT",
+          "phone": "410-871-7450",
+          "email": "jbosley@lifebridgehealth.org"
+        },
+        {
+          "name": "Qiwei Gai, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "William E. Kahlert Regional Cancer Center",
+      "city": "Westminster",
+      "state": "Maryland",
+      "zip": "21157",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Judy Bosley",
+          "role": "CONTACT",
+          "phone": "410-871-7450",
+          "email": "jbosley@lifebridgehealth.org"
+        },
+        {
+          "name": "Melissa Loomis",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Holyoke Medical Center",
+      "city": "Holyoke",
+      "state": "Massachusetts",
+      "zip": "01040",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Lynn Downey, RHIT, CTR",
+          "role": "CONTACT",
+          "phone": "413-534-2500",
+          "email": "downey_lynn@holyokehealth.com"
+        },
+        {
+          "name": "Zubeena Mateen, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Riverwood Healthcare Center",
+      "city": "Aitkin",
+      "state": "Minnesota",
+      "zip": "56431",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Alaina Wadzink",
+          "role": "CONTACT",
+          "phone": "218-786-1018",
+          "email": "alaina.wadzink@essentiahealth.org"
+        },
+        {
+          "name": "Bret Friday, MD, PhD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Essentia Health-St. Joseph's Medical Center",
+      "city": "Brainerd",
+      "state": "Minnesota",
+      "zip": "56401",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Alaina Wadzink",
+          "role": "CONTACT",
+          "phone": "218-786-1018",
+          "email": "alaina.wadzink@essentiahealth.org"
+        },
+        {
+          "name": "Bret Friday, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Essentia Health - Duluth Clinic",
+      "city": "Duluth",
+      "state": "Minnesota",
+      "zip": "55805",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Alaina Wadzink",
+          "role": "CONTACT",
+          "phone": "218-786-1018",
+          "email": "alaina.wadzink@essentiahealth.org"
+        },
+        {
+          "name": "Bret Friday, MD, PhD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "St. Luke's Hospital of Duluth",
+      "city": "Duluth",
+      "state": "Minnesota",
+      "zip": "55805",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Cade McDonald",
+          "role": "CONTACT",
+          "phone": "218-249-5002",
+          "email": "cade.mcdonald@aspirus.org"
+        },
+        {
+          "name": "Anne Silva-Benedict, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Lake Region Healthcare",
+      "city": "Fergus Falls",
+      "state": "Minnesota",
+      "zip": "56537",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Alaina Wadzink",
+          "role": "CONTACT",
+          "phone": "218-786-1018",
+          "email": "alaina.wadzink@essentiahealth.org"
+        },
+        {
+          "name": "Bret Friday, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Saint Luke's Cancer Institute, East",
+      "city": "Kansas City",
+      "state": "Missouri",
+      "zip": "64086",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Ragan Verelst",
+          "role": "CONTACT",
+          "phone": "816-287-6057",
+          "email": "rverelst@saint-lukes.org"
+        },
+        {
+          "name": "Addison Tolentino, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Saint Luke's Cancer Institute",
+      "city": "Kansas City",
+      "state": "Missouri",
+      "zip": "64111",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Ragan Verelst",
+          "role": "CONTACT",
+          "phone": "816-287-6057",
+          "email": "rverelst@saint-lukes.org"
+        },
+        {
+          "name": "Addison Tolentino, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Saint Luke's Cancer Institute, Kansas City North",
+      "city": "Kansas City",
+      "state": "Missouri",
+      "zip": "64118",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Ragan Verelst",
+          "role": "CONTACT",
+          "phone": "816-287-6057",
+          "email": "rverelst@saint-lukes.org"
+        },
+        {
+          "name": "Addison Tolentino, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Saint Luke's Cancer Institute, Liberty",
+      "city": "Liberty",
+      "state": "Missouri",
+      "zip": "64068",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Ragan Verelst",
+          "role": "CONTACT",
+          "phone": "816-287-6057",
+          "email": "rverelst@saint-lukes.org"
+        },
+        {
+          "name": "Addison Tolentino, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "North Kansas City Hospital",
+      "city": "North Kansas City",
+      "state": "Missouri",
+      "zip": "64116",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Magdalena Kosinska",
+          "role": "CONTACT",
+          "phone": "816-691-5195",
+          "email": "magdalena.kosinska@nkch.org"
+        },
+        {
+          "name": "John Park, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Heartland Regional Medical Center dba Mosaic Life Care",
+      "city": "Saint Joseph",
+      "state": "Missouri",
+      "zip": "64507",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Molly Kidwell",
+          "role": "CONTACT",
+          "phone": "816-271-7654",
+          "email": "molly.kidwell@mymlc.com"
+        },
+        {
+          "name": "Juliet Gyamfua Appiah, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Bozeman Health Deaconess Hospital",
+      "city": "Bozeman",
+      "state": "Montana",
+      "zip": "59715",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Adam Gott",
+          "role": "CONTACT",
+          "phone": "406-414-3745",
+          "email": "agott@bozemanhealth.org"
+        },
+        {
+          "name": "Justin Thomas, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Mary Lanning Healthcare, Morrison Cancer Center",
+      "city": "Hastings",
+      "state": "Nebraska",
+      "zip": "68901",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Joan Meese",
+          "role": "CONTACT",
+          "phone": "402-460-5899",
+          "email": "joan.meese@marylanning.org"
+        }
+      ]
+    },
+    {
+      "facility": "Faith Regional Health Services, Carson Cancer Center",
+      "city": "Norfolk",
+      "state": "Nebraska",
+      "zip": "68701",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Cynthia Montgomery, RN",
+          "role": "CONTACT",
+          "phone": "402-644-7534",
+          "email": "cmontgome@frhs.org"
+        },
+        {
+          "name": "Rahib C Fahed, MD",
+          "role": "SUB_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "Irena Popa, MD",
+          "role": "SUB_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Great Plains Regional Medical Center",
+      "city": "North Platte",
+      "state": "Nebraska",
+      "zip": "69101",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Rebecca Dotson",
+          "role": "CONTACT",
+          "phone": "308-696-7386",
+          "email": "dotsonr@gphealth.org"
+        },
+        {
+          "name": "Kartik Anand, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Methodist Estabrook Cancer Center",
+      "city": "Omaha",
+      "state": "Nebraska",
+      "zip": "68114",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Russell Smith, MD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "Liza Brandes",
+          "role": "CONTACT",
+          "phone": "402-354-5892",
+          "email": "liza.brandes@nmhs.org"
+        }
+      ]
+    },
+    {
+      "facility": "Nebraska Methodist Health System",
+      "city": "Omaha",
+      "state": "Nebraska",
+      "zip": "68114",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Kathryn Bartz",
+          "role": "CONTACT",
+          "phone": "402-354-7939",
+          "email": "kathryn.bartz@nmhs.org"
+        },
+        {
+          "name": "Aru Panwar, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "University of Nebraska Medical Center",
+      "city": "Omaha",
+      "state": "Nebraska",
+      "zip": "68198",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Kurt Fisher, MD, PhD",
+          "role": "CONTACT",
+          "phone": "402-559-9025",
+          "email": "kfisher@unmc.edu"
+        },
+        {
+          "name": "Kurt Fisher, MD, PhD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "C.R. Wood Cancer Center, Glens Falls Hospital",
+      "city": "Glens Falls",
+      "state": "New York",
+      "zip": "12801",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Misty LaCross DeCaro, RN-BSN",
+          "role": "CONTACT",
+          "phone": "518-926-6529",
+          "email": "mjlacross@glensfallshosp.org"
+        },
+        {
+          "name": "Aqeel Gillani, MD",
+          "role": "CONTACT",
+          "phone": "518-926-6701",
+          "email": null
+        },
+        {
+          "name": "Aqeel Gillani, MD",
+          "role": "SUB_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Faxton St. Luke's Healthcare, Mohawk Valley",
+      "city": "Utica",
+      "state": "New York",
+      "zip": "13501",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Kristen Crowder, BSN, RN, OCN",
+          "role": "CONTACT",
+          "phone": "315-624-4831",
+          "email": "kcrowder@mvhealthsystem.org"
+        },
+        {
+          "name": "Atul Butala, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Cape Fear Valley Health System",
+      "city": "Fayetteville",
+      "state": "North Carolina",
+      "zip": "28304",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Kenneth Manning, MD",
+          "role": "CONTACT",
+          "phone": null,
+          "email": null
+        },
+        {
+          "name": "Rebekah Bullard",
+          "role": "CONTACT",
+          "phone": "910-615-5603",
+          "email": "rbullard@capefearvalley.com"
+        }
+      ]
+    },
+    {
+      "facility": "Essentia Health",
+      "city": "Fargo",
+      "state": "North Dakota",
+      "zip": "58103",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Alaina Wadzink",
+          "role": "CONTACT",
+          "phone": "218-786-1018",
+          "email": "alaina.wadzink@essentiahealth.org"
+        },
+        {
+          "name": "Tammie Mlodozyniec",
+          "role": "CONTACT",
+          "phone": null,
+          "email": "tammie.mlodozyniec@essentiahealth.org"
+        }
+      ]
+    },
+    {
+      "facility": "Trinity Hospital Cancer Care Center",
+      "city": "Minot",
+      "state": "North Dakota",
+      "zip": "58701",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Trish Miller",
+          "role": "CONTACT",
+          "phone": "701-418-8348",
+          "email": "trish.miller@trinityhealth.org"
+        },
+        {
+          "name": "Marianna Jimenez",
+          "role": "CONTACT",
+          "phone": null,
+          "email": "marianna.jimenez@trinityhealth.org"
+        },
+        {
+          "name": "Moayed Ibrahim, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Aultman Alliance Community Hospital",
+      "city": "Alliance",
+      "state": "Ohio",
+      "zip": "44601",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Carla Larch",
+          "role": "CONTACT",
+          "phone": "330-363-7412",
+          "email": "carla.larch@aultman.com"
+        },
+        {
+          "name": "Steven Eric Olyejar, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Aultman Hospital",
+      "city": "Canton",
+      "state": "Ohio",
+      "zip": "44710",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Carla Larch",
+          "role": "CONTACT",
+          "phone": "330-363-7412",
+          "email": "carla.larch@aultman.com"
+        },
+        {
+          "name": "Steven Eric Olyejar, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    },
+    {
+      "facility": "Bellin Memorial Hospital",
+      "city": "Green Bay",
+      "state": "Wisconsin",
+      "zip": "54305",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Abigail Hecker",
+          "role": "CONTACT",
+          "phone": "920-430-4660",
+          "email": "abigail.hecker@bellin.org"
+        },
+        {
+          "name": "Seth Joppe",
+          "role": "CONTACT",
+          "phone": "920-430-4660",
+          "email": "seth.joppe@bellin.org"
+        },
+        {
+          "name": "Hassan Tahsildar, MD",
+          "role": "PRINCIPAL_INVESTIGATOR",
+          "phone": null,
+          "email": null
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Artem Pachikov",
+      "role": "CONTACT",
+      "phone": "402-559-0568",
+      "email": "artem.pachikov@unmc.edu"
+    }
+  ],
+  "languageRequirement": {
+    "status": "ambiguous",
+    "evidence": [
+      "* Non-English or non-Spanish speaking individuals"
+    ],
+    "note": "Language-related wording was found but it is not clearly a hard requirement. Ask the study team to clarify. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team."
+  },
+  "criteria": [
+    {
+      "id": "NCT02012699-inclusion-0",
+      "sourceText": "* Diagnosis/history of cancer",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 0,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": [
+        "treatment_history"
+      ]
+    },
+    {
+      "id": "NCT02012699-inclusion-1",
+      "sourceText": "* Risk for developing cancer or suspicious clinical findings",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 1,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT02012699-inclusion-2",
+      "sourceText": "* No history of cancer (normal control registry)",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 2,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": [
+        "treatment_history"
+      ]
+    },
+    {
+      "id": "NCT02012699-inclusion-3",
+      "sourceText": "* Able to provide informed consent",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "self_answer",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 3,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT02012699-inclusion-4",
+      "sourceText": "* 19 years of age or older",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "self_answer",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 4,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": [
+        "medical_threshold"
+      ]
+    },
+    {
+      "id": "NCT02012699-inclusion-5",
+      "sourceText": "* English or Spanish speaking individuals",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 5,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT02012699-exclusion-0",
+      "sourceText": "* Unable to provide informed consent because of cognitive impairment",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "self_answer",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 0,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT02012699-exclusion-1",
+      "sourceText": "* Non-English or non-Spanish speaking individuals",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT02012699",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 1,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+      },
+      "uncertaintyFlags": []
+    }
+  ],
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699",
+  "dataSource": {
+    "kind": "cache",
+    "fetchedAt": "2026-10-24T21:14:25.836Z",
+    "staleThresholdDays": 120,
+    "stale": false
+  },
+  "plainLanguageSummary": {
+    "en": "This is a research repository (called iCaRe2), not a treatment study. It collects and manages standardized health information and biological samples from consenting adults — cancer patients, high-risk individuals, and healthy controls — including many from small and rural hospitals. Researchers use it as a shared resource to study what causes cancer and to develop better prevention, screening, early detection, and treatment.",
+    "es": "Este es un repositorio de investigación (llamado iCaRe2), no un estudio de tratamiento. Recopila y gestiona información de salud estandarizada y muestras biológicas de adultos que dan su consentimiento — pacientes con cáncer, personas de alto riesgo y controles sanos — incluidos muchos de hospitales pequeños y rurales. Los investigadores lo usan como recurso compartido para estudiar las causas del cáncer y desarrollar mejor prevención, detección temprana y tratamiento.",
+    "reviewed": false
+  }
+}

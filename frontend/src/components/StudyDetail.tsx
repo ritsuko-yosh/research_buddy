@@ -22,22 +22,34 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
   const englishDescription = trial.description.en;
   const groups = groupBySection(trial.criteria);
 
-  // AI plain-language summary of the public registry description. Additive and
-  // optional: it never replaces the original text (shown in full below), and if
-  // the endpoint is unconfigured or fails, this stays null and the UI simply
-  // shows the registry description. The disclaimer labels it as AI-generated.
-  const summarySource = trial.description.en; // summarize the registry source text
-  const [summary, setSummary] = useState<string | null>(null);
+  // Plain-language summary of the study description. Two sources, in order:
+  //  1. A CURATED summary shipped with the study (free, reliable, no network) —
+  //     used for the demo studies.
+  //  2. Otherwise, an optional live AI summary (if an endpoint is configured).
+  // Either way it is ADDITIVE: the original registry description is always still
+  // shown (in a dropdown when a summary is present), and the summary is labeled
+  // as drafted/unreviewed.
+  const curated = trial.plainLanguageSummary ?? null;
+  const curatedSummary = curated ? (locale === 'es' ? curated.es : curated.en) : null;
+
+  const summarySource = trial.description.en; // text the live AI would summarize
+  const [liveSummary, setLiveSummary] = useState<string | null>(null);
   const [summaryLoading, setSummaryLoading] = useState(false);
+
+  // The summary shown: curated wins; live AI is the fallback when no curated one.
+  const summary = curatedSummary ?? liveSummary;
 
   useEffect(() => {
     let cancelled = false;
-    setSummary(null);
+    setLiveSummary(null);
+    setSummaryLoading(false);
+    // Skip the network entirely when a curated summary is available.
+    if (curatedSummary) return;
     if (!isSummaryEnabled() || !summarySource) return;
     setSummaryLoading(true);
     fetchPlainLanguageSummary(summarySource, locale)
       .then((result) => {
-        if (!cancelled) setSummary(result);
+        if (!cancelled) setLiveSummary(result);
       })
       .finally(() => {
         if (!cancelled) setSummaryLoading(false);
@@ -45,7 +57,7 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
     return () => {
       cancelled = true;
     };
-  }, [summarySource, locale]);
+  }, [curatedSummary, summarySource, locale]);
 
   // Renders the ORIGINAL registry description with the existing locale fallback.
   function renderDescription() {
@@ -85,14 +97,18 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
       <section aria-labelledby="about-heading" style={{ marginTop: '1.25rem' }}>
         <h2 id="about-heading">{m.aboutHeading}</h2>
 
-        {/* AI plain-language summary (optional, additive, clearly labeled). */}
+        {/* Plain-language summary (curated or AI), additive and clearly labeled. */}
         {summaryLoading && <p className="help" role="status">{m.aiSummaryLoading}</p>}
         {summary && (
           <div className="ai-summary">
             <h3>{m.aiSummaryHeading}</h3>
             <p lang={locale}>{summary}</p>
-            <p className="badge machine" role="note">
-              {m.aiSummaryDisclaimer}
+            <p className={curated?.reviewed ? 'badge' : 'badge machine'} role="note">
+              {curated
+                ? curated.reviewed
+                  ? m.summaryReviewedNote
+                  : m.summaryDraftedDisclaimer
+                : m.aiSummaryDisclaimer}
             </p>
           </div>
         )}

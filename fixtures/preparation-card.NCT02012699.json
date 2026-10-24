@@ -1,0 +1,176 @@
+{
+  "nctId": "NCT02012699",
+  "title": "Integrated Cancer Repository for Cancer Research",
+  "recruitmentStatus": "RECRUITING",
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699",
+  "freshness": {
+    "lastRegistryUpdate": "2026-06-29",
+    "stale": false,
+    "note": "Registry listing updated recently."
+  },
+  "languageNote": "Language-related wording was found but it is not clearly a hard requirement. Ask the study team to clarify. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team.",
+  "groups": {
+    "self_answer": [
+      {
+        "id": "NCT02012699-inclusion-3",
+        "sourceText": "* Able to provide informed consent",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT02012699-inclusion-4",
+        "sourceText": "* 19 years of age or older",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02012699-exclusion-0",
+        "sourceText": "* Unable to provide informed consent because of cognitive impairment",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "check_records": [],
+    "ask_study_team": [
+      {
+        "id": "NCT02012699-inclusion-0",
+        "sourceText": "* Diagnosis/history of cancer",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02012699-inclusion-1",
+        "sourceText": "* Risk for developing cancer or suspicious clinical findings",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT02012699-inclusion-2",
+        "sourceText": "* No history of cancer (normal control registry)",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02012699-inclusion-5",
+        "sourceText": "* English or Spanish speaking individuals",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT02012699-exclusion-1",
+        "sourceText": "* Non-English or non-Spanish speaking individuals",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02012699",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02012699#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "cannot_assess": []
+  },
+  "contacts": [
+    {
+      "name": "Artem Pachikov",
+      "role": "CONTACT",
+      "phone": "402-559-0568",
+      "email": "artem.pachikov@unmc.edu"
+    }
+  ],
+  "disclaimers": [
+    "Visit Ready does not decide whether you qualify for this study. There is no eligibility score.",
+    "Do not get new medical tests just to use this tool. Bring records you already have.",
+    "A Spanish interface here does not mean the study can serve Spanish-speaking participants. Confirm with the study team.",
+    "Recruitment status and contacts come from the public registry and may be out of date — verify with the study team."
+  ]
+}

@@ -182,6 +182,23 @@ export interface Trial {
   sourceUrl: string;
   /** Live vs. cache provenance and freshness. */
   dataSource: DataSource;
+  /**
+   * Optional curated plain-language summary of the study description. Additive:
+   * the original `description` is always still present and must stay visible in
+   * the UI. `null` when no curated summary exists for this study.
+   */
+  plainLanguageSummary: PlainLanguageSummary | null;
+}
+
+/**
+ * A curated, static plain-language summary of the study description (the
+ * free/safe alternative to a live LLM). Additive and honestly labeled.
+ */
+export interface PlainLanguageSummary {
+  en: string;
+  es: string | null;
+  /** Provenance of the summary; false = drafted/unreviewed (label it in UI). */
+  reviewed: boolean;
 }
 
 /**

@@ -5,7 +5,7 @@
   "description": "This research study is studying This research study is studying the efficacy and safety of the following study drugs as a possible treatment for recurrent central nervous system (CNS) metastases:\n\n* Palbociclib alone (Cohort 1)\n* The combination of palbociclib and pembrolizumab (Cohort 2) Pfizer and Merck, pharmaceutical companies, are supporting this research study by providing the study drugs as well as funding for research activities.",
   "recruitmentStatus": "RECRUITING",
   "lastRegistryUpdate": "2026-07-21",
-  "lastFetched": "2026-10-24T17:41:39.144Z",
+  "lastFetched": "2026-10-24T21:14:25.824Z",
   "locations": [
     {
       "facility": "Massachusetts General Hospital",
@@ -754,8 +754,13 @@
   "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335",
   "dataSource": {
     "kind": "cache",
-    "fetchedAt": "2026-10-24T17:41:39.144Z",
+    "fetchedAt": "2026-10-24T21:14:25.824Z",
     "staleThresholdDays": 120,
     "stale": false
+  },
+  "plainLanguageSummary": {
+    "en": "This study is testing two drugs — palbociclib and pembrolizumab — as a possible treatment for cancer that has spread to the brain or spinal cord (central nervous system). It focuses on people whose CNS lesions have grown or returned, including some who have had prior radiation or surgery. The study team decides who fits based on your scans and medical history.",
+    "es": "Este estudio evalúa dos medicamentos — palbociclib y pembrolizumab — como posible tratamiento para el cáncer que se ha diseminado al cerebro o la médula espinal (sistema nervioso central). Se centra en personas cuyas lesiones del SNC han crecido o reaparecido, incluidas algunas que han recibido radiación o cirugía previa. El equipo del estudio decide quién cumple los requisitos según sus imágenes e historial médico.",
+    "reviewed": false
   }
 }

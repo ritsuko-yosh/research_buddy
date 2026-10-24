@@ -1,0 +1,135 @@
+{
+  "contractVersion": "1.0.0",
+  "nctId": "NCT06052488",
+  "title": "Strength After Breast Cancer",
+  "description": "The goal of this study is to explore whether a group exercise program called Strength After Breast Cancer can be delivered in an outpatient physical therapy clinic to improve physical function among women after treatment for breast cancer.\n\nThe main questions this study aims to answer are:\n\n* Can the Strength After Breast Cancer program and the associated outcome battery be successfully delivered in an outpatient physical therapy clinic at Massachusetts General Hospital and do participants find the program practical?\n* What are the barriers to and facilitators of delivering the group exercise program in a clinical setting and what changes need to be made to the program to improve sustainability and to facilitate implementation at other clinical sites?\n\nParticipants will complete study questionnaires before and after engaging in the group exercise program and they will participate in interviews following participation in the program.",
+  "recruitmentStatus": "RECRUITING",
+  "lastRegistryUpdate": "2025-10-20",
+  "lastFetched": "2026-10-24T21:14:25.835Z",
+  "locations": [
+    {
+      "facility": "MGH Institute of Health Professions",
+      "city": "Boston",
+      "state": "Massachusetts",
+      "zip": "02129",
+      "country": "United States",
+      "status": "RECRUITING",
+      "contacts": [
+        {
+          "name": "Stephen Wechsler, DPT, PhD",
+          "role": "CONTACT",
+          "phone": "774-217-3221",
+          "email": "swechsler@mghihp.edu"
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Stephen Wechsler, DPT, PhD",
+      "role": "CONTACT",
+      "phone": "774-217-3221",
+      "email": "swechsler@mghihp.edu"
+    },
+    {
+      "name": "Kathleen Lyons, ScD, OTR/L",
+      "role": "CONTACT",
+      "phone": null,
+      "email": "klyons2@mghihp.edu"
+    }
+  ],
+  "languageRequirement": {
+    "status": "explicit_english_required",
+    "evidence": [
+      "* Non-English speaking"
+    ],
+    "note": "An explicit language requirement was found in the listing (see evidence). A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team."
+  },
+  "criteria": [
+    {
+      "id": "NCT06052488-inclusion-0",
+      "sourceText": "* ≥18 years of age",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "self_answer",
+      "sourceReference": {
+        "nctId": "NCT06052488",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 0,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+      },
+      "uncertaintyFlags": [
+        "medical_threshold"
+      ]
+    },
+    {
+      "id": "NCT06052488-inclusion-1",
+      "sourceText": "* Diagnosed with Stage I-III breast cancer, having completed primary cancer treatment (e.g., surgery, chemotherapy, radiation therapy); hormonal therapies and adjuvant targeted therapies will be permitted",
+      "section": "inclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT06052488",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "inclusion",
+        "index": 1,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+      },
+      "uncertaintyFlags": []
+    },
+    {
+      "id": "NCT06052488-exclusion-0",
+      "sourceText": "* Any injury or medical condition that would prohibit being able to safely perform exercise as indicated by the Physical Activity Readiness Questionnaire (i.e., atrial fibrillation, chest pain or angina, uncontrolled high blood pressure or hypertension, loss of balance due to dizziness in the past 12 months, or loss of consciousness in the past 12 months).",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "cannot_assess",
+      "sourceReference": {
+        "nctId": "NCT06052488",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 0,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+      },
+      "uncertaintyFlags": [
+        "medical_threshold",
+        "ambiguous_wording"
+      ]
+    },
+    {
+      "id": "NCT06052488-exclusion-1",
+      "sourceText": "* Non-English speaking",
+      "section": "exclusion",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT06052488",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "exclusion",
+        "index": 1,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+      },
+      "uncertaintyFlags": []
+    }
+  ],
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488",
+  "dataSource": {
+    "kind": "cache",
+    "fetchedAt": "2026-10-24T21:14:25.835Z",
+    "staleThresholdDays": 120,
+    "stale": true
+  },
+  "plainLanguageSummary": {
+    "en": "This study tests whether a group exercise program called 'Strength After Breast Cancer' can be run in an outpatient physical therapy clinic to improve physical function for women after breast cancer treatment. It looks at whether the program is practical to deliver and what would help offer it at other clinics. Participants fill out questionnaires before and after the program and take part in interviews afterward.",
+    "es": "Este estudio evalúa si un programa de ejercicio en grupo llamado 'Strength After Breast Cancer' puede ofrecerse en una clínica ambulatoria de fisioterapia para mejorar la función física de mujeres tras el tratamiento del cáncer de mama. Analiza si el programa es práctico de implementar y qué ayudaría a ofrecerlo en otras clínicas. Las participantes completan cuestionarios antes y después del programa y participan en entrevistas al finalizar.",
+    "reviewed": false
+  }
+}

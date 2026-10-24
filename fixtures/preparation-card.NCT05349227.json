@@ -1,0 +1,323 @@
+{
+  "nctId": "NCT05349227",
+  "title": "Comprehensive Outcomes for After Cancer Health",
+  "recruitmentStatus": "RECRUITING",
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227",
+  "freshness": {
+    "lastRegistryUpdate": "2024-12-11",
+    "stale": true,
+    "note": "This registry listing has not been updated recently; verify details with the study team."
+  },
+  "languageNote": "No explicit language requirement was found in the public registry listing. This is shown as \"not stated\" — it does not indicate whether any particular language is supported. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team.",
+  "groups": {
+    "self_answer": [],
+    "check_records": [
+      {
+        "id": "NCT05349227-inclusion-2",
+        "sourceText": "3. Are aged 18 years and older;",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT05349227-exclusion-2",
+        "sourceText": "3. Have a life expectancy of \\&lt;6 months, and/or",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT05349227-exclusion-4",
+        "sourceText": "1. Be adults aged 18 years or older or the age of majority in their state of residence, whichever is older.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      }
+    ],
+    "ask_study_team": [
+      {
+        "id": "NCT05349227-inclusion-0",
+        "sourceText": "1. Have primary diagnosis of cancer;",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-inclusion-1",
+        "sourceText": "2. Are within 1 year of completion of primary therapy OR have a diagnosis of metastatic cancer\n\n   1. For the purpose of this study, primary therapy is defined as treatment of curative intent, first-line or later, from which the individual is advancing to active surveillance or follow-up with or without maintenance therapy\n   2. For individuals with metastatic cancer, individuals may be included provided they completed primary therapy for a de novo diagnosis of metastatic disease within the last year, are within one year of completion of initial therapy for their primary cancer diagnosis for which disease progression has occurred, or who are within one year of receiving treatment for metastatic disease (including individuals currently receiving treatment).",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT05349227-inclusion-3",
+        "sourceText": "4. Can read and consent to participate in the trial;",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-inclusion-4",
+        "sourceText": "5. Can read and speak English;",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-inclusion-5",
+        "sourceText": "6. Can complete study follow-up at pre-specified intervals;",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-inclusion-6",
+        "sourceText": "7. Have access to mobile technology (e.g. a smart phone or tablet) that would allow engagement in digital health coaching for the collection of PROs and wearable data.",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 6,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-exclusion-0",
+        "sourceText": "1. Have a cognitive impairment (as assessed by their provider) that would prohibit the individual from engaging with the digital health coaching program or complete study assessments;",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-exclusion-1",
+        "sourceText": "2. Have a neurologic, musculoskeletal, or other comorbid condition that would impede their ability to engage in physical activity (as assessed by their provider)",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-exclusion-3",
+        "sourceText": "4. Are on active treatment for relapsed disease. a. Individuals with disease progression or relapse which occurs following their consent to participate will be given the option to continue on study if they wish to do so. Data from individuals experiencing disease progression or relapse will be grouped for sub-analysis to explore if and how relapse impacts study outcomes.\n\nHealthy Volunteers must:",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic"
+        ]
+      },
+      {
+        "id": "NCT05349227-exclusion-5",
+        "sourceText": "2. Must reside in the same dwelling as the patient participant",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-exclusion-6",
+        "sourceText": "3. Can read and consent to participate in the trial;",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 6,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-exclusion-7",
+        "sourceText": "4. Can read and speak English;",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 7,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT05349227-exclusion-8",
+        "sourceText": "5. Can complete study follow-up at pre-specified intervals;",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT05349227",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 8,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "cannot_assess": []
+  },
+  "contacts": [
+    {
+      "name": "Kelly J Brassil, PhD",
+      "role": "CONTACT",
+      "phone": "205-721-7542",
+      "email": "dgxpharesearch@questdiagnostics.com"
+    },
+    {
+      "name": "Jennifer Loftis, DNP",
+      "role": "CONTACT",
+      "phone": "205-721-7542",
+      "email": "dgxpharesearch@questdiagnostics.com"
+    }
+  ],
+  "disclaimers": [
+    "Visit Ready does not decide whether you qualify for this study. There is no eligibility score.",
+    "Do not get new medical tests just to use this tool. Bring records you already have.",
+    "A Spanish interface here does not mean the study can serve Spanish-speaking participants. Confirm with the study team.",
+    "Recruitment status and contacts come from the public registry and may be out of date — verify with the study team."
+  ]
+}

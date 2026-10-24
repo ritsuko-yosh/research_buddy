@@ -21,6 +21,68 @@ export interface CuratedExplanation {
   translationReviewed: boolean;
 }
 
+/**
+ * Curated, static plain-language SUMMARY of a study's public registry
+ * description ("About this study"). This is the free, safe alternative to a
+ * live LLM: the summary is written ahead of time, faithfully condenses the
+ * registry `briefSummary`, and adds no new facts or eligibility claims.
+ *
+ * SAFETY:
+ *  - Additive only: the ORIGINAL registry description is always still shown
+ *    (the UI keeps it available alongside/below this summary).
+ *  - `reviewed` records honestly whether a human has verified the summary.
+ *    Until then the UI labels it as drafted/unreviewed.
+ */
+export interface StudySummary {
+  summaryEn: string;
+  summaryEs: string | null;
+  /** True only after a human has reviewed the summary for accuracy. */
+  reviewed: boolean;
+}
+
+/**
+ * nctId -> plain-language study summary. Faithful condensations of each study's
+ * real ClinicalTrials.gov brief summary. Marked unreviewed until a teammate
+ * verifies them; the UI labels unreviewed summaries accordingly.
+ */
+export const STUDY_SUMMARIES: Record<string, StudySummary> = {
+  NCT02896335: {
+    summaryEn:
+      "This study is testing two drugs — palbociclib and pembrolizumab — as a possible treatment for cancer that has spread to the brain or spinal cord (central nervous system). It focuses on people whose CNS lesions have grown or returned, including some who have had prior radiation or surgery. The study team decides who fits based on your scans and medical history.",
+    summaryEs:
+      "Este estudio evalúa dos medicamentos — palbociclib y pembrolizumab — como posible tratamiento para el cáncer que se ha diseminado al cerebro o la médula espinal (sistema nervioso central). Se centra en personas cuyas lesiones del SNC han crecido o reaparecido, incluidas algunas que han recibido radiación o cirugía previa. El equipo del estudio decide quién cumple los requisitos según sus imágenes e historial médico.",
+    reviewed: false,
+  },
+  NCT04986579: {
+    summaryEn:
+      "This study looks at scalp cooling — using the Paxman Scalp Cooling System — to see whether it can reduce hair loss in people with metastatic breast cancer who are starting certain chemotherapy regimens. Participants choose whether to use scalp cooling, and the study follows how their hair responds.",
+    summaryEs:
+      "Este estudio evalúa el enfriamiento del cuero cabelludo — con el sistema Paxman — para ver si puede reducir la caída del cabello en personas con cáncer de mama metastásico que comienzan ciertos regímenes de quimioterapia. Los participantes eligen si usar el enfriamiento, y el estudio observa cómo responde su cabello.",
+    reviewed: false,
+  },
+  NCT05349227: {
+    summaryEn:
+      "This study explores whether a digital health coaching program can help people who have finished their main cancer treatment. About 625 people with different cancer types take part. One group gets 6 months of digital coaching first, then 6 months of monitoring; the other group is monitored first, then coached. Both groups share questionnaires, clinical data, wearable-device data, and stool (microbiome) samples. The goal is to see if digital coaching can improve how people do after treatment.",
+    summaryEs:
+      "Este estudio explora si un programa digital de asesoría de salud puede ayudar a las personas que terminaron su tratamiento principal contra el cáncer. Participan unas 625 personas con distintos tipos de cáncer. Un grupo recibe primero 6 meses de asesoría digital y luego 6 meses de seguimiento; el otro grupo se monitorea primero y recibe asesoría después. Ambos grupos comparten cuestionarios, datos clínicos, datos de dispositivos portátiles y muestras de microbioma (heces). El objetivo es ver si la asesoría digital puede mejorar la evolución tras el tratamiento.",
+    reviewed: false,
+  },
+  NCT06052488: {
+    summaryEn:
+      "This study tests whether a group exercise program called 'Strength After Breast Cancer' can be run in an outpatient physical therapy clinic to improve physical function for women after breast cancer treatment. It looks at whether the program is practical to deliver and what would help offer it at other clinics. Participants fill out questionnaires before and after the program and take part in interviews afterward.",
+    summaryEs:
+      "Este estudio evalúa si un programa de ejercicio en grupo llamado 'Strength After Breast Cancer' puede ofrecerse en una clínica ambulatoria de fisioterapia para mejorar la función física de mujeres tras el tratamiento del cáncer de mama. Analiza si el programa es práctico de implementar y qué ayudaría a ofrecerlo en otras clínicas. Las participantes completan cuestionarios antes y después del programa y participan en entrevistas al finalizar.",
+    reviewed: false,
+  },
+  NCT02012699: {
+    summaryEn:
+      "This is a research repository (called iCaRe2), not a treatment study. It collects and manages standardized health information and biological samples from consenting adults — cancer patients, high-risk individuals, and healthy controls — including many from small and rural hospitals. Researchers use it as a shared resource to study what causes cancer and to develop better prevention, screening, early detection, and treatment.",
+    summaryEs:
+      "Este es un repositorio de investigación (llamado iCaRe2), no un estudio de tratamiento. Recopila y gestiona información de salud estandarizada y muestras biológicas de adultos que dan su consentimiento — pacientes con cáncer, personas de alto riesgo y controles sanos — incluidos muchos de hospitales pequeños y rurales. Los investigadores lo usan como recurso compartido para estudiar las causas del cáncer y desarrollar mejor prevención, detección temprana y tratamiento.",
+    reviewed: false,
+  },
+};
+
 /** nctId -> list of curated explanations (matched by substring). */
 export const CURATED: Record<string, CuratedExplanation[]> = {
   NCT02896335: [
