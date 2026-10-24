@@ -9,7 +9,7 @@ import { BrandMark } from './components/BrandMark';
 import { HomePage } from './components/home/HomePage';
 import { LanguageToggle } from './components/LanguageToggle';
 import { NavBar, type Page } from './components/NavBar';
-import { HomeLanding } from './components/pages/HomeLanding';
+import { HomeHero, type SearchTarget } from './components/home/HomeHero';
 import { AboutPage } from './components/pages/AboutPage';
 import { PreparationCard } from './components/PreparationCard';
 import { ResultsList, type ResultsState } from './components/ResultsList';
@@ -74,6 +74,30 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
     if (window.location.hash !== `#/${next}`) window.location.hash = `#/${next}`;
     window.scrollTo?.(0, 0);
   }, []);
+
+  // From the Home hero doors: go to the Search page, then focus/scroll to the
+  // hinted area (condition field, NCT field, or the browse garden) once it renders.
+  const goToSearch = useCallback(
+    (target?: SearchTarget) => {
+      navigate('search');
+      const targetId =
+        target === 'condition'
+          ? 'condition-input'
+          : target === 'nct'
+            ? 'nct-input'
+            : target === 'garden'
+              ? 'garden-heading'
+              : null;
+      if (targetId) {
+        window.setTimeout(() => {
+          const el = document.getElementById(targetId);
+          el?.scrollIntoView?.({ block: 'center' });
+          el?.focus?.({ preventScroll: true });
+        }, 0);
+      }
+    },
+    [navigate],
+  );
 
   // Move focus to the new step's heading so keyboard and screen reader users land in the right place.
   useEffect(() => {
@@ -154,7 +178,7 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
           </p>
         )}
 
-        {page === 'home' && <HomeLanding m={m} onStart={() => navigate('search')} />}
+        {page === 'home' && <HomeHero m={m} onGoToSearch={goToSearch} />}
 
         {page === 'about' && <AboutPage m={m} />}
 

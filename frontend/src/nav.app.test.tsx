@@ -26,20 +26,22 @@ describe('Primary navigation: Home / Search / About', () => {
     expect(screen.getByRole('link', { name: en.navAbout })).toBeInTheDocument();
   });
 
-  it('defaults to the Home landing page (no hash)', () => {
+  it('defaults to the Home landing page (hero), not About', () => {
     // local beforeEach set hash to '' -> Home is the default landing.
     renderApp();
-    expect(screen.getByRole('heading', { name: en.homeHeading })).toBeInTheDocument();
+    // The hero headline + "where to start" doors are the Home content.
+    expect(screen.getByRole('heading', { name: new RegExp(en.heroEmphasis) })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: en.aboutPageHeading })).not.toBeInTheDocument();
   });
 
   it('navigates from Home to Search via the nav', async () => {
     const user = userEvent.setup();
     renderApp();
-    expect(screen.getByRole('heading', { name: en.homeHeading })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) })).toBeInTheDocument();
     await user.click(screen.getByRole('link', { name: en.navSearch }));
-    // Leaving Home: the landing heading is gone.
-    expect(screen.queryByRole('heading', { name: en.homeHeading })).not.toBeInTheDocument();
+    // Leaving Home: the hero doors are gone.
+    expect(screen.queryByRole('button', { name: new RegExp(en.doorConditionTitle) })).not.toBeInTheDocument();
   });
 
   it('navigates to the About page and shows the safety boundaries', async () => {
@@ -52,13 +54,14 @@ describe('Primary navigation: Home / Search / About', () => {
     expect(screen.getByText(en.aboutNot1)).toBeInTheDocument();
   });
 
-  it('Home CTA starts the search experience', async () => {
+  it('a Home hero door starts the search experience', async () => {
     const user = userEvent.setup();
     renderApp(); // starts on Home (no hash)
-    expect(screen.getByRole('heading', { name: en.homeHeading })).toBeInTheDocument();
-    // The CTA moves into the search experience.
-    await user.click(screen.getByRole('button', { name: en.homeCta }));
-    expect(screen.queryByRole('heading', { name: en.homeHeading })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) })).toBeInTheDocument();
+    // Clicking the condition door moves into the search experience.
+    await user.click(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) }));
+    expect(screen.getByRole('navigation', { name: en.navLabel })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: new RegExp(en.doorConditionTitle) })).not.toBeInTheDocument();
   });
 
   it('honors a deep-link hash (#/about) on load', () => {
