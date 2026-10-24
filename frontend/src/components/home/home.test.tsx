@@ -16,35 +16,40 @@ function renderHome(index = TEST_TOPIC_INDEX) {
   return render(<App dataSource={fixtureSource} topicIndex={index} />);
 }
 
-describe('homepage doors', () => {
-  it.each([
-    ['explainer', en.doorStartTitle, 'explainer-heading'],
-    ['research areas', en.doorExploreTitle, 'garden-heading'],
-  ])('moves focus to the %s heading', async (_label, buttonName, targetId) => {
+describe('home hero doors (now on the Home page, route to Search)', () => {
+  function renderOnHome(index = TEST_TOPIC_INDEX) {
+    window.location.hash = '#/home';
+    return render(<App dataSource={fixtureSource} topicIndex={index} />);
+  }
+
+  it('the condition door routes to Search and focuses the condition input', async () => {
     const user = userEvent.setup();
-    renderHome();
-
-    await user.click(screen.getByRole('button', { name: new RegExp(buttonName) }));
-
-    expect(document.activeElement).toBe(document.getElementById(targetId));
-  });
-
-  it('moves focus to the condition search input', async () => {
-    const user = userEvent.setup();
-    renderHome();
+    renderOnHome();
 
     await user.click(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) }));
 
+    expect(document.getElementById('condition-input')).toBeInTheDocument();
     expect(document.activeElement).toBe(document.getElementById('condition-input'));
   });
 
-  it('moves focus to the study ID input', async () => {
+  it('the study ID door routes to Search and focuses the NCT input', async () => {
     const user = userEvent.setup();
-    renderHome();
+    renderOnHome();
 
     await user.click(screen.getByRole('button', { name: new RegExp(en.doorNctTitle) }));
 
+    expect(document.getElementById('nct-input')).toBeInTheDocument();
     expect(document.activeElement).toBe(document.getElementById('nct-input'));
+  });
+
+  it('the "explore research" door routes to Search (browse garden)', async () => {
+    const user = userEvent.setup();
+    renderOnHome();
+
+    await user.click(screen.getByRole('button', { name: new RegExp(en.doorExploreTitle) }));
+
+    // Landed on Search: the browse garden heading is present.
+    expect(document.getElementById('garden-heading')).toBeInTheDocument();
   });
 });
 
@@ -156,14 +161,8 @@ describe('motion rules (styles.css)', () => {
 });
 
 describe('search error is never shown before submit', () => {
-  it('shows no invalid state on first render, or after the condition door moves focus to the field', async () => {
-    const user = userEvent.setup();
+  it('shows no invalid state on first render of the search page', () => {
     renderHome();
-
-    expect(screen.queryByText(en.conditionInvalid)).not.toBeInTheDocument();
-    expect(document.getElementById('condition-input')).toHaveAttribute('aria-invalid', 'false');
-
-    await user.click(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) }));
 
     expect(screen.queryByText(en.conditionInvalid)).not.toBeInTheDocument();
     expect(document.getElementById('condition-input')).toHaveAttribute('aria-invalid', 'false');
