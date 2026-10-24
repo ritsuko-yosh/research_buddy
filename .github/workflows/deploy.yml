@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+# Builds the Visit Ready frontend (which bundles the backend data pipeline via
+# the "@backend" Vite alias) and publishes it to GitHub Pages.
+#
+# One-time setup required by a repo admin:
+#   Settings -> Pages -> Build and deployment -> Source: "GitHub Actions"
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; newer pushes cancel in-progress runs.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Root deps: the frontend bundles the backend pipeline (src/**) via the
+      # "@backend" alias, so install root deps too for a clean, reproducible build.
+      - name: Install root dependencies
+        run: npm ci || npm install
+
+      - name: Install frontend dependencies
+        run: npm ci || npm install
+        working-directory: frontend
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: frontend
+        env:
+          # Project site base path: https://<owner>.github.io/research_buddy/
+          VITE_BASE: /research_buddy/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
