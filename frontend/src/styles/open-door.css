@@ -123,7 +123,9 @@ main.od-main-home > .disclaimer { margin: 0; border: 0; border-radius: 0; backgr
 
 .od-explain p, .od-steps p { font-size: 15px; color: var(--muted); margin: 0; }
 
-.od-steps .od-step-n { font-size: 13px; color: var(--lang-accent); font-weight: 700; }
+.od-steps { list-style: none; padding: 0; margin: 0; }
+
+.od-steps .od-step-n { display: block; font-size: 13px; color: var(--lang-accent); font-weight: 700; margin-bottom: 4px; }
 
 .od-steps h3 { font-size: 19px; font-weight: 600; margin: 4px 0; }
 

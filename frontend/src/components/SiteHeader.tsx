@@ -29,7 +29,7 @@ export function SiteHeader({ m, locale, onLocale, onHome, onSearch, hidden }: Si
         </span>
       </button>
 
-      <nav className="site-nav" aria-label={m.appName}>
+      <nav className="site-nav" aria-label={m.navLabel}>
         <button type="button" className="link" onClick={() => onHome('explore')}>
           {m.navExplore}
         </button>
