@@ -17,9 +17,11 @@ inclusion: always
 - **Demo study:** `NCT02896335` (recruiting at MGH Boston). Raw record cached at
   `src/data/cache/NCT02896335.raw.json`; envelope + fixture rebuilt via
   `npm run refresh-cache` / `scripts/build-fixture.ts`.
-- **Fixtures for Person A:** `fixtures/trial.NCT02896335.json`,
-  `fixtures/preparation-card.NCT02896335.json`, and the coordinator inquiry
-  text files.
+- **Fixtures for Person A:** `fixtures/trial.NCT02896335.json` (detail),
+  `fixtures/preparation-card.NCT02896335.json`, the coordinator inquiry text
+  files, `fixtures/search-results.json` (+ `.empty.json`) for the list UI, and
+  `fixtures/trial.SPARSE-DEMO.json` for missing-data states. Card-level shape is
+  `TrialSummary`/`SearchResults` in the contract; derive via `toTrialSummary`.
 - **Commands:** `npm test` (vitest run), `npm run typecheck`, `npm run build`,
   `npm run refresh-cache`.
 - **Division of work:** Person B owns data/API/safety/tests. Do not build or

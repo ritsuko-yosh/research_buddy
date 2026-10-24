@@ -183,3 +183,45 @@ export interface Trial {
   /** Live vs. cache provenance and freshness. */
   dataSource: DataSource;
 }
+
+/**
+ * Lightweight card-level projection of a `Trial` for search-results lists.
+ * Additive to the contract (v1.0.0): a `TrialSummary` is derivable from a full
+ * `Trial` and carries only what a result card needs to render. It still exposes
+ * no eligibility verdict or score.
+ */
+export interface TrialSummary {
+  nctId: string;
+  title: string;
+  /** STUDY-WIDE recruitment status. */
+  recruitmentStatus: string | null;
+  /** First city/state we have a recruiting (or any) site in, for the card line. */
+  primaryLocation: string | null;
+  /** Count of sites located in Massachusetts (study may have many elsewhere). */
+  massachusettsSiteCount: number;
+  /** True when at least one Massachusetts site is itself RECRUITING. */
+  hasRecruitingMaSite: boolean;
+  /** Whether a study-level contact exists (card can show a "contact available" hint). */
+  hasContact: boolean;
+  lastRegistryUpdate: string | null;
+  stale: boolean;
+  /** Explicit language-requirement status for a card badge. */
+  languageRequirement: LanguageRequirementStatus;
+  /** Whether curated plain-language explanations exist for this study. */
+  hasCuratedContent: boolean;
+  sourceUrl: string;
+}
+
+/** The response shape returned by a search, for the results-list UI. */
+export interface SearchResults {
+  contractVersion: string;
+  query: {
+    condition: string;
+    location: string | null;
+    status: string | null;
+  };
+  /** ISO-8601 timestamp when the search was performed. */
+  fetchedAt: string;
+  totalReturned: number;
+  results: TrialSummary[];
+}

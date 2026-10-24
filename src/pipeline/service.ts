@@ -15,7 +15,8 @@ import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
-import type { Trial } from "../contract/types.js";
+import type { SearchResults, Trial, TrialSummary } from "../contract/types.js";
+import { CONTRACT_VERSION } from "../contract/types.js";
 import {
   ApiError,
   isValidNctId,
@@ -27,6 +28,7 @@ import {
 import { enrichTrial } from "./enrich.js";
 import { normalizeStudy, type NormalizeOptions } from "./normalize.js";
 import type { RawStudy } from "./raw.js";
+import { toTrialSummary } from "./summary.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CACHE_DIR = join(__dirname, "..", "data", "cache");
@@ -136,5 +138,25 @@ export class TrialService {
       }
     }
     return out;
+  }
+
+  /**
+   * Search and return card-level summaries plus query echo, shaped for the
+   * results-list UI (`SearchResults`).
+   */
+  async searchTrialSummaries(params: SearchParams): Promise<SearchResults> {
+    const trials = await this.searchTrials(params);
+    const results: TrialSummary[] = trials.map(toTrialSummary);
+    return {
+      contractVersion: CONTRACT_VERSION,
+      query: {
+        condition: params.condition,
+        location: params.location ?? null,
+        status: params.status ?? null,
+      },
+      fetchedAt: new Date().toISOString(),
+      totalReturned: results.length,
+      results,
+    };
   }
 }

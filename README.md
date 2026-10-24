@@ -33,9 +33,17 @@ See [`.kiro/steering/safety.md`](.kiro/steering/safety.md).
 `Criterion`. Import it directly. Bump `CONTRACT_VERSION` on breaking changes and
 coordinate. A ready fixture is committed so Person A can build immediately:
 
-- `fixtures/trial.NCT02896335.json` — a normalized real study.
+- `fixtures/trial.NCT02896335.json` — a normalized real study (detail view).
 - `fixtures/preparation-card.NCT02896335.json`
 - `fixtures/coordinator-inquiry.NCT02896335.{en,es}.txt`
+- `fixtures/search-results.json` — real MA studies as `TrialSummary` cards (demo
+  study pinned first) for the results-list UI.
+- `fixtures/search-results.empty.json` — zero-result empty state.
+- `fixtures/trial.SPARSE-DEMO.json` — an intentionally sparse study (no contacts/
+  locations, `not_stated` language, `unsegmentable` criterion, stale listing) for
+  designing missing-data / empty states.
+
+Rebuild the list/sparse fixtures with `npx tsx scripts/build-search-fixtures.ts`.
 
 ## Usage
 

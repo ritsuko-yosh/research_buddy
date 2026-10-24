@@ -24,6 +24,7 @@ export {
 } from "./pipeline/criteria.js";
 export { detectLanguageRequirement } from "./pipeline/language.js";
 export { enrichTrial } from "./pipeline/enrich.js";
+export { toTrialSummary } from "./pipeline/summary.js";
 export {
   buildPreparationCard,
   buildCoordinatorInquiry,
