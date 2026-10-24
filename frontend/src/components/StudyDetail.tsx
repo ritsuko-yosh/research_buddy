@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import type { Locale, Messages } from '../i18n/strings';
 import { groupBySection, sectionLabel, type SectionGroup } from '../lib/sections';
+import { fetchPlainLanguageSummary, isSummaryEnabled } from '../lib/summary';
 import type { Trial } from '../types/trial';
 import { LanguageNotice, RegistryNotice } from './Notices';
 import { VerificationMap } from './VerificationMap';
@@ -20,6 +22,50 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
   const englishDescription = trial.description.en;
   const groups = groupBySection(trial.criteria);
 
+  // AI plain-language summary of the public registry description. Additive and
+  // optional: it never replaces the original text (shown in full below), and if
+  // the endpoint is unconfigured or fails, this stays null and the UI simply
+  // shows the registry description. The disclaimer labels it as AI-generated.
+  const summarySource = trial.description.en; // summarize the registry source text
+  const [summary, setSummary] = useState<string | null>(null);
+  const [summaryLoading, setSummaryLoading] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    setSummary(null);
+    if (!isSummaryEnabled() || !summarySource) return;
+    setSummaryLoading(true);
+    fetchPlainLanguageSummary(summarySource, locale)
+      .then((result) => {
+        if (!cancelled) setSummary(result);
+      })
+      .finally(() => {
+        if (!cancelled) setSummaryLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [summarySource, locale]);
+
+  // Renders the ORIGINAL registry description with the existing locale fallback.
+  function renderDescription() {
+    if (descriptionInLocale) {
+      return <p lang={locale}>{descriptionInLocale}</p>;
+    }
+    if (englishDescription && locale === 'es') {
+      return (
+        <>
+          <p className="unavailable-note">{m.descriptionUnavailable}</p>
+          <p lang="en">{englishDescription}</p>
+        </>
+      );
+    }
+    if (englishDescription) {
+      return <p lang="en">{englishDescription}</p>;
+    }
+    return <p>{m.noDescription}</p>;
+  }
+
   return (
     <article className="card" aria-labelledby="study-title">
       <div className="no-print">
@@ -38,13 +84,30 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
 
       <section aria-labelledby="about-heading" style={{ marginTop: '1.25rem' }}>
         <h2 id="about-heading">{m.aboutHeading}</h2>
-        {descriptionInLocale ? (
-          <p lang={locale}>{descriptionInLocale}</p>
-        ) : englishDescription && locale === 'es' ? (
-          <>
-            <p className="unavailable-note">{m.descriptionUnavailable}</p>
-            <p lang="en">{englishDescription}</p>
-          </>
+
+        {/* AI plain-language summary (optional, additive, clearly labeled). */}
+        {summaryLoading && <p className="help" role="status">{m.aiSummaryLoading}</p>}
+        {summary && (
+          <div className="ai-summary">
+            <h3>{m.aiSummaryHeading}</h3>
+            <p lang={locale}>{summary}</p>
+            <p className="badge machine" role="note">
+              {m.aiSummaryDisclaimer}
+            </p>
+          </div>
+        )}
+
+        {/* Original registry description — always preserved. In a dropdown when
+            an AI summary is present, otherwise shown directly. */}
+        {descriptionInLocale || (englishDescription && locale === 'es') || englishDescription ? (
+          summary ? (
+            <details className="card-inner" style={{ marginTop: '0.75rem' }}>
+              <summary>{m.fullDescriptionToggle}</summary>
+              {renderDescription()}
+            </details>
+          ) : (
+            renderDescription()
+          )
         ) : (
           <p>{m.noDescription}</p>
         )}

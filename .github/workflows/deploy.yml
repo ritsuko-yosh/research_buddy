@@ -48,6 +48,9 @@ jobs:
         env:
           # Project site base path: https://<owner>.github.io/research_buddy/
           VITE_BASE: /research_buddy/
+          # Optional: URL of the Vercel AI-summary function. Leave the repo
+          # variable unset to ship with AI summaries disabled (app still works).
+          VITE_SUMMARY_ENDPOINT: ${{ vars.VITE_SUMMARY_ENDPOINT }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
