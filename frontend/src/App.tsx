@@ -3,6 +3,7 @@ import { dataSource as defaultDataSource } from './data/adapter';
 import { messages, type Locale } from './i18n/strings';
 import { normalizeNctId } from './lib/nctId';
 import type { Trial, TrialDataSource } from './types/trial';
+import { BrandMark } from './components/BrandMark';
 import { LanguageToggle } from './components/LanguageToggle';
 import { PreparationCard } from './components/PreparationCard';
 import { ResultsList, type ResultsState } from './components/ResultsList';
@@ -87,9 +88,12 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
       </a>
 
       <header className="site-header no-print">
-        <div>
-          <p className="app-name">{m.appName}</p>
-          <p className="tagline">{m.tagline}</p>
+        <div className="brand">
+          <BrandMark />
+          <div>
+            <p className="app-name">{m.appName}</p>
+            <p className="tagline">{m.tagline}</p>
+          </div>
         </div>
         <LanguageToggle locale={locale} label={m.languageLabel} onChange={setLocale} />
       </header>
