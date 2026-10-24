@@ -2,8 +2,11 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { dataSource as defaultDataSource } from './data/adapter';
 import { messages, type Locale } from './i18n/strings';
 import { normalizeNctId } from './lib/nctId';
+import { presetTerms, type TopicIndex } from './lib/topicIndex';
+import { loadTopicIndex } from './data/topicIndexSource';
 import type { Trial, TrialDataSource } from './types/trial';
 import { BrandMark } from './components/BrandMark';
+import { HomePage } from './components/home/HomePage';
 import { LanguageToggle } from './components/LanguageToggle';
 import { PreparationCard } from './components/PreparationCard';
 import { ResultsList, type ResultsState } from './components/ResultsList';
@@ -18,9 +21,13 @@ type View =
 interface AppProps {
   /** Production uses the live ClinicalTrials.gov adapter. Tests inject fixtures explicitly. */
   dataSource?: TrialDataSource;
+  /** Production reads the committed topic file. Tests inject a labeled test index. Pass null for the unavailable state. */
+  topicIndex?: TopicIndex | null;
 }
 
-export default function App({ dataSource = defaultDataSource }: AppProps) {
+const defaultTopicIndex = loadTopicIndex();
+
+export default function App({ dataSource = defaultDataSource, topicIndex = defaultTopicIndex }: AppProps) {
   const [locale, setLocale] = useState<Locale>('en');
   const [view, setView] = useState<View>({ name: 'search' });
   const [results, setResults] = useState<ResultsState>({ status: 'idle' });
@@ -92,13 +99,13 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
           <BrandMark />
           <div>
             <p className="app-name">{m.appName}</p>
-            <p className="tagline">{m.tagline}</p>
+            <p className="brand-subtitle">{m.brandSubtitle}</p>
           </div>
         </div>
         <LanguageToggle locale={locale} label={m.languageLabel} onChange={setLocale} />
       </header>
 
-      <main id="main" ref={mainRef} tabIndex={-1}>
+      <main id="main" ref={mainRef} tabIndex={-1} className={view.name === 'search' ? 'od-main-home' : undefined}>
         <p className="disclaimer no-print">{m.disclaimer}</p>
         {locale === 'es' && (
           <p className="notice warn" role="note">
@@ -107,11 +114,22 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
         )}
 
         {view.name === 'search' && (
-          <>
+          <HomePage
+            m={m}
+            locale={locale}
+            index={topicIndex}
+            onSearchTerm={(term) => {
+              void runSearch(term);
+              // Move the reader from the garden to the results once they render.
+              window.setTimeout(() => {
+                document.getElementById('results-heading')?.scrollIntoView?.({ block: 'start' });
+              }, 0);
+            }}
+          >
             <SearchPanel
               m={m}
-              locale={locale}
               nctState={nctState}
+              presets={topicIndex ? presetTerms(topicIndex) : []}
               onSearch={(term) => {
                 void runSearch(term);
               }}
@@ -132,7 +150,7 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
                 }
               }}
             />
-          </>
+          </HomePage>
         )}
 
         {view.name === 'study' && (

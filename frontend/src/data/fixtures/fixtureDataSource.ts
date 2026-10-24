@@ -6,7 +6,6 @@
  * ClinicalTrials.gov adapter in data/adapter.ts. Tests inject this source
  * explicitly through the App `dataSource` prop.
  */
-import { SUPPORTED_CONDITIONS } from '../conditions';
 import type { Trial, TrialDataSource, TrialSummary } from '../../types/trial';
 import { SAMPLE_TRIALS, type SampleEntry } from './sampleTrials';
 
@@ -30,9 +29,13 @@ function toSummary(trial: Trial): TrialSummary {
 }
 
 /** Maps a search term to the fixture condition id, when the term is a preset. */
+const TEST_TERM_TO_CONDITION: Record<string, string> = {
+  'type 2 diabetes': 'type_2_diabetes',
+  asthma: 'asthma',
+};
+
 function conditionIdForTerm(term: string): string | null {
-  const preset = SUPPORTED_CONDITIONS.find((condition) => condition.term === term);
-  return preset ? preset.id : null;
+  return TEST_TERM_TO_CONDITION[term] ?? null;
 }
 
 export function createFixtureDataSource(entries: readonly SampleEntry[] = SAMPLE_TRIALS): TrialDataSource {
