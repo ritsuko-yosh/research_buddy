@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visit Ready</title>
+    <!--
+      GitHub Pages serves this for unknown paths. Visit Ready is a single-page
+      app with no client-side router, so any deep link or refresh is sent back
+      to the app root under the project base path.
+    -->
+    <script>
+      (function () {
+        var base = '/research_buddy/';
+        if (window.location.pathname !== base) {
+          window.location.replace(base);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/research_buddy/">Visit Ready</a>…</p>
+  </body>
+</html>
