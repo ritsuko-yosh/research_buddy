@@ -95,6 +95,11 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
 
       <main id="main" ref={mainRef} tabIndex={-1}>
         <p className="disclaimer no-print">{m.disclaimer}</p>
+        {locale === 'es' && (
+          <p className="notice warn" role="note">
+            {m.esInterfaceNotice}
+          </p>
+        )}
 
         {view.name === 'search' && (
           <>

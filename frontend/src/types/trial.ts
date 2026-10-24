@@ -16,7 +16,8 @@ export type RecruitmentStatus =
   | 'other'
   | 'unknown';
 
-export type CriterionSection = 'inclusion' | 'exclusion';
+/** Matches the backend contract v1.0.0. "unspecified" must be shown, never dropped or labeled as an exclusion. */
+export type CriterionSection = 'inclusion' | 'exclusion' | 'unspecified';
 
 /** Grouping for the Verification Map. Assigned by the backend, not by the UI. */
 export type VerificationCategory =

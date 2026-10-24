@@ -1,4 +1,5 @@
 import type { Locale, Messages } from '../i18n/strings';
+import { sectionLabel } from '../lib/sections';
 import type { Criterion } from '../types/trial';
 import { TranslationBadge } from './Notices';
 
@@ -10,25 +11,27 @@ interface CriterionItemProps {
 
 /**
  * One requirement. The original registry wording is always visible. The plain
- * explanation follows the selected language and says so when it is missing.
+ * explanation follows the selected language. Spanish explanations carry their
+ * review label, and missing Spanish is stated rather than silently replaced.
  */
 export function CriterionItem({ m, locale, criterion }: CriterionItemProps) {
-  const plain = locale === 'es' ? criterion.plainExplanation.es : criterion.plainExplanation.en;
+  const isSpanish = locale === 'es';
+  const plain = isSpanish ? criterion.plainExplanation.es : criterion.plainExplanation.en;
 
   return (
     <article className="criterion">
       <p>
-        <span className="tag">{criterion.section === 'inclusion' ? m.inclusion : m.exclusion}</span>
+        <span className="tag">{sectionLabel(criterion.section, m)}</span>
       </p>
 
       <h4>{m.plainHeading}</h4>
       {plain ? (
         <>
+          {isSpanish && <TranslationBadge m={m} status={criterion.spanishTranslationStatus} />}
           <p lang={locale}>{plain}</p>
-          {locale === 'es' && <TranslationBadge m={m} status={criterion.spanishTranslationStatus} />}
         </>
       ) : (
-        <p className="unavailable-note">{locale === 'es' ? m.noSpanish : m.noPlain}</p>
+        <p className="unavailable-note">{isSpanish ? m.noSpanish : m.noPlain}</p>
       )}
 
       <div>
@@ -40,10 +43,10 @@ export function CriterionItem({ m, locale, criterion }: CriterionItemProps) {
 
       {criterion.uncertaintyNotes.length > 0 && (
         <div>
-          <h4>{m.uncertaintyHeading}</h4>
+          <h4>{isSpanish ? `${m.uncertaintyHeading} ${m.uncertaintyEnglishOnly}` : m.uncertaintyHeading}</h4>
           <ul>
-            {criterion.uncertaintyNotes.map((note) => (
-              <li key={note} lang="en">
+            {criterion.uncertaintyNotes.map((note, index) => (
+              <li key={index} lang="en">
                 {note}
               </li>
             ))}

@@ -85,6 +85,11 @@ const en = {
   langNotListed:
     'The registry does not list a language requirement. This does not confirm whether interpreters or translated materials are available.',
   registryWording: 'Registry wording',
+  sectionUnspecified: 'Section not stated',
+  uncertaintyEnglishOnly: '(English only)',
+  languageSupportCaveat:
+    'Visit Ready is available in Spanish. That does not mean this study offers Spanish-language participation, interpreters, or translated study materials. Only the study team can confirm what is available.',
+  esInterfaceNotice: 'Spanish interface text was drafted by a machine and has not been reviewed by a person.',
 
   mapHeading: 'Verification Map',
   mapIntro:
@@ -98,7 +103,7 @@ const en = {
   categoryActions: {
     self_answer: 'You may be able to answer this yourself. Check with the study team if you are unsure.',
     check_records:
-      'You may find this in a medical record or a recent test result. Bring the information to the study team.',
+      'If this information is already in your medical records or test results, bring it to the study team.',
     ask_study_team: 'This needs the study team or your own doctor to explain. Add it to your questions.',
     cannot_assess: 'The public information is not clear enough to assess. Ask the study team what this means.',
   } satisfies Record<VerificationCategory, string>,
@@ -217,6 +222,11 @@ const es: Messages = {
   langNotListed:
     'El registro no indica un requisito de idioma. Esto no confirma si hay intérpretes o materiales traducidos.',
   registryWording: 'Texto original del registro',
+  sectionUnspecified: 'Sección no indicada',
+  uncertaintyEnglishOnly: '(solo en inglés)',
+  languageSupportCaveat:
+    'Visit Ready está disponible en español. Eso no significa que este estudio ofrezca participación en español, intérpretes ni materiales traducidos. Solo el equipo del estudio puede confirmar qué está disponible.',
+  esInterfaceNotice: 'El texto de esta interfaz en español fue redactado por una máquina y aún no ha sido revisado por una persona.',
 
   mapHeading: 'Mapa de verificación',
   mapIntro:
@@ -230,7 +240,7 @@ const es: Messages = {
   categoryActions: {
     self_answer: 'Quizás pueda responderlo usted mismo. Consúltelo con el equipo del estudio si tiene dudas.',
     check_records:
-      'Es posible que esto aparezca en un expediente médico o en un resultado de prueba reciente. Lleve esa información al equipo del estudio.',
+      'Si esta información ya está en sus registros médicos o resultados de pruebas, llévela al equipo del estudio.',
     ask_study_team:
       'Esto necesita que el equipo del estudio o su propio médico lo explique. Añádalo a sus preguntas.',
     cannot_assess:
