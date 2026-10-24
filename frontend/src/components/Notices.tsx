@@ -1,5 +1,6 @@
 import type { Locale, Messages } from '../i18n/strings';
 import { formatRegistryDate } from '../lib/format';
+import { DEFAULT_STALE_THRESHOLD_DAYS, isRegistryListingStale } from '../lib/freshness';
 import type { LanguageRequirementStatus, Trial, TranslationStatus } from '../types/trial';
 
 interface RegistryNoticeProps {
@@ -12,6 +13,8 @@ interface RegistryNoticeProps {
 export function RegistryNotice({ m, locale, trial }: RegistryNoticeProps) {
   const originText =
     trial.dataOrigin === 'live' ? m.originLive : trial.dataOrigin === 'cached' ? m.originCached : m.originSample;
+  // null means the date is unknown, so no staleness claim is made.
+  const stale = isRegistryListingStale(trial.registryUpdateDate);
 
   return (
     <section
@@ -29,6 +32,12 @@ export function RegistryNotice({ m, locale, trial }: RegistryNoticeProps) {
         <dt>{m.originLabel}</dt>
         <dd>{originText}</dd>
       </dl>
+      {trial.dataOrigin === 'cached' && <p role="note">{m.cachedNotice}</p>}
+      {stale === true && (
+        <p className="notice warn" role="note">
+          {m.staleNotice(DEFAULT_STALE_THRESHOLD_DAYS)}
+        </p>
+      )}
       <p>{m.statusNote}</p>
     </section>
   );

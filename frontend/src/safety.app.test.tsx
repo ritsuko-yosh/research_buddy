@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 import App from './App';
-import { createFixtureDataSource } from './data/adapter';
+import { createFixtureDataSource } from './data/fixtures/fixtureDataSource';
 import { SAMPLE_TRIALS } from './data/fixtures/sampleTrials';
 import { messages } from './i18n/strings';
 import { findNewTestSuggestions } from './test/wording';
@@ -11,6 +11,7 @@ import type { Criterion, Trial, TrialDataSource } from './types/trial';
 const en = messages.en;
 const es = messages.es;
 
+const fixtureSource = createFixtureDataSource();
 const UNSPECIFIED_TEXT = 'Any other requirement not labeled as inclusion or exclusion in the registry.';
 
 /** Sample study A plus one criterion whose section the registry does not state. */
@@ -36,7 +37,7 @@ function sourceReturning(trial: Trial): TrialDataSource {
 
 /** Opens a study through the NCT ID field, which works for any record. */
 async function openStudy(user: ReturnType<typeof userEvent.setup>, dataSource?: TrialDataSource) {
-  render(dataSource ? <App dataSource={dataSource} /> : <App />);
+  render(<App dataSource={dataSource ?? fixtureSource} />);
   await user.type(screen.getByLabelText(en.nctLabel), 'NCT90000001');
   await user.click(screen.getByRole('button', { name: en.openStudy }));
   // Wait for the study heading specifically. The search page also has a level-1 heading.
@@ -125,7 +126,7 @@ describe('language support caveat', () => {
 describe('translation honesty', () => {
   it('states that the Spanish interface is machine-drafted, only in Spanish mode', async () => {
     const user = userEvent.setup();
-    render(<App />);
+    render(<App dataSource={fixtureSource} />);
     expect(screen.queryByText(es.esInterfaceNotice)).not.toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Español' }));

@@ -15,6 +15,7 @@ type View =
   | { name: 'prepare'; trial: Trial };
 
 interface AppProps {
+  /** Production uses the live ClinicalTrials.gov adapter. Tests inject fixtures explicitly. */
   dataSource?: TrialDataSource;
 }
 
@@ -43,13 +44,13 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
   }, [view]);
 
   const runSearch = useCallback(
-    async (conditionId: string) => {
-      setResults({ status: 'loading', conditionId });
+    async (term: string) => {
+      setResults({ status: 'loading', term });
       try {
-        const items = await dataSource.searchByCondition(conditionId);
-        setResults({ status: 'ready', conditionId, items });
+        const items = await dataSource.searchByCondition(term);
+        setResults({ status: 'ready', term, items });
       } catch {
-        setResults({ status: 'error', conditionId });
+        setResults({ status: 'error', term });
       }
     },
     [dataSource],
@@ -107,8 +108,8 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
               m={m}
               locale={locale}
               nctState={nctState}
-              onSelectCondition={(conditionId) => {
-                void runSearch(conditionId);
+              onSearch={(term) => {
+                void runSearch(term);
               }}
               onSubmitNct={(rawNctId) => {
                 void openStudy(rawNctId);
@@ -123,7 +124,7 @@ export default function App({ dataSource = defaultDataSource }: AppProps) {
               }}
               onRetry={() => {
                 if (results.status !== 'idle') {
-                  void runSearch(results.conditionId);
+                  void runSearch(results.term);
                 }
               }}
             />
