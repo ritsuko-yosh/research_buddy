@@ -25,13 +25,13 @@ const PAGES: readonly Page[] = ['home', 'search', 'about'];
 
 /**
  * Read the current page from the URL hash (#/home, #/search, #/about).
- * With no (or unknown) hash we default to 'search' — the app's working core —
- * so direct loads land on the search experience. Home/About are reachable via
- * the nav and their own hashes.
+ * With no (or unknown) hash we default to 'home' — the landing page — so first
+ * visits get the welcome and overview. Search/About are reachable via the nav
+ * and their own hashes.
  */
 function pageFromHash(): Page {
   const raw = (window.location.hash || '').replace(/^#\/?/, '').toLowerCase();
-  return (PAGES as readonly string[]).includes(raw) ? (raw as Page) : 'search';
+  return (PAGES as readonly string[]).includes(raw) ? (raw as Page) : 'home';
 }
 
 interface AppProps {

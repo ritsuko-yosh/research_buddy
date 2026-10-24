@@ -26,10 +26,19 @@ describe('Primary navigation: Home / Search / About', () => {
     expect(screen.getByRole('link', { name: en.navAbout })).toBeInTheDocument();
   });
 
-  it('defaults to the Search page (preserves prior behavior)', () => {
+  it('defaults to the Home landing page (no hash)', () => {
+    // local beforeEach set hash to '' -> Home is the default landing.
     renderApp();
-    // About and Home page headings are NOT shown on the default (search) load.
+    expect(screen.getByRole('heading', { name: en.homeHeading })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: en.aboutPageHeading })).not.toBeInTheDocument();
+  });
+
+  it('navigates from Home to Search via the nav', async () => {
+    const user = userEvent.setup();
+    renderApp();
+    expect(screen.getByRole('heading', { name: en.homeHeading })).toBeInTheDocument();
+    await user.click(screen.getByRole('link', { name: en.navSearch }));
+    // Leaving Home: the landing heading is gone.
     expect(screen.queryByRole('heading', { name: en.homeHeading })).not.toBeInTheDocument();
   });
 
@@ -43,14 +52,13 @@ describe('Primary navigation: Home / Search / About', () => {
     expect(screen.getByText(en.aboutNot1)).toBeInTheDocument();
   });
 
-  it('navigates to the Home landing page and can start a search from it', async () => {
+  it('Home CTA starts the search experience', async () => {
     const user = userEvent.setup();
-    renderApp();
-    await user.click(screen.getByRole('link', { name: en.navHome }));
+    renderApp(); // starts on Home (no hash)
     expect(screen.getByRole('heading', { name: en.homeHeading })).toBeInTheDocument();
-    // The CTA returns to the search experience.
+    // The CTA moves into the search experience.
     await user.click(screen.getByRole('button', { name: en.homeCta }));
-    expect(screen.queryByText(en.homeHeading)).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: en.homeHeading })).not.toBeInTheDocument();
   });
 
   it('honors a deep-link hash (#/about) on load', () => {
