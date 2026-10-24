@@ -7,12 +7,17 @@
   "engines": {
     "node": ">=20"
   },
+  "exports": {
+    ".": "./src/index.ts",
+    "./browser": "./src/browser/index.ts"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest --run",
     "test:watch": "vitest",
-    "refresh-cache": "tsx scripts/refresh-cache.ts"
+    "refresh-cache": "tsx scripts/refresh-cache.ts",
+    "verify-live": "tsx scripts/verify-live-adapter.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
