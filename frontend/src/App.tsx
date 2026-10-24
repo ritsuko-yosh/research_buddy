@@ -8,6 +8,9 @@ import type { Trial, TrialDataSource } from './types/trial';
 import { BrandMark } from './components/BrandMark';
 import { HomePage } from './components/home/HomePage';
 import { LanguageToggle } from './components/LanguageToggle';
+import { NavBar, type Page } from './components/NavBar';
+import { HomeLanding } from './components/pages/HomeLanding';
+import { AboutPage } from './components/pages/AboutPage';
 import { PreparationCard } from './components/PreparationCard';
 import { ResultsList, type ResultsState } from './components/ResultsList';
 import { SearchPanel, type NctFormState } from './components/SearchPanel';
@@ -17,6 +20,19 @@ type View =
   | { name: 'search' }
   | { name: 'study'; trial: Trial }
   | { name: 'prepare'; trial: Trial };
+
+const PAGES: readonly Page[] = ['home', 'search', 'about'];
+
+/**
+ * Read the current page from the URL hash (#/home, #/search, #/about).
+ * With no (or unknown) hash we default to 'search' — the app's working core —
+ * so direct loads land on the search experience. Home/About are reachable via
+ * the nav and their own hashes.
+ */
+function pageFromHash(): Page {
+  const raw = (window.location.hash || '').replace(/^#\/?/, '').toLowerCase();
+  return (PAGES as readonly string[]).includes(raw) ? (raw as Page) : 'search';
+}
 
 interface AppProps {
   /** Production uses the live ClinicalTrials.gov adapter. Tests inject fixtures explicitly. */
@@ -29,6 +45,9 @@ const defaultTopicIndex = loadTopicIndex();
 
 export default function App({ dataSource = defaultDataSource, topicIndex = defaultTopicIndex }: AppProps) {
   const [locale, setLocale] = useState<Locale>('en');
+  const [page, setPage] = useState<Page>(() =>
+    typeof window !== 'undefined' ? pageFromHash() : 'home',
+  );
   const [view, setView] = useState<View>({ name: 'search' });
   const [results, setResults] = useState<ResultsState>({ status: 'idle' });
   const [nctState, setNctState] = useState<NctFormState>({ status: 'idle' });
@@ -41,6 +60,21 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
     document.documentElement.lang = locale;
   }, [locale]);
 
+  // Keep page state in sync with the URL hash (back/forward, deep links).
+  useEffect(() => {
+    const onHashChange = () => setPage(pageFromHash());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  // Navigate to a top-level page and reflect it in the hash.
+  const navigate = useCallback((next: Page) => {
+    setPage(next);
+    if (next === 'search') setView({ name: 'search' });
+    if (window.location.hash !== `#/${next}`) window.location.hash = `#/${next}`;
+    window.scrollTo?.(0, 0);
+  }, []);
+
   // Move focus to the new step's heading so keyboard and screen reader users land in the right place.
   useEffect(() => {
     if (isFirstView.current) {
@@ -49,7 +83,7 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
     }
     const heading = mainRef.current?.querySelector<HTMLElement>('h1');
     (heading ?? mainRef.current)?.focus();
-  }, [view]);
+  }, [view, page]);
 
   const runSearch = useCallback(
     async (term: string) => {
@@ -105,7 +139,14 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
         <LanguageToggle locale={locale} label={m.languageLabel} onChange={setLocale} />
       </header>
 
-      <main id="main" ref={mainRef} tabIndex={-1} className={view.name === 'search' ? 'od-main-home' : undefined}>
+      <NavBar m={m} current={page} onNavigate={navigate} />
+
+      <main
+        id="main"
+        ref={mainRef}
+        tabIndex={-1}
+        className={page === 'search' && view.name === 'search' ? 'od-main-home' : undefined}
+      >
         <p className="disclaimer no-print">{m.disclaimer}</p>
         {locale === 'es' && (
           <p className="notice warn" role="note">
@@ -113,7 +154,11 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
           </p>
         )}
 
-        {view.name === 'search' && (
+        {page === 'home' && <HomeLanding m={m} onStart={() => navigate('search')} />}
+
+        {page === 'about' && <AboutPage m={m} />}
+
+        {page === 'search' && view.name === 'search' && (
           <HomePage
             m={m}
             locale={locale}
@@ -153,7 +198,7 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
           </HomePage>
         )}
 
-        {view.name === 'study' && (
+        {page === 'search' && view.name === 'study' && (
           <StudyDetail
             m={m}
             locale={locale}
@@ -163,7 +208,7 @@ export default function App({ dataSource = defaultDataSource, topicIndex = defau
           />
         )}
 
-        {view.name === 'prepare' && (
+        {page === 'search' && view.name === 'prepare' && (
           <PreparationCard
             m={m}
             locale={locale}

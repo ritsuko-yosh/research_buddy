@@ -30,6 +30,42 @@ const en = {
   quickQ: 'Already know what to search for?',
   quickLink: 'Search a condition or study ID',
 
+  // --- Primary navigation ---
+  navLabel: 'Primary',
+  navHome: 'Home',
+  navSearch: 'Search',
+  navAbout: 'About',
+
+  // --- Home page ---
+  homeHeading: 'Get ready for your clinical trial visit',
+  homeLead:
+    'Visit Ready helps you find a clinical trial, understand what it asks in plain language, and prepare focused questions for the study team.',
+  homeStep1Title: 'Find',
+  homeStep1Desc: 'Search by a health condition, or look up a study by its NCT ID.',
+  homeStep2Title: 'Understand',
+  homeStep2Desc: 'See the original requirements with plain-language explanations in English and Spanish.',
+  homeStep3Title: 'Prepare',
+  homeStep3Desc: 'Get a preparation card and a message you can send to the study team yourself.',
+  homeCta: 'Find a study',
+
+  // --- About page ---
+  aboutPageHeading: 'About Visit Ready',
+  aboutTrack: 'Hackachusetts 2026 — Healthcare & Biotech',
+  aboutWhat:
+    'Visit Ready is a multilingual clinical trial navigation and preparation tool. It bridges the gap between finding a trial and knowing what to do next.',
+  aboutDoesHeading: 'What Visit Ready does',
+  aboutDoes1: 'Finds real studies from ClinicalTrials.gov, focused on Massachusetts.',
+  aboutDoes2: 'Shows every original eligibility requirement with plain-language explanations.',
+  aboutDoes3: 'Groups requirements into what you can answer, check, ask the study team, or cannot assess.',
+  aboutDoes4: 'Flags language requirements and how recently the registry listing was updated.',
+  aboutDoes5: 'Prepares a card and a ready-to-copy message for the study team.',
+  aboutNotHeading: 'What Visit Ready does not do',
+  aboutNot1: 'It does not decide whether you qualify, and gives no eligibility score.',
+  aboutNot2: 'It does not give medical advice or recommend new tests.',
+  aboutNot3: 'A translated interface does not mean a study offers that language.',
+  aboutNot4: 'It never contacts the study team for you or shares your information.',
+  aboutSourceNote: 'Study data comes from the public ClinicalTrials.gov API. Always confirm details with the study team.',
+
   heroBefore: 'Clinical trials, ',
   heroEmphasis: 'explained',
   heroAfter: ' before you search.',
@@ -262,6 +298,42 @@ const es: Messages = {
   brandSubtitle: 'Listo para su visita',
   quickQ: '¿Ya sabe qué buscar?',
   quickLink: 'Buscar una condición o número de estudio',
+
+  // --- Navegación principal ---
+  navLabel: 'Principal',
+  navHome: 'Inicio',
+  navSearch: 'Buscar',
+  navAbout: 'Acerca de',
+
+  // --- Página de inicio ---
+  homeHeading: 'Prepárese para su visita de estudio clínico',
+  homeLead:
+    'Visit Ready le ayuda a encontrar un estudio clínico, entender lo que pide en lenguaje sencillo y preparar preguntas claras para el equipo del estudio.',
+  homeStep1Title: 'Encontrar',
+  homeStep1Desc: 'Busque por una condición de salud o consulte un estudio por su número NCT.',
+  homeStep2Title: 'Entender',
+  homeStep2Desc: 'Vea los requisitos originales con explicaciones en lenguaje sencillo en inglés y español.',
+  homeStep3Title: 'Preparar',
+  homeStep3Desc: 'Obtenga una tarjeta de preparación y un mensaje que usted mismo puede enviar al equipo del estudio.',
+  homeCta: 'Encontrar un estudio',
+
+  // --- Página "Acerca de" ---
+  aboutPageHeading: 'Acerca de Visit Ready',
+  aboutTrack: 'Hackachusetts 2026 — Salud y Biotecnología',
+  aboutWhat:
+    'Visit Ready es una herramienta multilingüe de navegación y preparación para estudios clínicos. Conecta el momento de encontrar un estudio con saber qué hacer después.',
+  aboutDoesHeading: 'Lo que hace Visit Ready',
+  aboutDoes1: 'Encuentra estudios reales de ClinicalTrials.gov, con enfoque en Massachusetts.',
+  aboutDoes2: 'Muestra cada requisito de elegibilidad original con explicaciones en lenguaje sencillo.',
+  aboutDoes3: 'Agrupa los requisitos en lo que puede responder, revisar, preguntar al equipo o no se puede evaluar.',
+  aboutDoes4: 'Señala los requisitos de idioma y qué tan reciente es la actualización del registro.',
+  aboutDoes5: 'Prepara una tarjeta y un mensaje listo para copiar para el equipo del estudio.',
+  aboutNotHeading: 'Lo que Visit Ready no hace',
+  aboutNot1: 'No decide si usted cumple los requisitos ni da un puntaje de elegibilidad.',
+  aboutNot2: 'No da consejo médico ni recomienda nuevas pruebas.',
+  aboutNot3: 'Una interfaz traducida no significa que un estudio ofrezca ese idioma.',
+  aboutNot4: 'Nunca contacta al equipo del estudio por usted ni comparte su información.',
+  aboutSourceNote: 'Los datos de los estudios provienen de la API pública de ClinicalTrials.gov. Confirme siempre los detalles con el equipo del estudio.',
 
   heroBefore: 'Estudios clínicos, ',
   heroEmphasis: 'explicados',
