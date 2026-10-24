@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import type { Locale, Messages } from '../../i18n/strings';
 import { formatRegistryDate } from '../../lib/format';
+import { spawnRipple } from '../../lib/ripple';
 import type { Topic, TopicIndex } from '../../lib/topicIndex';
 import { GouacheFilter } from './DoorIllustration';
 
@@ -10,6 +11,9 @@ interface TopicGardenProps {
   index: TopicIndex | null;
   /** Runs the existing live condition search with this registry term. */
   onSearchTerm: (term: string) => void;
+  /** Page-wide Pause Animation choice. The class lives on <main>, so the loader obeys it too. */
+  animationPaused: boolean;
+  onToggleAnimation: () => void;
 }
 
 const DETAILS_ID = 'od-topic-details';
@@ -24,9 +28,18 @@ function labelFor(topic: Topic, m: Messages, locale: Locale): { text: string; la
   return label ? { text: label, lang: locale } : { text: topic.registryName, lang: 'en' };
 }
 
-export function TopicGarden({ m, locale, index, onSearchTerm }: TopicGardenProps) {
+/** Each topic keeps its own breathing phase, so the garden never moves in lockstep. */
+function motionStyle(position: number): CSSProperties {
+  return {
+    '--i': position,
+    '--bd': `${-((position * 1.7) % 9).toFixed(2)}s`,
+  } as CSSProperties;
+}
+
+export function TopicGarden({ m, locale, index, onSearchTerm, animationPaused, onToggleAnimation }: TopicGardenProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [view, setView] = useState<'garden' | 'list'>('garden');
+  const gardenRef = useRef<HTMLDivElement>(null);
   const wasOpen = useRef(false);
 
   // Escape closes the open topic from anywhere on the page and returns focus to its topic.
@@ -48,6 +61,13 @@ export function TopicGarden({ m, locale, index, onSearchTerm }: TopicGardenProps
   useEffect(() => {
     wasOpen.current = selectedId !== null;
   });
+
+  // Opening a topic moves focus to its panel heading, so keyboard and screen reader users land in the details.
+  useEffect(() => {
+    if (selectedId !== null) {
+      document.getElementById('topic-details-heading')?.focus({ preventScroll: true });
+    }
+  }, [selectedId]);
 
   const topics = index?.topics ?? [];
   if (!index || topics.length === 0) {
@@ -76,21 +96,36 @@ export function TopicGarden({ m, locale, index, onSearchTerm }: TopicGardenProps
     }
   };
 
-  const topicButton = (topic: Topic, className: string) => {
+  /** Selecting a topic paints a ripple in its color, from the point it was clicked. Deselecting does not. */
+  const choose = (topic: Topic, button: HTMLButtonElement) => {
+    const isSelected = topic.id === selectedId;
+    if (!isSelected && gardenRef.current) {
+      const shape = button.querySelector<HTMLElement>('.od-blob-shape');
+      const color = shape ? window.getComputedStyle(shape).backgroundColor : 'currentColor';
+      const garden = gardenRef.current.getBoundingClientRect();
+      const rect = button.getBoundingClientRect();
+      spawnRipple(gardenRef.current, rect.left - garden.left + rect.width / 2, rect.top - garden.top + rect.height / 2, color);
+    }
+    setSelectedId(isSelected ? null : topic.id);
+  };
+
+  const topicButton = (topic: Topic, className: string, position: number) => {
     const label = labelFor(topic, m, locale);
     const isSelected = topic.id === selectedId;
+    const isBlob = className.startsWith('od-blob');
     return (
       <button
         key={topic.id}
         id={`topic-${topic.id}`}
         type="button"
         className={className}
+        style={isBlob ? motionStyle(position) : undefined}
         aria-pressed={isSelected}
         aria-expanded={isSelected}
         aria-controls={isSelected ? DETAILS_ID : undefined}
-        onClick={() => setSelectedId(isSelected ? null : topic.id)}
+        onClick={(event) => choose(topic, event.currentTarget)}
       >
-        {className.startsWith('od-blob') ? (
+        {isBlob ? (
           <>
             <span className="od-blob-shape" aria-hidden="true" />
             <span className="od-blob-label">
@@ -125,29 +160,40 @@ export function TopicGarden({ m, locale, index, onSearchTerm }: TopicGardenProps
 
         <div className="od-garden-meta">
           <span>{m.gardenUpdated(formatRegistryDate(index.generatedAt, locale, m.dateNotListed))}</span>
-          <button
-            type="button"
-            className="od-toggle"
-            aria-pressed={view === 'list'}
-            onClick={() => setView(view === 'garden' ? 'list' : 'garden')}
-          >
-            {m.gardenViewList}
-          </button>
+          <span className="od-garden-controls">
+            <button
+              type="button"
+              className="od-toggle"
+              aria-pressed={animationPaused}
+              onClick={onToggleAnimation}
+            >
+              {animationPaused ? m.playAnimation : m.pauseAnimation}
+            </button>
+            <button
+              type="button"
+              className="od-toggle"
+              aria-pressed={view === 'list'}
+              onClick={() => setView(view === 'garden' ? 'list' : 'garden')}
+            >
+              {m.gardenViewList}
+            </button>
+          </span>
         </div>
 
         {view === 'garden' ? (
           <div
+            ref={gardenRef}
             className={`od-garden${selected ? ' has-selection' : ''}`}
             role="group"
             aria-label={m.gardenHeading}
           >
-            {topics.map((topic) =>
-              topicButton(topic, `od-blob${relatedIds.has(topic.id) ? ' is-related' : ''}`),
+            {topics.map((topic, position) =>
+              topicButton(topic, `od-blob${relatedIds.has(topic.id) ? ' is-related' : ''}`, position),
             )}
           </div>
         ) : (
           <div className="od-list" role="group" aria-label={m.gardenHeading}>
-            {topics.map((topic) => topicButton(topic, 'od-chip'))}
+            {topics.map((topic, position) => topicButton(topic, 'od-chip', position))}
           </div>
         )}
 
@@ -157,6 +203,9 @@ export function TopicGarden({ m, locale, index, onSearchTerm }: TopicGardenProps
             className={`od-details${opening ? ' is-opening' : ''}`}
             aria-labelledby="topic-details-heading"
           >
+            <button type="button" className="od-details-close" onClick={close} aria-label={m.topicClose}>
+              ×
+            </button>
             <p className="od-eyebrow">
               {m.topicRegistryCategory} <span lang="en">{selected.registryName}</span>
             </p>
@@ -210,11 +259,6 @@ export function TopicGarden({ m, locale, index, onSearchTerm }: TopicGardenProps
               </>
             )}
 
-            <div>
-              <button type="button" className="od-chip" onClick={close}>
-                {m.topicClose}
-              </button>
-            </div>
           </section>
         )}
       </div>

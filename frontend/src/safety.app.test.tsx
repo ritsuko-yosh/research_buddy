@@ -1,5 +1,6 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { openSearch } from './test/navigate';
 import { describe, expect, it } from 'vitest';
 import App from './App';
 import { TEST_TOPIC_INDEX } from './test/topicIndex.fixture';
@@ -39,6 +40,7 @@ function sourceReturning(trial: Trial): TrialDataSource {
 /** Opens a study through the NCT ID field, which works for any record. */
 async function openStudy(user: ReturnType<typeof userEvent.setup>, dataSource?: TrialDataSource) {
   render(<App dataSource={dataSource ?? fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
+  await openSearch(user, 'nct');
   await user.type(screen.getByLabelText(en.nctLabel), 'NCT90000001');
   await user.click(screen.getByRole('button', { name: en.openStudy }));
   // Wait for the study heading specifically. The search page also has a level-1 heading.

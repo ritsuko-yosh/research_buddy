@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { openSearch } from '../../test/navigate';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import axe from 'axe-core';
@@ -16,40 +17,35 @@ function renderHome(index = TEST_TOPIC_INDEX) {
   return render(<App dataSource={fixtureSource} topicIndex={index} />);
 }
 
-describe('home hero doors (now on the Home page, route to Search)', () => {
-  function renderOnHome(index = TEST_TOPIC_INDEX) {
-    window.location.hash = '#/home';
-    return render(<App dataSource={fixtureSource} topicIndex={index} />);
-  }
-
-  it('the condition door routes to Search and focuses the condition input', async () => {
+describe('homepage doors', () => {
+  it.each([
+    ['explainer', en.doorStartTitle, 'explainer-heading'],
+    ['research areas', en.doorExploreTitle, 'garden-heading'],
+  ])('moves focus to the %s heading', async (_label, buttonName, targetId) => {
     const user = userEvent.setup();
-    renderOnHome();
+    renderHome();
+
+    await user.click(screen.getByRole('button', { name: new RegExp(buttonName) }));
+
+    expect(document.activeElement).toBe(document.getElementById(targetId));
+  });
+
+  it('moves focus to the condition search input', async () => {
+    const user = userEvent.setup();
+    renderHome();
 
     await user.click(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) }));
 
-    expect(document.getElementById('condition-input')).toBeInTheDocument();
     expect(document.activeElement).toBe(document.getElementById('condition-input'));
   });
 
-  it('the study ID door routes to Search and focuses the NCT input', async () => {
+  it('moves focus to the study ID input', async () => {
     const user = userEvent.setup();
-    renderOnHome();
+    renderHome();
 
     await user.click(screen.getByRole('button', { name: new RegExp(en.doorNctTitle) }));
 
-    expect(document.getElementById('nct-input')).toBeInTheDocument();
     expect(document.activeElement).toBe(document.getElementById('nct-input'));
-  });
-
-  it('the "explore research" door routes to Search (browse garden)', async () => {
-    const user = userEvent.setup();
-    renderOnHome();
-
-    await user.click(screen.getByRole('button', { name: new RegExp(en.doorExploreTitle) }));
-
-    // Landed on Search: the browse garden heading is present.
-    expect(document.getElementById('garden-heading')).toBeInTheDocument();
   });
 });
 
@@ -105,7 +101,9 @@ describe('homepage without a topic index', () => {
 
     expect(screen.getByText(en.topicsUnavailable)).toBeInTheDocument();
 
+    await openSearch(user);
     await user.type(screen.getByLabelText(en.conditionInputLabel), 'asthma');
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: en.conditionSearch }));
 
     expect(await screen.findByRole('heading', { name: en.resultsHeading })).toBeInTheDocument();
@@ -129,40 +127,60 @@ describe('accessibility', () => {
   });
 });
 
-describe('motion rules (styles.css)', () => {
-  it('every transition and animation declaration sits inside the no-preference media query', () => {
-    const css = readFileSync(resolve(process.cwd(), 'src/styles.css'), 'utf8');
-    const reducedMotionHeader = '(prefers-reduced-motion: no-preference)';
-    const violations: string[] = [];
+describe('motion rules (styles.css and open-door.css)', () => {
+  const reducedMotionHeader = '(prefers-reduced-motion: no-preference)';
 
-    // Line-based check: find each declaration and confirm an enclosing block mentions the query.
-    const lines = css.split('\n');
+  /** Returns a violation message for each transition/animation declaration outside the no-preference query. */
+  function findMotionViolations(file: string, css: string): string[] {
+    const violations: string[] = [];
     const blockStack: string[] = [];
-    lines.forEach((line, index) => {
-      const opens = (line.match(/\{/g) ?? []).length;
-      const closes = (line.match(/\}/g) ?? []).length;
-      // Declarations that switch motion off (value "none") are allowed anywhere.
-      if (/^\s*(transition|animation)\s*:/.test(line) && !/:\s*none\s*;/.test(line)) {
+    css.split('\n').forEach((line, index) => {
+      // Check every declaration on the line, including rules written on one line.
+      const declarations = line.match(/(^|[{;\s])(transition|animation)\s*:[^;}]*/g) ?? [];
+      const isOff = (text: string) => /:\s*none\s*$/.test(text.trim());
+      for (const declaration of declarations) {
+        if (isOff(declaration)) {
+          continue;
+        }
         const enclosed = blockStack.some((header) => header.includes(reducedMotionHeader));
         if (!enclosed) {
-          violations.push(`line ${index + 1}: ${line.trim()}`);
+          violations.push(`${file} line ${index + 1}: ${line.trim()}`);
         }
       }
-      for (let k = 0; k < opens; k++) {
-        blockStack.push(line.includes('{') ? line.slice(0, line.indexOf('{')) : line);
-      }
-      for (let k = 0; k < closes; k++) {
-        blockStack.pop();
+      // Track block nesting. Each "{" pushes its header; each "}" pops one.
+      for (const char of line) {
+        if (char === '{') {
+          blockStack.push(line.slice(0, line.indexOf('{')));
+        } else if (char === '}') {
+          blockStack.pop();
+        }
       }
     });
+    return violations;
+  }
 
+  it('every transition and animation declaration sits inside the no-preference media query', () => {
+    const violations = ['src/styles.css', 'src/styles/open-door.css'].flatMap((file) =>
+      findMotionViolations(file, readFileSync(resolve(process.cwd(), file), 'utf8')),
+    );
     expect(violations).toEqual([]);
+  });
+
+  it('catches a motion declaration that is outside the query, even when written on one line', () => {
+    const sample = '.bad { animation: spin 1s; }\n@media (prefers-reduced-motion: no-preference) {\n  .ok { transition: none; animation: spin 1s; }\n}\n';
+    const violations = findMotionViolations('sample.css', sample);
+    expect(violations).toEqual(['sample.css line 1: .bad { animation: spin 1s; }']);
   });
 });
 
 describe('search error is never shown before submit', () => {
-  it('shows no invalid state on first render of the search page', () => {
+  it('shows no invalid state on first render, or after the condition door moves focus to the field', async () => {
+    const user = userEvent.setup();
     renderHome();
+
+    expect(screen.queryByText(en.conditionInvalid)).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: new RegExp(en.doorConditionTitle) }));
 
     expect(screen.queryByText(en.conditionInvalid)).not.toBeInTheDocument();
     expect(document.getElementById('condition-input')).toHaveAttribute('aria-invalid', 'false');

@@ -4,6 +4,7 @@ import axe from 'axe-core';
 import { describe, expect, it, vi } from 'vitest';
 import App from './App';
 import { TEST_TOPIC_INDEX } from './test/topicIndex.fixture';
+import { openSearch } from './test/navigate';
 import { createFixtureDataSource } from './data/fixtures/fixtureDataSource';
 import { messages } from './i18n/strings';
 import type { TrialDataSource } from './types/trial';
@@ -18,6 +19,7 @@ const es = messages.es;
 const VERDICT_PATTERN = /you (are|'re) eligible|you qualify|you match|pre-?screen|match score/i;
 
 async function openStudy(user: ReturnType<typeof userEvent.setup>, conditionLabel: string, sampleTag: string) {
+  await openSearch(user);
   await user.click(screen.getByRole('button', { name: conditionLabel }));
   const viewButton = await screen.findByRole('button', { name: new RegExp(`View study: \\[${sampleTag}\\]`) });
   await user.click(viewButton);
@@ -35,6 +37,7 @@ describe('Visit Ready patient journey (sample data)', () => {
     const user = userEvent.setup();
     render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
 
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: 'Type 2 diabetes' }));
 
     expect(await screen.findByRole('heading', { name: /\[SAMPLE A\]/ })).toBeInTheDocument();
@@ -71,6 +74,7 @@ describe('Visit Ready patient journey (sample data)', () => {
   it('switches to Spanish and labels missing Spanish explanations', async () => {
     const user = userEvent.setup();
     render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: 'Asthma' }));
     await user.click(await screen.findByRole('button', { name: /View study: \[SAMPLE B\]/ }));
     await screen.findByRole('heading', { level: 1, name: /\[SAMPLE B\]/ });
@@ -103,6 +107,7 @@ describe('Visit Ready patient journey (sample data)', () => {
   it('rejects malformed NCT IDs and reports unsupported studies', async () => {
     const user = userEvent.setup();
     render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
+    await openSearch(user, 'nct');
     const input = screen.getByLabelText(en.nctLabel);
 
     await user.type(input, 'abc');
@@ -198,6 +203,7 @@ describe('Visit Ready states, preparation actions, and accessibility', () => {
       getTrial: async () => null,
     };
     render(<App dataSource={empty} topicIndex={TEST_TOPIC_INDEX} />);
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: 'Asthma' }));
 
     expect(await screen.findByText(en.resultsEmpty)).toBeInTheDocument();
@@ -218,6 +224,7 @@ describe('Visit Ready states, preparation actions, and accessibility', () => {
       },
     };
     render(<App dataSource={flaky} topicIndex={TEST_TOPIC_INDEX} />);
+    await openSearch(user);
     await user.click(screen.getByRole('button', { name: 'Type 2 diabetes' }));
 
     expect(await screen.findByRole('alert')).toHaveTextContent(en.resultsError);

@@ -18,9 +18,11 @@ export function LanguageToggle({ locale, label, onChange }: LanguageToggleProps)
           className="chip"
           lang={option}
           aria-pressed={locale === option}
+          aria-label={LANGUAGE_NAMES[option]}
           onClick={() => onChange(option)}
         >
-          {LANGUAGE_NAMES[option]}
+          {/* Short codes match the reference header. The full language name stays as the accessible name. */}
+          {option.toUpperCase()}
         </button>
       ))}
     </div>
