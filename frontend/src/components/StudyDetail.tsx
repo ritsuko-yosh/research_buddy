@@ -52,8 +52,9 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
         <h3>{m.massLocationsLabel}</h3>
         {massachusettsSites.length > 0 ? (
           <ul>
-            {massachusettsSites.map((site) => (
-              <li key={`${site.city}-${site.state}`}>{site.city}, MA</li>
+            {massachusettsSites.map((site, index) => (
+              // Index key: several sites can share a city, so city and state are not unique.
+              <li key={index}>{site.city}, MA</li>
             ))}
           </ul>
         ) : (

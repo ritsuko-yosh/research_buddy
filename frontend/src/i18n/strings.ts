@@ -31,21 +31,34 @@ const en = {
   registryHeading: 'Registry information',
 
   searchHeading: 'Find a study in Massachusetts',
-  chooseCondition: 'Choose a condition',
-  conditionHelp: 'Pick the condition closest to your situation.',
+  chooseCondition: 'Common searches',
+  conditionHelp: 'Pick a common search, or type a condition below.',
+  conditionInputLabel: 'Condition or disease',
+  conditionInputHelp:
+    'Searches ClinicalTrials.gov, which uses English medical terms. For example: "breast cancer" or "asthma".',
+  conditionSearch: 'Search',
+  conditionInvalid: 'Enter 2 to 100 characters: letters, numbers, spaces, or basic punctuation.',
   orEnterNct: 'Or enter an NCT ID',
   nctLabel: 'NCT ID',
   nctHelp: 'The registry number on a study listing: the letters NCT followed by 8 digits.',
   openStudy: 'Open study',
   nctInvalid: 'Enter an NCT ID: the letters NCT followed by 8 digits.',
-  nctUnsupported: 'This study is not available in Visit Ready yet. Check the number or search by condition.',
+  nctUnsupported:
+    'We could not retrieve this study. Check the NCT ID. If it is correct, ClinicalTrials.gov may be unavailable right now, so try again later.',
   nctLoading: 'Opening study…',
   nctError: 'We could not open this study right now. Please try again.',
 
   resultsHeading: 'Massachusetts studies',
   resultsLoading: 'Loading studies…',
-  resultsEmpty: 'No Massachusetts studies were found for this condition in the current data.',
-  resultsError: 'We could not load studies right now.',
+  resultsEmpty:
+    'No recruiting studies with a Massachusetts site matched this search. Try a broader or different term.',
+  resultsError: 'We could not reach ClinicalTrials.gov to search right now. Check your connection and try again.',
+  resultsLiveNote:
+    'Live results from ClinicalTrials.gov: recruiting studies that have a Massachusetts site. Results can change as the registry updates.',
+  cachedNotice:
+    'The live registry could not be reached, so this is a saved copy of the record. Its retrieval date is shown above.',
+  staleNotice: (days: number) =>
+    `This registry listing has not been updated in more than ${days} days, so it may be out of date. Confirm with the study team.`,
   retry: 'Try again',
   viewStudy: 'View study',
 
@@ -167,21 +180,34 @@ const es: Messages = {
   registryHeading: 'Información del registro',
 
   searchHeading: 'Encuentre un estudio en Massachusetts',
-  chooseCondition: 'Elija una condición',
-  conditionHelp: 'Elija la condición que más se parezca a su situación.',
+  chooseCondition: 'Búsquedas comunes',
+  conditionHelp: 'Elija una búsqueda común o escriba una condición abajo.',
+  conditionInputLabel: 'Condición o enfermedad',
+  conditionInputHelp:
+    'Busca en ClinicalTrials.gov, que usa términos médicos en inglés. Por ejemplo: "breast cancer" o "asthma".',
+  conditionSearch: 'Buscar',
+  conditionInvalid: 'Escriba entre 2 y 100 caracteres: letras, números, espacios o signos básicos.',
   orEnterNct: 'O escriba un número NCT',
   nctLabel: 'Número NCT',
   nctHelp: 'El número de registro que aparece en la ficha de un estudio: las letras NCT seguidas de 8 dígitos.',
   openStudy: 'Abrir estudio',
   nctInvalid: 'Escriba un número NCT: las letras NCT seguidas de 8 dígitos.',
-  nctUnsupported: 'Este estudio todavía no está disponible en Visit Ready. Revise el número o busque por condición.',
+  nctUnsupported:
+    'No pudimos obtener este estudio. Revise el número NCT. Si es correcto, ClinicalTrials.gov puede no estar disponible en este momento; inténtelo más tarde.',
   nctLoading: 'Abriendo estudio…',
   nctError: 'No pudimos abrir este estudio en este momento. Inténtelo de nuevo.',
 
   resultsHeading: 'Estudios en Massachusetts',
   resultsLoading: 'Cargando estudios…',
-  resultsEmpty: 'No encontramos estudios en Massachusetts para esta condición en los datos actuales.',
-  resultsError: 'No pudimos cargar los estudios en este momento.',
+  resultsEmpty:
+    'Ningún estudio que recluta participantes y tiene un sitio en Massachusetts coincidió con esta búsqueda. Pruebe un término más amplio o diferente.',
+  resultsError: 'No pudimos consultar ClinicalTrials.gov en este momento. Revise su conexión e inténtelo de nuevo.',
+  resultsLiveNote:
+    'Resultados en vivo de ClinicalTrials.gov: estudios que reclutan participantes y tienen un sitio en Massachusetts. Los resultados pueden cambiar cuando el registro se actualice.',
+  cachedNotice:
+    'No se pudo consultar el registro en vivo, así que esta es una copia guardada del registro. Su fecha de consulta aparece arriba.',
+  staleNotice: (days: number) =>
+    `Esta ficha del registro no se ha actualizado en más de ${days} días, por lo que podría estar desactualizada. Confírmelo con el equipo del estudio.`,
   retry: 'Intentar de nuevo',
   viewStudy: 'Ver estudio',
 
