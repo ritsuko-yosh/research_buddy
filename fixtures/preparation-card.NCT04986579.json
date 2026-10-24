@@ -1,0 +1,270 @@
+{
+  "nctId": "NCT04986579",
+  "title": "Scalp Cooling in MBC",
+  "recruitmentStatus": "RECRUITING",
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579",
+  "freshness": {
+    "lastRegistryUpdate": "2026-06-18",
+    "stale": true,
+    "note": "This registry listing has not been updated recently; verify details with the study team."
+  },
+  "languageNote": "No explicit language requirement was found in the public registry listing. This is shown as \"not stated\" — it does not indicate whether any particular language is supported. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team.",
+  "groups": {
+    "self_answer": [
+      {
+        "id": "NCT04986579-inclusion-1",
+        "sourceText": "* Participant is ≥ 18 years old.",
+        "section": "inclusion",
+        "explanationEn": "You must be 18 years or older to take part. This is something you can confirm yourself.",
+        "explanationEs": "Debe tener 18 años o más para participar. Esto es algo que usted mismo puede confirmar.",
+        "translationReviewed": true,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      }
+    ],
+    "check_records": [
+      {
+        "id": "NCT04986579-inclusion-0",
+        "sourceText": "* Men and women with a diagnosis of metastatic invasive breast cancer with a ECOG PS≤2",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT04986579-inclusion-3",
+        "sourceText": "* One of the following full dose chemotherapy regimens must be planned for at least 4 cycles:\n\n  * Sacituzumab govitecan (IMMU-132) 10 mg/kg administered intravenously on days 1 and 8 of each 21-day cycle\n  * Trastuzumab deruxtecan 5.4 mg/kg administered intravenously once every 3 weeks\n  * Eribulin 1.4 mg/m2 administered intravenously on days 1 and 8 of each 21-day cycle",
+        "section": "inclusion",
+        "explanationEn": "One of several specific chemotherapy regimens (for example sacituzumab govitecan, trastuzumab deruxtecan, or eribulin) must be planned for at least 4 cycles. Your planned treatment is decided with your oncology team — ask the study team whether your regimen fits.",
+        "explanationEs": "Debe estar planificado uno de varios regímenes de quimioterapia específicos (por ejemplo, sacituzumab govitecan, trastuzumab deruxtecan o eribulina) durante al menos 4 ciclos. Su tratamiento planificado se decide con su equipo de oncología; pregunte al equipo del estudio si su régimen corresponde.",
+        "translationReviewed": false,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      }
+    ],
+    "ask_study_team": [
+      {
+        "id": "NCT04986579-inclusion-2",
+        "sourceText": "* Hair present at baseline.",
+        "section": "inclusion",
+        "explanationEn": "You need to have hair at the start of the study (this trial studies scalp cooling to reduce hair loss). You can confirm this yourself.",
+        "explanationEs": "Debe tener cabello al inicio del estudio (este ensayo estudia el enfriamiento del cuero cabelludo para reducir la caída del cabello). Usted mismo puede confirmarlo.",
+        "translationReviewed": true,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT04986579-inclusion-4",
+        "sourceText": "* The Paxman Scalp Cooling System must be initiated with the first dose of therapy in participants that elect to participate in the scalp cooling group.",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT04986579-exclusion-0",
+        "sourceText": "* Known hematological malignancies (i.e. leukemia or lymphoma)",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT04986579-exclusion-1",
+        "sourceText": "* Known scalp metastases.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT04986579-exclusion-3",
+        "sourceText": "* Subjects with cold agglutinin disease or cold urticaria.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT04986579-exclusion-4",
+        "sourceText": "* Subjects who are scheduled for bone marrow ablation chemotherapy.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT04986579-exclusion-6",
+        "sourceText": "* Subjects who have lichen planus or lupus.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 6,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT04986579-exclusion-7",
+        "sourceText": "* Participants who are receiving any additional anti-cancer agents",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 7,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "cannot_assess": [
+      {
+        "id": "NCT04986579-exclusion-2",
+        "sourceText": "* Baseline alopecia (defined CTCAE 5.0 grade \\> 0, see Appendix B)",
+        "section": "exclusion",
+        "explanationEn": "Existing hair loss at the start (graded using CTCAE 5.0, see Appendix B) affects eligibility. The exact grading isn't in the public listing (it points to an appendix), so this is best confirmed with the study team.",
+        "explanationEs": "La caída de cabello ya presente al inicio (clasificada con CTCAE 5.0, ver Apéndice B) afecta la elegibilidad. La clasificación exacta no está en la ficha pública (remite a un apéndice), por lo que es mejor confirmarlo con el equipo del estudio.",
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": [
+          "external_reference",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT04986579-exclusion-5",
+        "sourceText": "* Personal history of migraines, cluster or tension headaches as defined as actual medical diagnosis by a physician and/ or prescribed medications. If personal history of migraines was related to a past medical problem that is now resolved, the subject may go on study at the discretion of the Principal Investigator.",
+        "section": "exclusion",
+        "explanationEn": "A diagnosed history of migraines or tension/cluster headaches affects eligibility, but there is an exception if a past problem is now resolved — decided at the Principal Investigator's discretion. This is a judgment for the study team, not a simple yes/no.",
+        "explanationEs": "Un historial diagnosticado de migrañas o cefaleas tensionales o en racimo afecta la elegibilidad, pero hay una excepción si un problema pasado ya está resuelto, a criterio del Investigador Principal. Esto es un juicio para el equipo del estudio, no un simple sí/no.",
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT04986579",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic",
+          "treatment_history",
+          "ambiguous_wording"
+        ]
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Elahe Salehi, DNP, ANP-BC",
+      "role": "CONTACT",
+      "phone": "617-632-3800",
+      "email": "elahe_salehi@dfci.harvard.edu"
+    }
+  ],
+  "disclaimers": [
+    "Visit Ready does not decide whether you qualify for this study. There is no eligibility score.",
+    "Do not get new medical tests just to use this tool. Bring records you already have.",
+    "A Spanish interface here does not mean the study can serve Spanish-speaking participants. Confirm with the study team.",
+    "Recruitment status and contacts come from the public registry and may be out of date — verify with the study team."
+  ]
+}

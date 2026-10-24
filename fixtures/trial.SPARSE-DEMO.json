@@ -1,0 +1,44 @@
+{
+  "contractVersion": "1.0.0",
+  "nctId": "NCT00000000",
+  "title": "Sparse Demo Study (missing-data showcase)",
+  "description": null,
+  "recruitmentStatus": "RECRUITING",
+  "lastRegistryUpdate": "2023-01-01",
+  "lastFetched": "2026-10-24T00:00:00.000Z",
+  "locations": [],
+  "contacts": [],
+  "languageRequirement": {
+    "status": "not_stated",
+    "evidence": [],
+    "note": "No explicit language requirement was found in the public registry listing. This is shown as \"not stated\" — it does not indicate whether any particular language is supported. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team."
+  },
+  "criteria": [
+    {
+      "id": "NCT00000000-unspecified-0",
+      "sourceText": "Participants must meet all protocol-defined requirements. See the full protocol for details.",
+      "section": "unspecified",
+      "explanationEn": null,
+      "explanationEs": null,
+      "translationReviewed": false,
+      "category": "ask_study_team",
+      "sourceReference": {
+        "nctId": "NCT00000000",
+        "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+        "section": "unspecified",
+        "index": 0,
+        "sourceUrl": "https://clinicaltrials.gov/study/NCT00000000#eligibility"
+      },
+      "uncertaintyFlags": [
+        "unsegmentable"
+      ]
+    }
+  ],
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT00000000",
+  "dataSource": {
+    "kind": "cache",
+    "fetchedAt": "2026-10-24T00:00:00.000Z",
+    "staleThresholdDays": 120,
+    "stale": true
+  }
+}

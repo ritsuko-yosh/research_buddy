@@ -1,0 +1,96 @@
+{
+  "contractVersion": "1.0.0",
+  "query": {
+    "condition": "breast cancer",
+    "location": "Massachusetts",
+    "status": "RECRUITING"
+  },
+  "fetchedAt": "2026-10-24T00:00:00.000Z",
+  "totalReturned": 6,
+  "results": [
+    {
+      "nctId": "NCT02896335",
+      "title": "Palbociclib and Pembrolizumab In Central Nervous System Metastases",
+      "recruitmentStatus": "RECRUITING",
+      "primaryLocation": "Boston, Massachusetts",
+      "massachusettsSiteCount": 2,
+      "hasRecruitingMaSite": true,
+      "hasContact": true,
+      "lastRegistryUpdate": "2026-07-21",
+      "stale": false,
+      "languageRequirement": "not_stated",
+      "hasCuratedContent": true,
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335"
+    },
+    {
+      "nctId": "NCT04986579",
+      "title": "Scalp Cooling in MBC",
+      "recruitmentStatus": "RECRUITING",
+      "primaryLocation": "Boston, Massachusetts",
+      "massachusettsSiteCount": 2,
+      "hasRecruitingMaSite": true,
+      "hasContact": true,
+      "lastRegistryUpdate": "2026-06-18",
+      "stale": true,
+      "languageRequirement": "not_stated",
+      "hasCuratedContent": true,
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT04986579"
+    },
+    {
+      "nctId": "NCT06998407",
+      "title": "ORION-1: Study of AVZO-023 as a Single Agent and in Combination With AVZO-021, and/or Endocrine Therapy in Advanced Solid Tumors",
+      "recruitmentStatus": "RECRUITING",
+      "primaryLocation": "Los Angeles, California",
+      "massachusettsSiteCount": 1,
+      "hasRecruitingMaSite": true,
+      "hasContact": true,
+      "lastRegistryUpdate": "2026-08-10",
+      "stale": false,
+      "languageRequirement": "not_stated",
+      "hasCuratedContent": false,
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT06998407"
+    },
+    {
+      "nctId": "NCT05150691",
+      "title": "A Phase 1/2a Study of DB-1303/BNT323 in Advanced/Metastatic Solid Tumors",
+      "recruitmentStatus": "RECRUITING",
+      "primaryLocation": "Bengbu, Anhui",
+      "massachusettsSiteCount": 2,
+      "hasRecruitingMaSite": false,
+      "hasContact": true,
+      "lastRegistryUpdate": "2026-08-27",
+      "stale": false,
+      "languageRequirement": "not_stated",
+      "hasCuratedContent": false,
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT05150691"
+    },
+    {
+      "nctId": "NCT07214532",
+      "title": "Signatera-Guided CDK4/6 Inhibitor Therapy in Breast Cancer",
+      "recruitmentStatus": "RECRUITING",
+      "primaryLocation": "Greenbrae, California",
+      "massachusettsSiteCount": 1,
+      "hasRecruitingMaSite": false,
+      "hasContact": true,
+      "lastRegistryUpdate": "2026-09-23",
+      "stale": false,
+      "languageRequirement": "not_stated",
+      "hasCuratedContent": false,
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT07214532"
+    },
+    {
+      "nctId": "NCT05349227",
+      "title": "Comprehensive Outcomes for After Cancer Health",
+      "recruitmentStatus": "RECRUITING",
+      "primaryLocation": "Boston, Massachusetts",
+      "massachusettsSiteCount": 1,
+      "hasRecruitingMaSite": true,
+      "hasContact": true,
+      "lastRegistryUpdate": "2024-12-11",
+      "stale": true,
+      "languageRequirement": "not_stated",
+      "hasCuratedContent": false,
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227"
+    }
+  ]
+}

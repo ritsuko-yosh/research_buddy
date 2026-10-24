@@ -1,0 +1,335 @@
+{
+  "raw": {
+    "protocolSection": {
+      "identificationModule": {
+        "nctId": "NCT02896335",
+        "orgStudyIdInfo": {
+          "id": "16-254"
+        },
+        "organization": {
+          "fullName": "Massachusetts General Hospital",
+          "class": "OTHER"
+        },
+        "briefTitle": "Palbociclib and Pembrolizumab In Central Nervous System Metastases",
+        "officialTitle": "Phase II Trial of Palbociclib and Pembrolizumab in Central Nervous System Metastases"
+      },
+      "statusModule": {
+        "statusVerifiedDate": "2026-07",
+        "overallStatus": "RECRUITING",
+        "expandedAccessInfo": {
+          "hasExpandedAccess": false
+        },
+        "startDateStruct": {
+          "date": "2017-02-02",
+          "type": "ACTUAL"
+        },
+        "primaryCompletionDateStruct": {
+          "date": "2028-09-01",
+          "type": "ESTIMATED"
+        },
+        "completionDateStruct": {
+          "date": "2029-09-01",
+          "type": "ESTIMATED"
+        },
+        "studyFirstSubmitDate": "2016-08-30",
+        "studyFirstSubmitQcDate": "2016-09-09",
+        "studyFirstPostDateStruct": {
+          "date": "2016-09-12",
+          "type": "ESTIMATED"
+        },
+        "lastUpdateSubmitDate": "2026-07-17",
+        "lastUpdatePostDateStruct": {
+          "date": "2026-07-21",
+          "type": "ACTUAL"
+        }
+      },
+      "sponsorCollaboratorsModule": {
+        "responsibleParty": {
+          "type": "PRINCIPAL_INVESTIGATOR",
+          "investigatorFullName": "Nancy Wang, M.D.",
+          "investigatorTitle": "Principal Investigator",
+          "investigatorAffiliation": "Massachusetts General Hospital"
+        },
+        "leadSponsor": {
+          "name": "Massachusetts General Hospital",
+          "class": "OTHER"
+        },
+        "collaborators": [
+          {
+            "name": "Pfizer",
+            "class": "INDUSTRY"
+          },
+          {
+            "name": "Merck Sharp & Dohme LLC",
+            "class": "INDUSTRY"
+          }
+        ]
+      },
+      "oversightModule": {
+        "oversightHasDmc": true,
+        "isFdaRegulatedDrug": true,
+        "isFdaRegulatedDevice": false
+      },
+      "descriptionModule": {
+        "briefSummary": "This research study is studying This research study is studying the efficacy and safety of the following study drugs as a possible treatment for recurrent central nervous system (CNS) metastases:\n\n* Palbociclib alone (Cohort 1)\n* The combination of palbociclib and pembrolizumab (Cohort 2) Pfizer and Merck, pharmaceutical companies, are supporting this research study by providing the study drugs as well as funding for research activities.",
+        "detailedDescription": "This is a non-randomized, parallel cohort, Phase II study. Phase II clinical trials test the safety and effectiveness of an investigational intervention to learn whether the intervention works in treating a specific disease. \"Investigational\" means that the intervention is being studied.\n\nThe study will be conducted in two independent cohorts. The first cohort (Cohort 1) is comprised of participants with measurable CNS metastases from solid tumors (including patients whose primary cancers are from lung, breast or melanoma) harboring specific alterations, and participants receive the study drug palbociclib. The second cohort (Cohort 2) will evaluate the efficacy and safety of the combination of pembrolizumab and palbociclib in recurrent brain metastases from breast cancer or melanoma.\n\nPalbociclib is being studied for use in the treatment of a broad range of cancers. This type of drug inhibits cell growth in the cells called cyclin-dependent kinases which promote tumor cell proliferation. The U.S. Food and Drug Administration (FDA) has not approved palbociclib for participants with central nervous system metastases, but it has been approved for other uses.\n\nResearchers hope to study the effects of pembrolizumab. The U.S. Food and Drug Administration (FDA) has approved pembrolizumab for some diseases, but not central nervous system metastases. Many cancers use specific pathways (such as PD-1/PD-L1 and CTLA-4) to evade the body's immune system. Pembrolizumab works by blocking the PD-1/PD-L1 pathways and thus releasing the brakes on the immune system so it can stop or slow cancer. In some tumor diagnoses, there may be a correlation between a specific marker (PD-L1 status) and activity of types of immunotherapies.\n\nParticipants in any cohort will receive study treatment as long as they do not experience intolerable side effects and their disease does not worsen, and will be followed for 2 years after their study treatment ends."
+      },
+      "conditionsModule": {
+        "conditions": [
+          "Metastatic Malignant Neoplasm to Brain",
+          "Recurrent Brain Metastases",
+          "Progressive Brain Metastases"
+        ],
+        "keywords": [
+          "Recurrent Brain metastases",
+          "Progressive Brain Metastases",
+          "Recurrent brain metastases from breast cancer",
+          "central nervous system metastases",
+          "recurrent brain metastases from melanoma"
+        ]
+      },
+      "designModule": {
+        "studyType": "INTERVENTIONAL",
+        "phases": [
+          "PHASE2"
+        ],
+        "designInfo": {
+          "allocation": "NON_RANDOMIZED",
+          "interventionModel": "PARALLEL",
+          "primaryPurpose": "TREATMENT",
+          "maskingInfo": {
+            "masking": "NONE"
+          }
+        },
+        "enrollmentInfo": {
+          "count": 45,
+          "type": "ESTIMATED"
+        }
+      },
+      "armsInterventionsModule": {
+        "armGroups": [
+          {
+            "label": "Cohort 1 (Palbociclib)",
+            "type": "EXPERIMENTAL",
+            "description": "This arm involves screening for eligibility, study treatment and study visits, and follow up. Cohort 1 participants will receive palbociclib daily at a pre-determined dose for 21 days (Day 1-21) per 28-day cycle. Palbociclib is taken orally. Participants may receive study drug as long as they do not meet the criteria for ending treatment (no intolerable side effects and disease is not progressing). Participants will be followed for up to 2 years after their treatment with the study drug ends. Up to 30 participants will be enrolled in Cohort 1.",
+            "interventionNames": [
+              "Drug: Palbociclib"
+            ]
+          },
+          {
+            "label": "Cohort 2 (Palbociclib in Combination with Pembrolizumab)",
+            "type": "EXPERIMENTAL",
+            "description": "Cohort 2 involves screening for eligibility, study treatment and study visits, and follow up. Participants in Cohort 2 will receive study drugs palbociclib and pembrolizumab. Palbociclib is taken orally once per day for 21 days (Day 1-21) of each 28-day cycle. Pembrolizumab will be administered as an intravenous (IV) infusion once every 21 days. Participants may receive study drugs as long as they do not meet the criteria for ending treatment (no intolerable side effects and disease is not progressing), and will be followed for up to 2 years after they stop study treatment. Up to 15 participants will be enrolled in Cohort 2.",
+            "interventionNames": [
+              "Drug: Palbociclib",
+              "Drug: Pembrolizumab"
+            ]
+          }
+        ],
+        "interventions": [
+          {
+            "type": "DRUG",
+            "name": "Palbociclib",
+            "description": "Administered orally once per day on days 1-21 of 28-day cycles.",
+            "armGroupLabels": [
+              "Cohort 1 (Palbociclib)",
+              "Cohort 2 (Palbociclib in Combination with Pembrolizumab)"
+            ],
+            "otherNames": [
+              "Ibrance"
+            ]
+          },
+          {
+            "type": "DRUG",
+            "name": "Pembrolizumab",
+            "description": "Pembrolizumab is administered via intravenous (IV) infusion at a dose of 200 mg over 30 minutes once every 21 days. Pembrolizumab cycles are 3 weeks (21 days) long in this study, and participants in Cohort 2 can receive pembrolizumab as long as they are receiving study drug palbociclib.",
+            "armGroupLabels": [
+              "Cohort 2 (Palbociclib in Combination with Pembrolizumab)"
+            ],
+            "otherNames": [
+              "MK-3475",
+              "Keytruda"
+            ]
+          }
+        ]
+      },
+      "outcomesModule": {
+        "primaryOutcomes": [
+          {
+            "measure": "Intracranial Clinical Benefit Rate (Cohort 1)",
+            "description": "Intracranial Clinical Benefit is defined by complete response (CR), partial response (PR) or stable disease (SD) in the central nervous system (CNS). The proportion of patients in Cohort 1 with response in the CNS will be presented with a two-sided, 90% confidence interval based on the method of Atkinson and Brown, which allows for the two-stage design.",
+            "timeFrame": "8 weeks (Screening through 8 weeks)"
+          },
+          {
+            "measure": "Intracranial Clinical Benefit Rate (Cohort 2)",
+            "description": "Intracranial clinical benefit is defined by CR, PR, or SD in the CNS. The proportion of Cohort 2 participants with response in the CNS will be presented with a two-sided, 90% exact binomial confidence interval.",
+            "timeFrame": "8 weeks (Screening through 8 weeks)"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Extracranial Overall Response Rate",
+            "description": "RECIST 1.1 will be used to determine extracranial response rate (CR, PR, SD). Rate will be calculated for each cohort. A two-sided, 90% exact binomial confidence interval will be estimated for the extracranial response rate. For a sample of size 30 (Cohort 1), the confidence interval will be no wider than 0.32. For Cohort 2 (N=15), the confidence interval will be no wider than 0.46.",
+            "timeFrame": "8 weeks (Screening through 8 weeks)"
+          },
+          {
+            "measure": "Intracranial disease progression rate of Cohort 1",
+            "description": "Defined as time to the first occurrence of intracranial disease progression, or death from any cause, in Cohort 1 participants; extracranial disease progression is a competing risk. The cumulative incidence of intracranial progression/death will be estimated, making adjustment for the competing risk of extracranial progression using the methods of Pepe.",
+            "timeFrame": "Time from registration to the earlier of progression or death due to any cause, up to 2 years post End of Treatment (EoT) visit."
+          },
+          {
+            "measure": "Extracranial disease progression rate of Cohort 1",
+            "description": "Time to the first occurrence of extracranial disease progression (or death from any cause) defined by RECIST 1.1; intracranial disease progression is a competing risk. The cumulative incidence of extracranial progression/death will be estimated, making adjustment for the competing risk of intracranial progression using the methods of Pepe.",
+            "timeFrame": "Time from registration to the earlier of progression or death due to any cause, for up to 2 years post EoT visit."
+          },
+          {
+            "measure": "Overall Survival (OS) Rate",
+            "description": "OS is defined as the time from registration to death due to any cause, or censored at date last known alive. Kaplan-Meier estimates of overall survival will be presented with 90% confidence intervals estimated using log(-log(survival)) methodology. Survival estimates will be presented for all patients and also according to histology. Overall survival rate will be calculated for each cohort.",
+            "timeFrame": "Registration to death due to any cause, or censored at date last known alive. Patients will be followed for a maximum of 2 years after End-of-Treatment visit."
+          },
+          {
+            "measure": "Incidence of Drug Related Toxicities",
+            "description": "Toxicity categorized and graded per NCI Common Terminology Criteria for Adverse Events (CTCAE) criteria (grade 3 or more hematologic toxicity; grade 3 or more neurologic toxicity). Descriptive tabulations of toxicity according to the worst grade of each toxicity reported for each patient will be presented, displayed by Cohort. Exact binomial 90% CI will be presented for the proportions of patients with toxicities of interest and for rates of grade 3-5 events.",
+            "timeFrame": "Day 1 of study treatment through 30 days post last dose, an average of 1.5 years."
+          }
+        ]
+      },
+      "eligibilityModule": {
+        "eligibilityCriteria": "Inclusion Criteria:\n\n* Participants must have histologically or cytologically confirmed disease from any solid tumor (Cohort 1)\n* Participants must have histologically or cytologically confirmed disease from breast cancer or melanoma (Cohort 2).\n* Participants must have measurable disease in the CNS, defined as at least one lesion that can be accurately measured in at least one dimension as ≥10 mm.\n* Participants must have progressive CNS lesions, as defined by one of the following:\n\n  * Patients may have multiple progressive CNS lesions, some of which have been treated by SRS or surgery. Patients are eligible if they have one or more un-treated (by surgery or SRS) progressive lesions that is measurable.\n  * Patients have measurable residual or progressive lesions after surgery.\n  * Patients who have had prior WBRT and/or SRS are eligible but there needs to be unequivocal evidence of progression of at least one lesion treated by radiation (e.g. tissue diagnosis). Biopsy can be considered for definitive diagnosis.\n  * Patients who have previously been treated with systemic therapy for CNS metastases are eligible.\n* Age \\> 18 years. The toxicity of palbociclib in children is unknown.\n* ECOG performance status of 0, 1 or 2 (Karnofsky ≥ 60, see Appendix A).\n* Participants must have normal organ and marrow function as defined below:\n\n  * leukocytes ≥3,000/mcL\n  * absolute neutrophil count ≥1,500/mcL\n  * platelets ≥100,000/mcL\n  * hemoglobin ≥9g/dL\n  * total bilirubin \\< 1.5 x institutional upper limit of normal OR \\> 1.5 x institutional upper limit of normal allowed if direct bilirubin is within normal range.\n  * AST(SGOT)/ALT(SGPT) ≤2.5 × institutional upper limit of normal\n  * creatinine within normal institutional limits OR\n\n    * creatinine clearance ≥60 mL/min/1.73 m2 for participants with creatinine levels above institutional normal (Cohort 1)\n    * creatinine clearance ≥30 mL/min/1.73 m2 for participants with creatinine levels above institutional normal (Cohort 2)\n  * baseline QTc \\<480ms\n* The effects of palbociclib on the developing human fetus are unknown. For this reason, women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study, for the duration of study participation, and 6 months after completion of palbociclib administration.\n* Ability to understand and the willingness to sign a written informed consent document.\n* Tissue from a prior biopsy or resection of intracranial or extracranial site (primary or metastatic site) for clinical genetic sequencing (at least one FFPE block or 15 unstained slides). Patients previously assessed for genetic sequencing who meet requirements of section 9.2.1 do not need to have additional tissue available for prospective genetic screening.\n* Presence of alteration in CDK pathway in any biopsy or resection (amplifications in CDK4, CDK6, CCND1, CCND2, CCND3 or CCNE1 or loss of CDKN2A) as described in Section 9.2 using a CLIA-certified assay (Cohort 1 only).\n* Patients with progressive extracranial disease will not be excluded.\n* Stable dose of corticosteroids for at least 7 days.\n* Participants who are HBsAg positive are eligible if they have received HBV anti-viral therapy for at least 4 weeks, and have undetectable HBV viral load prior to enrollment\n\n  * Note: Participants should remain on anti-viral therapy throughout study intervention and follow local guidelines for HBV anti-viral therapy post completion of study intervention\n  * Hepatits B screening tests are not required unless:\n\n    * Known history of HBV infection\n    * As mandated by local health authority\n* Participants with a history of HCV infection are eligible if HCV viral load is undetectable at screening.\n\n  * Note: Participants must have completed curative anti-viral therapy at least 4 weeks prior to enrollment\n  * Heptatits C screening tests are not required unless:\n\n    * Known history of HCV infection\n    * As mandated by local health authority\n\nExclusion Criteria\n\n* Prior treatment with CDK4/6 inhibitor.\n* Participants who have had chemotherapy, immunotherapy or radiotherapy within 2 weeks (6 weeks for nitrosoureas or mitomycin C) prior to entering the study or those who have ≥ grade 2 adverse events due to agents administered more than 2 weeks earlier.\n* Participants who are receiving any other investigational agents.\n* Participants who are receiving other concurrent chemotherapies or immunotherapies for their cancer (except for patients who will receive letrozole, anastrozole, exemestane, tamoxifen, fulvestrant, trastuzumab, bisphosphonates, or ovarian suppression therapy)\n* Leptomeningeal involvement of cancer (Cohort 1). Leptomeningeal involvement is allowed for Cohort 2.\n* History of allergic reactions attributed to compounds of similar chemical or biologic composition to palbociclib (including abemaciclib).\n* Participants receiving any medications or substances that are moderate or strong inhibitors or inducers of CYP3A isoenzymes are ineligible. Lists including medications and substances known or with the potential to interact with the CYP3A isoenzymes are provided in Appendix C, and can also be found within section 5.4. Because the lists of these agents are constantly changing, it is important to regularly consult a frequently-updated list such as http://medicine.iupui.edu/clinpharm/ddis/table.aspx; medical reference texts such as the Physicians' Desk Reference may also provide this information. As part of the enrollment/informed consent procedures, the patient will be counseled on the risk of interactions with other agents, and what to do if new medications need to be prescribed or if the patient is considering a new over-the-counter medicine or herbal product.\n* Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements.\n* Pregnant women are excluded from this study because the effect of palbociclib on a developing fetus is unknown. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with palbociclib, breastfeeding should be discontinued if the mother is treated with palbociclib.\n\nIf a participant inadvertently becomes pregnant while on treatment with pembrolizumab, the participant will be immediately discontinued from study intervention(s). The site will contact the participant at least monthly and document the participant's status until the pregnancy has been completed or terminated. The outcome of the pregnancy will be reported to Merck within 2 working days if the outcome is a serious adverse experience (e.g. death, abortion, congenital anomaly, or other disabling or life-threatening complication to the mother or newborn). The study Investigator will make every effort to obtain permission to follow the outcome of the pregnancy and report the condition of the fetus or newborn to Merck. If a male participant impregnates his female partner, the study personnel at the site must be informed immediately and the pregnancy must be reported to the Overall PI, Merck and Pfizer and followed as necessary.\n\n* HIV-positive participants on combination antiretroviral therapy are ineligible because of the potential for pharmacokinetic interactions with palbociclib. In addition, these participants are at increased risk of lethal infections when treated with marrow-suppressive therapy. Appropriate studies will be undertaken in participants receiving combination antiretroviral therapy when indicated (Cohort 1). In Cohort 2, HIV-positive patients will NOT be permitted.\n* Current use of drugs that are known to prolong the QT interval (See Appendix C).\n* Unable to undergo MRI scans.\n* QTc \\> 480 msec (based on the mean value of the triplicate ECGs), family or personal history of long or short QTc prolongation, or Torsade de Pointes (TdP).\n* Uncontrolled electrolyte disorders that can compound the effects of QTc-prolonging drug (eg. hypocalcemia, hypokalemia, hypomagnesemia).\n* Active auto immune disease (Cohort 2)\n* Patients with history of lung radiation (Cohort 2)\n* Prior treatment with PD-1 or PD-L1 blocking agent (Cohort 2)\n* History of allogenic transplant\n* History of (non-infectious) pneumonitis/interstitial lung disease that required steroids or has current pneumonitis/interstitial lung disease\n* History of Hepatitis B or known active Hepatitis C virus infection",
+        "healthyVolunteers": false,
+        "sex": "ALL",
+        "minimumAge": "18 Years",
+        "stdAges": [
+          "ADULT",
+          "OLDER_ADULT"
+        ]
+      },
+      "contactsLocationsModule": {
+        "centralContacts": [
+          {
+            "name": "Nancy Wang, MD, MPH",
+            "role": "CONTACT",
+            "phone": "617-724-8770",
+            "email": "Nwang6@mgb.org"
+          }
+        ],
+        "overallOfficials": [
+          {
+            "name": "Nancy Wang, MD, MPH",
+            "affiliation": "Massachusetts General Hospital",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          }
+        ],
+        "locations": [
+          {
+            "facility": "Massachusetts General Hospital",
+            "status": "RECRUITING",
+            "city": "Boston",
+            "state": "Massachusetts",
+            "zip": "02115",
+            "country": "United States",
+            "contacts": [
+              {
+                "name": "Nancy Wang, MD, MPH",
+                "role": "CONTACT",
+                "phone": "617-724-8770",
+                "email": "Nwang6@mgb.org"
+              },
+              {
+                "name": "Nancy Wang, MD, MPH",
+                "role": "PRINCIPAL_INVESTIGATOR"
+              }
+            ],
+            "geoPoint": {
+              "lat": 42.35843,
+              "lon": -71.05977
+            }
+          },
+          {
+            "facility": "Dana Farber Cancer Institute",
+            "status": "NOT_YET_RECRUITING",
+            "city": "Boston",
+            "state": "Massachusetts",
+            "zip": "02215",
+            "country": "United States",
+            "contacts": [
+              {
+                "name": "Eudocia K. Lee, MD",
+                "role": "CONTACT",
+                "phone": "617-632-2166"
+              },
+              {
+                "name": "Eudocia Lee, MD",
+                "role": "PRINCIPAL_INVESTIGATOR"
+              }
+            ],
+            "geoPoint": {
+              "lat": 42.35843,
+              "lon": -71.05977
+            }
+          }
+        ]
+      },
+      "ipdSharingStatementModule": {
+        "ipdSharing": "NO"
+      }
+    },
+    "derivedSection": {
+      "miscInfoModule": {
+        "versionHolder": "2026-10-23"
+      },
+      "conditionBrowseModule": {
+        "meshes": [
+          {
+            "id": "D001932",
+            "term": "Brain Neoplasms"
+          }
+        ],
+        "ancestors": [
+          {
+            "id": "D016543",
+            "term": "Central Nervous System Neoplasms"
+          },
+          {
+            "id": "D009423",
+            "term": "Nervous System Neoplasms"
+          },
+          {
+            "id": "D009371",
+            "term": "Neoplasms by Site"
+          },
+          {
+            "id": "D009369",
+            "term": "Neoplasms"
+          },
+          {
+            "id": "D001927",
+            "term": "Brain Diseases"
+          },
+          {
+            "id": "D002493",
+            "term": "Central Nervous System Diseases"
+          },
+          {
+            "id": "D009422",
+            "term": "Nervous System Diseases"
+          }
+        ]
+      },
+      "interventionBrowseModule": {
+        "meshes": [
+          {
+            "id": "C500026",
+            "term": "palbociclib"
+          },
+          {
+            "id": "C582435",
+            "term": "pembrolizumab"
+          }
+        ]
+      }
+    },
+    "hasResults": false
+  },
+  "fetchedAt": "2026-10-24T17:41:39.144Z"
+}

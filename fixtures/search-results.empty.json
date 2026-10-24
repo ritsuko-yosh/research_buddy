@@ -1,0 +1,11 @@
+{
+  "contractVersion": "1.0.0",
+  "query": {
+    "condition": "a-condition-with-no-matches",
+    "location": "Massachusetts",
+    "status": "RECRUITING"
+  },
+  "fetchedAt": "2026-10-24T00:00:00.000Z",
+  "totalReturned": 0,
+  "results": []
+}
