@@ -1,5 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "installCommand": "npm install --ignore-scripts",
+  "framework": null,
   "functions": {
     "api/summarize.ts": {
       "memory": 128,
