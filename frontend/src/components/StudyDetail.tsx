@@ -1,4 +1,5 @@
 import type { Locale, Messages } from '../i18n/strings';
+import { groupBySection, sectionLabel, type SectionGroup } from '../lib/sections';
 import type { Trial } from '../types/trial';
 import { LanguageNotice, RegistryNotice } from './Notices';
 import { VerificationMap } from './VerificationMap';
@@ -11,12 +12,13 @@ interface StudyDetailProps {
   onPrepare: () => void;
 }
 
+const GROUP_ORDER: readonly SectionGroup[] = ['inclusion', 'exclusion', 'unspecified'];
+
 export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetailProps) {
   const massachusettsSites = trial.locations.filter((location) => location.state === 'Massachusetts');
   const descriptionInLocale = locale === 'es' ? trial.description.es : trial.description.en;
   const englishDescription = trial.description.en;
-  const inclusion = trial.criteria.filter((criterion) => criterion.section === 'inclusion');
-  const exclusion = trial.criteria.filter((criterion) => criterion.section === 'exclusion');
+  const groups = groupBySection(trial.criteria);
 
   return (
     <article className="card" aria-labelledby="study-title">
@@ -61,6 +63,9 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
 
       <div style={{ marginTop: '1.25rem' }}>
         <LanguageNotice m={m} requirement={trial.languageRequirement} />
+        <p className="notice warn" role="note" style={{ marginTop: '0.75rem' }}>
+          {m.languageSupportCaveat}
+        </p>
       </div>
 
       <div style={{ marginTop: '1.5rem' }}>
@@ -69,22 +74,23 @@ export function StudyDetail({ m, locale, trial, onBack, onPrepare }: StudyDetail
 
       <details className="card-inner" style={{ marginTop: '1.5rem' }}>
         <summary>{m.registryCriteriaSummary(trial.criteria.length)}</summary>
-        <h3>{m.inclusion}</h3>
-        <ul>
-          {inclusion.map((criterion) => (
-            <li key={criterion.id} lang="en">
-              {criterion.sourceText}
-            </li>
-          ))}
-        </ul>
-        <h3>{m.exclusion}</h3>
-        <ul>
-          {exclusion.map((criterion) => (
-            <li key={criterion.id} lang="en">
-              {criterion.sourceText}
-            </li>
-          ))}
-        </ul>
+        {GROUP_ORDER.map((group) =>
+          groups[group].length > 0 ? (
+            <section key={group}>
+              <h3>{sectionLabel(group, m)}</h3>
+              <ul>
+                {groups[group].map((criterion) => (
+                  <li key={criterion.id} lang="en">
+                    {criterion.sourceText}{' '}
+                    <span className="help">
+                      ({m.sourceRef}: {criterion.sourceRef})
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null,
+        )}
       </details>
 
       <div className="cta" style={{ marginTop: '1.5rem' }}>

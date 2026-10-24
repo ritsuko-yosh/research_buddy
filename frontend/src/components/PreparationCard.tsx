@@ -121,6 +121,9 @@ export function PreparationCard({ m, locale, trial, onBack }: PreparationCardPro
       <section className="prep-section" aria-labelledby="prep-language">
         <h2 id="prep-language">{m.prepLanguageHeading}</h2>
         <LanguageNotice m={m} requirement={trial.languageRequirement} />
+        <p className="notice warn" role="note" style={{ marginTop: '0.75rem' }}>
+          {m.languageSupportCaveat}
+        </p>
         {askLanguage && (
           <ul>
             <li>{m.languageQuestion}</li>
