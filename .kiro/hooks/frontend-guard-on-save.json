@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run frontend tests on frontend source change",
+      "trigger": "PostFileSave",
+      "description": "Runs the frontend Vitest suite (including the hardcoding and motion guards) whenever frontend source, styles, or markup change.",
+      "matcher": "frontend/src/.*\\.(ts|tsx|css)$",
+      "action": {
+        "type": "command",
+        "command": "cd \"$(git rev-parse --show-toplevel 2>/dev/null || echo .)/frontend\" && npm test --silent 2>&1 | tail -20",
+        "timeout": 180
+      }
+    }
+  ]
+}

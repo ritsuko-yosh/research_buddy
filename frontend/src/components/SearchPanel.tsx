@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { SUPPORTED_CONDITIONS } from '../data/conditions';
-import type { Locale, Messages } from '../i18n/strings';
+import type { Messages } from '../i18n/strings';
 import { normalizeSearchTerm } from '../lib/searchTerm';
 
 export type NctFormState =
@@ -12,8 +11,9 @@ export type NctFormState =
 
 interface SearchPanelProps {
   m: Messages;
-  locale: Locale;
   nctState: NctFormState;
+  /** Common search terms from the topic index. Empty when the index is unavailable. */
+  presets: readonly string[];
   /** Receives a validated, user-provided or preset search term. */
   onSearch: (term: string) => void;
   onSubmitNct: (rawNctId: string) => void;
@@ -34,7 +34,7 @@ function nctMessage(state: NctFormState, m: Messages): string | null {
   }
 }
 
-export function SearchPanel({ m, locale, nctState, onSearch, onSubmitNct }: SearchPanelProps) {
+export function SearchPanel({ m, nctState, presets, onSearch, onSubmitNct }: SearchPanelProps) {
   const [selectedPreset, setSelectedPreset] = useState<string | null>(null);
   const [termInput, setTermInput] = useState('');
   const [termInvalid, setTermInvalid] = useState(false);
@@ -44,9 +44,9 @@ export function SearchPanel({ m, locale, nctState, onSearch, onSubmitNct }: Sear
 
   return (
     <section className="card" aria-labelledby="search-heading">
-      <h1 id="search-heading" tabIndex={-1}>
+      <h2 id="search-heading" tabIndex={-1}>
         {m.searchHeading}
-      </h1>
+      </h2>
 
       <form
         className="nct-form"
@@ -88,28 +88,31 @@ export function SearchPanel({ m, locale, nctState, onSearch, onSubmitNct }: Sear
         </p>
       </form>
 
+      {presets.length > 0 && (
       <fieldset style={{ marginTop: '1.25rem' }}>
         <legend>{m.chooseCondition}</legend>
         <p className="help">{m.conditionHelp}</p>
         <div className="chip-row">
-          {SUPPORTED_CONDITIONS.map((condition) => (
+          {presets.map((term) => (
             <button
-              key={condition.id}
+              key={term}
               type="button"
               className="chip"
-              aria-pressed={selectedPreset === condition.id}
+              lang="en"
+              aria-pressed={selectedPreset === term}
               onClick={() => {
-                setSelectedPreset(condition.id);
+                setSelectedPreset(term);
                 setTermInvalid(false);
-                setTermInput(condition.term);
-                onSearch(condition.term);
+                setTermInput(term);
+                onSearch(term);
               }}
             >
-              {condition.label[locale]}
+              {term.charAt(0).toUpperCase() + term.slice(1)}
             </button>
           ))}
         </div>
       </fieldset>
+      )}
 
       <form
         className="nct-form"

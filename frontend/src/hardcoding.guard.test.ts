@@ -22,6 +22,15 @@ const FORBIDDEN_PATTERNS: Array<{ label: string; pattern: RegExp }> = [
   { label: 'literal NCT ID', pattern: /NCT\d{8}/ },
 ];
 
+/**
+ * Colors belong in styles.css as tokens. These files are artwork, not UI, so
+ * their colors live inside them. Any other file with a literal hex color fails.
+ *  - DoorIllustration.tsx: the homepage illustration (approved artwork).
+ *  - BrandMark.tsx: the Visit Ready logo (approved brand artwork).
+ */
+const HEX_COLOR_EXCEPTIONS = new Set(['components/home/DoorIllustration.tsx', 'components/BrandMark.tsx']);
+const HEX_COLOR = /#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/;
+
 function productionSourceFiles(dir: string): string[] {
   const files: string[] = [];
   for (const entry of readdirSync(dir)) {
@@ -57,6 +66,24 @@ describe('hardcoding guard (production source)', () => {
           }
         }
       });
+    }
+    expect(violations).toEqual([]);
+  });
+
+  it('contains no literal hex colors outside the token file and the approved artwork', () => {
+    const violations: string[] = [];
+    for (const file of files) {
+      const rel = relative(SRC_ROOT, file).split('\\').join('/');
+      if (HEX_COLOR_EXCEPTIONS.has(rel)) {
+        continue;
+      }
+      readFileSync(file, 'utf8')
+        .split('\n')
+        .forEach((line, index) => {
+          if (HEX_COLOR.test(line)) {
+            violations.push(`${rel}:${index + 1} [literal hex color] ${line.trim()}`);
+          }
+        });
     }
     expect(violations).toEqual([]);
   });

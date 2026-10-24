@@ -1,0 +1,5458 @@
+{
+  "generatedAt": "2026-10-24T21:12:39.938Z",
+  "query": "https://clinicaltrials.gov/api/v2/studies?query.locn=Massachusetts&filter.overallStatus=RECRUITING",
+  "totalStudies": 3145,
+  "groupingSource": "meshAncestors",
+  "categoryListVersion": "mesh-top-level-disease-v1",
+  "topics": [
+    {
+      "id": "neoplasms",
+      "registryName": "Neoplasms",
+      "studyCount": 943,
+      "topConditions": [
+        {
+          "term": "Breast Neoplasms",
+          "studyCount": 117
+        },
+        {
+          "term": "Carcinoma, Non-Small-Cell Lung",
+          "studyCount": 92
+        },
+        {
+          "term": "Lung Neoplasms",
+          "studyCount": 67
+        },
+        {
+          "term": "Prostatic Neoplasms",
+          "studyCount": 64
+        },
+        {
+          "term": "Neoplasm Metastasis",
+          "studyCount": 63
+        },
+        {
+          "term": "Colorectal Neoplasms",
+          "studyCount": 62
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Airway Obstruction",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Chemotherapy-Related Cognitive Impairment"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "ACTH Syndrome, Ectopic",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenocarcinoma, Clear Cell"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Atypical Hemolytic Uremic Syndrome",
+            "Autoimmune Diseases",
+            "Brain Concussion"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anemia, Aplastic",
+            "Anemia, Refractory, with Excess of Blasts",
+            "Antisocial Personality Disorder",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Amyloidosis",
+            "Anemia, Aplastic",
+            "Anemia, Refractory, with Excess of Blasts",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Amyloidosis",
+            "Antisocial Personality Disorder",
+            "Anxiety Disorders",
+            "Autoimmune Diseases",
+            "Brain Concussion"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Autoimmune Diseases",
+            "Barrett Esophagus"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Airway Obstruction",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "ACTH Syndrome, Ectopic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms",
+            "Breast Carcinoma In Situ"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Antisocial Personality Disorder",
+            "Carcinoma, Embryonal",
+            "Choriocarcinoma",
+            "Fetofetal Transfusion",
+            "Hemangioma"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli",
+            "Airway Obstruction"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Autoimmune Diseases"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenocarcinoma, Clear Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adenoviridae Infections",
+            "Astrocytoma",
+            "Biliary Tract Neoplasms",
+            "Brain Neoplasms"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Airway Obstruction",
+            "Anxiety Disorders",
+            "Brain Concussion",
+            "Brain Neoplasms",
+            "Breast Neoplasms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "registryName": "Other",
+      "studyCount": 603,
+      "topConditions": [
+        {
+          "term": "Neoplasms",
+          "studyCount": 37
+        },
+        {
+          "term": "Cardiovascular Diseases",
+          "studyCount": 19
+        },
+        {
+          "term": "Depression",
+          "studyCount": 15
+        },
+        {
+          "term": "Chronic Pain",
+          "studyCount": 11
+        },
+        {
+          "term": "Heart Diseases",
+          "studyCount": 8
+        },
+        {
+          "term": "Pain, Postoperative",
+          "studyCount": 8
+        }
+      ],
+      "sharedWith": []
+    },
+    {
+      "id": "nervous_system_diseases",
+      "registryName": "Nervous System Diseases",
+      "studyCount": 542,
+      "topConditions": [
+        {
+          "term": "Alzheimer Disease",
+          "studyCount": 44
+        },
+        {
+          "term": "Brain Neoplasms",
+          "studyCount": 31
+        },
+        {
+          "term": "Stroke",
+          "studyCount": 31
+        },
+        {
+          "term": "Amyotrophic Lateral Sclerosis",
+          "studyCount": 23
+        },
+        {
+          "term": "Parkinson Disease",
+          "studyCount": 23
+        },
+        {
+          "term": "Multiple Sclerosis",
+          "studyCount": 21
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Infections",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Agnosia",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bipolar Disorder"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "15q24 Microdeletion",
+            "16p11.2 Deletion Syndrome",
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Acidosis, Lactic"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Acromegaly",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Acidosis, Lactic",
+            "Acute Pain",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Aortitis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Agnosia",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Acromegaly",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Airway Obstruction",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acidosis, Lactic",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Disorders of Excessive Somnolence",
+            "Respiratory Aspiration",
+            "Sleep Disorders, Circadian Rhythm"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Auditory neuropathy"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Bronchopulmonary Dysplasia",
+            "Depressive Disorder, Major",
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Airway Obstruction",
+            "Amyotrophic Lateral Sclerosis"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acute Pain",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Airway Obstruction",
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cardiovascular_diseases",
+      "registryName": "Cardiovascular Diseases",
+      "studyCount": 386,
+      "topConditions": [
+        {
+          "term": "Multiple Myeloma",
+          "studyCount": 49
+        },
+        {
+          "term": "Heart Failure",
+          "studyCount": 43
+        },
+        {
+          "term": "Stroke",
+          "studyCount": 30
+        },
+        {
+          "term": "Atrial Fibrillation",
+          "studyCount": 21
+        },
+        {
+          "term": "Hypertension",
+          "studyCount": 18
+        },
+        {
+          "term": "Ischemic Stroke",
+          "studyCount": 18
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Rheumatoid",
+            "Bacteremia",
+            "Endocarditis",
+            "Gingivitis",
+            "Infections"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bites and Stings",
+            "Brain Injuries, Traumatic"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anemia, Sickle Cell",
+            "Aneurysm, Aortic Arch",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Airway Obstruction",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Barth Syndrome"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Hemorrhage",
+            "Hypertension",
+            "Hypertension, Pregnancy-Induced"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Airway Obstruction",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac",
+            "Atrial Fibrillation",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Airway Obstruction",
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Aneurysm",
+            "Anxiety Disorders"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "immune_system_diseases",
+      "registryName": "Immune System Diseases",
+      "studyCount": 373,
+      "topConditions": [
+        {
+          "term": "Multiple Myeloma",
+          "studyCount": 48
+        },
+        {
+          "term": "Leukemia, Lymphocytic, Chronic, B-Cell",
+          "studyCount": 35
+        },
+        {
+          "term": "Lymphoma",
+          "studyCount": 32
+        },
+        {
+          "term": "Recurrence",
+          "studyCount": 27
+        },
+        {
+          "term": "Lymphoma, Non-Hodgkin",
+          "studyCount": 26
+        },
+        {
+          "term": "Lymphoma, Follicular",
+          "studyCount": 22
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Hidradenitis Suppurativa",
+            "Infections",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Anaphylaxis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anemia, Aplastic",
+            "Anemia, Hemolytic, Autoimmune",
+            "Anemia, Refractory, with Excess of Blasts",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adjustment Disorders",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alcohol Drinking"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Amyloidosis",
+            "Anemia, Aplastic",
+            "Anemia, Refractory, with Excess of Blasts",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Hypertension",
+            "Insulin Resistance",
+            "Pregnancy in Diabetics"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms",
+            "Anxiety Disorders"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acquired Immunodeficiency Syndrome",
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acquired Immunodeficiency Syndrome",
+            "Alcohol Drinking",
+            "Amyotrophic Lateral Sclerosis",
+            "Astrocytoma"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urogenital_diseases",
+      "registryName": "Urogenital Diseases",
+      "studyCount": 367,
+      "topConditions": [
+        {
+          "term": "Prostatic Neoplasms",
+          "studyCount": 70
+        },
+        {
+          "term": "Ovarian Neoplasms",
+          "studyCount": 68
+        },
+        {
+          "term": "Endometrial Neoplasms",
+          "studyCount": 60
+        },
+        {
+          "term": "Urinary Bladder Neoplasms",
+          "studyCount": 34
+        },
+        {
+          "term": "Breast Neoplasms",
+          "studyCount": 32
+        },
+        {
+          "term": "Carcinoma, Non-Small-Cell Lung",
+          "studyCount": 29
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Rheumatoid",
+            "Escherichia coli Infections",
+            "Infections",
+            "Sepsis",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Agnosia",
+            "Alcohol-Related Disorders",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenocarcinoma",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Hyperplasia, Congenital",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Acute Kidney Injury",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenocarcinoma, Clear Cell"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Antisocial Personality Disorder",
+            "Anus Neoplasms",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acquired Immunodeficiency Syndrome",
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Agnosia",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenocarcinoma, Clear Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acute Pain",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acute Kidney Injury",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Hyperplasia, Congenital"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Psychological Well-Being",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Antisocial Personality Disorder",
+            "Birth Weight",
+            "Bronchopulmonary Dysplasia"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Abdominal Neoplasms",
+            "Acquired Immunodeficiency Syndrome",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "respiratory_tract_diseases",
+      "registryName": "Respiratory Tract Diseases",
+      "studyCount": 355,
+      "topConditions": [
+        {
+          "term": "Carcinoma, Non-Small-Cell Lung",
+          "studyCount": 107
+        },
+        {
+          "term": "Lung Neoplasms",
+          "studyCount": 74
+        },
+        {
+          "term": "Colorectal Neoplasms",
+          "studyCount": 30
+        },
+        {
+          "term": "Pulmonary Disease, Chronic Obstructive",
+          "studyCount": 25
+        },
+        {
+          "term": "Small Cell Lung Carcinoma",
+          "studyCount": 25
+        },
+        {
+          "term": "Breast Neoplasms",
+          "studyCount": 24
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Infections",
+            "Invasive Pulmonary Aspergillosis",
+            "Virus Diseases"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Airway Obstruction",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Cystic Fibrosis",
+            "Diabetes Complications",
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Aortitis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms",
+            "Anxiety Disorders"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Barrett Esophagus",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli",
+            "Airway Obstruction"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Airway Obstruction",
+            "Amyotrophic Lateral Sclerosis"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Burnout, Professional",
+            "Depression",
+            "Occupational Stress",
+            "Psychological Well-Being"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Critical Illness",
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Fetal Growth Retardation"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Airway Obstruction",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hemic_and_lymphatic_diseases",
+      "registryName": "Hemic and Lymphatic Diseases",
+      "studyCount": 332,
+      "topConditions": [
+        {
+          "term": "Leukemia, Myeloid, Acute",
+          "studyCount": 53
+        },
+        {
+          "term": "Multiple Myeloma",
+          "studyCount": 49
+        },
+        {
+          "term": "Leukemia, Lymphocytic, Chronic, B-Cell",
+          "studyCount": 35
+        },
+        {
+          "term": "Lymphoma",
+          "studyCount": 35
+        },
+        {
+          "term": "Hematologic Neoplasms",
+          "studyCount": 32
+        },
+        {
+          "term": "Leukemia",
+          "studyCount": 32
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anemia, Sickle Cell",
+            "Aneurysm, Aortic Arch",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Heart Failure"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anemia, Diamond-Blackfan",
+            "Anemia, Sickle Cell",
+            "Aneurysm, Aortic Arch"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Atypical Hemolytic Uremic Syndrome",
+            "Autoimmune Diseases"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anemia, Aplastic",
+            "Anemia, Hemolytic, Autoimmune",
+            "Anemia, Refractory, with Excess of Blasts",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Antisocial Personality Disorder",
+            "Arrhythmias, Cardiac",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Autoimmune Diseases"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Aneurysm, Aortic Arch",
+            "Aortic Aneurysm, Abdominal",
+            "Aortic Dissection",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anemia, Aplastic",
+            "Anemia, Refractory, with Excess of Blasts",
+            "Antisocial Personality Disorder",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Aortitis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Arrhythmias, Cardiac",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Antisocial Personality Disorder",
+            "Bronchopulmonary Dysplasia",
+            "Fetofetal Transfusion",
+            "Hemangioma",
+            "Hemorrhage"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Aortitis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anemia, Sickle Cell",
+            "Aneurysm, Aortic Arch",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Antisocial Personality Disorder",
+            "Anus Neoplasms",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Cognitive Dysfunction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mental_disorders",
+      "registryName": "Mental Disorders",
+      "studyCount": 313,
+      "topConditions": [
+        {
+          "term": "Depression",
+          "studyCount": 47
+        },
+        {
+          "term": "Depressive Disorder, Major",
+          "studyCount": 45
+        },
+        {
+          "term": "Alzheimer Disease",
+          "studyCount": 44
+        },
+        {
+          "term": "Anxiety Disorders",
+          "studyCount": 31
+        },
+        {
+          "term": "Cognitive Dysfunction",
+          "studyCount": 26
+        },
+        {
+          "term": "Stress Disorders, Post-Traumatic",
+          "studyCount": 22
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Infections"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adolescent Behavior",
+            "Agnosia",
+            "Alcohol-Related Disorders",
+            "Alcoholism"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Antisocial Personality Disorder",
+            "Arrhythmias, Cardiac",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Autoimmune Diseases"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adjustment Disorders",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alcohol Drinking"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Amyloidosis",
+            "Antisocial Personality Disorder",
+            "Anxiety Disorders",
+            "Autoimmune Diseases",
+            "Brain Concussion"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Agnosia",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Burnout, Professional",
+            "Depression",
+            "Disorders of Excessive Somnolence",
+            "Occupational Stress"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Brain Diseases",
+            "Breast Neoplasms",
+            "Colonic Neoplasms",
+            "Diabetes Mellitus",
+            "Dyskinesias"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Agnosia",
+            "Antisocial Personality Disorder",
+            "Bronchopulmonary Dysplasia",
+            "Depression, Postpartum",
+            "Depressive Disorder, Major"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Agnosia",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adrenal Insufficiency",
+            "Alcohol Drinking",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Accidental Injuries",
+            "Agnosia",
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digestive_system_diseases",
+      "registryName": "Digestive System Diseases",
+      "studyCount": 305,
+      "topConditions": [
+        {
+          "term": "Colorectal Neoplasms",
+          "studyCount": 71
+        },
+        {
+          "term": "Pancreatic Neoplasms",
+          "studyCount": 50
+        },
+        {
+          "term": "Carcinoma, Non-Small-Cell Lung",
+          "studyCount": 43
+        },
+        {
+          "term": "Stomach Neoplasms",
+          "studyCount": 40
+        },
+        {
+          "term": "Breast Neoplasms",
+          "studyCount": 35
+        },
+        {
+          "term": "Endometrial Neoplasms",
+          "studyCount": 30
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Clostridium Infections",
+            "Dysentery"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenoma, Islet Cell"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Abdominal Pain",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Depressive Disorder, Major",
+            "Diabetes Mellitus",
+            "Hemorrhage",
+            "Insulin Resistance"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Acute Kidney Injury",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenoviridae Infections",
+            "Astrocytoma",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Chronic Disease"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skin_and_connective_tissue_diseases",
+      "registryName": "Skin and Connective Tissue Diseases",
+      "studyCount": 287,
+      "topConditions": [
+        {
+          "term": "Breast Neoplasms",
+          "studyCount": 126
+        },
+        {
+          "term": "Ovarian Neoplasms",
+          "studyCount": 32
+        },
+        {
+          "term": "Melanoma",
+          "studyCount": 31
+        },
+        {
+          "term": "Carcinoma, Non-Small-Cell Lung",
+          "studyCount": 30
+        },
+        {
+          "term": "Endometrial Neoplasms",
+          "studyCount": 30
+        },
+        {
+          "term": "Triple Negative Breast Neoplasms",
+          "studyCount": 28
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Axial Spondyloarthritis",
+            "Hidradenitis",
+            "Hidradenitis Suppurativa"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Chemotherapy-Related Cognitive Impairment"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anemia, Sickle Cell",
+            "Aneurysm, Aortic Arch",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Depression",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Hemorrhage",
+            "Hypertension",
+            "Pulmonary Arterial Hypertension"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Diseases",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+      "registryName": "Congenital, Hereditary, and Neonatal Diseases and Abnormalities",
+      "studyCount": 256,
+      "topConditions": [
+        {
+          "term": "Cystic Fibrosis",
+          "studyCount": 17
+        },
+        {
+          "term": "Anemia, Sickle Cell",
+          "studyCount": 12
+        },
+        {
+          "term": "Amyloid Neuropathies, Familial",
+          "studyCount": 8
+        },
+        {
+          "term": "Genetic Diseases, Inborn",
+          "studyCount": 8
+        },
+        {
+          "term": "Down Syndrome",
+          "studyCount": 7
+        },
+        {
+          "term": "Endometrial Neoplasms",
+          "studyCount": 7
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Cognition Disorders"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenocarcinoma",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Hyperplasia, Congenital"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anemia, Diamond-Blackfan",
+            "Anemia, Sickle Cell",
+            "Aneurysm, Aortic Arch"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "15q24 Microdeletion",
+            "16p11.2 Deletion Syndrome",
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Acidosis, Lactic"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Acid-Base Imbalance",
+            "Acidosis",
+            "Acidosis, Lactic",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenoma, Islet Cell"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Psychological Well-Being",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Barth Syndrome"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Antisocial Personality Disorder",
+            "Bronchopulmonary Dysplasia",
+            "Critical Illness",
+            "Diabetes Mellitus",
+            "Diseases in Twins"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenocarcinoma",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Hyperplasia, Congenital",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nutritional_and_metabolic_diseases",
+      "registryName": "Nutritional and Metabolic Diseases",
+      "studyCount": 235,
+      "topConditions": [
+        {
+          "term": "Obesity",
+          "studyCount": 44
+        },
+        {
+          "term": "Diabetes Mellitus, Type 2",
+          "studyCount": 29
+        },
+        {
+          "term": "Diabetes Mellitus",
+          "studyCount": 27
+        },
+        {
+          "term": "Amyotrophic Lateral Sclerosis",
+          "studyCount": 23
+        },
+        {
+          "term": "Overweight",
+          "studyCount": 23
+        },
+        {
+          "term": "Diabetes Mellitus, Type 1",
+          "studyCount": 21
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bipolar Disorder",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Acid-Base Imbalance",
+            "Acidosis",
+            "Acidosis, Lactic",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenoma, Islet Cell"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "ACTH Syndrome, Ectopic",
+            "Acidosis, Lactic",
+            "Acute Kidney Injury",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Arrhythmias, Cardiac",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "ACTH Syndrome, Ectopic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Amyloidosis",
+            "Angiokeratoma"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acidosis, Lactic",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Diabetes, Gestational",
+            "Hemorrhage"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adjustment Disorders",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Anus Neoplasms"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acute Kidney Injury",
+            "Adenine phosphoribosyltransferase deficiency",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Hyperplasia, Congenital"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endocrine_system_diseases",
+      "registryName": "Endocrine System Diseases",
+      "studyCount": 218,
+      "topConditions": [
+        {
+          "term": "Ovarian Neoplasms",
+          "studyCount": 68
+        },
+        {
+          "term": "Pancreatic Neoplasms",
+          "studyCount": 50
+        },
+        {
+          "term": "Endometrial Neoplasms",
+          "studyCount": 36
+        },
+        {
+          "term": "Diabetes Mellitus, Type 2",
+          "studyCount": 29
+        },
+        {
+          "term": "Breast Neoplasms",
+          "studyCount": 28
+        },
+        {
+          "term": "Diabetes Mellitus",
+          "studyCount": 26
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenocarcinoma",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Hyperplasia, Congenital"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenoma, Islet Cell"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Anus Neoplasms",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Acromegaly",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "ACTH Syndrome, Ectopic",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenocarcinoma, Clear Cell"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Acromegaly",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "ACTH Syndrome, Ectopic",
+            "Acidosis, Lactic",
+            "Acute Kidney Injury",
+            "Adenoma, Islet Cell",
+            "Adenomatous Polyposis Coli"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Diabetes, Gestational",
+            "Hemorrhage"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adenomatous Polyposis Coli",
+            "Adrenal Insufficiency",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Acute Kidney Injury",
+            "Adenocarcinoma",
+            "Adenocarcinoma Of Esophagus",
+            "Adenocarcinoma of Lung",
+            "Adenocarcinoma, Clear Cell"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Diseases",
+            "Brain Neoplasms",
+            "Breast Neoplasms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "musculoskeletal_diseases",
+      "registryName": "Musculoskeletal Diseases",
+      "studyCount": 107,
+      "topConditions": [
+        {
+          "term": "Osteoarthritis, Knee",
+          "studyCount": 11
+        },
+        {
+          "term": "Arthritis, Rheumatoid",
+          "studyCount": 7
+        },
+        {
+          "term": "Autoimmune Diseases",
+          "studyCount": 6
+        },
+        {
+          "term": "Muscular Dystrophy, Duchenne",
+          "studyCount": 6
+        },
+        {
+          "term": "Myositis",
+          "studyCount": 6
+        },
+        {
+          "term": "Arthritis, Psoriatic",
+          "studyCount": 5
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Axial Spondyloarthritis",
+            "Hidradenitis Suppurativa"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Chronic Pain",
+            "Cognition Disorders",
+            "Hematologic Neoplasms"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Acromegaly",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Aneurysm, Aortic Arch",
+            "Aortic Aneurysm, Abdominal",
+            "Aortic Dissection",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Autoimmune Diseases",
+            "Barrett Esophagus"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Acromegaly",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Barth Syndrome",
+            "Brain Diseases",
+            "Breast Neoplasms",
+            "Camurati-Engelmann Syndrome"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Diabetes Mellitus",
+            "Wounds and Injuries"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Barrett Esophagus",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Cognitive Dysfunction",
+            "Fatigue Syndrome, Chronic"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Amyotrophic Lateral Sclerosis",
+            "Anterior Cruciate Ligament Injuries",
+            "Arterial Occlusive Diseases",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Diseases"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eye_diseases",
+      "registryName": "Eye Diseases",
+      "studyCount": 98,
+      "topConditions": [
+        {
+          "term": "Macular Degeneration",
+          "studyCount": 14
+        },
+        {
+          "term": "Geographic Atrophy",
+          "studyCount": 7
+        },
+        {
+          "term": "Glaucoma",
+          "studyCount": 6
+        },
+        {
+          "term": "Myopia",
+          "studyCount": 5
+        },
+        {
+          "term": "Neuromyelitis Optica",
+          "studyCount": 5
+        },
+        {
+          "term": "Sjogren's Syndrome",
+          "studyCount": 5
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Chronic Pain",
+            "Hematologic Neoplasms",
+            "Hemorrhagic Stroke",
+            "Neoplasms"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Atypical Hemolytic Uremic Syndrome",
+            "Autoimmune Diseases"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Atypical Hemolytic Uremic Syndrome",
+            "Autoimmune Diseases",
+            "Brain Concussion"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Acidosis, Lactic",
+            "Acute Pain",
+            "Adrenoleukodystrophy"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Barth Syndrome",
+            "Brain Diseases",
+            "Cytochrome-c Oxidase Deficiency",
+            "Deafness"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Acute Pain",
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Cystic Fibrosis",
+            "Diabetes Complications",
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Adrenoleukodystrophy",
+            "Agenesis of Cerebellar Vermis",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Amyotrophic Lateral Sclerosis",
+            "Athabaskan brainstem dysgenesis",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Acute Pain",
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Concussion",
+            "Brain Diseases"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wounds_and_injuries",
+      "registryName": "Wounds and Injuries",
+      "studyCount": 66,
+      "topConditions": [
+        {
+          "term": "Brain Injuries, Traumatic",
+          "studyCount": 12
+        },
+        {
+          "term": "Spinal Cord Injuries",
+          "studyCount": 9
+        },
+        {
+          "term": "Brain Concussion",
+          "studyCount": 5
+        },
+        {
+          "term": "Brain Injuries",
+          "studyCount": 4
+        },
+        {
+          "term": "Consciousness Disorders",
+          "studyCount": 4
+        },
+        {
+          "term": "Depression",
+          "studyCount": 4
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Airway Obstruction",
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Aneurysm",
+            "Anxiety Disorders"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Agnosia",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bipolar Disorder"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Chronic Disease"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Diseases",
+            "Brain Neoplasms",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Concussion",
+            "Brain Diseases"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Cognitive Dysfunction"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Accidental Injuries",
+            "Agnosia",
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Amyotrophic Lateral Sclerosis",
+            "Anterior Cruciate Ligament Injuries",
+            "Arterial Occlusive Diseases",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Diseases"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Airway Obstruction",
+            "Anxiety Disorders",
+            "Brain Concussion",
+            "Brain Neoplasms",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Airway Obstruction",
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Alzheimer Disease",
+            "Amyotrophic Lateral Sclerosis",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Persian Gulf Syndrome",
+            "Respiratory Aspiration"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Brain Diseases",
+            "Breast Neoplasms",
+            "Dyskinesias",
+            "Dysphonia",
+            "Dystonia"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Depressive Disorder, Major",
+            "Pulmonary Atelectasis"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Airway Obstruction",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Diseases",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Corneal Diseases",
+            "Dyskinesias",
+            "Dysphonia"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Amyotrophic Lateral Sclerosis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Cognitive Dysfunction",
+            "Heart Failure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "virus_diseases",
+      "registryName": "Virus Diseases",
+      "studyCount": 58,
+      "topConditions": [
+        {
+          "term": "Burkitt Lymphoma",
+          "studyCount": 12
+        },
+        {
+          "term": "COVID-19",
+          "studyCount": 9
+        },
+        {
+          "term": "Acquired Immunodeficiency Syndrome",
+          "studyCount": 6
+        },
+        {
+          "term": "HIV Infections",
+          "studyCount": 6
+        },
+        {
+          "term": "Post-Acute COVID-19 Syndrome",
+          "studyCount": 6
+        },
+        {
+          "term": "Carcinoma, Merkel Cell",
+          "studyCount": 5
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac",
+            "Atrial Fibrillation",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Heart Failure",
+            "Lymphoma, Large B-Cell, Diffuse"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adenoviridae Infections",
+            "Astrocytoma",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Amyotrophic Lateral Sclerosis",
+            "Athabaskan brainstem dysgenesis",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adrenal Insufficiency",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Acquired Immunodeficiency Syndrome",
+            "Alcohol Drinking",
+            "Amyotrophic Lateral Sclerosis",
+            "Astrocytoma"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adrenal Insufficiency",
+            "Alcohol Drinking",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Cognitive Dysfunction",
+            "Fatigue Syndrome, Chronic"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenocarcinoma Of Esophagus",
+            "Adenoviridae Infections",
+            "Astrocytoma",
+            "Biliary Tract Neoplasms",
+            "Brain Neoplasms"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Biliary Tract Neoplasms",
+            "Carcinoma",
+            "Carcinoma, Basal Cell",
+            "Carcinoma, Hepatocellular"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Hemorrhage",
+            "Hypertension",
+            "Pulmonary Arterial Hypertension"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency",
+            "Amyotrophic Lateral Sclerosis",
+            "Arrhythmias, Cardiac"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency",
+            "Arrhythmias, Cardiac",
+            "Astrocytoma"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Athabaskan brainstem dysgenesis",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "AIDS-Related Complex",
+            "Abdominal Neoplasms",
+            "Acquired Immunodeficiency Syndrome",
+            "Adenocarcinoma Of Esophagus",
+            "Adrenal Insufficiency"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Amyotrophic Lateral Sclerosis",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Cognitive Dysfunction",
+            "Heart Failure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chemically_induced_disorders",
+      "registryName": "Chemically-Induced Disorders",
+      "studyCount": 50,
+      "topConditions": [
+        {
+          "term": "Opioid-Related Disorders",
+          "studyCount": 16
+        },
+        {
+          "term": "Substance-Related Disorders",
+          "studyCount": 15
+        },
+        {
+          "term": "Alcoholism",
+          "studyCount": 8
+        },
+        {
+          "term": "Chronic Pain",
+          "studyCount": 4
+        },
+        {
+          "term": "Behavior, Addictive",
+          "studyCount": 3
+        },
+        {
+          "term": "Cardiotoxicity",
+          "studyCount": 3
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bites and Stings",
+            "Brain Injuries, Traumatic"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Cognition Disorders"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Chronic Pain",
+            "Hematologic Neoplasms",
+            "Hemorrhagic Stroke",
+            "Neoplasms"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Heart Failure"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Anaphylaxis",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Adolescent Behavior",
+            "Agnosia",
+            "Alcohol-Related Disorders",
+            "Alcoholism"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Chronic Pain",
+            "Cognition Disorders",
+            "Hematologic Neoplasms"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Chemotherapy-Related Cognitive Impairment"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Agnosia",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bipolar Disorder"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bipolar Disorder",
+            "Breast Neoplasms"
+          ]
+        },
+        {
+          "topicId": "occupational_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Psychological Well-Being"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Breast Neoplasms",
+            "Lymphoma",
+            "Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Agnosia",
+            "Depressive Disorder, Major"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Breast Neoplasms",
+            "Cardiotoxicity",
+            "Chemotherapy-Related Cognitive Impairment"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Hematologic Neoplasms",
+            "Neoplasms"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Agnosia",
+            "Alcohol-Related Disorders",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Acquired Immunodeficiency Syndrome",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Brain Neoplasms",
+            "Heart Failure",
+            "Lymphoma, Large B-Cell, Diffuse"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Agnosia",
+            "Aneurysm",
+            "Anxiety Disorders",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bipolar Disorder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otorhinolaryngologic_diseases",
+      "registryName": "Otorhinolaryngologic Diseases",
+      "studyCount": 43,
+      "topConditions": [
+        {
+          "term": "Dysphonia",
+          "studyCount": 8
+        },
+        {
+          "term": "Carcinoma",
+          "studyCount": 7
+        },
+        {
+          "term": "Laryngeal Neoplasms",
+          "studyCount": 7
+        },
+        {
+          "term": "Squamous Cell Carcinoma of Head and Neck",
+          "studyCount": 7
+        },
+        {
+          "term": "Deafness",
+          "studyCount": 6
+        },
+        {
+          "term": "Hearing Loss",
+          "studyCount": 5
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Barth Syndrome"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Breast Neoplasms",
+            "Lymphoma",
+            "Neoplasms"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Barth Syndrome"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Abdominal Pain",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Barth Syndrome",
+            "Brain Diseases",
+            "Cytochrome-c Oxidase Deficiency",
+            "Deafness"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Brain Diseases",
+            "Breast Neoplasms",
+            "Colonic Neoplasms",
+            "Diabetes Mellitus",
+            "Dyskinesias"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Barth Syndrome",
+            "Brain Diseases",
+            "Breast Neoplasms",
+            "Camurati-Engelmann Syndrome"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms",
+            "Breast Carcinoma In Situ"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Auditory neuropathy"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Acidosis, Lactic",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Barth Syndrome",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "pregnancy_complications",
+          "sharedTerms": [
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arteriovenous Malformations",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Biliary Tract Neoplasms",
+            "Carcinoma",
+            "Carcinoma, Basal Cell",
+            "Carcinoma, Hepatocellular"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Brain Diseases",
+            "Breast Neoplasms",
+            "Dyskinesias",
+            "Dysphonia",
+            "Dystonia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stomatognathic_diseases",
+      "registryName": "Stomatognathic Diseases",
+      "studyCount": 35,
+      "topConditions": [
+        {
+          "term": "Squamous Cell Carcinoma of Head and Neck",
+          "studyCount": 9
+        },
+        {
+          "term": "Carcinoma",
+          "studyCount": 6
+        },
+        {
+          "term": "Mouth Neoplasms",
+          "studyCount": 6
+        },
+        {
+          "term": "Salivary Gland Neoplasms",
+          "studyCount": 6
+        },
+        {
+          "term": "Hypopharyngeal Neoplasms",
+          "studyCount": 5
+        },
+        {
+          "term": "Laryngeal Neoplasms",
+          "studyCount": 5
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "bacterial_infections_and_mycoses",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Bacteremia",
+            "Endocarditis",
+            "Gingivitis"
+          ]
+        },
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Hematologic Neoplasms",
+            "Neoplasms"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy",
+            "Allan-Herndon-Dudley syndrome"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Autoimmune Diseases"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease",
+            "Alexanders leukodystrophy"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Bile Duct Neoplasms",
+            "Biliary Tract Neoplasms"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Anus Neoplasms",
+            "Attention Deficit Disorder with Hyperactivity",
+            "Bile Duct Neoplasms"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Adenomatous Polyposis Coli",
+            "Adrenoleukodystrophy",
+            "Aicardi-Goutieres syndrome",
+            "Alexander Disease"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Abdominal Neoplasms",
+            "Abducens Nerve Diseases",
+            "Accessory Nerve Diseases",
+            "Athabaskan brainstem dysgenesis",
+            "Attention Deficit Disorder with Hyperactivity"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Attention Deficit Disorder with Hyperactivity",
+            "Breast Neoplasms",
+            "Corneal Diseases",
+            "Dyskinesias",
+            "Dysphonia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bacterial_infections_and_mycoses",
+      "registryName": "Bacterial Infections and Mycoses",
+      "studyCount": 28,
+      "topConditions": [
+        {
+          "term": "Hidradenitis Suppurativa",
+          "studyCount": 11
+        },
+        {
+          "term": "Clostridium Infections",
+          "studyCount": 4
+        },
+        {
+          "term": "Hidradenitis",
+          "studyCount": 3
+        },
+        {
+          "term": "Bacteremia",
+          "studyCount": 2
+        },
+        {
+          "term": "Escherichia coli Infections",
+          "studyCount": 2
+        },
+        {
+          "term": "Pneumococcal Infections",
+          "studyCount": 2
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Arthritis, Rheumatoid",
+            "Bacteremia",
+            "Endocarditis",
+            "Gingivitis",
+            "Infections"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Clostridium Infections",
+            "Dysentery"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Hidradenitis Suppurativa",
+            "Infections",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Infections"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Axial Spondyloarthritis",
+            "Hidradenitis Suppurativa"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Infections",
+            "Skin Diseases"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Infections",
+            "Invasive Pulmonary Aspergillosis",
+            "Virus Diseases"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Axial Spondyloarthritis",
+            "Hidradenitis",
+            "Hidradenitis Suppurativa"
+          ]
+        },
+        {
+          "topicId": "stomatognathic_diseases",
+          "sharedTerms": [
+            "Arthritis, Psoriatic",
+            "Arthritis, Rheumatoid",
+            "Bacteremia",
+            "Endocarditis",
+            "Gingivitis"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Arthritis, Rheumatoid",
+            "Escherichia coli Infections",
+            "Infections",
+            "Sepsis",
+            "Skin Diseases"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pregnancy_complications",
+      "registryName": "Pregnancy Complications",
+      "studyCount": 28,
+      "topConditions": [
+        {
+          "term": "Premature Birth",
+          "studyCount": 9
+        },
+        {
+          "term": "Depression, Postpartum",
+          "studyCount": 3
+        },
+        {
+          "term": "Fetal Growth Retardation",
+          "studyCount": 3
+        },
+        {
+          "term": "Hypertension",
+          "studyCount": 3
+        },
+        {
+          "term": "Hypertension, Pregnancy-Induced",
+          "studyCount": 3
+        },
+        {
+          "term": "Pre-Eclampsia",
+          "studyCount": 3
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Hemorrhage",
+            "Hypertension",
+            "Hypertension, Pregnancy-Induced"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Agnosia",
+            "Depressive Disorder, Major"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Antisocial Personality Disorder",
+            "Bronchopulmonary Dysplasia",
+            "Critical Illness",
+            "Diabetes Mellitus",
+            "Diseases in Twins"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Depressive Disorder, Major",
+            "Diabetes Mellitus",
+            "Hemorrhage",
+            "Insulin Resistance"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Diabetes, Gestational",
+            "Hemorrhage"
+          ]
+        },
+        {
+          "topicId": "eye_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Antisocial Personality Disorder",
+            "Bronchopulmonary Dysplasia",
+            "Fetofetal Transfusion",
+            "Hemangioma",
+            "Hemorrhage"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Hypertension",
+            "Insulin Resistance",
+            "Pregnancy in Diabetics"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Agnosia",
+            "Antisocial Personality Disorder",
+            "Bronchopulmonary Dysplasia",
+            "Depression, Postpartum",
+            "Depressive Disorder, Major"
+          ]
+        },
+        {
+          "topicId": "musculoskeletal_diseases",
+          "sharedTerms": [
+            "Diabetes Mellitus",
+            "Wounds and Injuries"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Antisocial Personality Disorder",
+            "Carcinoma, Embryonal",
+            "Choriocarcinoma",
+            "Fetofetal Transfusion",
+            "Hemangioma"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Bronchopulmonary Dysplasia",
+            "Depressive Disorder, Major",
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Diabetes, Gestational",
+            "Hemorrhage"
+          ]
+        },
+        {
+          "topicId": "otorhinolaryngologic_diseases",
+          "sharedTerms": [
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Critical Illness",
+            "Diabetes Mellitus",
+            "Diabetes Mellitus, Type 1",
+            "Fetal Growth Retardation"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Diabetes Mellitus",
+            "Hemorrhage",
+            "Hypertension",
+            "Pulmonary Arterial Hypertension"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Antisocial Personality Disorder",
+            "Birth Weight",
+            "Bronchopulmonary Dysplasia"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Bronchopulmonary Dysplasia",
+            "Hemorrhage",
+            "Hypertension",
+            "Pulmonary Arterial Hypertension"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Acute Pain",
+            "Agnosia",
+            "Depressive Disorder, Major",
+            "Pulmonary Atelectasis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "occupational_diseases",
+      "registryName": "Occupational Diseases",
+      "studyCount": 4,
+      "topConditions": [
+        {
+          "term": "Persian Gulf Syndrome",
+          "studyCount": 2
+        },
+        {
+          "term": "Anxiety Disorders",
+          "studyCount": 1
+        },
+        {
+          "term": "Burnout, Professional",
+          "studyCount": 1
+        },
+        {
+          "term": "Depression",
+          "studyCount": 1
+        },
+        {
+          "term": "Disorders of Excessive Somnolence",
+          "studyCount": 1
+        },
+        {
+          "term": "Occupational Stress",
+          "studyCount": 1
+        }
+      ],
+      "sharedWith": [
+        {
+          "topicId": "cardiovascular_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "chemically_induced_disorders",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Psychological Well-Being"
+          ]
+        },
+        {
+          "topicId": "congenital_hereditary_and_neonatal_diseases_and_abnormalities",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Psychological Well-Being",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "digestive_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "endocrine_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "hemic_and_lymphatic_diseases",
+          "sharedTerms": [
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "immune_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration"
+          ]
+        },
+        {
+          "topicId": "mental_disorders",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Burnout, Professional",
+            "Depression",
+            "Disorders of Excessive Somnolence",
+            "Occupational Stress"
+          ]
+        },
+        {
+          "topicId": "neoplasms",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression"
+          ]
+        },
+        {
+          "topicId": "nervous_system_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Disorders of Excessive Somnolence",
+            "Respiratory Aspiration",
+            "Sleep Disorders, Circadian Rhythm"
+          ]
+        },
+        {
+          "topicId": "nutritional_and_metabolic_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Respiratory Aspiration",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "respiratory_tract_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Burnout, Professional",
+            "Depression",
+            "Occupational Stress",
+            "Psychological Well-Being"
+          ]
+        },
+        {
+          "topicId": "skin_and_connective_tissue_diseases",
+          "sharedTerms": [
+            "Depression",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "urogenital_diseases",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Psychological Well-Being",
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "virus_diseases",
+          "sharedTerms": [
+            "Sleep Initiation and Maintenance Disorders"
+          ]
+        },
+        {
+          "topicId": "wounds_and_injuries",
+          "sharedTerms": [
+            "Anxiety Disorders",
+            "Depression",
+            "Persian Gulf Syndrome",
+            "Respiratory Aspiration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parasitic_diseases",
+      "registryName": "Parasitic Diseases",
+      "studyCount": 2,
+      "topConditions": [
+        {
+          "term": "Babesiosis",
+          "studyCount": 1
+        },
+        {
+          "term": "Chagas Disease",
+          "studyCount": 1
+        }
+      ],
+      "sharedWith": []
+    }
+  ]
+}

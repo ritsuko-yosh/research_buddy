@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import axe from 'axe-core';
 import { describe, expect, it, vi } from 'vitest';
 import App from './App';
+import { TEST_TOPIC_INDEX } from './test/topicIndex.fixture';
 import { createFixtureDataSource } from './data/fixtures/fixtureDataSource';
 import { messages } from './i18n/strings';
 import type { TrialDataSource } from './types/trial';
@@ -32,7 +33,7 @@ function criterionCount(group: HTMLElement): number {
 describe('Visit Ready patient journey (sample data)', () => {
   it('shows only Massachusetts studies for a selected condition', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
 
     await user.click(screen.getByRole('button', { name: 'Type 2 diabetes' }));
 
@@ -42,7 +43,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('shows the four verification categories with original registry wording', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
 
     for (const label of Object.values(en.categoryLabels)) {
@@ -53,7 +54,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('expands a long group with the keyboard and keeps every item', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
 
     const group = screen.getByRole('region', { name: new RegExp(en.categoryLabels.check_records) });
@@ -69,7 +70,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('switches to Spanish and labels missing Spanish explanations', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await user.click(screen.getByRole('button', { name: 'Asthma' }));
     await user.click(await screen.findByRole('button', { name: /View study: \[SAMPLE B\]/ }));
     await screen.findByRole('heading', { level: 1, name: /\[SAMPLE B\]/ });
@@ -83,7 +84,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('marks machine-drafted Spanish explanations as unreviewed', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
     await user.click(screen.getByRole('button', { name: 'Español' }));
 
@@ -93,7 +94,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('shows an explicit English-language requirement notice', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
 
     expect(screen.getByText(en.langEnglishRequired)).toBeInTheDocument();
@@ -101,7 +102,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('rejects malformed NCT IDs and reports unsupported studies', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     const input = screen.getByLabelText(en.nctLabel);
 
     await user.type(input, 'abc');
@@ -116,7 +117,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('shows "Contact not listed" when the registry has no contacts', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Asthma', 'SAMPLE B');
     await user.click(screen.getByRole('button', { name: en.prepareButton }));
 
@@ -125,7 +126,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('builds a coordinator message that asks about language support when the registry states English', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
     await user.click(screen.getByRole('button', { name: en.prepareButton }));
 
@@ -139,7 +140,7 @@ describe('Visit Ready patient journey (sample data)', () => {
     const user = userEvent.setup();
     // Spy after setup: user-event installs its own clipboard stub during setup.
     const writeText = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined);
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
     await user.click(screen.getByRole('button', { name: en.prepareButton }));
     await user.click(screen.getByRole('button', { name: en.copyInquiry }));
@@ -151,7 +152,7 @@ describe('Visit Ready patient journey (sample data)', () => {
   it('shows a manual-copy fallback when copying fails', async () => {
     const user = userEvent.setup();
     vi.spyOn(navigator.clipboard, 'writeText').mockRejectedValue(new Error('clipboard denied'));
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
     await user.click(screen.getByRole('button', { name: en.prepareButton }));
     await user.click(screen.getByRole('button', { name: en.copyInquiry }));
@@ -161,7 +162,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 
   it('never presents a verdict on the study or the patient', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
     await waitFor(() => expect(screen.getByRole('heading', { name: en.mapHeading })).toBeInTheDocument());
     await user.click(screen.getByRole('button', { name: en.prepareButton }));
@@ -181,7 +182,7 @@ describe('Visit Ready patient journey (sample data)', () => {
 describe('Visit Ready states, preparation actions, and accessibility', () => {
   it('shows registry freshness and the sample-data notice', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
 
     expect(screen.getByText(en.lastUpdatedLabel)).toBeInTheDocument();
@@ -196,7 +197,7 @@ describe('Visit Ready states, preparation actions, and accessibility', () => {
       searchByCondition: async () => [],
       getTrial: async () => null,
     };
-    render(<App dataSource={empty} />);
+    render(<App dataSource={empty} topicIndex={TEST_TOPIC_INDEX} />);
     await user.click(screen.getByRole('button', { name: 'Asthma' }));
 
     expect(await screen.findByText(en.resultsEmpty)).toBeInTheDocument();
@@ -216,7 +217,7 @@ describe('Visit Ready states, preparation actions, and accessibility', () => {
         return real.searchByCondition(conditionId);
       },
     };
-    render(<App dataSource={flaky} />);
+    render(<App dataSource={flaky} topicIndex={TEST_TOPIC_INDEX} />);
     await user.click(screen.getByRole('button', { name: 'Type 2 diabetes' }));
 
     expect(await screen.findByRole('alert')).toHaveTextContent(en.resultsError);
@@ -227,7 +228,7 @@ describe('Visit Ready states, preparation actions, and accessibility', () => {
 
   it('lets the patient mark preparation items without saving them', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
     await user.click(screen.getByRole('button', { name: en.prepareButton }));
 
@@ -241,7 +242,7 @@ describe('Visit Ready states, preparation actions, and accessibility', () => {
 
   it('moves focus to the new step heading after navigation', async () => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
     await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
 
     expect(screen.getByRole('heading', { level: 1, name: /\[SAMPLE A\]/ })).toHaveFocus();
@@ -255,7 +256,7 @@ describe('Visit Ready states, preparation actions, and accessibility', () => {
     ['preparation', 'es'],
   ] as const)('has no detectable accessibility violations: %s (%s)', async (step, locale) => {
     const user = userEvent.setup();
-    render(<App dataSource={fixtureSource} />);
+    render(<App dataSource={fixtureSource} topicIndex={TEST_TOPIC_INDEX} />);
 
     if (step !== 'search') {
       await openStudy(user, 'Type 2 diabetes', 'SAMPLE A');
