@@ -121,7 +121,7 @@ export function HomePage({
           <h2 id="how-heading" tabIndex={-1}>
             {m.howHeading}
           </h2>
-          <ol className="od-steps">
+          <ol className="od-steps" role="list">
             {steps.map((step, position) => (
               <li key={step.title}>
                 <span className="od-step-n" aria-hidden="true">

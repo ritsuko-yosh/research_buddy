@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Visit Ready Open Door Reference</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Shell: a review console around a device stage. The stage holds one of three concepts,
+   each of which commits to its own fixed look (they are product mockups, not theme-aware UI). */
+:root {
+  --sh-bg: #eef0f3; --sh-fg: #1b2230; --sh-muted: #5a6475; --sh-line: #d3d8e0;
+  --sh-panel: #ffffff; --sh-accent: #1e4fa3; --sh-accent-ink: #ffffff; --sh-chip: #e3e8f0;
+  --sh-real: #1f6f4a; --sh-real-bg: #e4f3ea; --sh-proto: #8a4b00; --sh-proto-bg: #fff3df;
+  --f-ui: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --sh-bg: #11151c; --sh-fg: #e7ebf2; --sh-muted: #a3adbd; --sh-line: #2c3442;
+  --sh-panel: #181d26; --sh-accent: #8fb3ff; --sh-accent-ink: #0d1420; --sh-chip: #232b38;
+  --sh-real: #8fdcb2; --sh-real-bg: #16302a; --sh-proto: #ffc477; --sh-proto-bg: #33260f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --sh-bg: #11151c; --sh-fg: #e7ebf2; --sh-muted: #a3adbd; --sh-line: #2c3442;
+  --sh-panel: #181d26; --sh-accent: #8fb3ff; --sh-accent-ink: #0d1420; --sh-chip: #232b38;
+  --sh-real: #8fdcb2; --sh-real-bg: #16302a; --sh-proto: #ffc477; --sh-proto-bg: #33260f; color-scheme: dark }
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { background: var(--sh-bg); color: var(--sh-fg); font: 15px/1.5 var(--f-ui); }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid #d97706; outline-offset: 2px; }
+
+.shell-bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--sh-panel); border-bottom: 1px solid var(--sh-line);
+  padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--sh-panel); }
+.shell-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; max-width: 1400px; margin: 0 auto; }
+.shell-title { font-weight: 700; font-size: 15px; margin: 0; margin-right: auto; min-width: 0; }
+.shell-title small { display: block; font-weight: 400; color: var(--sh-muted); font-size: 12.5px; }
+.seg { display: inline-flex; background: var(--sh-chip); border-radius: 10px; padding: 3px; gap: 2px; flex-wrap: wrap; }
+.seg button { border: 0; background: transparent; color: var(--sh-fg); padding: 6px 11px; border-radius: 8px; font-size: 13.5px; }
+.seg button[aria-pressed="true"] { background: var(--sh-panel); box-shadow: 0 1px 2px rgba(0,0,0,.12); font-weight: 700; }
+.seg-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--sh-muted); margin-right: 4px; }
+.seg-wrap { display: inline-flex; align-items: center; gap: 6px; }
+
+.shell-main { max-width: 1400px; margin: 0 auto; padding-block: 16px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 13px; color: var(--sh-muted); margin-bottom: 12px; }
+.tag { display: inline-flex; align-items: center; gap: 6px; font: 500 11.5px/1.3 var(--f-mono); letter-spacing: .01em; padding: 3px 8px; border-radius: 6px; vertical-align: middle; }
+.tag-real { color: var(--sh-real); background: var(--sh-real-bg); border: 1px solid currentColor; }
+.tag-proto { color: var(--sh-proto); background: var(--sh-proto-bg); border: 1px dashed currentColor; }
+.whatsnew { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin: 0 0 12px; font-size: 13.5px; }
+.whatsnew b { margin-right: 4px; }
+.whatsnew button { border: 1px solid var(--sh-accent); color: var(--sh-accent); background: var(--sh-panel); border-radius: 999px; padding: 4px 11px; font-size: 13px; }
+.whatsnew button:hover { background: var(--sh-accent); color: var(--sh-accent-ink); }
+#fx { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 45; }
+#fx .ripple { position: absolute; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 46% 54% 42% 58% / 55% 45% 55% 45%; opacity: .55; animation: fx-ripple 650ms cubic-bezier(.2,.8,.2,1) forwards; }
+@keyframes fx-ripple { from { transform: scale(.2); opacity: .6; } to { transform: scale(7); opacity: 0; } }
+.concept-blurb { font-size: 14px; color: var(--sh-fg); margin: 0 0 12px; max-width: 75ch; }
+.concept-blurb b { font-weight: 700; }
+
+.device-wrap { display: flex; justify-content: center; }
+.device { position: relative; width: 100%; height: min(820px, calc(100vh - 190px)); min-height: 560px; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 0 0 1px var(--sh-line), 0 12px 40px rgba(16,24,40,.14); background: #fff; container-type: inline-size; container-name: stage; }
+.device.mobile { width: 390px; max-width: 100%; height: min(800px, calc(100vh - 190px)); border-radius: 34px; box-shadow: 0 0 0 10px #1b1f27, 0 0 0 11px #3a4150, 0 18px 50px rgba(0,0,0,.25); }
+.viewport { position: absolute; inset: 0; overflow-y: auto; overflow-x: hidden; }
+
+/* ---------------- Review tab ---------------- */
+.review { max-width: 980px; margin: 0 auto; }
+.review h2 { font-size: 24px; margin: 34px 0 8px; text-wrap: balance; }
+.review h3 { font-size: 17px; margin: 22px 0 6px; }
+.review p, .review li { max-width: 72ch; }
+.review .lede { font-size: 17px; }
+.shots { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; align-items: start; margin: 12px 0; }
+.shots figure { margin: 0; background: var(--sh-panel); border: 1px solid var(--sh-line); border-radius: 10px; padding: 8px; min-width: 0; }
+.shots img { display: block; width: 100%; border-radius: 6px; }
+.shots figcaption { font-size: 12.5px; color: var(--sh-muted); padding: 6px 2px 0; }
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--sh-line); border-radius: 10px; background: var(--sh-panel); }
+table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--sh-line); }
+th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--sh-muted); }
+td.score { font: 500 14px var(--f-mono); white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.rec td { background: color-mix(in srgb, var(--sh-accent) 9%, transparent); }
+.callout { background: var(--sh-panel); border: 1px solid var(--sh-line); border-left: 4px solid var(--sh-accent); border-radius: 8px; padding: 14px 16px; margin: 14px 0; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; font-size: 14px; }
+.kv dt { font-weight: 700; } .kv dd { margin: 0; min-width: 0; }
+@media (max-width: 700px) { .shots { grid-template-columns: 1fr; } .kv { grid-template-columns: 1fr; } .kv dd { margin-bottom: 8px; } }
+
+/* =====================================================================
+   STAGE: shared product markup, styled per concept through tokens
+   ===================================================================== */
+.vr { --ink: #1f2937; --muted: #4b5563; --bg: #fff; --surface: #fff; --line: #d9dee6; --accent: #1e4fa3; --accent-ink: #fff; --soft: #eef4ff;
+  --lang: var(--accent); --display: var(--f-ui); --body: var(--f-ui); --radius: 12px;
+  --b1: #2e6f57; --b2: #1e4fa3; --b3: #8a4b00; --b4: #6b7280;
+  font-family: var(--body); color: var(--ink); background: var(--bg); min-height: 100%; font-size: 16px; line-height: 1.55; }
+.vr[lang="es"] { --lang: var(--lang-es, #b4441c); }
+.vr .wrap { max-width: 1160px; margin: 0 auto; padding-inline: 28px; }
+@container stage (max-width: 640px) { .vr .wrap { padding-inline: 16px; } }
+.vr h1, .vr h2, .vr h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+.vr p { margin: 0; }
+.vr .btn { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; padding: 11px 18px; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none; }
+.vr .btn.ghost { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1.5px currentColor; }
+.vr .proto-tag, .vr .real-tag { display: inline-block; font: 500 11px/1.3 var(--f-mono); padding: 3px 7px; border-radius: 5px; letter-spacing: .01em; }
+.vr .proto-tag { color: #8a4b00; background: #fff3df; border: 1px dashed #8a4b00; }
+.vr .real-tag { color: #1f6f4a; background: #e4f3ea; border: 1px solid #1f6f4a; }
+
+/* Header */
+.vr-head { position: sticky; top: 0; z-index: 20; background: var(--head-bg, var(--bg)); border-bottom: 1px solid var(--head-line, var(--line)); }
+.vr-head .wrap { display: flex; align-items: center; gap: 14px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; border: 0; background: none; padding: 0; color: inherit; text-align: left; }
+.brand img { width: 46px; height: 46px; display: block; }
+.brand .wm { font-family: var(--display); font-size: 21px; line-height: 1; color: var(--brand-ink, var(--lang)); font-weight: var(--wm-weight, 700); }
+.brand .wm small { display: block; font-family: var(--body); font-size: 11.5px; color: var(--muted); font-weight: 400; margin-top: 3px; letter-spacing: .02em; }
+.nav { display: flex; gap: 4px; margin-left: auto; align-items: center; }
+.nav .link { border: 0; background: none; color: var(--nav-ink, var(--ink)); padding: 8px 10px; border-radius: 8px; font-size: 15px; }
+.nav .link:hover { background: var(--soft); }
+.searchbtn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 999px; padding: 7px 14px 7px 11px; font-size: 14.5px; }
+.searchbtn svg { width: 17px; height: 17px; }
+.langtog { display: inline-flex; border: 1.5px solid var(--lang); border-radius: 999px; overflow: hidden; }
+.langtog button { border: 0; background: transparent; color: var(--lang); padding: 6px 11px; font-size: 14px; font-weight: 700; }
+.langtog button[aria-pressed="true"] { background: var(--lang); color: var(--lang-on, #fff); }
+@container stage (max-width: 760px) { .nav .link { display: none; } .searchbtn span { display: none; } .searchbtn { padding: 8px; } .brand .wm small { display: none; } }
+
+.es-note { background: #fff7e6; color: #7a4a00; font-size: 13.5px; padding: 8px 0; border-bottom: 1px solid #f1d9a8; }
+.safety { font-size: 14px; color: var(--muted); }
+.safety b { color: var(--ink); }
+.foot { padding: 28px 0 40px; font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 40px; }
+
+/* Doors (shared semantics, concept-specific look) */
+.doors { display: grid; gap: 12px; }
+.door { text-align: left; border: 0; display: grid; gap: 2px; color: inherit; }
+.door b { font-size: 16.5px; }
+.door span { font-size: 14px; color: var(--muted); }
+
+/* Atlas common */
+.atlas { position: relative; }
+.atlas-canvas { position: relative; width: 100%; }
+.atlas-canvas svg.deco { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.node { position: absolute; transform: translate(-50%, -50%); border: 0; background: none; color: inherit; padding: 6px 10px; border-radius: 999px; white-space: nowrap; font-size: 14px; line-height: 1.2; }
+.atlas-tools { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; margin-top: 10px; font-size: 13.5px; }
+.lv-wrap { display: none; } .lv-wrap.on { display: block; }
+@container stage (max-width: 640px) { .vr.cA .lv-wrap, .vr.cC .lv-wrap { display: block; } .vr.cA .atlas-tools .tgl, .vr.cC .atlas-tools .tgl { display: none; } }
+.listview { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin-top: 12px; }
+.listview button { text-align: left; border: 1px solid var(--line); background: var(--surface); color: inherit; border-radius: 10px; padding: 10px 12px; display: grid; gap: 2px; }
+.listview button small { color: var(--muted); font-size: 12.5px; }
+.listview button[aria-pressed="true"] { border-color: var(--lang); box-shadow: inset 0 0 0 1.5px var(--lang); }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.step { display: grid; gap: 6px; align-content: start; }
+.step .n { font: 500 13px var(--f-mono); color: var(--lang); }
+.step h3 { font-size: 19px; }
+.step p { color: var(--muted); font-size: 15px; }
+@container stage (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
+
+/* Explainer */
+.explain { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.explain div { display: grid; gap: 4px; align-content: start; }
+.explain h3 { font-size: 17px; }
+.explain p { font-size: 15px; color: var(--muted); }
+@container stage (max-width: 760px) { .explain { grid-template-columns: 1fr; } }
+
+/* Overlays */
+.scrim { position: absolute; inset: 0; background: rgba(10,16,30,.42); z-index: 40; display: flex; justify-content: center; align-items: flex-start; padding: 70px 16px 16px; }
+.sheet { background: var(--surface); color: var(--ink); width: min(640px, 100%); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,.3); padding: 20px; display: grid; gap: 14px; max-height: calc(100% - 20px); overflow: auto; font-family: var(--body); }
+.sheet h2 { font-size: 22px; }
+.tabs { display: flex; gap: 6px; border-bottom: 1px solid var(--line); }
+.tabs button { border: 0; background: none; color: var(--muted); padding: 8px 4px; margin-right: 14px; border-bottom: 3px solid transparent; font-weight: 700; }
+.tabs button[aria-selected="true"] { color: var(--lang); border-color: var(--lang); }
+.field label { display: block; font-weight: 700; margin-bottom: 4px; }
+.field .help { font-size: 13.5px; color: var(--muted); margin-bottom: 6px; }
+.field .row { display: flex; gap: 8px; }
+.field input { flex: 1; min-width: 0; font: inherit; padding: 11px 13px; border: 1.5px solid var(--line); border-radius: 10px; background: #fff; color: #1f2937; }
+.sugg { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-size: 14px; }
+.chip:hover { border-color: var(--lang); color: var(--lang); }
+.xbtn { position: absolute; right: 14px; top: 12px; border: 0; background: var(--soft); color: var(--ink); width: 36px; height: 36px; border-radius: 50%; font-size: 20px; line-height: 1; }
+
+.panel { position: absolute; z-index: 35; right: 16px; top: 84px; bottom: 16px; width: min(380px, calc(100% - 32px)); background: var(--surface); color: var(--ink); border-radius: 16px; box-shadow: 0 14px 50px rgba(0,0,0,.25); padding: 22px; overflow: auto; display: grid; gap: 14px; align-content: start; font-family: var(--body); }
+@container stage (max-width: 640px) { .panel { left: 0; right: 0; bottom: 0; top: auto; width: 100%; max-height: 72%; border-radius: 20px 20px 0 0; } }
+.panel .eyebrow { font: 500 11.5px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.panel h2 { font-size: 24px; padding-right: 36px; }
+.panel .mesh { font-size: 13.5px; color: var(--muted); }
+.panel h3 { font-size: 14px; font-family: var(--body); }
+.rel { display: flex; flex-wrap: wrap; gap: 6px; }
+.rel button { border: 0; background: var(--soft); color: var(--ink); border-radius: 8px; padding: 6px 10px; font-size: 13.5px; text-align: left; }
+.rel button small { color: var(--muted); }
+
+/* Results / study / prepare */
+.page { padding: 28px 0 10px; display: grid; gap: 18px; }
+.crumbs { display: flex; gap: 8px; align-items: center; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
+.crumbs button { border: 0; background: none; color: var(--lang); padding: 0; text-decoration: underline; }
+.rcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; display: grid; gap: 10px; }
+.rcard h3 { font-size: 20px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.meta span { font-size: 13px; padding: 3px 9px; border-radius: 999px; background: var(--soft); color: var(--ink); }
+.meta span.ok { background: #e4f3ea; color: #1f5f40; }
+.lang-flag { font-size: 14px; display: flex; gap: 8px; align-items: baseline; }
+.vmap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@container stage (max-width: 760px) { .vmap { grid-template-columns: 1fr; } }
+.bucket { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: grid; gap: 10px; align-content: start; border-top: 5px solid var(--bc); }
+.bucket h3 { font-size: 17px; font-family: var(--body); display: flex; gap: 8px; align-items: center; }
+.bucket h3 .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--bc); flex: none; }
+.bucket .act { font-size: 13.5px; color: var(--muted); }
+.crit { font-size: 14px; border-left: 3px solid var(--line); padding: 2px 0 2px 10px; }
+.crit small { display: block; color: var(--muted); font-size: 12px; font-family: var(--f-mono); }
+.prep { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: grid; gap: 14px; max-width: 760px; }
+.prep ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.splitgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@container stage (max-width: 760px) { .splitgrid { grid-template-columns: 1fr; } }
+
+/* =====================================================================
+   CONCEPT A: Constellations. Night star chart in the badge's fine-line language.
+   ===================================================================== */
+.vr.cA { --ink: #1c2540; --muted: #4c5675; --bg: #f7f5ee; --surface: #ffffff; --line: #d8d6cc; --accent: #1b2a55; --accent-ink: #f7f5ee; --soft: #ecebe3;
+  --lang-es: #b4441c; --lang: #1e4fa3; --display: "Instrument Serif", Georgia, serif; --wm-weight: 400; --radius: 6px;
+  --head-bg: #121a33; --head-line: #26315a; --nav-ink: #e9e6da; --brand-ink: #f2efe4; --lang-on: #121a33; --night: #121a33; --star: #f2efe4; --gold: #d8b25a; }
+.vr.cA .vr-head .brand .wm small { color: #a9b0c8; }
+.vr.cA .vr-head .langtog { border-color: #e9e6da; } .vr.cA .vr-head .langtog button { color: #e9e6da; } .vr.cA .vr-head .langtog button[aria-pressed="true"] { background: #e9e6da; color: #121a33; }
+.vr.cA[lang="es"] .vr-head .langtog { border-color: #ff9c7a; } .vr.cA[lang="es"] .vr-head .langtog button { color: #ffb59c; } .vr.cA[lang="es"] .vr-head .langtog button[aria-pressed="true"] { background: #ff9c7a; color: #121a33; }
+.vr.cA .vr-head .searchbtn { background: #1d2850; border-color: #34407a; color: #c9cee0; }
+.vr.cA .nav .link:hover { background: #1d2850; }
+.vr.cA .hero-a { background: var(--night); color: var(--star); padding: 26px 0 18px; position: relative; overflow: hidden; }
+.vr.cA .hero-a .grid { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.vr.cA .hero-a h1 { font-size: 46px; line-height: 1.02; font-weight: 400; }
+.vr.cA .hero-a h1 em { color: var(--gold); }
+[lang="es"].vr.cA .hero-a h1 em { color: #ffa684; }
+.vr.cA .hero-a .sub { color: #c4c9da; font-size: 15.5px; margin-top: 12px; }
+.vr.cA .hero-a .searchpill { margin-top: 18px; width: 100%; display: flex; align-items: center; gap: 10px; background: #f2efe4; color: #1c2540; border: 0; border-radius: 8px; padding: 13px 14px; font-size: 15.5px; text-align: left; }
+.vr.cA .hero-a .searchpill kbd { margin-left: auto; font: 12px var(--f-mono); color: #6a7290; }
+.vr.cA .doors { margin-top: 18px; gap: 0; border-top: 1px solid #2b3766; }
+.vr.cA .door { background: none; color: var(--star); padding: 11px 0; border-bottom: 1px solid #2b3766; grid-template-columns: 1fr auto; }
+.vr.cA .door span { color: #a9b0c8; grid-column: 1; }
+.vr.cA .door::after { content: "\2192"; grid-row: 1 / span 2; grid-column: 2; align-self: center; color: var(--gold); }
+.vr.cA .door:hover b { color: var(--gold); }
+.vr.cA .atlas-canvas { aspect-ratio: 1000 / 620; }
+.vr.cA .node { color: #e9e6da; font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; background: rgba(18,26,51,.55); }
+.vr.cA .node:hover, .vr.cA .node[aria-pressed="true"] { color: var(--gold); background: rgba(18,26,51,.9); box-shadow: inset 0 0 0 1px var(--gold); }
+.vr.cA .atlas-tools { color: #c4c9da; }
+.vr.cA .atlas-tools .tgl { border: 1px solid #3a4677; background: none; color: #e9e6da; border-radius: 6px; padding: 5px 10px; }
+.vr.cA .listview button { background: #18224a; border-color: #2e3a6c; color: #f2efe4; } .vr.cA .listview button small { color: #a9b0c8; }
+.vr.cA .listview button[aria-pressed="true"] { border-color: var(--gold); box-shadow: inset 0 0 0 1.5px var(--gold); }
+.vr.cA .section-a { padding: 40px 0 0; }
+.vr.cA .section-a h2 { font-size: 34px; font-weight: 400; margin-bottom: 18px; }
+.vr.cA .bucket { border-top-width: 2px; }
+.vr.cA .rcard h3, .vr.cA .page h1 { font-weight: 400; }
+.vr.cA .page h1 { font-size: 38px; }
+.vr.cA .rcard h3 { font-size: 24px; }
+@container stage (max-width: 860px) { .vr.cA .hero-a .grid { grid-template-columns: 1fr; } .vr.cA .hero-a h1 { font-size: 38px; } }
+@container stage (max-width: 640px) { .vr.cA .atlas-canvas .node { display: none; } .vr.cA .atlas-canvas { aspect-ratio: 1000 / 700; } }
+
+/* =====================================================================
+   CONCEPT B: Open Door. Guided welcome, original gouache-style illustration, topic garden.
+   ===================================================================== */
+.vr.cB { --ink: #1d2a33; --muted: #4f5d66; --bg: #f2f5f1; --surface: #ffffff; --line: #d5ddd6; --accent: #1e4fa3; --accent-ink: #fff; --soft: #e6ede7;
+  --lang-es: #b4441c; --display: "Fraunces", Georgia, serif; --wm-weight: 600; --radius: 18px;
+  --teal: #5fa8a0; --sky: #9cc3e4; --ochre: #e0a84a; --rose: #e98d86; --sage: #a9c39a; --navy: #263553; }
+.vr.cB .hero-b { padding: 34px 0 30px; }
+.vr.cB .hero-b .grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 34px; align-items: center; }
+.vr.cB .hero-b h1 { font-size: 50px; line-height: 1.05; font-weight: 600; letter-spacing: -.01em; font-variation-settings: "opsz" 100; }
+.vr.cB .hero-b h1 em { font-style: italic; color: var(--lang); font-weight: 400; }
+.vr.cB .hero-b .sub { font-size: 17.5px; color: var(--muted); margin-top: 14px; max-width: 34em; }
+.vr.cB .doors { grid-template-columns: 1fr 1fr; margin-top: 24px; }
+.vr.cB .door { background: var(--surface); border-radius: 16px; padding: 14px 16px 14px 54px; position: relative; box-shadow: 0 1px 0 var(--line), 0 0 0 1px var(--line); transition: transform .15s, box-shadow .15s; }
+.vr.cB .door:hover { transform: translateY(-2px); box-shadow: 0 0 0 2px var(--lang), 0 8px 20px rgba(30,60,80,.08); }
+.vr.cB .door i { position: absolute; left: 14px; top: 15px; width: 28px; height: 28px; border-radius: 46% 54% 42% 58% / 55% 45% 55% 45%; }
+.vr.cB .quick { margin-top: 18px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 14.5px; color: var(--muted); }
+.vr.cB .quick button.inline { border: 0; border-bottom: 1.5px solid var(--lang); background: none; color: var(--lang); padding: 0; font-weight: 700; }
+.vr.cB .illo { position: relative; aspect-ratio: 1 / 0.92; width: 100%; }
+.vr.cB .illo svg { width: 100%; height: 100%; display: block; }
+.vr.cB .band { padding: 40px 0; }
+.vr.cB .band.alt { background: #e7eee8; }
+.vr.cB .band h2 { font-size: 32px; font-weight: 600; margin-bottom: 8px; }
+.vr.cB .band .intro { color: var(--muted); max-width: 46em; margin-bottom: 20px; }
+.vr.cB .garden { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; padding: 10px 0; }
+.vr.cB .blob { position: relative; border: 0; color: #1d2a33; padding: 0; display: grid; place-items: center; text-align: center; font-family: var(--display); font-size: 17px; line-height: 1.15; font-weight: 600; transition: transform .2s; background: none; }
+.vr.cB .blob .shape { position: absolute; inset: 0; filter: url(#gouache); }
+.vr.cB .blob .lbl { position: relative; padding: 0 16px; max-width: 100%; }
+.vr.cB .blob .lbl small { display: block; font-family: var(--body); font-size: 12px; font-weight: 400; color: #34444e; margin-top: 4px; }
+.vr.cB .blob:hover { transform: scale(1.05) rotate(-1deg); }
+.vr.cB .blob[aria-pressed="true"] .lbl { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.vr.cB .blob[aria-pressed="true"] { transform: scale(1.06); }
+.vr.cB .blob.dim { opacity: .45; }
+.vr.cB .atlas-tools .tgl { border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 12px; }
+.vr.cB .bucket { border-top-width: 6px; }
+@media (prefers-reduced-motion: no-preference) { .vr .gloss { animation: vr-rise var(--dur-panel) var(--ease-out); } }
+@container stage (max-width: 900px) { .vr.cB .hero-b .grid { grid-template-columns: 1fr; } .vr.cB .illo { max-width: 420px; justify-self: center; order: -1; aspect-ratio: 1 / .62; } }
+@container stage (max-width: 640px) { .vr.cB .hero-b h1 { font-size: 36px; } .vr.cB .doors { grid-template-columns: 1fr; } .vr.cB .blob { font-size: 15px; } .vr.cB .garden { gap: 8px; } }
+
+/* =====================================================================
+   CONCEPT C: Living Atlas. Organic figure for body-system topics plus an orbit for whole-body topics.
+   ===================================================================== */
+.vr.cC { --ink: #22203a; --muted: #57546f; --bg: #fbfaff; --surface: #ffffff; --line: #e1ddf0; --accent: #4b3f99; --accent-ink: #fff; --soft: #f0edfb;
+  --lang: #3b49b8; --lang-es: #b4441c; --display: "Figtree", system-ui, sans-serif; --body: "Figtree", system-ui, sans-serif; --wm-weight: 800; --radius: 22px; }
+.vr.cC .hero-c { padding: 30px 0 20px; background: radial-gradient(120% 90% at 85% 10%, #e6e0ff 0%, rgba(230,224,255,0) 60%), radial-gradient(90% 80% at 10% 100%, #d9f1ee 0%, rgba(217,241,238,0) 60%); }
+.vr.cC .hero-c .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 24px; align-items: center; }
+.vr.cC .hero-c h1 { font-size: 46px; line-height: 1.04; font-weight: 800; letter-spacing: -.02em; }
+.vr.cC .hero-c h1 span { color: var(--lang); }
+.vr.cC .hero-c .sub { color: var(--muted); font-size: 17px; margin-top: 12px; }
+.vr.cC .doors { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
+.vr.cC .door { grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; background: rgba(255,255,255,.75); border-radius: 999px; padding: 10px 18px 10px 10px; box-shadow: 0 0 0 1px var(--line); }
+.vr.cC .door i { grid-row: 1 / span 2; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #b8f0e6, #c9bcff); }
+.vr.cC .door:hover { box-shadow: 0 0 0 2px var(--lang); }
+.vr.cC .inline-search { margin-top: 16px; display: flex; gap: 8px; }
+.vr.cC .inline-search input { flex: 1; min-width: 0; font: inherit; padding: 12px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; color: #22203a; }
+.vr.cC .atlas-canvas { aspect-ratio: 640 / 640; }
+.vr.cC .node { font-weight: 700; font-size: 13.5px; background: rgba(255,255,255,.88); box-shadow: 0 0 0 1px var(--line), 0 4px 10px rgba(60,40,120,.08); color: var(--ink); }
+.vr.cC .node:hover, .vr.cC .node[aria-pressed="true"] { background: var(--lang); color: #fff; box-shadow: none; }
+.vr.cC .node.orbit { background: #f6fffd; box-shadow: 0 0 0 1px #bfe5de; }
+.vr.cC .figure-note { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 4px; }
+.vr.cC .section-c { padding: 36px 0 0; }
+.vr.cC .section-c h2 { font-size: 30px; font-weight: 800; margin-bottom: 14px; letter-spacing: -.01em; }
+.vr.cC .atlas-tools .tgl { border: 0; background: var(--soft); color: var(--ink); border-radius: 999px; padding: 6px 12px; }
+@container stage (max-width: 900px) { .vr.cC .hero-c .grid { grid-template-columns: 1fr; } }
+@container stage (max-width: 640px) { .vr.cC .hero-c h1 { font-size: 34px; } .vr.cC .node { font-size: 11.5px; padding: 4px 7px; } }
+
+/* Supporting visuals */
+.vr .vig { display: block; width: 100%; max-width: 200px; aspect-ratio: 160 / 110; margin-bottom: 6px; }
+.vr .vig svg { width: 100%; height: 100%; display: block; }
+.vr .bicon { width: 30px; height: 30px; flex: none; }
+.vr .term { border: 0; background: none; padding: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.vr .term[aria-expanded="true"] { text-decoration-style: solid; color: var(--lang); }
+.vr .gloss { background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--lang); border-radius: 14px; padding: 14px 16px; display: grid; gap: 6px; max-width: 760px; }
+.vr .gloss p { font-size: 15px; color: var(--ink); }
+.vr .gloss .gnote { font-size: 12.5px; color: var(--muted); }
+.vr .phase-track { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; position: relative; }
+.vr .phase-track li { display: grid; gap: 2px; align-content: start; font-size: 14px; position: relative; }
+.vr .phase-track li:not(:last-child)::after { content: ""; position: absolute; left: 22px; right: -10px; top: 10px; height: 2px; background: var(--line); }
+.vr .phase-track .pdot { width: 20px; height: 20px; border-radius: 46% 54% 42% 58% / 55% 45% 55% 45%; background: var(--soft); border: 2px solid var(--line); position: relative; z-index: 1; }
+.vr .phase-track .cur .pdot { background: var(--lang); border-color: var(--lang); }
+.vr .phase-track small { color: var(--muted); font-size: 12.5px; line-height: 1.35; }
+@container stage (max-width: 640px) { .vr .phase-track { grid-template-columns: 1fr 1fr; } .vr .phase-track li::after { display: none; } }
+/* Search loader */
+.vr .loader { display: grid; justify-items: center; gap: 10px; padding: 48px 0 30px; text-align: center; }
+.vr .loader-art { width: min(280px, 80%); height: auto; }
+.vr .ld-text { font-family: var(--display); font-size: 22px; }
+.vr .found { font-size: 15px; color: var(--muted); }
+.vr .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.vr .ld-line { stroke-dasharray: 1; stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .vr .ld-line { animation: ld-draw 1.3s var(--ease-out) infinite; }
+  .vr .ld-dot { animation: ld-bob 1.3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .vr .ld-dot.d1 { animation-name: ld-gather-l; } .vr .ld-dot.d2 { animation-delay: .15s; } .vr .ld-dot.d3 { animation-name: ld-gather-r; }
+  .vr .rcard { animation: vr-bloom var(--dur-bloom) var(--ease-spring) backwards; animation-delay: calc(var(--i, 0) * var(--stagger) + 80ms); }
+  .vr.anim-paused .ld-dot, .vr.anim-paused .rcard { animation: none; }
+  .vr .page h1#resultsH { animation: vr-rise var(--dur-panel) var(--ease-out); }
+}
+@keyframes ld-draw { 0% { stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; opacity: .25; } }
+@keyframes ld-gather-l { 0%, 100% { transform: translateX(-18px) scale(.9); } 50% { transform: translateX(14px) scale(1.2); } }
+@keyframes ld-gather-r { 0%, 100% { transform: translateX(18px) scale(.9); } 50% { transform: translateX(-14px) scale(1.2); } }
+@keyframes ld-bob { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-8px) scale(1.15); } }
+/* Living topic garden (Concept B) */
+.vr { --dur-bloom: 720ms; --stagger: 70ms; --dur-breathe: 9s; --dur-ring: 650ms; --dur-room: 260ms; }
+@media (prefers-reduced-motion: no-preference) {
+  .vr.cB .blob .shape { will-change: transform; animation: vr-breathe var(--dur-breathe) ease-in-out var(--bd, 0s) infinite alternate; }
+  .vr.cB.anim-paused .blob .shape { animation-play-state: paused; }
+  .vr.cB .garden.bloom .blob { animation: vr-bloom var(--dur-bloom) var(--ease-spring) backwards; animation-delay: calc(var(--i) * var(--stagger)); }
+  .vr.cB .blob::after { content: ""; position: absolute; inset: -6px; border: 2px solid var(--h); border-radius: 46% 54% 42% 58% / 55% 45% 55% 45%; opacity: 0; pointer-events: none; }
+  .vr.cB .blob:hover::after, .vr.cB .blob:focus-visible::after { animation: vr-ring var(--dur-ring) var(--ease-out); }
+  .vr.cB .blob:hover, .vr.cB .blob:focus-visible { transform: scale(1.08) rotate(-1.5deg); }
+  .vr.cB .garden .blob[aria-pressed="true"] { animation: vr-grow var(--dur-select) var(--ease-spring), vr-room var(--dur-room) var(--ease-out) forwards; }
+}
+@keyframes vr-breathe { 0% { transform: scale(1, 1) rotate(0deg); } 50% { transform: scale(1.035, .975) rotate(1.6deg); } 100% { transform: scale(.98, 1.03) rotate(-1.2deg); } }
+@keyframes vr-bloom { 0% { transform: scale(.15) rotate(-14deg); opacity: 0; } 55% { opacity: 1; } 100% { transform: none; opacity: 1; } }
+@keyframes vr-ring { from { transform: scale(.96); opacity: .9; } to { transform: scale(1.22); opacity: 0; } }
+@keyframes vr-room { from { margin-inline: 0; } to { margin-inline: 14px; } }
+/* Motion tokens: short, non-looping, off under reduced motion */
+.vr { --dur-press: 120ms; --dur-select: 240ms; --dur-panel: 280ms; --ease-out: cubic-bezier(.2,.8,.2,1); --ease-spring: cubic-bezier(.34,1.4,.64,1); }
+@media (prefers-reduced-motion: no-preference) {
+  .vr .door, .vr .chip, .vr .btn, .vr .listview button, .vr .rel button, .vr .node { transition: transform var(--dur-press) var(--ease-out), box-shadow var(--dur-select) var(--ease-out), background-color var(--dur-select) var(--ease-out); }
+  .vr .door:active, .vr .chip:active, .vr .btn:active, .vr .listview button:active, .vr .rel button:active { transform: scale(.97); }
+  .vr.cB .blob { transition: transform var(--dur-select) var(--ease-spring), opacity var(--dur-select) var(--ease-out); }
+  .vr.cB .blob:active { transform: scale(.95); }
+  .vr.cB .blob[aria-pressed="true"] { animation: vr-grow var(--dur-select) var(--ease-spring); }
+  .vr .node[aria-pressed="true"] { animation: vr-pop var(--dur-select) var(--ease-spring); }
+  .vr .panel { animation: vr-slide var(--dur-panel) var(--ease-out); }
+  .vr .scrim { animation: vr-fade var(--dur-select) var(--ease-out); }
+  .vr .scrim .sheet { animation: vr-rise var(--dur-panel) var(--ease-out); }
+  .vr .page, .vr .explain > div { animation: vr-rise var(--dur-panel) var(--ease-out) both; }
+}
+@container stage (max-width: 640px) { @media (prefers-reduced-motion: no-preference) { .vr .panel { animation-name: vr-sheet; } } }
+@keyframes vr-grow { 0% { transform: scale(1); } 60% { transform: scale(1.1); } 100% { transform: scale(1.06); } }
+@keyframes vr-pop { 0% { transform: translate(-50%,-50%) scale(1); } 60% { transform: translate(-50%,-50%) scale(1.12); } 100% { transform: translate(-50%,-50%) scale(1); } }
+@keyframes vr-slide { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes vr-sheet { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes vr-rise { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes vr-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+@keyframes twinkle { 0%,100% { opacity: .35 } 50% { opacity: 1 } }
+.tw { animation: twinkle 4s ease-in-out infinite; }
+/* Standalone reference: concept B only */
+#conceptSeg [data-c="cA"], #conceptSeg [data-c="cC"], #tabSeg, .concept-blurb { display: none !important; }
+</style>
+</head>
+<body>
+
+<header class="shell-bar">
+  <div class="shell-row">
+    <p class="shell-title">Visit Ready: Open Door design reference<small>Approved design. Kiro: match this layout, CSS and motion. Labels marked PROTOTYPE are placeholders for live data.</small></p>
+    <span class="seg-wrap"><span class="seg-label">View</span><span class="seg" id="tabSeg"><button data-tab="preview" aria-pressed="true">Preview</button><button data-tab="review" aria-pressed="false">Design review</button></span></span>
+    <span class="seg-wrap preview-only"><span class="seg-label">Concept</span><span class="seg" id="conceptSeg"><button data-c="cA" aria-pressed="false">A. Constellations</button><button data-c="cB" aria-pressed="true">B. Open Door</button><button data-c="cC" aria-pressed="false">C. Living Atlas</button></span></span>
+    <span class="seg-wrap preview-only"><span class="seg-label">Device</span><span class="seg" id="deviceSeg"><button data-d="desktop" aria-pressed="true">Desktop</button><button data-d="mobile" aria-pressed="false">Mobile</button></span></span>
+  </div>
+</header>
+
+<main class="shell-main">
+  <section id="previewTab">
+    <div class="legend">
+      <span class="tag tag-real">REAL DATA</span><span>Text copied from a cached ClinicalTrials.gov record or the current app.</span>
+      <span class="tag tag-proto">PROTOTYPE</span><span>Works in this preview only. No live search, counts or classification.</span>
+    </div>
+    <div class="whatsnew" id="whatsnew"><b>New in this version</b>
+      <button data-jump="search">Search loading and results</button><button data-jump="garden">Living topic garden</button><button data-jump="explain">Pictures for "New to clinical trials?"</button><button data-jump="vmap">Verification Map icons</button><button data-jump="gloss">Tap-to-explain words and phase track</button></div>
+    <p class="concept-blurb" id="conceptBlurb"></p>
+    <div class="device-wrap"><div class="device" id="device"><div class="viewport" id="viewport"></div><div id="overlay"></div><div id="fx" aria-hidden="true"></div></div></div>
+  </section>
+  <section id="reviewTab" hidden></section>
+</main>
+
+<!-- Shared SVG filter for the gouache edge in Concept B -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="gouache" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0" result="ga"/>
+    <feComposite in="ga" in2="d" operator="in" result="gi"/>
+    <feMerge><feMergeNode in="d"/><feMergeNode in="gi"/></feMerge>
+  </filter>
+</svg>
+
+<script>
+/* ------------------------------------------------------------------
+   Topic data. Groupings follow MeSH disease categories (NLM), which
+   ClinicalTrials.gov uses to index conditions. Patient-facing labels
+   are ours. Spanish labels are machine-drafted, not reviewed.
+   No study counts are shown: the real build would fetch them live.
+------------------------------------------------------------------- */
+const TOPICS = {
+  cancer:    { en: "Cancer and tumors", es: "Cáncer y tumores", mesh: "Neoplasms", hue: "#e98d86" },
+  heart:     { en: "Heart and blood vessels", es: "Corazón y vasos sanguíneos", mesh: "Cardiovascular Diseases", hue: "#e7a3a8" },
+  brain:     { en: "Brain and nerves", es: "Cerebro y nervios", mesh: "Nervous System Diseases", hue: "#b7a6e0" },
+  mind:      { en: "Mental health", es: "Salud mental", mesh: "Mental Disorders", hue: "#9cc3e4" },
+  lungs:     { en: "Lungs and breathing", es: "Pulmones y respiración", mesh: "Respiratory Tract Diseases", hue: "#8fc7c0" },
+  metabolism:{ en: "Diabetes, hormones and metabolism", es: "Diabetes, hormonas y metabolismo", mesh: "Nutritional and Metabolic Diseases; Endocrine System Diseases", hue: "#e0b45a" },
+  digestive: { en: "Stomach, liver and digestion", es: "Estómago, hígado y digestión", mesh: "Digestive System Diseases", hue: "#c9b48a" },
+  immune:    { en: "Immune system and allergies", es: "Sistema inmunitario y alergias", mesh: "Immune System Diseases", hue: "#a9c39a" },
+  infection: { en: "Infections", es: "Infecciones", mesh: "Infections", hue: "#9fbfa8" },
+  kidney:    { en: "Kidneys and urinary health", es: "Riñones y vías urinarias", mesh: "Urogenital Diseases", hue: "#a8c8dc" },
+  bones:     { en: "Bones, joints and muscles", es: "Huesos, articulaciones y músculos", mesh: "Musculoskeletal Diseases", hue: "#d6b8a0" },
+  pregnancy: { en: "Pregnancy and reproductive health", es: "Embarazo y salud reproductiva", mesh: "Female Urogenital Diseases and Pregnancy Complications", hue: "#e8b7cf" }
+};
+// Example conditions. "in" lists every topic the condition is filed under in MeSH.
+// "term" is the English text the real app would send as query.cond.
+const CONDS = [
+  { term: "breast cancer", es: "cáncer de mama", in: ["cancer"] },
+  { term: "leukemia", es: "leucemia", in: ["cancer"] },
+  { term: "lymphoma", es: "linfoma", in: ["cancer"] },
+  { term: "lung cancer", es: "cáncer de pulmón", in: ["cancer", "lungs"] },
+  { term: "colorectal cancer", es: "cáncer colorrectal", in: ["cancer", "digestive"] },
+  { term: "prostate cancer", es: "cáncer de próstata", in: ["cancer", "kidney"] },
+  { term: "brain tumor", es: "tumor cerebral", in: ["cancer", "brain"], verified: true },
+  { term: "heart failure", es: "insuficiencia cardiaca", in: ["heart"] },
+  { term: "atrial fibrillation", es: "fibrilación auricular", in: ["heart"] },
+  { term: "hypertension", es: "hipertensión", in: ["heart"] },
+  { term: "stroke", es: "accidente cerebrovascular", in: ["heart", "brain"] },
+  { term: "Parkinson disease", es: "enfermedad de Parkinson", in: ["brain"] },
+  { term: "multiple sclerosis", es: "esclerosis múltiple", in: ["brain"] },
+  { term: "epilepsy", es: "epilepsia", in: ["brain"] },
+  { term: "migraine", es: "migraña", in: ["brain"] },
+  { term: "Alzheimer disease", es: "enfermedad de Alzheimer", in: ["brain", "mind"] },
+  { term: "depression", es: "depresión", in: ["mind"] },
+  { term: "anxiety", es: "ansiedad", in: ["mind"] },
+  { term: "PTSD", es: "trastorno de estrés postraumático", in: ["mind"] },
+  { term: "bipolar disorder", es: "trastorno bipolar", in: ["mind"] },
+  { term: "COPD", es: "EPOC", in: ["lungs"] },
+  { term: "cystic fibrosis", es: "fibrosis quística", in: ["lungs"] },
+  { term: "asthma", es: "asma", in: ["lungs", "immune"] },
+  { term: "type 2 diabetes", es: "diabetes tipo 2", in: ["metabolism"] },
+  { term: "type 1 diabetes", es: "diabetes tipo 1", in: ["metabolism"] },
+  { term: "obesity", es: "obesidad", in: ["metabolism"] },
+  { term: "thyroid disease", es: "enfermedad de la tiroides", in: ["metabolism"] },
+  { term: "Crohn disease", es: "enfermedad de Crohn", in: ["digestive"] },
+  { term: "ulcerative colitis", es: "colitis ulcerosa", in: ["digestive"] },
+  { term: "fatty liver disease", es: "hígado graso", in: ["digestive"] },
+  { term: "hepatitis C", es: "hepatitis C", in: ["infection", "digestive"] },
+  { term: "lupus", es: "lupus", in: ["immune"] },
+  { term: "food allergy", es: "alergia alimentaria", in: ["immune"] },
+  { term: "rheumatoid arthritis", es: "artritis reumatoide", in: ["bones", "immune"] },
+  { term: "HIV", es: "VIH", in: ["infection"] },
+  { term: "COVID-19", es: "COVID-19", in: ["infection"] },
+  { term: "influenza", es: "gripe", in: ["infection"] },
+  { term: "chronic kidney disease", es: "enfermedad renal crónica", in: ["kidney"] },
+  { term: "overactive bladder", es: "vejiga hiperactiva", in: ["kidney"] },
+  { term: "osteoarthritis", es: "artrosis", in: ["bones"] },
+  { term: "osteoporosis", es: "osteoporosis", in: ["bones"] },
+  { term: "preeclampsia", es: "preeclampsia", in: ["pregnancy"] },
+  { term: "endometriosis", es: "endometriosis", in: ["pregnancy"] },
+  { term: "polycystic ovary syndrome", es: "síndrome de ovario poliquístico", in: ["pregnancy"] }
+];
+const condsOf = t => CONDS.filter(c => c.in.includes(t));
+const related = t => { const m = {}; CONDS.filter(c => c.in.length > 1 && c.in.includes(t)).forEach(c => c.in.filter(x => x !== t).forEach(x => (m[x] = m[x] || []).push(c))); return m; };
+
+/* Real record, copied from the repo's cached ClinicalTrials.gov response
+   (NCT04986579, fetchedAt 2026-10-24T17:41Z). Criteria are verbatim.
+   Bucket placement below is illustrative styling only; the real app's classifier decides. */
+const STUDY = {
+  nct: "NCT04986579", title: "Scalp Cooling in MBC",
+  official: "Assessing the Impact of Scalp Cooling in With Metastatic Breast Cancer",
+  sponsor: "Dana-Farber Cancer Institute", status: "Recruiting", phase: "Phase 2",
+  sites: "Boston, Massachusetts (2 sites)", conditions: "Metastatic Breast Cancer; Chemotherapy-induced Alopecia",
+  updated: "2026-06-18", age: "18 Years and older",
+  buckets: {
+    self_answer: [["Participant is ≥ 18 years old.", "Inclusion 2"], ["Hair present at baseline.", "Inclusion 3"]],
+    check_records: [["Men and women with a diagnosis of metastatic invasive breast cancer with a ECOG PS≤2", "Inclusion 1"], ["Known scalp metastases.", "Exclusion 2"]],
+    ask_study_team: [["One of the following full dose chemotherapy regimens must be planned for at least 4 cycles: …", "Inclusion 4"], ["Personal history of migraines, cluster or tension headaches as defined as actual medical diagnosis by a physician and/ or prescribed medications. …", "Exclusion 6"]],
+    cannot_assess: [["Baseline alopecia (defined CTCAE 5.0 grade > 0, see Appendix B)", "Exclusion 3"]]
+  }
+};
+
+const T = {
+  en: {
+    tagline: "Listo para su visita", explore: "Explore topics", how: "How it works", search: "Search", searchHint: "Search a condition or study ID",
+    esNote: "",
+    safety: "<b>Visit Ready does not decide whether you qualify.</b> It helps you prepare for the next step. The study team makes all eligibility decisions.",
+    footer: "Preparation tool only. Not medical advice. Study information comes from ClinicalTrials.gov.",
+    d1: "I'm not sure where to start", d1s: "Learn what a clinical trial is, in plain words.",
+    d2: "I want to explore research", d2s: "Browse research areas studied in Massachusetts.",
+    d3: "I know which condition I'm researching", d3s: "Search by condition name.",
+    d4: "I already have a study ID", d4s: "Open a study by its NCT number.",
+    explainH: "New to clinical trials? Start here.",
+    e1h: "A clinical trial is a research study", e1p: "Researchers test a treatment, device or approach with volunteers. Joining is always your choice, and you can ask questions first.",
+    e2h: "Each study has its own requirements", e2p: "Listings say who can take part. The language is often technical. Visit Ready sorts each requirement so you know who can answer it.",
+    e3h: "The study team decides", e3p: "Visit Ready never says you qualify or do not. It helps you get ready to call the study team or talk with your doctor.",
+    stepsH: "How Visit Ready helps",
+    s1h: "Find", s1p: "Search studies recruiting in Massachusetts by condition, or open one by its study ID.",
+    s2h: "Understand", s2p: "See every requirement from the listing, sorted into four groups by who can answer it.",
+    s3h: "Prepare", s3p: "Get a printable card with your questions and what to bring to the first call.",
+    atlasH: "Explore research areas", atlasIntro: "Research areas follow the medical vocabulary that ClinicalTrials.gov uses to index conditions. Pick one to see example conditions, then search for studies.",
+    listView: "List view", mapView: "Map view", countNote: "Study counts not loaded in this preview",
+    panelEyebrow: "Research area", meshLabel: "Registry category (MeSH):", examples: "Example conditions in this area", examplesHelp: "Choose one to search studies in Massachusetts.",
+    shares: "Shares conditions with", via: "via", liveNote: "Live count of recruiting Massachusetts studies would load here from ClinicalTrials.gov.",
+    sheetH: "Find a study", tCond: "By condition", tId: "By study ID", condLabel: "Condition or disease", condHelp: "ClinicalTrials.gov uses English medical terms. For example: breast cancer, asthma.",
+    idLabel: "NCT ID", idHelp: "The letters NCT followed by 8 digits.", go: "Search", open: "Open study", sugg: "Suggestions (from this preview's topic list, not the registry)",
+    resultsFor: "Studies for", searching: "Searching ClinicalTrials.gov for", found1: "1 example study shown.", searchingShort: "Searching…", resNote: "Preview only: no live search ran. The real app sends this condition to ClinicalTrials.gov with location Massachusetts and status Recruiting.",
+    resExample: "Example layout, filled with one real cached record:", home: "Home", results: "Results", study: "Study", prepare: "Prepare",
+    viewStudy: "Open study", prepBtn: "Make my preparation card", vmapH: "Verification Map", vmapNote: "Every requirement from the listing, verbatim. Bucket placement here is illustrative; the real app's classifier assigns it.",
+    langFlag: "Language: no English-language requirement is stated in this listing.",
+    cats: { self_answer: "You can answer", check_records: "Check existing records", ask_study_team: "Ask the study team", cannot_assess: "Cannot assess from public information" },
+    acts: { self_answer: "You may be able to answer this yourself. Check with the study team if you are unsure.", check_records: "Your records or patient portal may show this.", ask_study_team: "This needs the study team or your own doctor to explain. Add it to your questions.", cannot_assess: "The public information is not clear enough to assess. Ask the study team what this means." },
+    prepH: "Preparation card", prepQ: "Questions for the study team", prepBring: "Records that may help", prepContact: "Study contact: shown from the registry listing in the real app.",
+    q1: "Could you explain what “full dose chemotherapy regimens … planned for at least 4 cycles” means for me?", q2: "How does a past headache or migraine history affect taking part?", q3: "What does “Baseline alopecia (CTCAE 5.0 grade > 0)” mean, and how is it checked?",
+    b1: "Recent notes that describe your diagnosis and performance status (ECOG)", b2: "Your current or planned treatment plan",
+    origEn: "Original registry text (English)", topicsCount: "12 research areas",
+    glossHint: "Tap an underlined word to see what it means.",
+    gloss: {
+      recruiting: ["Recruiting", "The registry says the study team is looking for participants now. It does not mean you would be accepted."],
+      phase: ["Phase", "Phases are the steps a treatment goes through in research. Some studies, such as behavioral ones, have no phase."],
+      nct: ["NCT number", "The study's ID on ClinicalTrials.gov. Use it to find this study again, or when you call the study team."],
+      criteria: ["Inclusion and exclusion", "Inclusion criteria are what a study needs participants to have. Exclusion criteria are things that would keep someone from joining. Only the study team decides."]
+    },
+    phases: [["Phase 1", "Small group. Mainly checks safety."], ["Phase 2", "Larger group. Checks how well it works and its side effects."], ["Phase 3", "Large group. Compares it with current care."], ["Phase 4", "After approval. Watches long-term effects."]],
+    thisStudy: "This study"
+  },
+  es: {
+    tagline: "Listo para su visita", explore: "Explorar temas", how: "Cómo funciona", search: "Buscar", searchHint: "Busque una condición o un número de estudio",
+    esNote: "El texto en español de esta vista previa fue redactado por una máquina y no ha sido revisado por una persona.",
+    safety: "<b>Visit Ready no decide si usted cumple los requisitos.</b> Le ayuda a prepararse para el siguiente paso. El equipo del estudio toma todas las decisiones sobre la elegibilidad.",
+    footer: "Solo es una herramienta de preparación. No es consejo médico. La información de los estudios proviene de ClinicalTrials.gov.",
+    d1: "No sé por dónde empezar", d1s: "Aprenda qué es un estudio clínico, en palabras sencillas.",
+    d2: "Quiero explorar la investigación", d2s: "Vea las áreas de investigación en Massachusetts.",
+    d3: "Sé qué condición estoy investigando", d3s: "Busque por el nombre de la condición.",
+    d4: "Ya tengo un número de estudio", d4s: "Abra un estudio con su número NCT.",
+    explainH: "¿Es nuevo en los estudios clínicos? Empiece aquí.",
+    e1h: "Un estudio clínico es una investigación", e1p: "Los investigadores prueban un tratamiento, un dispositivo o un enfoque con voluntarios. Participar siempre es su decisión y puede hacer preguntas antes.",
+    e2h: "Cada estudio tiene sus propios requisitos", e2p: "Los anuncios dicen quién puede participar. El lenguaje suele ser técnico. Visit Ready ordena cada requisito para que sepa quién puede responderlo.",
+    e3h: "El equipo del estudio decide", e3p: "Visit Ready nunca dice si usted califica o no. Le ayuda a prepararse para llamar al equipo del estudio o hablar con su médico.",
+    stepsH: "Cómo le ayuda Visit Ready",
+    s1h: "Encontrar", s1p: "Busque estudios que reclutan en Massachusetts por condición, o abra uno con su número.",
+    s2h: "Entender", s2p: "Vea cada requisito del anuncio, ordenado en cuatro grupos según quién puede responderlo.",
+    s3h: "Prepararse", s3p: "Obtenga una tarjeta imprimible con sus preguntas y lo que debe llevar a la primera llamada.",
+    atlasH: "Explore áreas de investigación", atlasIntro: "Las áreas siguen el vocabulario médico que ClinicalTrials.gov usa para clasificar las condiciones. Elija una para ver ejemplos y luego busque estudios.",
+    listView: "Ver lista", mapView: "Ver mapa", countNote: "Esta vista previa no carga el número de estudios",
+    panelEyebrow: "Área de investigación", meshLabel: "Categoría del registro (MeSH):", examples: "Ejemplos de condiciones en esta área", examplesHelp: "Elija una para buscar estudios en Massachusetts.",
+    shares: "Comparte condiciones con", via: "por", liveNote: "Aquí se cargaría desde ClinicalTrials.gov el número de estudios que reclutan en Massachusetts.",
+    sheetH: "Encuentre un estudio", tCond: "Por condición", tId: "Por número de estudio", condLabel: "Condición o enfermedad", condHelp: "ClinicalTrials.gov usa términos médicos en inglés. Por ejemplo: breast cancer, asthma.",
+    idLabel: "Número NCT", idHelp: "Las letras NCT seguidas de 8 dígitos.", go: "Buscar", open: "Abrir estudio", sugg: "Sugerencias (de la lista de temas de esta vista previa, no del registro)",
+    resultsFor: "Estudios para", searching: "Buscando en ClinicalTrials.gov:", found1: "Se muestra 1 estudio de ejemplo.", searchingShort: "Buscando…", resNote: "Solo vista previa: no se hizo una búsqueda real. La aplicación real envía esta condición a ClinicalTrials.gov con ubicación Massachusetts y estado Reclutando.",
+    resExample: "Diseño de ejemplo, con un registro real guardado:", home: "Inicio", results: "Resultados", study: "Estudio", prepare: "Prepararse",
+    viewStudy: "Abrir estudio", prepBtn: "Crear mi tarjeta de preparación", vmapH: "Mapa de verificación", vmapNote: "Cada requisito del anuncio, textual. La ubicación en cada grupo es ilustrativa; el clasificador de la aplicación real la asigna.",
+    langFlag: "Idioma: este anuncio no indica que se requiera hablar inglés.",
+    cats: { self_answer: "Puede responderlo usted", check_records: "Revisar registros existentes", ask_study_team: "Preguntar al equipo del estudio", cannot_assess: "No se puede evaluar con la información pública" },
+    acts: { self_answer: "Quizás pueda responderlo usted mismo. Consúltelo con el equipo del estudio si tiene dudas.", check_records: "Sus registros o su portal de paciente pueden mostrarlo.", ask_study_team: "Esto lo debe explicar el equipo del estudio o su médico. Agréguelo a sus preguntas.", cannot_assess: "La información pública no es suficiente para evaluarlo. Pregunte al equipo del estudio qué significa." },
+    prepH: "Tarjeta de preparación", prepQ: "Preguntas para el equipo del estudio", prepBring: "Registros que pueden ayudar", prepContact: "Contacto del estudio: en la aplicación real se muestra desde el anuncio del registro.",
+    q1: "¿Podría explicarme qué significa “full dose chemotherapy regimens … planned for at least 4 cycles” en mi caso?", q2: "¿Cómo afecta mi historial de dolores de cabeza o migrañas a la participación?", q3: "¿Qué significa “Baseline alopecia (CTCAE 5.0 grade > 0)” y cómo se revisa?",
+    b1: "Notas recientes que describan su diagnóstico y su estado funcional (ECOG)", b2: "Su plan de tratamiento actual o previsto",
+    origEn: "Texto original del registro (inglés)", topicsCount: "12 áreas de investigación",
+    glossHint: "Toque una palabra subrayada para ver qué significa.",
+    gloss: {
+      recruiting: ["Reclutando", "Según el registro, el equipo del estudio busca participantes ahora. No significa que usted sería aceptado."],
+      phase: ["Fase", "Las fases son los pasos que sigue un tratamiento en la investigación. Algunos estudios, como los de comportamiento, no tienen fase."],
+      nct: ["Número NCT", "El identificador del estudio en ClinicalTrials.gov. Úselo para volver a encontrar este estudio o cuando llame al equipo del estudio."],
+      criteria: ["Inclusión y exclusión", "Los criterios de inclusión son lo que el estudio necesita que tengan los participantes. Los de exclusión son cosas que impedirían participar. Solo el equipo del estudio decide."]
+    },
+    phases: [["Fase 1", "Grupo pequeño. Revisa sobre todo la seguridad."], ["Fase 2", "Grupo más grande. Revisa si funciona y sus efectos secundarios."], ["Fase 3", "Grupo grande. Lo compara con la atención actual."], ["Fase 4", "Después de la aprobación. Observa efectos a largo plazo."]],
+    thisStudy: "Este estudio"
+  }
+};
+
+const state = { concept: "cB", device: "desktop", lang: "en", screen: "home", topic: null, list: false, sheet: null, term: "" };
+const BLURB = {
+  cA: "<b>A. Constellations.</b> Atlas first. Each research area is a constellation of example conditions; a star between two constellations is a condition the medical vocabulary files under both. Fine gold line on night navy, matching the badge's line art and its plus-sign sparkles.",
+  cB: "<b>B. Open Door.</b> Welcome first. Four plain-language doors lead the page, a short explainer answers “what is a trial”, and research areas grow as a painted topic garden that reflows on phones. Original gouache-style shapes in the light badge's teal, ochre and rose.",
+  cC: "<b>C. Living Atlas.</b> Body and beyond. Body-system areas sit on an abstract figure; areas that are not tied to one place (cancer, mental health, infections, immune, metabolism, pregnancy) orbit around it. Soft lilac and mint, matching the lilac badge."
+};
+const BADGE = { cA: "brand/visit-ready-badge-navy.svg", cB: "brand/visit-ready-badge-light.svg", cC: "brand/visit-ready-badge-lilac.svg" };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const L = () => T[state.lang];
+const tl = k => TOPICS[k][state.lang];
+const cl = c => state.lang === "es" ? c.es : c.term;
+const ICON_SEARCH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+
+/* ---------- Header / footer ---------- */
+function header() {
+  const t = L();
+  return `<header class="vr-head"><div class="wrap">
+    <button class="brand" data-go="home" aria-label="Visit Ready home"><img src="../../../frontend/public/brand/visit-ready-badge-light.svg" alt=""><span class="wm">Visit Ready<small>${t.tagline}</small></span></button>
+    <nav class="nav" aria-label="Main">
+      <button class="link" data-act="explore">${t.explore}</button>
+      <button class="link" data-act="how">${t.how}</button>
+      <button class="searchbtn" data-act="search">${ICON_SEARCH}<span>${t.search}</span></button>
+      <span class="langtog" role="group" aria-label="Language"><button data-lang="en" aria-pressed="${state.lang === "en"}">EN</button><button data-lang="es" aria-pressed="${state.lang === "es"}">ES</button></span>
+    </nav></div></header>
+    ${state.lang === "es" ? `<div class="es-note"><div class="wrap">${t.esNote}</div></div>` : ""}`;
+}
+const footer = () => `<footer class="foot"><div class="wrap">${L().footer}</div></footer>`;
+function doors(withIcons) {
+  const t = L(); const cols = ["#9cc3e4", "#a9c39a", "#e0b45a", "#e98d86"];
+  return `<div class="doors" role="list">${[["d1", "start"], ["d2", "explore"], ["d3", "cond"], ["d4", "id"]].map(([k, a], i) =>
+    `<button class="door" role="listitem" data-door="${a}">${withIcons ? `<i style="background:${cols[i]}" aria-hidden="true"></i>` : ""}<b>${t[k]}</b><span>${t[k + "s"]}</span></button>`).join("")}</div>`;
+}
+const G = inner => `<g filter="url(#gouache)">${inner}</g>`;
+const VIG = {
+  1: `<svg viewBox="0 0 160 110">${G('<ellipse cx="80" cy="58" rx="72" ry="48" fill="#e3ece6"/><path d="M52 98l6-30h40l6 30z" fill="#c98a6b"/><path d="M78 68c-2-18 2-30 8-40" stroke="#5f8f66" stroke-width="5" fill="none"/><path d="M84 40c10-12 26-10 30-4-10 8-22 10-30 4z" fill="#7fae86"/><path d="M80 52c-10-10-26-8-30-2 10 8 22 8 30 2z" fill="#a9c39a"/><rect x="118" y="30" width="16" height="68" rx="3" fill="#f7d58e"/>')}<path d="M118 42h7M118 54h10M118 66h7M118 78h10M118 90h7" stroke="#263553" stroke-width="2" stroke-linecap="round"/></svg>`,
+  2: `<svg viewBox="0 0 160 110">${G('<ellipse cx="80" cy="58" rx="72" ry="48" fill="#e7eef7"/><rect x="40" y="16" width="80" height="84" rx="10" fill="#ffffff"/><circle cx="54" cy="34" r="6" fill="#7fb59a"/><circle cx="54" cy="52" r="6" fill="#8fb0e0"/><circle cx="54" cy="70" r="6" fill="#e0b45a"/><circle cx="54" cy="88" r="6" fill="#b8bec8"/>')}<path d="M66 34h40M66 52h32M66 70h38M66 88h28" stroke="#263553" stroke-width="2.4" stroke-linecap="round"/></svg>`,
+  3: `<svg viewBox="0 0 160 110">${G('<ellipse cx="80" cy="58" rx="72" ry="48" fill="#f3e6e4"/><path d="M14 108c4-30 18-44 36-44s30 14 32 44z" fill="#5fa8a0"/><circle cx="48" cy="48" r="15" fill="#c98a6b"/><path d="M82 108c3-28 16-40 32-40s28 12 30 40z" fill="#e98d86"/><circle cx="114" cy="54" r="13" fill="#8a5a44"/><path d="M70 14h40a10 10 0 0 1 10 10v14a10 10 0 0 1-10 10H92l-10 9 2-9h-14a10 10 0 0 1-10-10V24a10 10 0 0 1 10-10z" fill="#ffffff"/>')}<path d="M85 26a5 5 0 1 1 7 4.6c-2 1-2.5 2-2.5 4M89.5 40v.5" stroke="#263553" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>`
+};
+const BICON = {
+  self_answer: ['#bfe3cf', '<path d="M11 12h18a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4h-9l-6 5v-5h-3a4 4 0 0 1-4-4v-8a4 4 0 0 1 4-4z"/>'],
+  check_records: ['#c9d9f3', '<path d="M8 13a2 2 0 0 1 2-2h7l3 3h10a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2z"/><path d="M8 18h24"/>'],
+  ask_study_team: ['#f3dcb6', '<path d="M13 9l4 1 2 6-3 2c1.5 3.5 4 6 7.5 7.5l2-3 6 2 1 4c0 2-2 3.5-4 3.5C17 31 9 23 9 13c0-2 2-4 4-4z"/>'],
+  cannot_assess: ['#dfe2e7', '<path d="M12 28a6 6 0 0 1-.5-12A8 8 0 0 1 27 14a6 6 0 0 1 1 14z"/><path d="M18 18.5a2.5 2.5 0 1 1 3.4 2.3c-.9.4-1.4 1-1.4 2M20 25.5v.5"/>']
+};
+const bicon = k => `<svg class="bicon" viewBox="0 0 40 40" aria-hidden="true">${G(`<path d="M20 2c10 0 18 7 18 17s-8 19-18 19S2 30 2 20 10 2 20 2z" fill="${BICON[k][0]}"/>`)}<g fill="none" stroke="#263553" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${BICON[k][1]}</g></svg>`;
+const term = (k, label) => `<button class="term" data-gloss="${k}" aria-expanded="${state.gloss === k}" aria-controls="gloss">${label}</button>`;
+function glossBox() {
+  const k = state.gloss; if (!k) return ""; const t = L(); const [h, p] = t.gloss[k];
+  const track = k === "phase" ? `<ol class="phase-track">${t.phases.map(([n, d], i) => `<li class="${i === 1 ? "cur" : ""}"><span class="pdot" aria-hidden="true"></span><b>${n}</b>${i === 1 ? ` <span class="real-tag">${t.thisStudy}</span>` : ""}<small>${d}</small></li>`).join("")}</ol>` : "";
+  return `<div class="gloss" id="gloss" role="region" aria-label="${h}"><b>${h}</b><p>${p}</p>${track}<p class="gnote"><span class="proto-tag">PROTOTYPE</span> Definitions to be checked against the ClinicalTrials.gov glossary before release.</p></div>`;
+}
+const explainer = () => { const t = L(); return `<div class="explain" id="explainer">${[1, 2, 3].map(i => `<div><span class="vig" aria-hidden="true">${VIG[i]}</span><h3>${t["e" + i + "h"]}</h3><p>${t["e" + i + "p"]}</p></div>`).join("")}</div>`; };
+const steps = () => { const t = L(); return `<div class="steps" id="how">${[1, 2, 3].map(i => `<div class="step"><span class="n">Step ${i}</span><h3>${t["s" + i + "h"]}</h3><p>${t["s" + i + "p"]}</p></div>`).join("")}</div>`; };
+function listView() {
+  return `<div class="listview">${Object.keys(TOPICS).map(k => `<button data-topic="${k}" aria-pressed="${state.topic === k}"><span>${tl(k)}</span><small>${condsOf(k).slice(0, 3).map(cl).join(", ")}…</small></button>`).join("")}</div>`;
+}
+function atlasTools(showToggle = true) {
+  const t = L();
+  return `<div class="atlas-tools"><span class="proto-tag">PROTOTYPE · ${t.countNote}</span><span style="display:flex;gap:8px;flex-wrap:wrap">${state.concept === "cB" && !state.list ? pauseBtn() : ""}${showToggle ? `<button class="tgl" data-act="toggleList" aria-pressed="${state.list}">${state.list ? t.mapView : t.listView}</button>` : ""}</span></div>`;
+}
+
+/* ---------- Concept A: constellation chart ---------- */
+const POS_A = { cancer: [500, 320], brain: [500, 115], heart: [285, 160], mind: [725, 135], lungs: [290, 445], immune: [165, 300], bones: [170, 530], digestive: [650, 480], infection: [870, 520], kidney: [470, 560], metabolism: [845, 300], pregnancy: [835, 75] };
+function starLayout() {
+  const stars = [];
+  Object.keys(TOPICS).forEach((k, ti) => {
+    const own = condsOf(k).filter(c => c.in.length === 1); const [cx, cy] = POS_A[k];
+    own.forEach((c, i) => { const a = (i / own.length) * Math.PI * 2 + ti; const r = 52 + (i % 2) * 18; stars.push({ c, x: cx + Math.cos(a) * r, y: cy + Math.sin(a) * r * .8, t: [k] }); });
+  });
+  CONDS.filter(c => c.in.length > 1).forEach(c => { const [a, b] = c.in; const x = (POS_A[a][0] + POS_A[b][0]) / 2, y = (POS_A[a][1] + POS_A[b][1]) / 2; stars.push({ c, x: x + 8, y: y - 6, t: c.in, bridge: true }); });
+  return stars;
+}
+function atlasA() {
+  const stars = starLayout(); const act = state.topic;
+  let lines = "", dots = "", labels = "";
+  stars.forEach(s => s.t.forEach(k => {
+    const [cx, cy] = POS_A[k]; const on = act === k;
+    lines += `<line x1="${cx}" y1="${cy}" x2="${s.x.toFixed(1)}" y2="${s.y.toFixed(1)}" stroke="${s.bridge ? "#d8b25a" : "#e9e6da"}" stroke-opacity="${on ? .9 : act ? .12 : .32}" stroke-width="${on ? 1.4 : 1}" ${s.bridge ? 'stroke-dasharray="3 4"' : ""}/>`;
+  }));
+  stars.forEach((s, i) => {
+    const on = act && s.t.includes(act);
+    dots += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="${s.bridge ? 4.2 : 2.8}" fill="${s.bridge ? "#d8b25a" : "#f2efe4"}" opacity="${act && !on ? .35 : 1}" ${!act && i % 5 === 0 ? 'class="tw"' : ""}/>`;
+    if (on) labels += `<text x="${(s.x + 7).toFixed(1)}" y="${(s.y + 4).toFixed(1)}" fill="${s.bridge ? "#e9c877" : "#f2efe4"}" font-family="IBM Plex Mono, monospace" font-size="12">${esc(cl(s.c))}</text>`;
+  });
+  let bg = ""; for (let i = 0; i < 90; i++) { const x = (i * 137.5) % 1000, y = (i * 71.3) % 620; bg += `<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${i % 7 === 0 ? 1.1 : .6}" fill="#8e97b8" opacity=".5"/>`; }
+  const plus = [[60, 60], [950, 40], [40, 600], [960, 600], [640, 30]].map(([x, y]) => `<path d="M${x - 6} ${y}h12M${x} ${y - 6}v12" stroke="#d8b25a" stroke-width="1.2"/>`).join("");
+  const grid = `<ellipse cx="500" cy="320" rx="470" ry="290" fill="none" stroke="#2a3563" stroke-width="1"/><ellipse cx="500" cy="320" rx="300" ry="290" fill="none" stroke="#222c55"/><line x1="30" y1="320" x2="970" y2="320" stroke="#222c55"/>`;
+  const nodes = Object.keys(TOPICS).map(k => { const [x, y] = POS_A[k]; return `<button class="node" data-topic="${k}" aria-pressed="${act === k}" style="left:${x / 10}%;top:${(y - 26) / 6.2}%">${esc(tl(k))}</button>`; }).join("");
+  return `<div class="atlas" id="atlas"><div class="atlas-canvas"><svg class="deco" viewBox="0 0 1000 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${bg}${grid}${plus}${lines}${dots}${labels}</svg>${nodes}</div>${atlasTools()}<div class="lv-wrap${state.list ? " on" : ""}">${listView()}</div></div>`;
+}
+function homeA() {
+  const t = L();
+  const h = state.lang === "es" ? "Explore la investigación clínica en <em>Massachusetts</em>." : "Explore clinical research in <em>Massachusetts</em>.";
+  return `<section class="hero-a"><div class="wrap"><div class="grid">
+    <div><h1>${h}</h1><p class="sub">${t.atlasIntro}</p>
+      <button class="searchpill" data-act="search">${ICON_SEARCH.replace('<svg', '<svg width="18" height="18"')}${t.searchHint}<kbd>/</kbd></button>
+      ${doors(false)}</div>
+    <div>${atlasA()}</div></div></div></section>
+    <section class="section-a"><div class="wrap"><p class="safety">${t.safety}</p></div></section>
+    <section class="section-a"><div class="wrap"><h2>${t.explainH}</h2>${explainer()}</div></section>
+    <section class="section-a"><div class="wrap"><h2>${t.stepsH}</h2>${steps()}</div></section>`;
+}
+
+/* ---------- Concept B: open door + topic garden ---------- */
+function illoB() {
+  // Original composition: an open doorway, two abstract seated figures in conversation, a window with a sun disc, a plant.
+  return `<svg viewBox="0 0 520 480" role="img" aria-label="Illustration: two people talking beside an open door">
+    <g filter="url(#gouache)">
+      <rect x="20" y="30" width="480" height="420" rx="40" fill="#e3ece6"/>
+      <path d="M300 450V150a90 90 0 0 1 180 0v300z" fill="#263553"/>
+      <path d="M318 450V158a72 72 0 0 1 144 0v292z" fill="#f7d58e"/>
+      <path d="M318 450V158a72 72 0 0 1 72-72v364z" fill="#fbe7b8"/>
+      <circle cx="140" cy="120" r="52" fill="#9cc3e4"/><circle cx="150" cy="110" r="22" fill="#f7d58e"/>
+      <path d="M60 450c10-90 60-140 120-140s80 60 85 140z" fill="#5fa8a0"/>
+      <circle cx="170" cy="262" r="34" fill="#c98a6b"/>
+      <path d="M150 248c10-30 50-30 58 0-10-8-40-12-58 0z" fill="#263553"/>
+      <path d="M215 450c4-70 40-112 84-112s50 50 52 112z" fill="#e98d86"/>
+      <circle cx="292" cy="300" r="28" fill="#8a5a44"/>
+      <path d="M270 292c4-26 44-30 50 2-14-14-36-12-50-2z" fill="#3a2a2a"/>
+      <path d="M440 450c-6-40 0-70 14-90 10 30 8 60-2 90z" fill="#a9c39a"/>
+      <path d="M455 450c4-50 24-80 44-92-2 40-14 70-34 92z" fill="#7fae86"/>
+      <rect x="40" y="430" width="440" height="20" rx="8" fill="#c9b48a"/>
+    </g>
+    <g fill="none" stroke="#263553" stroke-width="2.4" stroke-linecap="round">
+      <path d="M232 380c18-6 30-6 44 2"/><path d="M196 300c8 10 20 14 32 12"/>
+      <path d="M86 70h16M94 62v16"/><path d="M470 60h14M477 53v14"/>
+    </g>
+    <path d="M348 214l14 14 26-30" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`;
+}
+function blobShape(k, i) {
+  const r = ["46% 54% 42% 58% / 55% 45% 55% 45%", "58% 42% 50% 50% / 45% 55% 45% 55%", "40% 60% 60% 40% / 50% 40% 60% 50%", "52% 48% 38% 62% / 60% 50% 50% 40%"][i % 4];
+  return `<span class="shape" style="background:${TOPICS[k].hue};border-radius:${r}" aria-hidden="true"></span>`;
+}
+function gardenB() {
+  const sizes = [190, 150, 170, 160, 150, 200, 165, 175, 140, 160, 165, 180];
+  const relSet = state.topic ? Object.keys(related(state.topic)) : [];
+  return `<div class="atlas" id="atlas">${state.list ? listView() : `<div class="garden">${Object.keys(TOPICS).map((k, i) => {
+    const s = sizes[i]; const dim = state.topic && state.topic !== k && !relSet.includes(k);
+    const phase = -(((Date.now() / 1000) + i * 2.3) % 18).toFixed(2);
+    return `<button class="blob${dim ? " dim" : ""}${relSet.includes(k) ? " rel" : ""}" data-topic="${k}" aria-pressed="${state.topic === k}" style="--i:${i};--h:${TOPICS[k].hue};--bd:${phase}s;width:min(${s}px, 44cqw);height:min(${Math.round(s * .78)}px, 34cqw)">${blobShape(k, i)}<span class="lbl">${esc(tl(k))}<small>${condsOf(k).length} ${state.lang === "es" ? "ejemplos" : "examples"}</small></span></button>`;
+  }).join("")}</div>`}${atlasTools()}</div>`;
+}
+const pauseBtn = () => `<button class="tgl" data-act="pause" aria-pressed="${!!state.paused}">${state.paused ? (state.lang === "es" ? "Reanudar animación" : "Play animation") : (state.lang === "es" ? "Pausar animación" : "Pause animation")}</button>`;
+function homeB() {
+  const t = L();
+  const h = state.lang === "es" ? "Los estudios clínicos, <em>explicados</em> antes de buscar." : "Clinical trials, <em>explained</em> before you search.";
+  const sub = state.lang === "es" ? "Visit Ready le ayuda a entender lo que pide un estudio en Massachusetts y a prepararse para la primera conversación. Empiece por donde se sienta cómodo." : "Visit Ready helps you understand what a Massachusetts study asks for and get ready for the first conversation. Start wherever feels right.";
+  const q = state.lang === "es" ? "¿Ya sabe qué busca?" : "Already know what you are looking for?";
+  return `<section class="hero-b"><div class="wrap"><div class="grid">
+      <div><h1>${h}</h1><p class="sub">${sub}</p>${doors(true)}
+        <p class="quick">${q} <button class="inline" data-act="search">${t.searchHint}</button></p></div>
+      <div class="illo">${illoB()}</div></div>
+      <p class="safety" style="margin-top:22px">${t.safety}</p></div></section>
+    <section class="band alt"><div class="wrap"><h2>${t.explainH}</h2><p class="intro">${state.lang === "es" ? "Tres cosas que conviene saber antes de buscar." : "Three things worth knowing before you search."}</p>${explainer()}</div></section>
+    <section class="band"><div class="wrap"><h2>${t.atlasH}</h2><p class="intro">${t.atlasIntro}</p>${gardenB()}</div></section>
+    <section class="band alt"><div class="wrap"><h2>${t.stepsH}</h2>${steps()}</div></section>`;
+}
+
+/* ---------- Concept C: living figure + orbit ---------- */
+const POS_C = { brain: [320, 118], lungs: [226, 222], heart: [410, 262], digestive: [320, 330], kidney: [320, 400], bones: [330, 600],
+  cancer: [86, 150], mind: [556, 140], immune: [70, 330], infection: [570, 330], metabolism: [118, 505], pregnancy: [548, 510] };
+const ORBIT = ["cancer", "mind", "immune", "infection", "metabolism", "pregnancy"];
+function atlasC() {
+  const act = state.topic; const hi = k => act === k ? .95 : act ? .25 : .6;
+  const region = (k, d) => `<path d="${d}" fill="${TOPICS[k].hue}" opacity="${hi(k)}"/>`;
+  const svg = `<svg class="deco" viewBox="0 0 640 640" aria-hidden="true">
+    <defs><linearGradient id="fig" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#e9e4ff"/><stop offset="1" stop-color="#d7f2ee"/></linearGradient></defs>
+    <circle cx="320" cy="330" r="270" fill="none" stroke="#cfc6f2" stroke-width="1.5" stroke-dasharray="2 7"/>
+    <g opacity="${act && !ORBIT.includes(act) ? 1 : 1}">
+      <circle cx="320" cy="112" r="58" fill="url(#fig)"/>
+      <path d="M232 200c0-14 30-26 88-26s88 12 88 26l14 220c2 30-20 40-40 40H258c-20 0-42-10-40-40z" fill="url(#fig)"/>
+      <path d="M232 210c-30 30-44 100-46 170 0 12 18 14 20 2 6-60 18-110 40-140z" fill="url(#fig)"/>
+      <path d="M408 210c30 30 44 100 46 170 0 12-18 14-20 2-6-60-18-110-40-140z" fill="url(#fig)"/>
+      <path d="M262 460l-16 150c-1 12 26 14 28 2l36-150zM378 460l16 150c1 12-26 14-28 2l-36-150z" fill="url(#fig)"/>
+      ${region("brain", "M282 92c8-26 68-26 76 0 8 22-10 40-38 40s-46-18-38-40z")}
+      ${region("lungs", "M248 214c22-14 52-10 58 6l2 60c0 20-52 24-62 4-6-20-8-52 2-70z")}
+      ${region("heart", "M342 232c8-14 34-14 38 2 4 14-10 28-26 38-14-10-20-26-12-40z")}
+      ${region("digestive", "M268 304c30-10 74-10 104 0 8 18 6 42-6 54-30 8-62 8-92 0-12-12-14-36-6-54z")}
+      ${region("kidney", "M282 386c10-6 26-6 30 4 2 12-4 26-16 26s-20-18-14-30zM358 386c-10-6-26-6-30 4-2 12 4 26 16 26s20-18 14-30z")}
+      ${region("bones", "M250 500c10-6 22-4 26 6l-4 40c-6 10-20 10-24 0zM390 500c-10-6-22-4-26 6l4 40c6 10 20 10 24 0zM200 360c8-4 16 0 16 8l-4 20c-6 6-14 4-16-4z")}
+    </g>
+    ${ORBIT.map(k => { const [x, y] = POS_C[k]; return `<circle cx="${x}" cy="${y}" r="${act === k ? 40 : 30}" fill="${TOPICS[k].hue}" opacity="${hi(k)}"/>`; }).join("")}
+  </svg>`;
+  const nodes = Object.keys(TOPICS).map(k => { const [x, y] = POS_C[k]; return `<button class="node${ORBIT.includes(k) ? " orbit" : ""}" data-topic="${k}" aria-pressed="${act === k}" style="left:${x / 6.4}%;top:${y / 6.4}%">${esc(tl(k))}</button>`; }).join("");
+  return `<div class="atlas" id="atlas"><div class="atlas-canvas">${svg}${nodes}</div>
+    <p class="figure-note">${state.lang === "es" ? "Las formas son una ayuda para explorar temas. Señalar una parte del cuerpo no indica qué condición tiene ni si califica para un estudio." : "Shapes are a way to browse topics. Pointing at a body area does not tell you what condition you have or whether you qualify for a study."}</p>
+    ${atlasTools()}<div class="lv-wrap${state.list ? " on" : ""}">${listView()}</div></div>`;
+}
+function homeC() {
+  const t = L();
+  const h = state.lang === "es" ? "La investigación clínica, <span>a su ritmo</span>." : "Clinical research, <span>at your own pace</span>.";
+  return `<section class="hero-c"><div class="wrap"><div class="grid">
+    <div><h1>${h}</h1><p class="sub">${t.atlasIntro}</p>${doors(true)}
+      <form class="inline-search" data-form="inline"><label class="sr" for="inlineq" style="position:absolute;left:-9999px">${t.condLabel}</label><input id="inlineq" placeholder="${t.searchHint}" autocomplete="off"><button class="btn" type="submit">${t.go}</button></form>
+      <p class="safety" style="margin-top:14px">${t.safety}</p></div>
+    <div>${atlasC()}</div></div></div></section>
+    <section class="section-c"><div class="wrap"><h2>${t.explainH}</h2>${explainer()}</div></section>
+    <section class="section-c"><div class="wrap"><h2>${t.stepsH}</h2>${steps()}</div></section>`;
+}
+
+/* ---------- Shared downstream screens ---------- */
+function crumbs(trail) { return `<nav class="crumbs" aria-label="Breadcrumb">${trail.map(([lbl, go], i) => i < trail.length - 1 ? `<button data-go="${go}">${lbl}</button><span aria-hidden="true">/</span>` : `<span>${lbl}</span>`).join("")}</nav>`; }
+const LOADER = `<svg class="loader-art" viewBox="0 0 240 110" aria-hidden="true">
+  <g filter="url(#gouache)"><path d="M30 60c0-30 40-48 90-48s92 16 92 46-38 46-92 46S30 90 30 60z" fill="#d7ebe7"/><circle class="ld-dot d1" cx="74" cy="86" r="7" fill="#e98d86"/><circle class="ld-dot d2" cx="120" cy="92" r="7" fill="#e0b45a"/><circle class="ld-dot d3" cx="166" cy="86" r="7" fill="#9cc3e4"/></g>
+  <path class="ld-line" d="M24 56h52l10-22 14 46 14-58 12 46 8-12h82" fill="none" stroke="#263553" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
+</svg>`;
+function resultsScreen() {
+  const t = L(); const s = STUDY;
+  if (state.loading) return `<div class="wrap page"><div class="loader" aria-busy="true">${LOADER}<p class="ld-text">${t.searching} “${esc(state.term)}”</p><p role="status" aria-live="polite" class="sr-only">${t.searchingShort}</p></div></div>`;
+  return `<div class="wrap page">${crumbs([[t.home, "home"], [t.results, ""]])}
+    <h1 tabindex="-1" id="resultsH">${t.resultsFor} “${esc(state.term)}”</h1>
+    <p role="status" aria-live="polite" class="found">${t.found1}</p>
+    <p><span class="proto-tag">PROTOTYPE</span> ${t.resNote}</p>
+    <p style="color:var(--muted);font-size:14px">${t.resExample}</p>
+    <article class="rcard" style="--i:0"><div><span class="real-tag">REAL · ClinicalTrials.gov cache, fetched 2026-10-24</span></div>
+      <h3>${s.title}</h3><p style="color:var(--muted);font-size:14.5px">${s.official}</p>
+      <div class="meta"><span class="ok">${s.status}</span><span>${s.phase}</span><span>${s.sites}</span><span>${s.sponsor}</span><span>${s.nct}</span></div>
+      <p class="lang-flag">${t.langFlag}</p>
+      <div><button class="btn" data-go="study">${t.viewStudy}</button></div></article></div>`;
+}
+function studyScreen() {
+  const t = L(); const s = STUDY; const bc = { self_answer: "var(--b1)", check_records: "var(--b2)", ask_study_team: "var(--b3)", cannot_assess: "var(--b4)" };
+  return `<div class="wrap page">${crumbs([[t.home, "home"], [t.results, "results"], [s.nct, ""]])}
+    <div><span class="real-tag">REAL · ${s.nct} · last update posted ${s.updated}</span></div>
+    <h1 style="font-size:34px">${s.title}</h1><p style="color:var(--muted)">${s.official}</p>
+    <div class="meta"><span class="ok">${term("recruiting", s.status)}</span><span>${term("phase", s.phase)}</span><span>${s.age}</span><span>${s.sites}</span><span>${term("nct", s.nct)}</span></div>
+    <p style="font-size:13.5px;color:var(--muted)">${t.glossHint} ${term("criteria", t.gloss.criteria[0])}</p>${glossBox()}
+    <p class="lang-flag">${t.langFlag}</p>
+    <p class="safety">${t.safety}</p>
+    <h2 style="font-size:26px">${t.vmapH}</h2><p style="font-size:14px;color:var(--muted)"><span class="proto-tag">PROTOTYPE PLACEMENT</span> ${t.vmapNote}</p>
+    <div class="vmap" id="vmap">${Object.entries(s.buckets).map(([k, items]) => `<section class="bucket" style="--bc:${bc[k]}"><h3>${bicon(k)}${t.cats[k]}</h3><p class="act">${t.acts[k]}</p>
+      ${items.map(([txt, ref]) => `<div class="crit" lang="en">${esc(txt)}<small>${ref}${state.lang === "es" ? " · " + t.origEn : ""}</small></div>`).join("")}</section>`).join("")}</div>
+    <div><button class="btn" data-go="prepare">${t.prepBtn}</button></div></div>`;
+}
+function prepScreen() {
+  const t = L(); const s = STUDY;
+  return `<div class="wrap page">${crumbs([[t.home, "home"], [s.nct, "study"], [t.prepare, ""]])}
+    <article class="prep"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><h1 style="font-size:30px">${t.prepH}</h1><span class="real-tag">REAL STUDY · ${s.nct}</span></div>
+      <p><b>${s.title}</b> · ${s.sponsor}</p>
+      <div class="splitgrid"><div><h3 style="font-size:17px;margin-bottom:6px">${t.prepQ}</h3><ol><li>${esc(t.q1)}</li><li>${esc(t.q2)}</li><li>${esc(t.q3)}</li></ol></div>
+      <div><h3 style="font-size:17px;margin-bottom:6px">${t.prepBring}</h3><ol><li>${t.b1}</li><li>${t.b2}</li></ol></div></div>
+      <p style="font-size:14px;color:var(--muted)">${t.prepContact}</p><p class="safety">${t.safety}</p>
+      <p><span class="proto-tag">PROTOTYPE</span> <span style="font-size:13.5px;color:var(--muted)">Questions here are written for the preview; the real app generates them from the Verification Map.</span></p></article></div>`;
+}
+
+/* ---------- Overlays ---------- */
+function topicPanel() {
+  const k = state.topic; if (!k) return ""; const t = L(); const rel = related(k);
+  return `<aside class="panel" role="dialog" aria-label="${esc(tl(k))}"><button class="xbtn" data-act="closeTopic" aria-label="Close">×</button>
+    <span class="eyebrow">${t.panelEyebrow}</span><h2>${esc(tl(k))}</h2>
+    <p class="mesh">${t.meshLabel} <span lang="en">${TOPICS[k].mesh}</span></p>
+    <p><span class="proto-tag">PROTOTYPE</span> <span style="font-size:13.5px;color:var(--muted)">${t.liveNote}</span></p>
+    <div><h3>${t.examples}</h3><p style="font-size:13.5px;color:var(--muted);margin:2px 0 8px">${t.examplesHelp}</p>
+      <div class="sugg">${condsOf(k).map(c => `<button class="chip" data-term="${esc(c.term)}">${esc(cl(c))}</button>`).join("")}</div></div>
+    ${Object.keys(rel).length ? `<div><h3>${t.shares}</h3><div class="rel" style="margin-top:8px">${Object.entries(rel).map(([o, cs]) => `<button data-topic="${o}">${esc(tl(o))} <small>${t.via} ${cs.map(cl).join(", ")}</small></button>`).join("")}</div></div>` : ""}
+  </aside>`;
+}
+function searchSheet() {
+  if (!state.sheet) return ""; const t = L(); const id = state.sheet === "id";
+  const sugg = ["breast cancer", "type 2 diabetes", "asthma", "depression", "heart failure", "Alzheimer disease"].map(x => CONDS.find(c => c.term === x));
+  return `<div class="scrim" data-act="closeSheet"><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetH" style="position:relative" data-stop="1">
+    <button class="xbtn" data-act="closeSheet" aria-label="Close">×</button><h2 id="sheetH">${t.sheetH}</h2>
+    <div class="tabs" role="tablist"><button role="tab" aria-selected="${!id}" data-sheet="cond">${t.tCond}</button><button role="tab" aria-selected="${id}" data-sheet="id">${t.tId}</button></div>
+    ${id ? `<form class="field" data-form="id"><label for="nctq">${t.idLabel}</label><p class="help">${t.idHelp}</p><div class="row"><input id="nctq" value="NCT04986579" autocomplete="off"><button class="btn" type="submit">${t.open}</button></div>
+      <p style="font-size:13px;color:var(--muted);margin-top:8px"><span class="real-tag">REAL</span> Prefilled with a study whose record is cached in the repo. Other IDs open the same example in this preview.</p></form>`
+    : `<form class="field" data-form="cond"><label for="condq">${t.condLabel}</label><p class="help">${t.condHelp}</p><div class="row"><input id="condq" value="${esc(state.term)}" autocomplete="off"><button class="btn" type="submit">${t.go}</button></div></form>
+      <div><p style="font-size:13px;color:var(--muted);margin-bottom:6px">${t.sugg}</p><div class="sugg">${sugg.map(c => `<button class="chip" data-term="${esc(c.term)}">${esc(cl(c))}</button>`).join("")}</div></div>`}
+  </div></div>`;
+}
+
+/* ---------- Render + events ---------- */
+const vp = document.getElementById("viewport"), ov = document.getElementById("overlay"), device = document.getElementById("device");
+function render(keepScroll) {
+  const top = vp.scrollTop;
+  const body = state.screen === "home" ? ({ cA: homeA, cB: homeB, cC: homeC })[state.concept]() : state.screen === "results" ? resultsScreen() : state.screen === "study" ? studyScreen() : prepScreen();
+  vp.innerHTML = `<div class="vr ${state.concept}${state.paused ? " anim-paused" : ""}" lang="${state.lang}">${header()}<main>${body}</main>${footer()}</div>`;
+  ov.innerHTML = `<div class="vr ${state.concept}" lang="${state.lang}" style="min-height:0;background:none">${state.screen === "home" ? topicPanel() : ""}${searchSheet()}</div>`;
+  document.getElementById("conceptBlurb").innerHTML = BLURB[state.concept];
+  if (keepScroll) vp.scrollTop = top; else vp.scrollTop = 0;
+  armBloom();
+}
+// Preview stand-in for the real request: show the loader for at least ~900 ms, then results, then focus the heading.
+function runSearch(term) {
+  state.term = term; state.sheet = null; state.topic = null; state.screen = "results"; state.loading = true; render(false);
+  setTimeout(() => { state.loading = false; render(false); const h = vp.querySelector("#resultsH"); if (h) h.focus({ preventScroll: true });
+    const c = vp.querySelector(".rcard"); if (c && !state.paused) setTimeout(() => { const b = c.getBoundingClientRect(); ripple({ clientX: b.left + 40, clientY: b.top + 30 }, c); }, 500); }, 900);
+}
+let bloomObs = null;
+function armBloom() {
+  if (bloomObs) { bloomObs.disconnect(); bloomObs = null; }
+  const g = vp.querySelector(".cB .garden"); if (!g || state.bloomed || state.paused) return;
+  bloomObs = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { state.bloomed = true; g.classList.add("bloom"); bloomObs.disconnect(); } }, { root: vp, threshold: 0.25 });
+  bloomObs.observe(g);
+}
+const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function ripple(e, el) {
+  if (reduceMotion()) return;
+  const fx = document.getElementById("fx"), d = device.getBoundingClientRect(), b = el.getBoundingClientRect();
+  const x = (e.clientX || b.left + b.width / 2) - d.left, y = (e.clientY || b.top + b.height / 2) - d.top;
+  const sp = document.createElement("span"); sp.className = "ripple"; sp.style.left = x + "px"; sp.style.top = y + "px"; sp.style.background = el.style.getPropertyValue("--h") || "#9cc3e4";
+  fx.appendChild(sp); setTimeout(() => sp.remove(), 700);
+}
+function scrollToId(id) { const el = vp.querySelector("#" + id); if (el) vp.scrollTo({ top: el.getBoundingClientRect().top - vp.getBoundingClientRect().top + vp.scrollTop - 90, behavior: "smooth" }); }
+function openSheet(kind) { state.sheet = kind; render(true); setTimeout(() => { const i = ov.querySelector("input"); if (i) i.focus(); }, 30); }
+
+device.addEventListener("click", e => {
+  const el = e.target.closest("button, .scrim"); if (!el) return;
+  if (el.classList.contains("scrim") && e.target !== el) return;
+  const d = el.dataset;
+  if (d.gloss) { state.gloss = state.gloss === d.gloss ? null : d.gloss; render(true); return; }
+  if (d.lang) { state.lang = d.lang; render(true); return; }
+  if (d.go !== undefined && d.go !== "") { state.screen = d.go; state.topic = null; state.gloss = null; state.sheet = null; render(false); return; }
+  if (d.topic && el.classList.contains("blob")) ripple(e, el);
+  if (d.topic) { const panelOpen = !!state.topic; state.topic = state.topic === d.topic ? null : d.topic; render(true); if (panelOpen) { const p = ov.querySelector('.panel'); if (p) p.style.animation = 'none'; } return; }
+  if (d.term) { runSearch(d.term); return; }
+  if (d.sheet) { openSheet(d.sheet); return; }
+  if (d.door) {
+    if (d.door === "start") { if (state.screen !== "home") { state.screen = "home"; render(false); } scrollToId("explainer"); }
+    if (d.door === "explore") { if (state.concept === "cA") scrollToId("atlas"); else scrollToId("atlas"); }
+    if (d.door === "cond") openSheet("cond");
+    if (d.door === "id") openSheet("id");
+    return;
+  }
+  switch (d.act) {
+    case "search": openSheet("cond"); break;
+    case "explore": if (state.screen !== "home") { state.screen = "home"; render(false); } scrollToId("atlas"); break;
+    case "how": if (state.screen !== "home") { state.screen = "home"; render(false); } scrollToId("how"); break;
+    case "toggleList": state.list = !state.list; render(true); break;
+    case "pause": state.paused = !state.paused; render(true); break;
+    case "closeTopic": state.topic = null; render(true); break;
+    case "closeSheet": state.sheet = null; render(true); break;
+  }
+});
+device.addEventListener("submit", e => {
+  e.preventDefault(); const f = e.target.dataset.form;
+  if (f === "cond" || f === "inline") { const v = e.target.querySelector("input").value.trim(); const btn = e.target.querySelector("button[type=submit]"); if (btn) { btn.disabled = true; btn.setAttribute("aria-busy", "true"); btn.textContent = L().searchingShort; } setTimeout(() => runSearch(v || "breast cancer"), 150); }
+  if (f === "id") { state.sheet = null; state.screen = "study"; render(false); }
+});
+device.addEventListener("keydown", e => {
+  if (e.key === "Escape") { if (state.sheet) { state.sheet = null; render(true); } else if (state.topic) { state.topic = null; render(true); } }
+  if (e.key === "/" && !/INPUT/.test(e.target.tagName)) { e.preventDefault(); openSheet("cond"); }
+});
+// Hover preview for constellations and the figure (selection still needs a click or Enter)
+vp.addEventListener("mouseover", e => {
+  if (state.concept === "cB" || state.screen !== "home") return;
+  const n = e.target.closest(".node"); if (!n || state.topic) return;
+  vp.querySelectorAll(".node").forEach(x => x.style.opacity = x === n ? 1 : .55);
+});
+vp.addEventListener("mouseout", e => { if (e.target.closest(".node")) vp.querySelectorAll(".node").forEach(x => x.style.opacity = ""); });
+
+function setSeg(id, attr, val) { document.querySelectorAll(`#${id} button`).forEach(b => b.setAttribute("aria-pressed", b.dataset[attr] === val)); }
+document.getElementById("conceptSeg").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; state.concept = b.dataset.c; state.topic = null; state.list = false; state.sheet = null; setSeg("conceptSeg", "c", state.concept); render(false); try { localStorage.setItem("vr-concept", state.concept); } catch (_) {} });
+document.getElementById("deviceSeg").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; state.device = b.dataset.d; setSeg("deviceSeg", "d", state.device); device.classList.toggle("mobile", state.device === "mobile"); });
+document.getElementById("whatsnew").addEventListener("click", e => {
+  const b = e.target.closest("button[data-jump]"); if (!b) return; const j = b.dataset.jump;
+  state.concept = "cB"; setSeg("conceptSeg", "c", "cB"); state.sheet = null; state.topic = null; state.list = false;
+  if (j === "search") { runSearch("breast cancer"); return; }
+  if (j === "garden" || j === "explain") { state.screen = "home"; if (j === "garden") state.bloomed = false; render(false); setTimeout(() => scrollToId(j === "garden" ? "atlas" : "explainer"), 50); }
+  else { state.screen = "study"; state.term = "breast cancer"; state.gloss = j === "gloss" ? "phase" : null; render(false); setTimeout(() => scrollToId(j === "gloss" ? "gloss" : "vmap"), 50); }
+});
+document.getElementById("tabSeg").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; const tab = b.dataset.tab; setSeg("tabSeg", "tab", tab);
+  document.getElementById("previewTab").hidden = tab !== "preview"; document.getElementById("reviewTab").hidden = tab !== "review";
+  document.querySelectorAll(".preview-only").forEach(x => x.hidden = tab !== "preview"); });
+
+const hash = location.hash.replace("#", "");
+state.concept = "cB";
+if (hash === "review") document.querySelector('#tabSeg [data-tab="review"]').click();
+setSeg("conceptSeg", "c", state.concept);
+render(false);
+</script>
+
+<template id="reviewTpl"></template>
+<script>
+document.getElementById("reviewTab").innerHTML = `
+<div class="review">
+  <h2>Recommendation: Concept B, Open Door</h2>
+  <p class="lede">Open Door is the strongest fit for the patients you described: people who do not know what to search, do not know the terms, and do not yet know how trials work. It leads with plain-language choices and a short explainer, keeps search one tap away, and turns research areas into a painted topic garden that works the same way on a phone and with a keyboard. It is also the only concept I think can be built properly in the time left.</p>
+  <div class="callout"><dl class="kv">
+    <dt>Build estimate (B)</dt><dd>About 2 to 2.5 hours in Kiro for two people: homepage and doors 45 to 60 min, topic garden and panel 45 min, restyling results, study, Verification Map and prep card through tokens 30 to 45 min, tests and fixes 20 min. Feasible only if approval comes soon; it leaves little room before an 8 PM end and the video.</dd>
+    <dt>A, if you prefer it</dt><dd>About 3 to 3.5 hours. The chart needs a keyboard and screen reader path, a mobile fallback, and checks on label collisions. Risky today.</dd>
+    <dt>C</dt><dd>About 3.5 hours or more, plus the safety and accuracy risks below. I would not build it this weekend.</dd>
+    <dt>Fallback</dt><dd>If time is short, ship B's hero (doors, explainer, quick search) and the topic list view only. That alone fixes the main weakness of the current homepage.</dd>
+  </dl></div>
+
+  <h2>Critique of the current homepage</h2>
+  <p>Screenshots are from a local build of the repo's current main branch (commit 8f93f80, which includes the new logo and the AI summary merge). GitHub Pages deploys main on every push, so this should match the live site, but my environment cannot reach github.io or the Actions status, so I could not confirm the deploy finished.</p>
+  <div class="shots">
+    <figure><img src="shots/current-desktop.png" alt="Current Visit Ready homepage on desktop: header, disclaimer, and a search card"><figcaption>Desktop, 1280 px</figcaption></figure>
+    <figure><img src="shots/current-mobile.png" alt="Current Visit Ready homepage on mobile"><figcaption>Mobile, 390 px, full page</figcaption></figure>
+  </div>
+  <h3>What already works, and must survive any redesign</h3>
+  <ul>
+    <li>The no-verdict disclaimer is the first thing on the page, and the copy is clear and calm.</li>
+    <li>Real labels, help text, live regions, a skip link, a visible focus ring and an <code>html lang</code> that follows the toggle. This is better accessibility groundwork than most hackathon projects have.</li>
+    <li>The help text is honest that the registry uses English medical terms.</li>
+  </ul>
+  <h3>What does not work</h3>
+  <ul>
+    <li><b>It asks before it explains.</b> The first heading is “Find a study in Massachusetts” followed by an empty box labeled “Condition or disease”. A patient who does not know the right term, or what a trial is, gets no way in. This matches your concern exactly.</li>
+    <li><b>Two of the four entry points exist; two are missing.</b> “I know my condition” and “I have a study ID” are covered. “I am not sure where to start” and “I want to explore” have nothing.</li>
+    <li><b>Only two preset searches</b> (type 2 diabetes, asthma). They look like the whole catalog, which undersells the tool.</li>
+    <li><b>Three stacked forms in one card,</b> each with its own button, at equal weight. On mobile the study ID form starts below the fold, and nothing says why you would choose one over the other.</li>
+    <li><b>Little identity beyond the logo.</b> The new badge and accent line help, but below the header it is still a system font, one blue, and a white card. It reads as a form, not as a guide. The product's best ideas (four buckets, the language flag, the call card) are invisible from the homepage.</li>
+    <li><b>Wasted width on desktop.</b> A 52rem column with a 320 px input leaves most of the screen empty, while the tagline in the header is the only description of what the tool does.</li>
+  </ul>
+
+  <h2>Is a cluster map the right idea?</h2>
+  <p>Partly. A spatial view is good for the “I want to explore” door and for a memorable demo. It is a poor first step for the “I am not sure where to start” door, because a map of research areas still asks the patient to recognize a medical category. Maps also cost the most to make accessible: a keyboard user or screen reader user needs an equivalent list, and on a 390 px phone a 12-label map either overlaps or becomes unreadably small. That is why every concept here pairs the visual with a list view, and why B uses a flowing garden instead of fixed coordinates.</p>
+  <p>Position on a map also implies meaning. If two dots sit close together, people read them as related. So the layout must encode something real. The one relationship the registry data actually supports is the medical vocabulary: ClinicalTrials.gov indexes each study's conditions to MeSH terms and their parent categories, and one condition can sit under several categories. The cached record NCT02896335 in the repo shows this: “Brain Neoplasms” has ancestors under both Neoplasms and Nervous System Diseases. The bridges in all three concepts use that relationship and nothing else.</p>
+
+  <h2>What the data supports, and what is invented in this preview</h2>
+  <dl class="kv">
+    <dt>Verified</dt><dd>Condition text, MeSH terms and ancestors per study (<code>derivedSection.conditionBrowseModule</code>, seen in the repo's cached records). Phases, status, site city and state, and geo points per site (seen in NCT04986579). Search by condition, location and status, as the app already does.</dd>
+    <dt>From my knowledge, to verify</dt><dd>The 12 groupings and which category each example condition belongs to follow MeSH. Only the brain tumor placement is confirmed from data here. The build should derive groupings from live API results rather than this hand list.</dd>
+    <dt>Not verified</dt><dd>Study counts per area for Massachusetts. The API was not reachable from my environment, so no counts appear anywhere in the preview. The build would need one live call per area (or a precomputed snapshot with its date shown).</dd>
+    <dt>Not supported</dt><dd>Symptoms, body-to-condition mapping, or anything that suggests fit. None of the concepts does symptom input, and C carries an explicit note.</dd>
+    <dt>Prototype only</dt><dd>Search does not query anything; it shows a results layout with one real cached record. Bucket placement on the study page is illustrative. Spanish strings in the preview are machine-drafted.</dd>
+  </dl>
+
+  <h2>Comparison</h2>
+  <p>Scores are my judgment on a 1 to 5 scale, with the reason next to each.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Criterion</th><th>A. Constellations</th><th>B. Open Door</th><th>C. Living Atlas</th></tr></thead>
+    <tbody>
+      <tr><td>Aesthetics and memorability</td><td class="score">5</td><td class="score">4</td><td class="score">3</td></tr>
+      <tr><td></td><td>Most striking. Fine gold line on navy reads as research, and it echoes the badge's line art and plus signs.</td><td>Warm and human. Painted shapes avoid stock imagery; less dramatic in a video.</td><td>Pleasant but closest to generic wellness design.</td></tr>
+      <tr><td>Patient usability</td><td class="score">3</td><td class="score">5</td><td class="score">3</td></tr>
+      <tr><td></td><td>Map is the hero, so the “not sure” patient still meets a chart of categories first.</td><td>Doors in plain words, then an explainer, then topics. Matches the four entry points directly.</td><td>Familiar body metaphor, but it invites “point where it hurts” thinking that the tool cannot honor.</td></tr>
+      <tr><td>Originality</td><td class="score">4</td><td class="score">3</td><td class="score">3</td></tr>
+      <tr><td></td><td>Stars as conditions and bridges as shared MeSH categories is specific to this data. Closest in spirit to the reference idea, so it needs care not to resemble it.</td><td>The doorway illustration and garden are original, but a guided homepage is a known pattern.</td><td>Body maps are common in health apps.</td></tr>
+      <tr><td>Feasibility today</td><td class="score">2</td><td class="score">4</td><td class="score">2</td></tr>
+      <tr><td></td><td>Custom SVG layout, collision handling, mobile fallback.</td><td>Mostly HTML and CSS. The garden reflows with flexbox; no layout math.</td><td>Hand-drawn regions, orbit layout, and safety copy review.</td></tr>
+      <tr><td>Accessibility</td><td class="score">3</td><td class="score">5</td><td class="score">2</td></tr>
+      <tr><td></td><td>Labels are real buttons, but the map hides labels on phones and depends on the list view.</td><td>Every topic is a large button in reading order; works at 200% text.</td><td>Region labels crowd on phones; the meaning depends on position.</td></tr>
+      <tr class="rec"><td><b>Total</b></td><td class="score">17</td><td class="score">21</td><td class="score">13</td></tr>
+    </tbody></table></div>
+
+  <h3>Why C is risky beyond effort</h3>
+  <ul>
+    <li>Many large areas have no single place on the body (cancer, mental health, infections, immune, metabolism), so they end up in an orbit. That makes the figure feel incomplete and separates mental health from the brain, which can read as stigmatizing.</li>
+    <li>A body figure next to a search box looks like a symptom checker, even with a note. It works against the no-verdict promise rather than with it.</li>
+  </ul>
+
+  <h2>How B carries through the product</h2>
+  <ul>
+    <li><b>Type:</b> Fraunces for headings only, Atkinson Hyperlegible for all reading text (designed for low-vision readers, open license). Both on Google Fonts.</li>
+    <li><b>Color:</b> blue in English and coral in Spanish stay as the language accent, as planned in the logo thread. Topic hues come from the badge's teal, ochre and rose and appear only on topic shapes, never as status colors.</li>
+    <li><b>Search and results:</b> one search sheet with two tabs replaces the three stacked forms. Result cards keep the language flag and freshness on the card.</li>
+    <li><b>Verification Map:</b> four buckets keep distinct colors plus a heading and a dot, so color is never the only cue. Verbatim registry text stays visible with its source reference.</li>
+    <li><b>Prep card:</b> same tokens, printable, no illustration.</li>
+    <li><b>Spanish:</b> same layout; English source text is marked <code>lang="en"</code> and labeled as original registry text.</li>
+    <li><b>Logo:</b> works unchanged with the light badge. A uses the navy badge, C the lilac one; none needs a logo change.</li>
+  </ul>
+
+  <h2>Supporting visuals for patients with no clinical background</h2>
+  <p>Added to the preview in the same gouache style. Each one sits next to plain text that says the same thing, so the pictures are decorative for screen readers.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Visual</th><th>Where to see it</th><th>Why it helps</th><th>Build today?</th></tr></thead>
+    <tbody>
+      <tr><td>Three explainer vignettes (a growing plant for research, a sorted list for requirements, two people talking for "the study team decides")</td><td>Home, "New to clinical trials?"</td><td>Gives the "not sure where to start" door a picture for each idea.</td><td><b>Yes</b>, about 15 to 20 min. Static SVG.</td></tr>
+      <tr><td>Icons for the four Verification Map groups (speech bubble, folder, phone, cloud with a question mark)</td><td>Study page</td><td>Patients can tell the groups apart without reading the headings. Shape adds a cue besides color.</td><td><b>Yes</b>, about 20 min.</td></tr>
+      <tr><td>Glossary terms with a phase track (Recruiting, Phase, NCT number, Inclusion and exclusion)</td><td>Study page: tap a dotted word</td><td>Explains the words patients meet first. The phase track highlights the study's real phase from the registry.</td><td><b>If time allows</b>, 40 to 50 min. The definitions must be checked against the ClinicalTrials.gov glossary first.</td></tr>
+      <tr><td>Living topic garden: shapes bloom in one by one like paint drops, breathe slowly, swell with a ring on hover or focus, send a paint ripple on tap, and neighbors make room for the selected one. Pause button included; everything stops under reduced motion.</td><td>Home, "Explore research areas" (use the "Living topic garden" button above the preview to replay the bloom)</td><td>The memorable moment for the demo video, and it stays inside the existing design.</td><td><b>Yes</b>, about 30 to 40 min. CSS keyframes plus a small scroll trigger and the pause toggle; no library.</td></tr>
+      <tr><td>Pictograms inside each topic shape</td><td>Not built</td><td>I recommend against this. Most icons for disease areas end up as organ drawings, which brings back the body-map problem. They would also crowd the labels, and with 20+ data-driven areas each one needs its own icon.</td><td><b>No.</b> Pitch slide only, if at all.</td></tr>
+    </tbody></table></div>
+  <p>Icons never use a check mark, so nothing can be read as "you qualify".</p>
+
+  <h2>Not done yet, by design</h2>
+  <ul>
+    <li>No changes to the repository and no Kiro prompt. The Kiro prompt comes only after you approve a direction.</li>
+    <li>The reference video was not attached to the project, so I could not compare against it. If you share it, I will check that the chosen concept does not copy its composition.</li>
+  </ul>
+</div>`;
+</script>
+</body>
+</html>
