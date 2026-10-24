@@ -3,17 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visit Ready — API</title>
+    <title>Visit Ready</title>
+    <!-- This Vercel deployment only hosts the /api/summarize function.
+         The app itself lives on GitHub Pages; send visitors there immediately. -->
+    <meta http-equiv="refresh" content="0; url=https://ritsuko-yosh.github.io/research_buddy/" />
+    <link rel="canonical" href="https://ritsuko-yosh.github.io/research_buddy/" />
+    <script>
+      window.location.replace('https://ritsuko-yosh.github.io/research_buddy/');
+    </script>
   </head>
   <body>
     <main style="font-family: system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem;">
-      <h1>Visit Ready — API host</h1>
       <p>
-        This Vercel deployment hosts the Visit Ready plain-language summary
-        function (<code>/api/summarize</code>). The patient-facing application
-        lives on GitHub Pages.
+        Visit Ready lives at
+        <a href="https://ritsuko-yosh.github.io/research_buddy/">ritsuko-yosh.github.io/research_buddy</a>.
       </p>
-      <p><a href="https://ritsuko-yosh.github.io/research_buddy/">Open Visit Ready →</a></p>
+      <p style="color:#555;font-size:0.9rem;">
+        (This address only hosts the Visit Ready summary API.)
+      </p>
     </main>
   </body>
 </html>
