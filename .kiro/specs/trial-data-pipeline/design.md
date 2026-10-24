@@ -1,4 +1,4 @@
-# Design — Visit Ready Trial Data Pipeline (Person B)
+# Design — Visit Ready Trial Data Pipeline
 
 ## Overview
 A small, dependency-light TypeScript library that transforms raw
@@ -30,7 +30,7 @@ ClinicalTrials.gov v2 API ──┐
 ## Components & interfaces
 
 - **`contract/types.ts`** — shared `Trial`, `Criterion`, enums,
-  `CONTRACT_VERSION`. Single source of truth for Person A.
+  `CONTRACT_VERSION`. Single source of truth for the web app.
 - **`pipeline/raw.ts`** — structural typing of the v2 record (all optional).
 - **`pipeline/client.ts`** — `searchStudies`, `lookupStudy`, `isValidNctId`,
   `ApiError`; injectable `FetchLike`; abort-based timeout.

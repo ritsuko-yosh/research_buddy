@@ -30,7 +30,7 @@ describe("toTrialSummary — card projection", () => {
   });
 });
 
-describe("search-results fixture (Person A list UI)", () => {
+describe("search-results fixture (list UI)", () => {
   const data = searchResults as unknown as SearchResults;
 
   it("is on-contract and pins the curated demo study first", () => {

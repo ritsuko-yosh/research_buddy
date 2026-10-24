@@ -1,6 +1,6 @@
 /**
- * Visit Ready data pipeline — public API barrel (Person B).
- * Person A imports from here.
+ * Visit Ready data pipeline — public API barrel.
+ * The web app imports from here.
  */
 
 export * from "./contract/types.js";

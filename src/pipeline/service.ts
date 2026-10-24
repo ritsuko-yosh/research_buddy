@@ -1,5 +1,5 @@
 /**
- * TrialService — the façade Person A's frontend consumes.
+ * TrialService — the façade the web app consumes.
  *
  * Responsibilities:
  *  - getTrialByNct: live lookup -> normalize -> enrich, with cache fallback.

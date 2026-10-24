@@ -1,9 +1,10 @@
 /**
- * TEMPORARY SHARED CONTRACT (Person A draft).
+ * Web app view-model contract.
  *
- * Person B must confirm or amend this before integration. Once both sides
- * agree, change it only through a coordinated edit. Components should depend
- * on these types, never on raw ClinicalTrials.gov JSON.
+ * These are the shapes the UI components depend on — they never touch raw
+ * ClinicalTrials.gov JSON. The data pipeline maps its normalized `Trial`
+ * (src/contract/types.ts) into these types. Change them only through a
+ * coordinated edit across the pipeline and the web app.
  */
 
 export type RecruitmentStatus =

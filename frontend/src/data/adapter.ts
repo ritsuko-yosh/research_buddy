@@ -1,5 +1,5 @@
 import type { TrialDataSource } from '../types/trial';
-// Backend-owned, browser-safe live ClinicalTrials.gov data source (Person B).
+// Browser-safe live ClinicalTrials.gov data source (project data pipeline).
 // Resolved via the "@backend" alias (see vite.config.ts and tsconfig.json).
 import { createLiveDataSource } from '@backend/browser/index';
 

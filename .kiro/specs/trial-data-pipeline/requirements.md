@@ -1,4 +1,4 @@
-# Requirements — Visit Ready Trial Data Pipeline (Person B)
+# Requirements — Visit Ready Trial Data Pipeline
 
 ## Introduction
 

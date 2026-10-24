@@ -4,8 +4,8 @@ Status: spec drafted, awaiting review. No code written yet.
 
 - [x] 0. Spec written (requirements, design, this file).
 - [x] 1a. Live API shape checked (see design.md, "Grouping source").
-- [ ] 1b. `src/pipeline/topics.ts`: buildTopicIndex, category list, exclusion config. Waiting for Person B.
-- [ ] 1c. `scripts/build-topic-index.ts` (paged, validated, atomic write), `build:topics` script, run once and commit the generated file. Waiting for Person B.
+- [ ] 1b. `src/pipeline/topics.ts`: buildTopicIndex, category list, exclusion config.
+- [ ] 1c. `scripts/build-topic-index.ts` (paged, validated, atomic write), `build:topics` script, run once and commit the generated file.
 - [x] 1d. `deploy.yml`: SKIPPED for this iteration (decision).
 - [x] 1e. `isTopicIndex` runtime guard in the frontend.
 - [ ] 2. Homepage: doors, explainer, step list, illustration, presets from the index.

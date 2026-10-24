@@ -4,7 +4,7 @@
  *
  * For each curated demo study, outputs:
  *   src/data/cache/{nctId}.cache.json   (raw record + fetch timestamp)
- *   fixtures/trial.{nctId}.json         (normalized Trial for Person A)
+ *   fixtures/trial.{nctId}.json         (normalized Trial for the web app)
  *   fixtures/preparation-card.{nctId}.json
  *   fixtures/coordinator-inquiry.{nctId}.{en,es}.txt
  */

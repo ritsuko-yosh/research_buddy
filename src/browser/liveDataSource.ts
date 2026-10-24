@@ -1,5 +1,5 @@
 /**
- * Browser-safe live ClinicalTrials.gov data source (Person B, backend-owned).
+ * Browser-safe live ClinicalTrials.gov data source for the web app.
  *
  * Implements the frontend's `FeTrialDataSource` interface using ONLY fs-free
  * pipeline modules + the browser's global `fetch`. ClinicalTrials.gov API v2 is
@@ -10,7 +10,7 @@
  * back to a BUNDLED cached record (imported as JSON, not read via fs) when one
  * exists for that study, and marks the origin as "cached".
  *
- * Person A wires this in with a one-line change in frontend/src/data/adapter.ts:
+ * The web app wires this in via frontend/src/data/adapter.ts:
  *     import { createLiveDataSource } from 'visit-ready/browser';
  *     export const dataSource = createLiveDataSource();
  */
@@ -35,7 +35,7 @@ const BUNDLED_CACHE: Record<string, RawStudy> = {
 
 /**
  * Map the frontend's condition ids to ClinicalTrials.gov condition query terms.
- * Person B owns this mapping; keep ids aligned with frontend/src/data/conditions.ts.
+ * Keep ids aligned with the web app's condition list.
  */
 const CONDITION_TERMS: Record<string, string> = {
   type_2_diabetes: "type 2 diabetes",

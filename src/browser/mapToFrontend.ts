@@ -1,5 +1,5 @@
 /**
- * Map Person B's authoritative `Trial` (src/contract/types.ts, v1.0.0) into the
+ * Map the authoritative `Trial` (src/contract/types.ts, v1.0.0) into the
  * frontend view-model `FeTrial` (frontendContract.ts).
  *
  * This mapping is the single reconciliation point between the two contracts.
