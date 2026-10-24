@@ -1,8 +1,8 @@
 /**
- * Browser-safe entry point (Person B, backend-owned).
+ * Browser-safe entry point for the web app.
  *
  * Everything exported here is free of Node-only APIs (no `fs`/`path`/`url`) and
- * safe to bundle into a Vite/browser app. Person A imports from here to go live:
+ * safe to bundle into a Vite/browser app. The web app imports from here to go live:
  *
  *   import { createLiveDataSource } from "visit-ready/browser";
  *   export const dataSource = createLiveDataSource();

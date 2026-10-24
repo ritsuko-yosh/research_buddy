@@ -1,5 +1,5 @@
 /**
- * Build card-level fixtures for Person A's search-results UI:
+ * Build card-level fixtures for the search-results UI:
  *
  *   fixtures/search-results.json        — real MA studies as TrialSummary cards,
  *                                          demo study (NCT02896335) pinned first.

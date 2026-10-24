@@ -71,7 +71,7 @@ The frontend loads the topic file with `import.meta.glob`. If the file is absent
 
 ## Ownership and sign-off
 
-These need Person B's agreement before they are committed:
+These need agreement on the shared data contract before they are committed:
 - `src/pipeline/topics.ts` (`buildTopicIndex`, the category list, and the exclusion config)
 - `scripts/build-topic-index.ts`
 - the generated file `frontend/src/data/generated/topic-index.json`

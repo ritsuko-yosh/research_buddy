@@ -1,4 +1,4 @@
-# Tasks — Visit Ready Trial Data Pipeline (Person B)
+# Tasks — Visit Ready Trial Data Pipeline
 
 ## P0 — Foundation
 - [x] 1. Inspect repo, confirm stack (TypeScript/Node), set up tooling
@@ -14,7 +14,7 @@
   - _Req: 2_
 - [x] 6. Implement conservative four-category classifier
   - _Req: 3_
-- [x] 7. Generate shared fixture for Person A (`fixtures/`)
+- [x] 7. Generate shared fixtures for the web app (`fixtures/`)
   - _Req: 2, 3_
 - [x] 8. Core safety tests (source, classification, missing data, fidelity)
   - _Req: 8_
@@ -42,5 +42,5 @@
   - _Req: 1_
 - [x] 18. Expand curated studies (NCT02896335 + NCT04986579)
   - _Req: 1, 5_
-- [ ] 19. Final frontend integration + demo rehearsal with Person A
+- [ ] 19. Final frontend integration + demo rehearsal
   - _Req: all_ (joint)

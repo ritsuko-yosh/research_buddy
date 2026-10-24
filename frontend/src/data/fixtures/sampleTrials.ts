@@ -5,7 +5,7 @@ import type { Trial } from '../../types/trial';
  *
  * These records are invented to exercise the interface. They are not real
  * clinical trials, their NCT IDs do not correspond to registry entries, and
- * their plain-language text is illustrative. Person B's live data replaces
+ * their plain-language text is illustrative. The live data source replaces
  * this file through the adapter in data/adapter.ts.
  */
 

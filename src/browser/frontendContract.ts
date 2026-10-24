@@ -1,11 +1,11 @@
 /**
- * Mirror of Person A's frontend `Trial` contract (frontend/src/types/trial.ts).
+ * Mirror of the web app's `Trial` view-model (frontend/src/types/trial.ts).
  *
  * This file is OWNED BY PERSON B and lives in the backend package. It is a
  * read-only copy of the frontend's view-model types so the backend-owned live
  * adapter can produce exactly the shape the frontend consumes WITHOUT the
  * backend importing across into frontend source (which would couple the two
- * build graphs). If Person A changes frontend/src/types/trial.ts, update this
+ * build graphs). If the web app changes frontend/src/types/trial.ts, update this
  * mirror in coordination.
  *
  * NOTE: this is the FRONTEND's shape, which intentionally differs from Person

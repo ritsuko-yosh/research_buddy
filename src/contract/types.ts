@@ -1,10 +1,10 @@
 /**
- * Visit Ready — Shared Data Contract (Person B owns the finalized schema)
+ * Visit Ready — Shared Data Contract
  * =======================================================================
  *
  * This is the single source of truth for the normalized `Trial` and `Criterion`
- * shapes exchanged between the data pipeline (Person B) and the frontend
- * (Person A). Import these types directly on both sides.
+ * shapes exchanged between the data pipeline and the web app.
+ * Import these types wherever the normalized study shape is needed.
  *
  * SAFETY INVARIANTS encoded by this schema (see project brief §13):
  *  - There is NO eligibility verdict, match score, or "qualifies" boolean. The
@@ -15,10 +15,10 @@
  *  - Contacts, recruitment status, and language support are only ever populated
  *    from real source data; absence is represented explicitly.
  *
- * Avoid breaking changes without coordinating with Person A.
+ * Avoid breaking changes without coordinating across the pipeline and web app.
  */
 
-/** Schema version. Bump on breaking changes and coordinate with Person A. */
+/** Schema version. Bump on breaking changes and coordinate across the project. */
 export const CONTRACT_VERSION = "1.0.0" as const;
 
 /**
