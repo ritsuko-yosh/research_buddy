@@ -152,7 +152,7 @@ const RECORDS_RE =
 /** Detect the honest uncertainty/complexity flags present in a criterion. */
 export function detectUncertaintyFlags(
   text: string,
-  section: CriterionSection,
+  _section: CriterionSection,
 ): UncertaintyFlag[] {
   const flags = new Set<UncertaintyFlag>();
   if (CONDITIONAL_RE.test(text)) flags.add("conditional_logic");
@@ -181,7 +181,7 @@ export function detectUncertaintyFlags(
  */
 export function classifyCriterion(
   text: string,
-  section: CriterionSection,
+  _section: CriterionSection,
   flags: UncertaintyFlag[],
 ): VerificationCategory {
   const f = new Set(flags);

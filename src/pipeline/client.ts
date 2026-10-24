@@ -19,9 +19,12 @@ const NCT_RE = /^NCT\d{8}$/i;
 export class ApiError extends Error {
   readonly status?: number;
   constructor(message: string, status?: number, cause?: unknown) {
-    super(message, cause !== undefined ? { cause } : undefined);
+    super(message);
     this.name = "ApiError";
     this.status = status;
+    // Assign cause directly so this compiles under both ES2020 and ES2022 libs
+    // (the 2-arg Error constructor is not in the ES2020 lib).
+    if (cause !== undefined) (this as { cause?: unknown }).cause = cause;
   }
 }
 
