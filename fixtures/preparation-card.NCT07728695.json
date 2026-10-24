@@ -1,0 +1,288 @@
+{
+  "nctId": "NCT07728695",
+  "title": "Assessing the Mechanisms and Impact of a Novel Cannabinoid Product for Gynecologic Pain",
+  "recruitmentStatus": "RECRUITING",
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695",
+  "freshness": {
+    "lastRegistryUpdate": "2026-07-27",
+    "stale": false,
+    "note": "Registry listing updated recently."
+  },
+  "languageNote": "No explicit language requirement was found in the public registry listing. This is shown as \"not stated\" — it does not indicate whether any particular language is supported. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team.",
+  "groups": {
+    "self_answer": [
+      {
+        "id": "NCT07728695-inclusion-0",
+        "sourceText": "* Provides informed consent",
+        "section": "inclusion",
+        "explanationEn": "You need to read and sign the consent form before taking part. You can confirm this yourself.",
+        "explanationEs": "Debe leer y firmar el formulario de consentimiento antes de participar. Usted mismo puede confirmarlo.",
+        "translationReviewed": false,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-inclusion-1",
+        "sourceText": "* Sex assigned female at birth",
+        "section": "inclusion",
+        "explanationEn": "This study enrolls people who were assigned female at birth. You can answer this yourself.",
+        "explanationEs": "Este estudio incluye a personas a las que se les asignó el sexo femenino al nacer. Usted puede responderlo.",
+        "translationReviewed": false,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-inclusion-3",
+        "sourceText": "* Aged 21+",
+        "section": "inclusion",
+        "explanationEn": "You must be 21 years of age or older. You can confirm this yourself.",
+        "explanationEs": "Debe tener 21 años o más. Usted mismo puede confirmarlo.",
+        "translationReviewed": false,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "check_records": [
+      {
+        "id": "NCT07728695-exclusion-6",
+        "sourceText": "* Liver function test (LFT) values \\>3x the upper limit of normal (ULN) at the baseline visit",
+        "section": "exclusion",
+        "explanationEn": "Liver function test (LFT) results more than 3 times the upper limit of normal at the baseline visit would exclude participation. These are lab values that may already be in your medical records — bring them and ask the study team.",
+        "explanationEs": "Resultados de pruebas de función hepática (LFT) superiores a 3 veces el límite normal en la visita inicial excluirían la participación. Son valores de laboratorio que pueden estar ya en sus registros médicos; llévelos y pregunte al equipo del estudio.",
+        "translationReviewed": false,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 6,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": [
+          "institutional_reference",
+          "medical_threshold"
+        ]
+      }
+    ],
+    "ask_study_team": [
+      {
+        "id": "NCT07728695-inclusion-2",
+        "sourceText": "* Capable of having menstrual cycles",
+        "section": "inclusion",
+        "explanationEn": "Participants need to be able to have menstrual cycles. Whether this applies to you can depend on your medical situation — check with the study team if you are unsure.",
+        "explanationEs": "Las participantes deben poder tener ciclos menstruales. Si esto aplica a su caso puede depender de su situación médica; consulte con el equipo del estudio si tiene dudas.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-inclusion-4",
+        "sourceText": "* Endorses one of the following gynecologic pain conditions: endometriosis, adenomyosis, chronic pelvic inflammatory disease (PID)",
+        "section": "inclusion",
+        "explanationEn": "You need a diagnosis of endometriosis, adenomyosis, or chronic pelvic inflammatory disease (PID). A clinician confirms these diagnoses — bring your records and ask the study team.",
+        "explanationEs": "Necesita un diagnóstico de endometriosis, adenomiosis o enfermedad inflamatoria pélvica (EIP) crónica. Un profesional confirma estos diagnósticos; lleve sus registros y pregunte al equipo del estudio.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-inclusion-5",
+        "sourceText": "* Stable medication/psychotherapy regimens for at least 3 months prior to starting the study, including hormonal contraceptives\n\nAdditional inclusion criteria for those in the PK subgroup:",
+        "section": "inclusion",
+        "explanationEn": "Your medications and any therapy (including hormonal contraceptives) need to have been stable for at least 3 months before starting. The study team can confirm whether your situation qualifies.",
+        "explanationEs": "Sus medicamentos y cualquier terapia (incluidos los anticonceptivos hormonales) deben haber estado estables durante al menos 3 meses antes de comenzar. El equipo del estudio puede confirmar si su situación cumple el requisito.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT07728695-inclusion-6",
+        "sourceText": "* Willingness to participate in the PK procedures (i.e., agree to an indwelling catheter with repeated blood collection)",
+        "section": "inclusion",
+        "explanationEn": "For one subgroup (the PK group) only, you would need to agree to an indwelling catheter with repeated blood draws. The study team explains what this involves.",
+        "explanationEs": "Solo para un subgrupo (el grupo PK), tendría que aceptar un catéter permanente con extracciones de sangre repetidas. El equipo del estudio explica en qué consiste.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 6,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-exclusion-0",
+        "sourceText": "* Meets criteria for DSM-5 classification of current substance use disorder, psychotic disorder, bipolar disorder, or an eating disorder",
+        "section": "exclusion",
+        "explanationEn": "Certain current mental-health conditions (such as a substance use disorder, psychotic disorder, bipolar disorder, or eating disorder, as defined by DSM-5) would exclude participation. A clinician determines this — ask the study team.",
+        "explanationEs": "Ciertas afecciones de salud mental actuales (como un trastorno por uso de sustancias, trastorno psicótico, trastorno bipolar o trastorno alimentario, según el DSM-5) excluirían la participación. Un profesional lo determina; pregunte al equipo del estudio.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-exclusion-1",
+        "sourceText": "* Currently uses cannabinoid products",
+        "section": "exclusion",
+        "explanationEn": "People who currently use cannabinoid products are not eligible. If you are unsure whether something you use counts, ask the study team.",
+        "explanationEs": "Las personas que actualmente usan productos con cannabinoides no son elegibles. Si no está seguro de si algo que usa cuenta, pregunte al equipo del estudio.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-exclusion-2",
+        "sourceText": "* Positive urine pregnancy test, are trying to become pregnant, or are currently breastfeeding",
+        "section": "exclusion",
+        "explanationEn": "You cannot take part if you are pregnant, trying to become pregnant, or breastfeeding. Pregnancy is confirmed by a test at the study.",
+        "explanationEs": "No puede participar si está embarazada, intentando quedar embarazada o amamantando. El embarazo se confirma con una prueba en el estudio.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-exclusion-4",
+        "sourceText": "* Comorbid neuropathic pain or cancer-related pain",
+        "section": "exclusion",
+        "explanationEn": "Having nerve-related (neuropathic) pain or cancer-related pain at the same time would exclude participation. The study team can clarify how this applies to you.",
+        "explanationEs": "Tener dolor de origen nervioso (neuropático) o dolor relacionado con el cáncer al mismo tiempo excluiría la participación. El equipo del estudio puede aclarar cómo aplica a su caso.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT07728695-exclusion-5",
+        "sourceText": "* Disclosure of a genetic polymorphism affecting CYP2C9 function",
+        "section": "exclusion",
+        "explanationEn": "A known genetic variation affecting the CYP2C9 enzyme (which influences how the body processes certain substances) would exclude participation. This comes from genetic testing — ask the study team.",
+        "explanationEs": "Una variación genética conocida que afecta la enzima CYP2C9 (que influye en cómo el cuerpo procesa ciertas sustancias) excluiría la participación. Esto proviene de pruebas genéticas; pregunte al equipo del estudio.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "cannot_assess": [
+      {
+        "id": "NCT07728695-exclusion-3",
+        "sourceText": "* Presence of a serious or unstable medical illness, including liver/kidney disease, cardiovascular disease, neurological disorder, and conditions or medications that impact drug absorption or gastric emptying (e.g., GLP-1 agonists)",
+        "section": "exclusion",
+        "explanationEn": "Serious or unstable medical conditions (for example liver/kidney disease, heart disease, neurological disorders, or medications affecting how the body absorbs drugs, such as GLP-1 agonists) would exclude participation. This needs the study team's medical review.",
+        "explanationEs": "Afecciones médicas graves o inestables (por ejemplo, enfermedad hepática/renal, cardíaca, trastornos neurológicos o medicamentos que afectan la absorción de fármacos, como los agonistas de GLP-1) excluirían la participación. Esto requiere la revisión médica del equipo del estudio.",
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT07728695",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT07728695#eligibility"
+        },
+        "uncertaintyFlags": [
+          "ambiguous_wording"
+        ]
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Staci Gruber, PhD",
+      "role": "CONTACT",
+      "phone": "617-855-2762",
+      "email": "gruber@mclean.harvard.edu"
+    },
+    {
+      "name": "Rosie Smith, M.S.",
+      "role": "CONTACT",
+      "phone": "617-855-2908",
+      "email": "rsmith@mclean.harvard.edu"
+    }
+  ],
+  "disclaimers": [
+    "Visit Ready does not decide whether you qualify for this study. There is no eligibility score.",
+    "Do not get new medical tests just to use this tool. Bring records you already have.",
+    "A Spanish interface here does not mean the study can serve Spanish-speaking participants. Confirm with the study team.",
+    "Recruitment status and contacts come from the public registry and may be out of date — verify with the study team."
+  ]
+}

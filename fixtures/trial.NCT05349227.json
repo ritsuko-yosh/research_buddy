@@ -5,7 +5,7 @@
   "description": "This study intends to explore feasibility, acceptability, and outcomes related to the use of a digital health coaching intervention for individuals who have completed primary therapy for cancer. Up to 625 individuals with diverse cancer diagnoses will be enrolled across up to 8 clinical sites to participate in a randomized wait-list control study. Those in the intervention group will receive 6 months of digital coaching up front followed by 6 months of ongoing monitoring via patient reported and clinical outcomes, as well as wearable data. Those in the control group will be monitored via patient reported and clinical outcomes as well as wearable data for the first 6 months followed by 6 months of digital health coaching. Both groups will collect fecal microbiome samples at enrollment and month 6. The study aims to explore if and how digital health coaching may be used to enhance outcomes for individuals following completion of primary cancer therapy.",
   "recruitmentStatus": "RECRUITING",
   "lastRegistryUpdate": "2024-12-11",
-  "lastFetched": "2026-10-24T21:14:25.832Z",
+  "lastFetched": "2026-10-24T21:30:47.254Z",
   "locations": [
     {
       "facility": "The University of Florida",
@@ -466,7 +466,7 @@
   "sourceUrl": "https://clinicaltrials.gov/study/NCT05349227",
   "dataSource": {
     "kind": "cache",
-    "fetchedAt": "2026-10-24T21:14:25.832Z",
+    "fetchedAt": "2026-10-24T21:30:47.254Z",
     "staleThresholdDays": 120,
     "stale": true
   },

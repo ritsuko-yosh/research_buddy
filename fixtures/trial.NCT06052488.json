@@ -5,7 +5,7 @@
   "description": "The goal of this study is to explore whether a group exercise program called Strength After Breast Cancer can be delivered in an outpatient physical therapy clinic to improve physical function among women after treatment for breast cancer.\n\nThe main questions this study aims to answer are:\n\n* Can the Strength After Breast Cancer program and the associated outcome battery be successfully delivered in an outpatient physical therapy clinic at Massachusetts General Hospital and do participants find the program practical?\n* What are the barriers to and facilitators of delivering the group exercise program in a clinical setting and what changes need to be made to the program to improve sustainability and to facilitate implementation at other clinical sites?\n\nParticipants will complete study questionnaires before and after engaging in the group exercise program and they will participate in interviews following participation in the program.",
   "recruitmentStatus": "RECRUITING",
   "lastRegistryUpdate": "2025-10-20",
-  "lastFetched": "2026-10-24T21:14:25.835Z",
+  "lastFetched": "2026-10-24T21:30:47.256Z",
   "locations": [
     {
       "facility": "MGH Institute of Health Professions",
@@ -123,7 +123,7 @@
   "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488",
   "dataSource": {
     "kind": "cache",
-    "fetchedAt": "2026-10-24T21:14:25.835Z",
+    "fetchedAt": "2026-10-24T21:30:47.256Z",
     "staleThresholdDays": 120,
     "stale": true
   },

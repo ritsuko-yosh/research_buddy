@@ -81,6 +81,13 @@ export const STUDY_SUMMARIES: Record<string, StudySummary> = {
       "Este es un repositorio de investigación (llamado iCaRe2), no un estudio de tratamiento. Recopila y gestiona información de salud estandarizada y muestras biológicas de adultos que dan su consentimiento — pacientes con cáncer, personas de alto riesgo y controles sanos — incluidos muchos de hospitales pequeños y rurales. Los investigadores lo usan como recurso compartido para estudiar las causas del cáncer y desarrollar mejor prevención, detección temprana y tratamiento.",
     reviewed: false,
   },
+  NCT07728695: {
+    summaryEn:
+      "This is a short, 7-day study looking at how a hemp-derived, full-spectrum, high-CBD product might affect gynecologic pain. It enrolls people living with endometriosis, adenomyosis, or chronic pelvic inflammatory disease (PID). The goal is to understand the biological targets and mechanisms behind the product's possible effect on this kind of pain — it is a mechanism study, not a test of whether the product treats these conditions.",
+    summaryEs:
+      "Este es un estudio corto, de 7 días, que analiza cómo un producto derivado del cáñamo, de espectro completo y alto en CBD, podría afectar el dolor ginecológico. Incluye a personas que viven con endometriosis, adenomiosis o enfermedad inflamatoria pélvica (EIP) crónica. El objetivo es comprender los mecanismos biológicos detrás del posible efecto del producto sobre este tipo de dolor; es un estudio de mecanismos, no una prueba de si el producto trata estas afecciones.",
+    reviewed: false,
+  },
 };
 
 /** nctId -> list of curated explanations (matched by substring). */
@@ -176,6 +183,121 @@ export const CURATED: Record<string, CuratedExplanation[]> = {
         "A diagnosed history of migraines or tension/cluster headaches affects eligibility, but there is an exception if a past problem is now resolved — decided at the Principal Investigator's discretion. This is a judgment for the study team, not a simple yes/no.",
       explanationEs:
         "Un historial diagnosticado de migrañas o cefaleas tensionales o en racimo afecta la elegibilidad, pero hay una excepción si un problema pasado ya está resuelto, a criterio del Investigador Principal. Esto es un juicio para el equipo del estudio, no un simple sí/no.",
+      translationReviewed: false,
+    },
+  ],
+
+  NCT07728695: [
+    // --- Inclusion ---
+    {
+      match: "provides informed consent",
+      explanationEn:
+        "You need to read and sign the consent form before taking part. You can confirm this yourself.",
+      explanationEs:
+        "Debe leer y firmar el formulario de consentimiento antes de participar. Usted mismo puede confirmarlo.",
+      translationReviewed: false,
+    },
+    {
+      match: "sex assigned female at birth",
+      explanationEn:
+        "This study enrolls people who were assigned female at birth. You can answer this yourself.",
+      explanationEs:
+        "Este estudio incluye a personas a las que se les asignó el sexo femenino al nacer. Usted puede responderlo.",
+      translationReviewed: false,
+    },
+    {
+      match: "capable of having menstrual cycles",
+      explanationEn:
+        "Participants need to be able to have menstrual cycles. Whether this applies to you can depend on your medical situation — check with the study team if you are unsure.",
+      explanationEs:
+        "Las participantes deben poder tener ciclos menstruales. Si esto aplica a su caso puede depender de su situación médica; consulte con el equipo del estudio si tiene dudas.",
+      translationReviewed: false,
+    },
+    {
+      match: "aged 21+",
+      explanationEn: "You must be 21 years of age or older. You can confirm this yourself.",
+      explanationEs: "Debe tener 21 años o más. Usted mismo puede confirmarlo.",
+      translationReviewed: false,
+    },
+    {
+      match: "endorses one of the following gynecologic pain conditions",
+      explanationEn:
+        "You need a diagnosis of endometriosis, adenomyosis, or chronic pelvic inflammatory disease (PID). A clinician confirms these diagnoses — bring your records and ask the study team.",
+      explanationEs:
+        "Necesita un diagnóstico de endometriosis, adenomiosis o enfermedad inflamatoria pélvica (EIP) crónica. Un profesional confirma estos diagnósticos; lleve sus registros y pregunte al equipo del estudio.",
+      translationReviewed: false,
+    },
+    {
+      match: "stable medication/psychotherapy regimens",
+      explanationEn:
+        "Your medications and any therapy (including hormonal contraceptives) need to have been stable for at least 3 months before starting. The study team can confirm whether your situation qualifies.",
+      explanationEs:
+        "Sus medicamentos y cualquier terapia (incluidos los anticonceptivos hormonales) deben haber estado estables durante al menos 3 meses antes de comenzar. El equipo del estudio puede confirmar si su situación cumple el requisito.",
+      translationReviewed: false,
+    },
+    {
+      match: "willingness to participate in the pk procedures",
+      explanationEn:
+        "For one subgroup (the PK group) only, you would need to agree to an indwelling catheter with repeated blood draws. The study team explains what this involves.",
+      explanationEs:
+        "Solo para un subgrupo (el grupo PK), tendría que aceptar un catéter permanente con extracciones de sangre repetidas. El equipo del estudio explica en qué consiste.",
+      translationReviewed: false,
+    },
+    // --- Exclusion ---
+    {
+      match: "dsm-5 classification",
+      explanationEn:
+        "Certain current mental-health conditions (such as a substance use disorder, psychotic disorder, bipolar disorder, or eating disorder, as defined by DSM-5) would exclude participation. A clinician determines this — ask the study team.",
+      explanationEs:
+        "Ciertas afecciones de salud mental actuales (como un trastorno por uso de sustancias, trastorno psicótico, trastorno bipolar o trastorno alimentario, según el DSM-5) excluirían la participación. Un profesional lo determina; pregunte al equipo del estudio.",
+      translationReviewed: false,
+    },
+    {
+      match: "currently uses cannabinoid products",
+      explanationEn:
+        "People who currently use cannabinoid products are not eligible. If you are unsure whether something you use counts, ask the study team.",
+      explanationEs:
+        "Las personas que actualmente usan productos con cannabinoides no son elegibles. Si no está seguro de si algo que usa cuenta, pregunte al equipo del estudio.",
+      translationReviewed: false,
+    },
+    {
+      match: "positive urine pregnancy test",
+      explanationEn:
+        "You cannot take part if you are pregnant, trying to become pregnant, or breastfeeding. Pregnancy is confirmed by a test at the study.",
+      explanationEs:
+        "No puede participar si está embarazada, intentando quedar embarazada o amamantando. El embarazo se confirma con una prueba en el estudio.",
+      translationReviewed: false,
+    },
+    {
+      match: "presence of a serious or unstable medical illness",
+      explanationEn:
+        "Serious or unstable medical conditions (for example liver/kidney disease, heart disease, neurological disorders, or medications affecting how the body absorbs drugs, such as GLP-1 agonists) would exclude participation. This needs the study team's medical review.",
+      explanationEs:
+        "Afecciones médicas graves o inestables (por ejemplo, enfermedad hepática/renal, cardíaca, trastornos neurológicos o medicamentos que afectan la absorción de fármacos, como los agonistas de GLP-1) excluirían la participación. Esto requiere la revisión médica del equipo del estudio.",
+      translationReviewed: false,
+    },
+    {
+      match: "comorbid neuropathic pain or cancer-related pain",
+      explanationEn:
+        "Having nerve-related (neuropathic) pain or cancer-related pain at the same time would exclude participation. The study team can clarify how this applies to you.",
+      explanationEs:
+        "Tener dolor de origen nervioso (neuropático) o dolor relacionado con el cáncer al mismo tiempo excluiría la participación. El equipo del estudio puede aclarar cómo aplica a su caso.",
+      translationReviewed: false,
+    },
+    {
+      match: "genetic polymorphism affecting cyp2c9",
+      explanationEn:
+        "A known genetic variation affecting the CYP2C9 enzyme (which influences how the body processes certain substances) would exclude participation. This comes from genetic testing — ask the study team.",
+      explanationEs:
+        "Una variación genética conocida que afecta la enzima CYP2C9 (que influye en cómo el cuerpo procesa ciertas sustancias) excluiría la participación. Esto proviene de pruebas genéticas; pregunte al equipo del estudio.",
+      translationReviewed: false,
+    },
+    {
+      match: "liver function test",
+      explanationEn:
+        "Liver function test (LFT) results more than 3 times the upper limit of normal at the baseline visit would exclude participation. These are lab values that may already be in your medical records — bring them and ask the study team.",
+      explanationEs:
+        "Resultados de pruebas de función hepática (LFT) superiores a 3 veces el límite normal en la visita inicial excluirían la participación. Son valores de laboratorio que pueden estar ya en sus registros médicos; llévelos y pregunte al equipo del estudio.",
       translationReviewed: false,
     },
   ],
