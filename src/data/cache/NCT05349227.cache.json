@@ -1,0 +1,1240 @@
+{
+  "raw": {
+    "protocolSection": {
+      "identificationModule": {
+        "nctId": "NCT05349227",
+        "orgStudyIdInfo": {
+          "id": "202101"
+        },
+        "secondaryIdInfos": [
+          {
+            "id": "ZIANR000020-06",
+            "type": "NIH",
+            "link": "https://reporter.nih.gov/quickSearch/ZIANR000020-06"
+          }
+        ],
+        "organization": {
+          "fullName": "Pack Health",
+          "class": "INDUSTRY"
+        },
+        "briefTitle": "Comprehensive Outcomes for After Cancer Health",
+        "officialTitle": "Comprehensive Outcomes for After Cancer Health (COACH): the Feasibility and Impact of an MHealth Augmented Coaching Program for Self-Management in Cancer Survivors",
+        "acronym": "COACH"
+      },
+      "statusModule": {
+        "statusVerifiedDate": "2024-09",
+        "overallStatus": "RECRUITING",
+        "expandedAccessInfo": {
+          "hasExpandedAccess": false
+        },
+        "startDateStruct": {
+          "date": "2022-06-23",
+          "type": "ACTUAL"
+        },
+        "primaryCompletionDateStruct": {
+          "date": "2026-12",
+          "type": "ESTIMATED"
+        },
+        "completionDateStruct": {
+          "date": "2027-05",
+          "type": "ESTIMATED"
+        },
+        "studyFirstSubmitDate": "2022-04-14",
+        "studyFirstSubmitQcDate": "2022-04-21",
+        "studyFirstPostDateStruct": {
+          "date": "2022-04-27",
+          "type": "ACTUAL"
+        },
+        "lastUpdateSubmitDate": "2024-12-06",
+        "lastUpdatePostDateStruct": {
+          "date": "2024-12-11",
+          "type": "ACTUAL"
+        }
+      },
+      "sponsorCollaboratorsModule": {
+        "responsibleParty": {
+          "type": "SPONSOR"
+        },
+        "leadSponsor": {
+          "name": "Pack Health",
+          "class": "INDUSTRY"
+        },
+        "collaborators": [
+          {
+            "name": "Daiichi Sankyo",
+            "class": "INDUSTRY"
+          },
+          {
+            "name": "GlaxoSmithKline",
+            "class": "INDUSTRY"
+          },
+          {
+            "name": "University of Nebraska",
+            "class": "OTHER"
+          },
+          {
+            "name": "Ohio State University Comprehensive Cancer Center",
+            "class": "OTHER"
+          },
+          {
+            "name": "The University of Texas Health Science Center, Houston",
+            "class": "OTHER"
+          },
+          {
+            "name": "M.D. Anderson Cancer Center",
+            "class": "OTHER"
+          },
+          {
+            "name": "University of Florida",
+            "class": "OTHER"
+          },
+          {
+            "name": "Memorial Sloan Kettering Cancer Center",
+            "class": "OTHER"
+          },
+          {
+            "name": "Dana-Farber Cancer Institute",
+            "class": "OTHER"
+          },
+          {
+            "name": "Gilead Sciences",
+            "class": "INDUSTRY"
+          },
+          {
+            "name": "National Institute of Nursing Research (NINR)",
+            "class": "NIH"
+          }
+        ]
+      },
+      "oversightModule": {
+        "oversightHasDmc": false,
+        "isFdaRegulatedDrug": false,
+        "isFdaRegulatedDevice": false,
+        "isUsExport": false
+      },
+      "descriptionModule": {
+        "briefSummary": "This study intends to explore feasibility, acceptability, and outcomes related to the use of a digital health coaching intervention for individuals who have completed primary therapy for cancer. Up to 625 individuals with diverse cancer diagnoses will be enrolled across up to 8 clinical sites to participate in a randomized wait-list control study. Those in the intervention group will receive 6 months of digital coaching up front followed by 6 months of ongoing monitoring via patient reported and clinical outcomes, as well as wearable data. Those in the control group will be monitored via patient reported and clinical outcomes as well as wearable data for the first 6 months followed by 6 months of digital health coaching. Both groups will collect fecal microbiome samples at enrollment and month 6. The study aims to explore if and how digital health coaching may be used to enhance outcomes for individuals following completion of primary cancer therapy.",
+        "detailedDescription": "Background: There are an estimated 16.9 million cancer survivors in the United States, accounting for approximately 5% of the entire US population, and this number is anticipated to increase by 31% over the next 10 years to include 22.2 million individuals.1 Due to advances in therapy individuals with cancer are experiencing increased overall survival that is often accompanied by the management of cancer as a chronic condition.2 As such many individuals require maintenance therapies that extend for months or years beyond the completion of primary therapy with surgery, radiation, and/or pharmacologic therapies. Chronic management of cancer care may include both long-term maintenance therapy as well as the management of treatment-related sequelae, the majority of which occurs beyond the clinical setting. Supportive care needs include symptom support, general wellness, and a focus on the importance of adherence to treatment and follow-up, all of which may influence quality and quantity of life. Accordingly, there is a critical and growing need for comprehensive, accessible platforms to support survivor self-management of symptoms and general wellness (including physical, functional, and psychosocial well-being and healthcare adherence). There is furthermore a critical knowledge gap on the correlation between individual symptoms and wellness on novel biomarkers, specifically intestinal (gut) microbiome. Gut microbiome regulates critical physiological processes-digestion, mood, and overall immune health, but to date studies have focused on dysbiosis during cancer treatment. The investigators seek to explore dynamics of gut microbiota after cancer treatment and understand how health behavioral changes prompted by health coaching to modulate symptoms and physical/ psychosocial well-being may also positively influence the restoration of gut flora.\n\nAims: The objective of this randomized, wait-list control study is to assess the effect of a 6-month digital health coaching program in cancer survivors within 1 year of primary treatment and longitudinally measure its impact on multifaceted health outcomes. The investigators aim to: 1) Primarily, assess the feasibility, acceptability, and effect of digital health coaching on participants' health self-efficacy; 2) Secondarily, characterize associations between participant symptoms, physical/psychosocial well-being, and health self-management and gut microbiota changes; and 3) Explore patient-generated health data outcomes among participants (patient-reported \\[PROs\\] and wearable biometrics outcomes).\n\nMethods: The proposed study will utilize a randomized-wait list control design to enroll up to 625 individuals with diverse tumor types who have completed primary treatment and are within 1 year of diagnosis. Each of up to 8 collaborating sites will enroll up to 100 participants. Participants will be enrolled in a 6-month digital health coaching program that combines person-to-person calls once weekly, accompanied by up to 4 digital nudges of evidence-based content via text, email and/or mobile application, based on the participant's preference. Content will focus on key topics designed to optimize survivorship outcomes, including management of late and long-term effects of therapy, diet and exercise, fatigue, financial toxicity, and other associated symptoms (e.g., sleep disturbance, depression), medication adherence, surveillance, and managing anxiety and fear of cancer recurrence. The program emphasizes targeting modifiable behaviors that can improve quality of life and health outcomes, including progression-free and overall survival. Those randomized to the intervention group will receive the 6-month coaching intervention up front followed by 6 months of on-going clinical, patient reported, activity, and microbiome data collection. Those randomized to the control will receive 6-months of clinical, patient reported, activity, and microbiome data collection, after which they will be randomized to the digital health coaching intervention.\n\nOutcome Measures: All participants will be followed for 12-months during which time they will be provided with Fitbit devices to track engagement in physical activity. Microbiome samples will be collected at enrollment and 6 months to explore biomarkers of inflammation, which will be analyzed to examine associations between microbiota signatures and engagement in physical activity and PROs. Genomic bacterial DNA will be extracted and analyzed for any taxonomic changes in the microbiota diversity and composition with 16s rRNA sequencing. Microbiome analysis will be conducted in partnership with The National Institute of Nursing Research (NINR). PROs will be collected at baseline and months 3, 6, 9, and 12 to track progress during and following the program and to provide insights into the experience of quality of life, symptom burden, mental health, cognitive function, sleep quality, sexual health, and financial toxicity.\n\nRationale: This program seeks to address survivors' total well-being, including co-morbid conditions, psychosocial wellness, and healthy lifestyle behaviors, to enhance outcomes for individuals who have completed primary therapy for a cancer diagnosis. The approach is innovative in exploring how digital health coaching may be used to support the holistic needs of cancer survivors beyond the clinical care setting. The robust collection of patient-reported, wearable, biomarker, and clinical data, as well as qualitative data related to patient priorities, concerns and challenges in the context of Health Coaching, will allow for triangulation of data to comprehensively inform the experience of individuals following primary therapy as they manage their health in the community setting."
+      },
+      "conditionsModule": {
+        "conditions": [
+          "Ovarian Cancer",
+          "Breast Cancer",
+          "Lung Cancer",
+          "Gastric Cancer",
+          "Survivorship",
+          "Endometrial Cancer",
+          "Head and Neck Cancers",
+          "Prostate Cancers",
+          "Geriatric Oncology",
+          "Metastatic Breast Cancer",
+          "Metastatic Cancer"
+        ],
+        "keywords": [
+          "Patient Reported Outcome Measures",
+          "Physical Activity",
+          "Digital Coaching",
+          "Microbiome",
+          "Wearables"
+        ]
+      },
+      "designModule": {
+        "studyType": "INTERVENTIONAL",
+        "phases": [
+          "NA"
+        ],
+        "designInfo": {
+          "allocation": "RANDOMIZED",
+          "interventionModel": "CROSSOVER",
+          "interventionModelDescription": "Wait list control trial in which up to 625 patients will be randomized to receive either 6-months of digital coaching immediately followed by 6-months of monitoring or 6-months of monitoring followed by 6-months of digital health coaching. All participants will receive 12 months of patient reported outcomes collection and activity tracking via wrist-worn devices, as well as microbiome collection at baseline and month 6 only.",
+          "primaryPurpose": "SUPPORTIVE_CARE",
+          "maskingInfo": {
+            "masking": "NONE"
+          }
+        },
+        "enrollmentInfo": {
+          "count": 625,
+          "type": "ESTIMATED"
+        }
+      },
+      "armsInterventionsModule": {
+        "armGroups": [
+          {
+            "label": "Intervention Group",
+            "type": "EXPERIMENTAL",
+            "description": "In addition to standard of care services at the participant's respective health system, and study specific collection of clinical, PRO, and wearable data, as well as microbiome specimens, individuals randomized to the intervention group will receive immediate enrollment to a 6-month digital health coaching program followed by 6 months monitoring via PRO, wearable, and clinical data collection. They will collect fecal microbiome samples at baseline (study enrollment) and month 6 following enrollment.",
+            "interventionNames": [
+              "Behavioral: Digital Health Coaching Program",
+              "Device: Fitbit"
+            ]
+          },
+          {
+            "label": "Wait List Control Group",
+            "type": "OTHER",
+            "description": "In addition to standard of care services, individuals in the wait list control will be monitored via the collection of PRO, clinical, and wearable data for the first 6 months, along with fecal microbiome collection at study enrollment baseline (study enrollment) and month 6. At month 6 these individuals will be enrolled into the 6-month digital health coaching program, during which clinical, PRO and wearable data will continue to be collected. At the completion of the 6-month coaching these individuals will come off study and will not receive additional follow-up.",
+            "interventionNames": [
+              "Behavioral: Digital Health Coaching Program",
+              "Device: Fitbit"
+            ]
+          },
+          {
+            "label": "Household Healthy Participants",
+            "type": "NO_INTERVENTION",
+            "description": "A cohort of consisting of adults without a cancer diagnosis residing in the same residence as participants, will be consented to collect fecal microbiome specimens to serve as a control for potential regional variation in microbiome dysbiosis. Up to 25 healthy controls will be enrolled per 100 participants at each study site. At sites enrolling fewer than 100 participants, an n up to 25% of the total patient enrollment sample will be approached for enrollment."
+          }
+        ],
+        "interventions": [
+          {
+            "type": "BEHAVIORAL",
+            "name": "Digital Health Coaching Program",
+            "description": "Coaching consisting of weekly calls and delivery of evidence-based content across health and wellness domains (e.g. nutrition, exercise, physical, emotional and financial health) up to 4 times weekly via text, email or mobile application.",
+            "armGroupLabels": [
+              "Intervention Group",
+              "Wait List Control Group"
+            ]
+          },
+          {
+            "type": "DEVICE",
+            "name": "Fitbit",
+            "description": "Device: Fitbit A wrist-worn activity tracker allowing for the capture of physical activity, including but not limited to step-count and minutes of activity, to be captured daily.",
+            "armGroupLabels": [
+              "Intervention Group",
+              "Wait List Control Group"
+            ]
+          }
+        ]
+      },
+      "outcomesModule": {
+        "primaryOutcomes": [
+          {
+            "measure": "Acceptability of coaching intervention",
+            "description": "A 3-item questionnaire evaluating the following: 1) The digital health coaching program is easy to participate in; 2) the digital health coaching program is useful to me; 3) the digital health coaching program is relevant to my survivorship experience. Responses will be provided on a 10-point Likert scale ranging from 1 (Not at all) to 10 (Very Much).",
+            "timeFrame": "At 6 months following the start of the coaching intervention"
+          },
+          {
+            "measure": "Feasibility of coaching intervention",
+            "description": "A retention rate greater than or equal to 70%. Retention is defined as individuals who agree to participate in the digital health coaching program completing the 6-months of engagement post-enrollment.",
+            "timeFrame": "At 6 months following the start of the coaching intervention"
+          },
+          {
+            "measure": "Change in Self-Efficacy for Managing Chronic Disease",
+            "description": "A 6-item instrument measures how confident an individual is in engaging in certain health management activities. Responses are provided on a 10-point scale ranging from 1(not at all confident) to 10 (totally confident). A mean score is calculated for the instrument with a higher score indicating higher self-efficacy.",
+            "timeFrame": "Change in baseline perception of self-efficacy at 12 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Change in the National Institutes of Health (NIH) Patient Reported Outcomes Measurement Information System (PROMIS) Short Form v2.0 Physical Function 10a",
+            "description": "A 12-item instrument assessing respondents' abilities to perform physical tasks and activities of daily living. Items are scored on 5-point Likert scales, with higher scores indicating higher physical functioning.",
+            "timeFrame": "Change in baseline perception of physical function at 12 months"
+          },
+          {
+            "measure": "Change in Quality of Life as measured by The Functional Assessment of Cancer Therapy - General v4 (FACT-G)",
+            "description": "A 27-item instrument using a 5-point Likert scale ranging from 0 (not at all) to 4 (very much) to measure QoL across four dimensions: physical, social/family, emotional and functional. The FACT-G, validated for use with individuals with diverse cancer types, in addition to condition specific items as available by tumor type.",
+            "timeFrame": "Change in baseline perception of quality of life at 12 months"
+          },
+          {
+            "measure": "Change in Anxiety as measured by the PROMIS Anxiety Short Form 8a",
+            "description": "An 8-item instrument measuring indicators of anxiety with a recall period over the last 7 days. Responses are provided on a 5-point scale ranging from 1(never) to 5 (always). A summed score is calculated for the instrument with a higher score indicating greater anxiety.",
+            "timeFrame": "Change in baseline perception of anxiety at 12 months"
+          },
+          {
+            "measure": "Change in Depression as measured by the PROMIS Depression Short Form 8a",
+            "description": "An 8-item instrument measuring indicators of depression with a recall period over the last 7 days. Responses are provided on a 5-point scale ranging from 1(never) to 5 (always). A summed score is calculated for the instrument with a higher score indicating greater depression.",
+            "timeFrame": "Change in baseline perception of depression at 12 months"
+          },
+          {
+            "measure": "Change in Cognitive Function as measured by the PROMIS Cognitive Function Short Form 8a",
+            "description": "An 8-item instrument measuring indicators of cognitive function with a recall period over the last 7 days. Responses are provided on a 5-point scale ranging from 1(never) to 5 (always). A summed score is calculated for the instrument with a higher score indicating greater cognitive impairment.",
+            "timeFrame": "Change in baseline perception of cognitive impairment at 12 months"
+          },
+          {
+            "measure": "Change in Sleep-related Impairment as measured by the PROMIS Sleep related Impairment Short Form 8a",
+            "description": "An 8-item instrument measuring indicators of sleep-related impairment with a recall period over the last 7 days. Responses are provided on a 5-point scale ranging from 1(never) to 5 (always). A summed score is calculated for the instrument with a higher score indicating greater sleep-related impairment.",
+            "timeFrame": "Change in baseline perception of cognitive impairment at 12 months"
+          },
+          {
+            "measure": "Change in the PROMIS Brief Sexual Function & Satisfaction Measure Male",
+            "description": "An 11-item instrument measuring indicators of male sexual function and satisfaction with a recall period over the last 30 days. Responses are provided on various 2- to 10-point scales across 10 domains: interest in sexual activity, orgasm ability, orgasm satisfaction, oral discomfort, oral dryness, satisfaction with sex life, erectile function. For each item on the instrument a higher score indicates more of the concept being described.",
+            "timeFrame": "Change in baseline perception of sexual function and satisfaction at 12 months among male participants"
+          },
+          {
+            "measure": "Change in the PROMIS Brief Sexual Function & Satisfaction Measure Female",
+            "description": "A 14-item instrument measuring sexual function and satisfaction for women with a recall period over the last 30 days. Responses are provided on various 2- to 10-point scales across 7 domains: interest in sexual activity, lubrication for sexual activity, orgasm ability, orgasm pleasure, oral discomfort, oral dryness, satisfaction with sex life, vaginal discomfort, vulvar discomfort-clitoral, vulvar discomfort-labial. For each item on the instrument a higher score indicates more of the concept being described.",
+            "timeFrame": "Change in baseline perception of sexual function and satisfaction at 12 months among female participants"
+          },
+          {
+            "measure": "Change in The Comprehensive Score for Financial Toxicity (COST)",
+            "description": "An 11-item instrument measuring the financial toxicity of cancer treatment utilizing a five-point ordinal scale ranging from (0- Not at all) to (4- Very much).",
+            "timeFrame": "Change in baseline perception of financial toxicity at 12 months"
+          },
+          {
+            "measure": "Change in Economic Strain and Resilience in Cancer (ENRICh)",
+            "description": "An 16-item instrument measuring the financial toxicity of cancer treatment. The first 15 items are rated on an 11-point scale ranging from 0 (lowest financial toxicity burden) to 10 (most severe financial toxicity burden). A final item asks individuals to rank their overall financial situation at the time of the survey compared to prior to their cancer diagnosis, using a 5-point response ranging from much better to much worse.",
+            "timeFrame": "Change in baseline perception of financial toxicity at 12 months"
+          },
+          {
+            "measure": "Change in symptom burden as measured by the Edmonton Symptom Assessment System-Revised (ESAS-R)",
+            "description": "A 10-item instrument measuring the presence of commonly observed symptoms in individuals with a cancer diagnosis (9 specific items and 1 allowing entry of other problems). Responses for a recall period of the last 24 hours are recorded on an 11-point scale ranging from 0 (none/not present) to 10 (worst possible).",
+            "timeFrame": "Change in baseline perception of symptom burden at 12 months"
+          }
+        ],
+        "otherOutcomes": [
+          {
+            "measure": "Dietary Intake as measured by the Diet History Questionnaire (DHQ) III",
+            "description": "An electronic food diary assessment capturing dietary intake over the last 24 hours. The number of items",
+            "timeFrame": "Within 2 weeks of microbiome collection at enrollment and month 6"
+          },
+          {
+            "measure": "Change in medication adherence for individuals taking maintenance therapies",
+            "description": "A three-item instrument used to measure medication adherence, asking about difficulty taking medications on time, average days per week with one dose missed, and the last time a dose was missed. Responses are on differing scales, with higher values meaning better adherence.",
+            "timeFrame": "Change in baseline perception of medication adherence at 12 months"
+          },
+          {
+            "measure": "Physical Activity",
+            "description": "Step count will be collected via Fitbits provided to study participants",
+            "timeFrame": "From date of enrollment up to 12 months"
+          },
+          {
+            "measure": "Physical Activity",
+            "description": "Minutes of physical activity will be collected via Fitbits provided to study participants",
+            "timeFrame": "From date of enrollment up to 12 months"
+          },
+          {
+            "measure": "Digital Engagement",
+            "description": "Frequency, types and duration of engagement with the digital health coaching platform",
+            "timeFrame": "From date of enrollment up to 12 months"
+          },
+          {
+            "measure": "Gut Microbiota",
+            "description": "16s analysis of fecal microbiome specimens self-collected by participants",
+            "timeFrame": "From date of enrollment to 6 months"
+          },
+          {
+            "measure": "Health Care Utilization",
+            "description": "ER visits and unplanned hospitalizations as documented in the electronic health record",
+            "timeFrame": "From date of enrollment to 12 months"
+          }
+        ]
+      },
+      "eligibilityModule": {
+        "eligibilityCriteria": "Inclusion Criteria:\n\n1. Have primary diagnosis of cancer;\n2. Are within 1 year of completion of primary therapy OR have a diagnosis of metastatic cancer\n\n   1. For the purpose of this study, primary therapy is defined as treatment of curative intent, first-line or later, from which the individual is advancing to active surveillance or follow-up with or without maintenance therapy\n   2. For individuals with metastatic cancer, individuals may be included provided they completed primary therapy for a de novo diagnosis of metastatic disease within the last year, are within one year of completion of initial therapy for their primary cancer diagnosis for which disease progression has occurred, or who are within one year of receiving treatment for metastatic disease (including individuals currently receiving treatment).\n3. Are aged 18 years and older;\n4. Can read and consent to participate in the trial;\n5. Can read and speak English;\n6. Can complete study follow-up at pre-specified intervals;\n7. Have access to mobile technology (e.g. a smart phone or tablet) that would allow engagement in digital health coaching for the collection of PROs and wearable data.\n\nExclusion Criteria:\n\n1. Have a cognitive impairment (as assessed by their provider) that would prohibit the individual from engaging with the digital health coaching program or complete study assessments;\n2. Have a neurologic, musculoskeletal, or other comorbid condition that would impede their ability to engage in physical activity (as assessed by their provider)\n3. Have a life expectancy of \\&lt;6 months, and/or\n4. Are on active treatment for relapsed disease. a. Individuals with disease progression or relapse which occurs following their consent to participate will be given the option to continue on study if they wish to do so. Data from individuals experiencing disease progression or relapse will be grouped for sub-analysis to explore if and how relapse impacts study outcomes.\n\nHealthy Volunteers must:\n\n1. Be adults aged 18 years or older or the age of majority in their state of residence, whichever is older.\n2. Must reside in the same dwelling as the patient participant\n3. Can read and consent to participate in the trial;\n4. Can read and speak English;\n5. Can complete study follow-up at pre-specified intervals;",
+        "healthyVolunteers": true,
+        "sex": "ALL",
+        "minimumAge": "18 Years",
+        "stdAges": [
+          "ADULT",
+          "OLDER_ADULT"
+        ]
+      },
+      "contactsLocationsModule": {
+        "centralContacts": [
+          {
+            "name": "Kelly J Brassil, PhD",
+            "role": "CONTACT",
+            "phone": "205-721-7542",
+            "email": "dgxpharesearch@questdiagnostics.com"
+          },
+          {
+            "name": "Jennifer Loftis, DNP",
+            "role": "CONTACT",
+            "phone": "205-721-7542",
+            "email": "dgxpharesearch@questdiagnostics.com"
+          }
+        ],
+        "overallOfficials": [
+          {
+            "name": "Marilyn Hammer, PhD",
+            "affiliation": "Dana-Farber Cancer Institute",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Alexi Wright, MD",
+            "affiliation": "Dana-Farber Cancer Institute",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Elizabeth Arthur, PhD",
+            "affiliation": "Ohio State University",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Jessica Krok-Schoen, PhD",
+            "affiliation": "Ohio State University",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Robin Lally, PhD",
+            "affiliation": "The University of Nebraska",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Rachael Schmidt, DNP",
+            "affiliation": "Nebraska Medicine",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Debra E Lyon, PhD",
+            "affiliation": "University of Florida College of Nursing",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Anneliese Gonzalez, MD",
+            "affiliation": "UTHealth Houston McGovern Medical School",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Kathrin Milbury, PhD",
+            "affiliation": "M.D. Anderson Cancer Center",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          },
+          {
+            "name": "Kristen Fessele, PhD",
+            "affiliation": "Memorial Sloan Kettering Cancer Center",
+            "role": "PRINCIPAL_INVESTIGATOR"
+          }
+        ],
+        "locations": [
+          {
+            "facility": "The University of Florida",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "city": "Gainesville",
+            "state": "Florida",
+            "zip": "32610",
+            "country": "United States",
+            "geoPoint": {
+              "lat": 29.65163,
+              "lon": -82.32483
+            }
+          },
+          {
+            "facility": "Dana Farber Cancer Institute",
+            "status": "RECRUITING",
+            "city": "Boston",
+            "state": "Massachusetts",
+            "zip": "02215",
+            "country": "United States",
+            "contacts": [
+              {
+                "name": "Marilyn Hammer, PhD",
+                "role": "CONTACT",
+                "phone": "347-271-0293",
+                "email": "marilynj_hammer@dfci.harvard.edu"
+              },
+              {
+                "name": "Alexi Wright, MD, MPH",
+                "role": "CONTACT",
+                "phone": "617-632-2334",
+                "email": "Alexi_Wright@dfci.harvard.edu"
+              },
+              {
+                "name": "Marilyn Hammer, PhD",
+                "role": "CONTACT"
+              },
+              {
+                "name": "Alexi Wright, MD, MPH",
+                "role": "CONTACT"
+              }
+            ],
+            "geoPoint": {
+              "lat": 42.35843,
+              "lon": -71.05977
+            }
+          },
+          {
+            "facility": "University of Nebraska Medical Center",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "city": "Omaha",
+            "state": "Nebraska",
+            "zip": "68106",
+            "country": "United States",
+            "geoPoint": {
+              "lat": 41.25626,
+              "lon": -95.94043
+            }
+          },
+          {
+            "facility": "Memorial Sloan Kettering Cancer Center",
+            "status": "NOT_YET_RECRUITING",
+            "city": "New York",
+            "state": "New York",
+            "zip": "10065",
+            "country": "United States",
+            "contacts": [
+              {
+                "name": "Kristen L Fessele, PhD",
+                "role": "CONTACT",
+                "phone": "646-449-1076",
+                "email": "nuronr@mskcc.org"
+              },
+              {
+                "name": "Kristen L Fessele, PhD",
+                "role": "CONTACT"
+              }
+            ],
+            "geoPoint": {
+              "lat": 40.71427,
+              "lon": -74.00597
+            }
+          },
+          {
+            "facility": "The Ohio State University Wexner Medical Center",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "city": "Columbus",
+            "state": "Ohio",
+            "zip": "43210",
+            "country": "United States",
+            "geoPoint": {
+              "lat": 39.96118,
+              "lon": -82.99879
+            }
+          },
+          {
+            "facility": "The University of Texas MD Anderson Cancer Center",
+            "status": "NOT_YET_RECRUITING",
+            "city": "Houston",
+            "state": "Texas",
+            "zip": "77030",
+            "country": "United States",
+            "contacts": [
+              {
+                "name": "Kathrin Milbury, PhD",
+                "role": "CONTACT",
+                "phone": "713-745-2868",
+                "email": "kmilbury@mdanderson.org"
+              },
+              {
+                "name": "Meagan Whisenant, PhD",
+                "role": "CONTACT",
+                "phone": "713-500-2279",
+                "email": "meagan.whisenant@uth.tmc.edu"
+              },
+              {
+                "name": "Meagan Whisenant, PhD",
+                "role": "CONTACT"
+              },
+              {
+                "name": "Debu Tripathy, MD",
+                "role": "CONTACT"
+              },
+              {
+                "name": "Abbey Kaler, MSN",
+                "role": "CONTACT"
+              }
+            ],
+            "geoPoint": {
+              "lat": 29.76328,
+              "lon": -95.36327
+            }
+          },
+          {
+            "facility": "UT Health Houston",
+            "status": "RECRUITING",
+            "city": "Houston",
+            "state": "Texas",
+            "zip": "77030",
+            "country": "United States",
+            "contacts": [
+              {
+                "name": "Kaukab I Jafry, MD, MBBS",
+                "role": "CONTACT",
+                "phone": "832 325 6537",
+                "email": "Kaukab.I.Jafry@uth.tmc.edu"
+              },
+              {
+                "name": "Martha Thompson",
+                "role": "CONTACT",
+                "phone": "832-325-7706",
+                "email": "Martha.Thompson@uth.tmc.edu"
+              },
+              {
+                "name": "Anneliese Gonzalez, MD",
+                "role": "CONTACT"
+              }
+            ],
+            "geoPoint": {
+              "lat": 29.76328,
+              "lon": -95.36327
+            }
+          }
+        ]
+      },
+      "referencesModule": {
+        "references": [
+          {
+            "pmid": "11769298",
+            "type": "BACKGROUND",
+            "citation": "Lorig KR, Sobel DS, Ritter PL, Laurent D, Hobbs M. Effect of a self-management program on patients with chronic disease. Eff Clin Pract. 2001 Nov-Dec;4(6):256-62."
+          },
+          {
+            "pmid": "21205833",
+            "type": "BACKGROUND",
+            "citation": "McCorkle R, Ercolano E, Lazenby M, Schulman-Green D, Schilling LS, Lorig K, Wagner EH. Self-management: Enabling and empowering patients living with cancer as a chronic illness. CA Cancer J Clin. 2011 Jan-Feb;61(1):50-62. doi: 10.3322/caac.20093. Epub 2011 Jan 4."
+          },
+          {
+            "pmid": "25091546",
+            "type": "BACKGROUND",
+            "citation": "Ritter PL, Lorig K. The English and Spanish Self-Efficacy to Manage Chronic Disease Scale measures were validated using multiple studies. J Clin Epidemiol. 2014 Nov;67(11):1265-73. doi: 10.1016/j.jclinepi.2014.06.009. Epub 2014 Aug 3."
+          },
+          {
+            "pmid": "25935353",
+            "type": "BACKGROUND",
+            "citation": "Jensen RE, Potosky AL, Reeve BB, Hahn E, Cella D, Fries J, Smith AW, Keegan TH, Wu XC, Paddock L, Moinpour CM. Validation of the PROMIS physical function measures in a diverse US population-based cohort of cancer patients. Qual Life Res. 2015 Oct;24(10):2333-44. doi: 10.1007/s11136-015-0992-9. Epub 2015 May 3."
+          },
+          {
+            "pmid": "9095563",
+            "type": "BACKGROUND",
+            "citation": "Yellen SB, Cella DF, Webster K, Blendowski C, Kaplan E. Measuring fatigue and other anemia-related symptoms with the Functional Assessment of Cancer Therapy (FACT) measurement system. J Pain Symptom Manage. 1997 Feb;13(2):63-74. doi: 10.1016/s0885-3924(96)00274-6."
+          },
+          {
+            "pmid": "9060536",
+            "type": "BACKGROUND",
+            "citation": "Brady MJ, Cella DF, Mo F, Bonomi AE, Tulsky DS, Lloyd SR, Deasy S, Cobleigh M, Shiomoto G. Reliability and validity of the Functional Assessment of Cancer Therapy-Breast quality-of-life instrument. J Clin Oncol. 1997 Mar;15(3):974-86. doi: 10.1200/JCO.1997.15.3.974."
+          },
+          {
+            "pmid": "11251013",
+            "type": "BACKGROUND",
+            "citation": "Basen-Engquist K, Bodurka-Bevers D, Fitzgerald MA, Webster K, Cella D, Hu S, Gershenson DM. Reliability and validity of the functional assessment of cancer therapy-ovarian. J Clin Oncol. 2001 Mar 15;19(6):1809-17. doi: 10.1200/JCO.2001.19.6.1809."
+          },
+          {
+            "pmid": "20960518",
+            "type": "BACKGROUND",
+            "citation": "Garland SN, Pelletier G, Lawe A, Biagioni BJ, Easaw J, Eliasziw M, Cella D, Bathe OF. Prospective evaluation of the reliability, validity, and minimally important difference of the functional assessment of cancer therapy-gastric (FACT-Ga) quality-of-life instrument. Cancer. 2011 Mar 15;117(6):1302-12. doi: 10.1002/cncr.25556. Epub 2010 Oct 19."
+          },
+          {
+            "pmid": "29423755",
+            "type": "BACKGROUND",
+            "citation": "Clover K, Lambert SD, Oldmeadow C, Britton B, King MT, Mitchell AJ, Carter G. PROMIS depression measures perform similarly to legacy measures relative to a structured diagnostic interview for depression in cancer patients. Qual Life Res. 2018 May;27(5):1357-1367. doi: 10.1007/s11136-018-1803-x. Epub 2018 Feb 8."
+          },
+          {
+            "pmid": "27696377",
+            "type": "BACKGROUND",
+            "citation": "Jensen RE, Moinpour CM, Potosky AL, Lobo T, Hahn EA, Hays RD, Cella D, Smith AW, Wu XC, Keegan TH, Paddock LE, Stroup AM, Eton DT. Responsiveness of 8 Patient-Reported Outcomes Measurement Information System (PROMIS) measures in a large, community-based cancer study cohort. Cancer. 2017 Jan 1;123(2):327-335. doi: 10.1002/cncr.30354. Epub 2016 Oct 3."
+          },
+          {
+            "pmid": "26931289",
+            "type": "BACKGROUND",
+            "citation": "Schalet BD, Pilkonis PA, Yu L, Dodds N, Johnston KL, Yount S, Riley W, Cella D. Clinical validity of PROMIS Depression, Anxiety, and Anger across diverse clinical samples. J Clin Epidemiol. 2016 May;73:119-27. doi: 10.1016/j.jclinepi.2015.08.036. Epub 2016 Feb 27."
+          },
+          {
+            "pmid": "31045417",
+            "type": "BACKGROUND",
+            "citation": "Valentine TR, Weiss DM, Jones JA, Andersen BL. Construct validity of PROMIS(R) Cognitive Function in cancer patients and noncancer controls. Health Psychol. 2019 May;38(5):351-358. doi: 10.1037/hea0000693."
+          },
+          {
+            "pmid": "33454756",
+            "type": "BACKGROUND",
+            "citation": "Iverson GL, Marsh JM, Connors EJ, Terry DP. Normative Reference Values, Reliability, and Item-Level Symptom Endorsement for the PROMIS(R) v2.0 Cognitive Function-Short Forms 4a, 6a and 8a. Arch Clin Neuropsychol. 2021 Oct 13;36(7):1341-1349. doi: 10.1093/arclin/acaa128."
+          },
+          {
+            "pmid": "28078839",
+            "type": "BACKGROUND",
+            "citation": "Jerath R, Cearley SM, Jensen M. Widespread membrane potential changes and cardiorespiratory synchronization involved in anxiety and sleep-wake transitions. J Biol Regul Homeost Agents. 2016 Oct-Dec;30(4):935-944."
+          },
+          {
+            "pmid": "22250775",
+            "type": "BACKGROUND",
+            "citation": "Yu L, Buysse DJ, Germain A, Moul DE, Stover A, Dodds NE, Johnston KL, Pilkonis PA. Development of short forms from the PROMIS sleep disturbance and Sleep-Related Impairment item banks. Behav Sleep Med. 2011 Dec 28;10(1):6-24. doi: 10.1080/15402002.2012.636266."
+          },
+          {
+            "pmid": "23387911",
+            "type": "BACKGROUND",
+            "citation": "Flynn KE, Lin L, Cyranowski JM, Reeve BB, Reese JB, Jeffery DD, Smith AW, Porter LS, Dombeck CB, Bruner DW, Keefe FJ, Weinfurt KP. Development of the NIH PROMIS (R) Sexual Function and Satisfaction measures in patients with cancer. J Sex Med. 2013 Feb;10 Suppl 1(0 1):43-52. doi: 10.1111/j.1743-6109.2012.02995.x."
+          },
+          {
+            "pmid": "26346418",
+            "type": "BACKGROUND",
+            "citation": "Weinfurt KP, Lin L, Bruner DW, Cyranowski JM, Dombeck CB, Hahn EA, Jeffery DD, Luecht RM, Magasi S, Porter LS, Reese JB, Reeve BB, Shelby RA, Smith AW, Willse JT, Flynn KE. Development and Initial Validation of the PROMIS((R)) Sexual Function and Satisfaction Measures Version 2.0. J Sex Med. 2015 Sep;12(9):1961-74. doi: 10.1111/jsm.12966. Epub 2015 Sep 7."
+          },
+          {
+            "pmid": "23497200",
+            "type": "BACKGROUND",
+            "citation": "Flynn KE, Reeve BB, Lin L, Cyranowski JM, Bruner DW, Weinfurt KP. Construct validity of the PROMIS(R) sexual function and satisfaction measures in patients with cancer. Health Qual Life Outcomes. 2013 Mar 11;11:40. doi: 10.1186/1477-7525-11-40."
+          },
+          {
+            "pmid": "24954526",
+            "type": "BACKGROUND",
+            "citation": "de Souza JA, Yap BJ, Hlubocky FJ, Wroblewski K, Ratain MJ, Cella D, Daugherty CK. The development of a financial toxicity patient-reported outcome in cancer: The COST measure. Cancer. 2014 Oct 15;120(20):3245-53. doi: 10.1002/cncr.28814. Epub 2014 Jun 20."
+          },
+          {
+            "pmid": "19229371",
+            "type": "BACKGROUND",
+            "citation": "Richardson LA, Jones GW. A review of the reliability and validity of the Edmonton Symptom Assessment System. Curr Oncol. 2009 Jan;16(1):55. doi: 10.3747/co.v16i1.261."
+          },
+          {
+            "pmid": "30216478",
+            "type": "BACKGROUND",
+            "citation": "Rozental A, Gafter-Gvili A, Vidal L, Raanani P, Gurion R. The role of maintenance therapy in patients with diffuse large B cell lymphoma: A systematic review and meta-analysis. Hematol Oncol. 2019 Feb;37(1):27-34. doi: 10.1002/hon.2561. Epub 2018 Oct 8."
+          },
+          {
+            "pmid": "30098165",
+            "type": "BACKGROUND",
+            "citation": "Gay F, Jackson G, Rosinol L, Holstein SA, Moreau P, Spada S, Davies F, Lahuerta JJ, Leleu X, Bringhen S, Evangelista A, Hulin C, Panzani U, Cairns DA, Di Raimondo F, Macro M, Liberati AM, Pawlyn C, Offidani M, Spencer A, Hajek R, Terpos E, Morgan GJ, Blade J, Sonneveld P, San-Miguel J, McCarthy PL, Ludwig H, Boccadoro M, Mateos MV, Attal M. Maintenance Treatment and Survival in Patients With Myeloma: A Systematic Review and Network Meta-analysis. JAMA Oncol. 2018 Oct 1;4(10):1389-1397. doi: 10.1001/jamaoncol.2018.2961."
+          },
+          {
+            "pmid": "26996100",
+            "type": "BACKGROUND",
+            "citation": "Rossi S, Schinzari G, Basso M, Strippoli A, Dadduzio V, D'Argento E, Cassano A, Barone C. Maintenance hormonal and chemotherapy treatment in metastatic breast cancer: a systematic review. Future Oncol. 2016 May;12(10):1299-307. doi: 10.2217/fon-2015-0065. Epub 2016 Mar 21."
+          },
+          {
+            "pmid": "32297910",
+            "type": "BACKGROUND",
+            "citation": "Sonbol MB, Murad MH, Bekaii-Saab T. The Role of Maintenance Therapy in Metastatic Colorectal Cancer-Reply. JAMA Oncol. 2020 Jun 1;6(6):937-938. doi: 10.1001/jamaoncol.2020.0583. No abstract available."
+          },
+          {
+            "pmid": "26603345",
+            "type": "BACKGROUND",
+            "citation": "Korkmaz T, Seber S, Basaran G. Review of the current role of targeted therapies as maintenance therapies in first and second line treatment of epithelial ovarian cancer; In the light of completed trials. Crit Rev Oncol Hematol. 2016 Feb;98:180-8. doi: 10.1016/j.critrevonc.2015.10.006. Epub 2015 Nov 10."
+          },
+          {
+            "pmid": "31661164",
+            "type": "BACKGROUND",
+            "citation": "Alcaraz KI, Wiedt TL, Daniels EC, Yabroff KR, Guerra CE, Wender RC. Understanding and addressing social determinants to advance cancer health equity in the United States: A blueprint for practice, research, and policy. CA Cancer J Clin. 2020 Jan;70(1):31-46. doi: 10.3322/caac.21586. Epub 2019 Oct 29."
+          },
+          {
+            "pmid": "32134515",
+            "type": "BACKGROUND",
+            "citation": "Boehmer U, Gereige J, Winter M, Ozonoff A, Scout N. Transgender individuals' cancer survivorship: Results of a cross-sectional study. Cancer. 2020 Jun 15;126(12):2829-2836. doi: 10.1002/cncr.32784. Epub 2020 Mar 5."
+          },
+          {
+            "pmid": "32681303",
+            "type": "BACKGROUND",
+            "citation": "Dieli-Conwright CM, Fox FS, Tripathy D, Sami N, Van Fleet J, Buchanan TA, Spicer D, Lee K, Mortimer J, Bernstein L, Demark-Wahnefried W, Courneya KS. Hispanic ethnicity as a moderator of the effects of aerobic and resistance exercise on physical fitness and quality-of-life in breast cancer survivors. J Cancer Surviv. 2021 Feb;15(1):127-139. doi: 10.1007/s11764-020-00918-3. Epub 2020 Jul 17."
+          },
+          {
+            "pmid": "27340121",
+            "type": "BACKGROUND",
+            "citation": "Kohler LN, Garcia DO, Harris RB, Oren E, Roe DJ, Jacobs ET. Adherence to Diet and Physical Activity Cancer Prevention Guidelines and Cancer Outcomes: A Systematic Review. Cancer Epidemiol Biomarkers Prev. 2016 Jul;25(7):1018-28. doi: 10.1158/1055-9965.EPI-16-0121. Epub 2016 Jun 23."
+          },
+          {
+            "pmid": "30993648",
+            "type": "BACKGROUND",
+            "citation": "Tollosa DN, Tavener M, Hure A, James EL. Adherence to multiple health behaviours in cancer survivors: a systematic review and meta-analysis. J Cancer Surviv. 2019 Jun;13(3):327-343. doi: 10.1007/s11764-019-00754-0. Epub 2019 Apr 16."
+          },
+          {
+            "pmid": "34043452",
+            "type": "BACKGROUND",
+            "citation": "Maldonado JA, Fu S, Chen YS, Acquati C, Yabroff KR, Banegas MP, Chang S, Conti RM, Checka CM, Peterson SK, Advani P, Ku K, Jagsi R, Giordano SH, Volk RJ, Shih YT, Smith GL. Sensitivity of Psychosocial Distress Screening to Identify Cancer Patients at Risk for Financial Hardship During Care Delivery. JCO Oncol Pract. 2021 Dec;17(12):e1856-e1865. doi: 10.1200/OP.20.01009. Epub 2021 May 27."
+          },
+          {
+            "pmid": "31590147",
+            "type": "BACKGROUND",
+            "citation": "Smith GL, Lopez-Olivo MA, Advani PG, Ning MS, Geng Y, Giordano SH, Volk RJ. Financial Burdens of Cancer Treatment: A Systematic Review of Risk Factors and Outcomes. J Natl Compr Canc Netw. 2019 Oct 1;17(10):1184-1192. doi: 10.6004/jnccn.2019.7305."
+          },
+          {
+            "pmid": "32009565",
+            "type": "BACKGROUND",
+            "citation": "van Dongen SI, de Nooijer K, Cramm JM, Francke AL, Oldenmenger WH, Korfage IJ, Witkamp FE, Stoevelaar R, van der Heide A, Rietjens JA. Self-management of patients with advanced cancer: A systematic review of experiences and attitudes. Palliat Med. 2020 Feb;34(2):160-178. doi: 10.1177/0269216319883976."
+          },
+          {
+            "pmid": "28404938",
+            "type": "BACKGROUND",
+            "citation": "Chirico A, Lucidi F, Merluzzi T, Alivernini F, Laurentiis M, Botti G, Giordano A. A meta-analytic review of the relationship of cancer coping self-efficacy with distress and quality of life. Oncotarget. 2017 May 30;8(22):36800-36811. doi: 10.18632/oncotarget.15758."
+          },
+          {
+            "pmid": "29149118",
+            "type": "BACKGROUND",
+            "citation": "White LL, Cohen MZ, Berger AM, Kupzyk KA, Swore-Fletcher BA, Bierman PJ. Perceived Self-Efficacy: A Concept Analysis for Symptom Management in Patients With Cancer . Clin J Oncol Nurs. 2017 Dec 1;21(6):E272-E279. doi: 10.1188/17.CJON.E272-E279."
+          },
+          {
+            "pmid": "30601269",
+            "type": "BACKGROUND",
+            "citation": "Wu F, Howell D, Fang Q, Chen J, Yuan C. Trajectory Patterns and Factors Influencing Self-management Behaviors in Chinese Patients With Breast Cancer. Cancer Nurs. 2020 Mar/Apr;43(2):E105-E112. doi: 10.1097/NCC.0000000000000681."
+          },
+          {
+            "pmid": "32525530",
+            "type": "BACKGROUND",
+            "citation": "Howell D, Mayer DK, Fielding R, Eicher M, Verdonck-de Leeuw IM, Johansen C, Soto-Perez-de-Celis E, Foster C, Chan R, Alfano CM, Hudson SV, Jefford M, Lam WWT, Loerzel V, Pravettoni G, Rammant E, Schapira L, Stein KD, Koczwara B; Global Partners for Self-Management in Cancer. Management of Cancer and Health After the Clinic Visit: A Call to Action for Self-Management in Cancer Care. J Natl Cancer Inst. 2021 May 4;113(5):523-531. doi: 10.1093/jnci/djaa083."
+          },
+          {
+            "pmid": "33724608",
+            "type": "BACKGROUND",
+            "citation": "Haase KR, Sattar S, Hall S, McLean B, Wills A, Gray M, Kenis C, Donison V, Howell D, Puts M. Systematic review of self-management interventions for older adults with cancer. Psychooncology. 2021 Jul;30(7):989-1008. doi: 10.1002/pon.5649. Epub 2021 Mar 16."
+          },
+          {
+            "pmid": "33727415",
+            "type": "BACKGROUND",
+            "citation": "Howell D, Powis M, Kirkby R, Amernic H, Moody L, Bryant-Lukosius D, O'Brien MA, Rask S, Krzyzanowska M. Improving the quality of self-management support in ambulatory cancer care: a mixed-method study of organisational and clinician readiness, barriers and enablers for tailoring of implementation strategies to multisites. BMJ Qual Saf. 2022 Jan;31(1):12-22. doi: 10.1136/bmjqs-2020-012051. Epub 2021 Mar 16."
+          },
+          {
+            "pmid": "31475766",
+            "type": "BACKGROUND",
+            "citation": "Cuthbert CA, Farragher JF, Hemmelgarn BR, Ding Q, McKinnon GP, Cheung WY. Self-management interventions for cancer survivors: A systematic review and evaluation of intervention content and theories. Psychooncology. 2019 Nov;28(11):2119-2140. doi: 10.1002/pon.5215. Epub 2019 Oct 15."
+          },
+          {
+            "pmid": "12867348",
+            "type": "BACKGROUND",
+            "citation": "Lorig KR, Holman H. Self-management education: history, definition, outcomes, and mechanisms. Ann Behav Med. 2003 Aug;26(1):1-7. doi: 10.1207/S15324796ABM2601_01."
+          },
+          {
+            "pmid": "17610432",
+            "type": "BACKGROUND",
+            "citation": "Hibbard JH, Mahoney ER, Stock R, Tusler M. Do increases in patient activation result in improved self-management behaviors? Health Serv Res. 2007 Aug;42(4):1443-63. doi: 10.1111/j.1475-6773.2006.00669.x."
+          },
+          {
+            "pmid": "17170632",
+            "type": "BACKGROUND",
+            "citation": "Hibbard JH, Tusler M. Assessing activation stage and employing a \"next steps\" approach to supporting patient self-management. J Ambul Care Manage. 2007 Jan-Mar;30(1):2-8. doi: 10.1097/00004479-200701000-00002."
+          },
+          {
+            "pmid": "25683894",
+            "type": "BACKGROUND",
+            "citation": "Demark-Wahnefried W, Rogers LQ, Alfano CM, Thomson CA, Courneya KS, Meyerhardt JA, Stout NL, Kvale E, Ganzer H, Ligibel JA. Practical clinical interventions for diet, physical activity, and weight control in cancer survivors. CA Cancer J Clin. 2015 May-Jun;65(3):167-89. doi: 10.3322/caac.21265. Epub 2015 Feb 13."
+          },
+          {
+            "pmid": "29086526",
+            "type": "BACKGROUND",
+            "citation": "Basen-Engquist K, Alfano CM, Maitin-Shepard M, Thomson CA, Schmitz KH, Pinto BM, Stein K, Zucker DS, Syrjala KL, Fallon E, Doyle C, Demark-Wahnefried W. Agenda for Translating Physical Activity, Nutrition, and Weight Management Interventions for Cancer Survivors into Clinical and Community Practice. Obesity (Silver Spring). 2017 Nov;25 Suppl 2(Suppl 2):S9-S22. doi: 10.1002/oby.22031."
+          },
+          {
+            "pmid": "28942909",
+            "type": "BACKGROUND",
+            "citation": "Stout NL, Baima J, Swisher AK, Winters-Stone KM, Welsh J. A Systematic Review of Exercise Systematic Reviews in the Cancer Literature (2005-2017). PM R. 2017 Sep;9(9S2):S347-S384. doi: 10.1016/j.pmrj.2017.07.074."
+          },
+          {
+            "pmid": "24733568",
+            "type": "BACKGROUND",
+            "citation": "Steel JL, Bress K, Popichak L, Evans JS, Savkova A, Biala M, Ordos J, Carr BI. A systematic review of randomized controlled trials testing the efficacy of psychosocial interventions for gastrointestinal cancers. J Gastrointest Cancer. 2014 Jun;45(2):181-9. doi: 10.1007/s12029-014-9605-z."
+          },
+          {
+            "pmid": "27197276",
+            "type": "BACKGROUND",
+            "citation": "Meneses-Echavez JF, Correa-Bautista JE, Gonzalez-Jimenez E, Schmidt Rio-Valle J, Elkins MR, Lobelo F, Ramirez-Velez R. The Effect of Exercise Training on Mediators of Inflammation in Breast Cancer Survivors: A Systematic Review with Meta-analysis. Cancer Epidemiol Biomarkers Prev. 2016 Jul;25(7):1009-17. doi: 10.1158/1055-9965.EPI-15-1061. Epub 2016 Apr 12."
+          },
+          {
+            "pmid": "27144158",
+            "type": "BACKGROUND",
+            "citation": "Zimmer P, Baumann FT, Oberste M, Wright P, Garthe A, Schenk A, Elter T, Galvao DA, Bloch W, Hubner ST, Wolf F. Effects of Exercise Interventions and Physical Activity Behavior on Cancer Related Cognitive Impairments: A Systematic Review. Biomed Res Int. 2016;2016:1820954. doi: 10.1155/2016/1820954. Epub 2016 Apr 10."
+          },
+          {
+            "pmid": "22294757",
+            "type": "BACKGROUND",
+            "citation": "Fong DY, Ho JW, Hui BP, Lee AM, Macfarlane DJ, Leung SS, Cerin E, Chan WY, Leung IP, Lam SH, Taylor AJ, Cheng KK. Physical activity for cancer survivors: meta-analysis of randomised controlled trials. BMJ. 2012 Jan 30;344:e70. doi: 10.1136/bmj.e70."
+          },
+          {
+            "pmid": "20052559",
+            "type": "BACKGROUND",
+            "citation": "Speck RM, Courneya KS, Masse LC, Duval S, Schmitz KH. An update of controlled physical activity trials in cancer survivors: a systematic review and meta-analysis. J Cancer Surviv. 2010 Jun;4(2):87-100. doi: 10.1007/s11764-009-0110-5. Epub 2010 Jan 6."
+          },
+          {
+            "pmid": "28119278",
+            "type": "BACKGROUND",
+            "citation": "Robertson MC, Tsai E, Lyons EJ, Srinivasan S, Swartz MC, Baum ML, Basen-Engquist KM. Mobile Health Physical Activity Intervention Preferences in Cancer Survivors: A Qualitative Study. JMIR Mhealth Uhealth. 2017 Jan 24;5(1):e3. doi: 10.2196/mhealth.6970."
+          },
+          {
+            "pmid": "28763133",
+            "type": "BACKGROUND",
+            "citation": "Tsai E, Robertson MC, Lyons EJ, Swartz MC, Basen-Engquist K. Physical activity and exercise self-regulation in cancer survivors: A qualitative study. Psychooncology. 2018 Feb;27(2):563-568. doi: 10.1002/pon.4519. Epub 2017 Sep 29."
+          },
+          {
+            "pmid": "23989022",
+            "type": "BACKGROUND",
+            "citation": "Barber FD. Effects of social support on physical activity, self-efficacy, and quality of life in adult cancer survivors and their caregivers. Oncol Nurs Forum. 2013 Sep;40(5):481-9. doi: 10.1188/13.ONF.481-489."
+          },
+          {
+            "pmid": "24048123",
+            "type": "BACKGROUND",
+            "citation": "Gajewski TF, Schreiber H, Fu YX. Innate and adaptive immune cells in the tumor microenvironment. Nat Immunol. 2013 Oct;14(10):1014-22. doi: 10.1038/ni.2703."
+          },
+          {
+            "pmid": "28673937",
+            "type": "BACKGROUND",
+            "citation": "Hojman P. Exercise protects from cancer through regulation of immune function and inflammation. Biochem Soc Trans. 2017 Aug 15;45(4):905-11. doi: 10.1042/BST20160466. Epub 2017 Jul 3."
+          },
+          {
+            "pmid": "31323874",
+            "type": "BACKGROUND",
+            "citation": "Yang S, Chu S, Gao Y, Ai Q, Liu Y, Li X, Chen N. A Narrative Review of Cancer-Related Fatigue (CRF) and Its Possible Pathogenesis. Cells. 2019 Jul 18;8(7):738. doi: 10.3390/cells8070738."
+          },
+          {
+            "pmid": "29634945",
+            "type": "BACKGROUND",
+            "citation": "Gopalakrishnan V, Helmink BA, Spencer CN, Reuben A, Wargo JA. The Influence of the Gut Microbiome on Cancer, Immunity, and Cancer Immunotherapy. Cancer Cell. 2018 Apr 9;33(4):570-580. doi: 10.1016/j.ccell.2018.03.015."
+          },
+          {
+            "pmid": "30842679",
+            "type": "BACKGROUND",
+            "citation": "Helmink BA, Khan MAW, Hermann A, Gopalakrishnan V, Wargo JA. The microbiome, cancer, and cancer therapy. Nat Med. 2019 Mar;25(3):377-388. doi: 10.1038/s41591-019-0377-7. Epub 2019 Mar 6."
+          },
+          {
+            "pmid": "20444648",
+            "type": "BACKGROUND",
+            "citation": "Freund A, Orjalo AV, Desprez PY, Campisi J. Inflammatory networks during cellular senescence: causes and consequences. Trends Mol Med. 2010 May;16(5):238-46. doi: 10.1016/j.molmed.2010.03.003. Epub 2010 May 3."
+          },
+          {
+            "pmid": "31862745",
+            "type": "BACKGROUND",
+            "citation": "American Diabetes Association. 2. Classification and Diagnosis of Diabetes: Standards of Medical Care in Diabetes-2020. Diabetes Care. 2020 Jan;43(Suppl 1):S14-S31. doi: 10.2337/dc20-S002."
+          },
+          {
+            "pmid": "24455420",
+            "type": "BACKGROUND",
+            "citation": "Makki K, Froguel P, Wolowczuk I. Adipose tissue in obesity-related inflammation and insulin resistance: cells, cytokines, and chemokines. ISRN Inflamm. 2013 Dec 22;2013:139239. doi: 10.1155/2013/139239. eCollection 2013 Dec 22."
+          },
+          {
+            "pmid": "26228057",
+            "type": "BACKGROUND",
+            "citation": "Minihane AM, Vinoy S, Russell WR, Baka A, Roche HM, Tuohy KM, Teeling JL, Blaak EE, Fenech M, Vauzour D, McArdle HJ, Kremer BH, Sterkman L, Vafeiadou K, Benedetti MM, Williams CM, Calder PC. Low-grade inflammation, diet composition and health: current research evidence and its translation. Br J Nutr. 2015 Oct 14;114(7):999-1012. doi: 10.1017/S0007114515002093. Epub 2015 Jul 31."
+          },
+          {
+            "pmid": "30737418",
+            "type": "BACKGROUND",
+            "citation": "Zhou B, Sun C, Huang J, Xia M, Guo E, Li N, Lu H, Shan W, Wu Y, Li Y, Xu X, Weng D, Meng L, Hu J, Gao Q, Ma D, Chen G. The biodiversity Composition of Microbiome in Ovarian Carcinoma Patients. Sci Rep. 2019 Feb 8;9(1):1691. doi: 10.1038/s41598-018-38031-2."
+          },
+          {
+            "pmid": "30652577",
+            "type": "BACKGROUND",
+            "citation": "Dicker AP, Jim HSL. Intersection of Digital Health and Oncology. JCO Clin Cancer Inform. 2018 Dec;2:1-4. doi: 10.1200/CCI.18.00070. No abstract available."
+          },
+          {
+            "pmid": "30652580",
+            "type": "BACKGROUND",
+            "citation": "Garg S, Williams NL, Ip A, Dicker AP. Clinical Integration of Digital Solutions in Health Care: An Overview of the Current Landscape of Digital Technologies in Cancer Care. JCO Clin Cancer Inform. 2018 Dec;2:1-9. doi: 10.1200/CCI.17.00159."
+          },
+          {
+            "pmid": "29927756",
+            "type": "BACKGROUND",
+            "citation": "Harris J, Cheevers K, Armes J. The emerging role of digital health in monitoring and supporting people living with cancer and the consequences of its treatments. Curr Opin Support Palliat Care. 2018 Sep;12(3):268-275. doi: 10.1097/SPC.0000000000000362."
+          },
+          {
+            "pmid": "33742737",
+            "type": "BACKGROUND",
+            "citation": "Onyeaka HK, Zambrano J, Longley RM, Celano CM, Naslund JA, Amonoo HL. Use of digital health tools for health promotion in cancer survivors. Psychooncology. 2021 Aug;30(8):1302-1310. doi: 10.1002/pon.5677. Epub 2021 Apr 1."
+          },
+          {
+            "pmid": "28779220",
+            "type": "BACKGROUND",
+            "citation": "Roberts AL, Fisher A, Smith L, Heinrich M, Potts HWW. Digital health behaviour change interventions targeting physical activity and diet in cancer survivors: a systematic review and meta-analysis. J Cancer Surviv. 2017 Dec;11(6):704-719. doi: 10.1007/s11764-017-0632-1. Epub 2017 Aug 4."
+          },
+          {
+            "pmid": "31566769",
+            "type": "BACKGROUND",
+            "citation": "Xu A, Wang Y, Wu X. Effectiveness of e-health based self-management to improve cancer-related fatigue, self-efficacy and quality of life in cancer patients: Systematic review and meta-analysis. J Adv Nurs. 2019 Dec;75(12):3434-3447. doi: 10.1111/jan.14197. Epub 2019 Oct 20."
+          },
+          {
+            "pmid": "25661828",
+            "type": "BACKGROUND",
+            "citation": "Girault A, Ferrua M, Lalloue B, Sicotte C, Fourcade A, Yatim F, Hebert G, Di Palma M, Minvielle E. Internet-based technologies to improve cancer care coordination: current use and attitudes among cancer patients. Eur J Cancer. 2015 Mar;51(4):551-557. doi: 10.1016/j.ejca.2014.12.001. Epub 2015 Feb 4."
+          },
+          {
+            "pmid": "24639035",
+            "type": "BACKGROUND",
+            "citation": "Madore S, Kilbourn K, Valverde P, Borrayo E, Raich P. Feasibility of a psychosocial and patient navigation intervention to improve access to treatment among underserved breast cancer patients. Support Care Cancer. 2014 Aug;22(8):2085-93. doi: 10.1007/s00520-014-2176-5. Epub 2014 Mar 18."
+          },
+          {
+            "pmid": "25741683",
+            "type": "BACKGROUND",
+            "citation": "Green AC, Hayman LL, Cooley ME. Multiple health behavior change in adults with or at risk for cancer: a systematic review. Am J Health Behav. 2015 May;39(3):380-94. doi: 10.5993/AJHB.39.3.11."
+          },
+          {
+            "pmid": "32533435",
+            "type": "BACKGROUND",
+            "citation": "Aapro M, Bossi P, Dasari A, Fallowfield L, Gascon P, Geller M, Jordan K, Kim J, Martin K, Porzig S. Digital health for optimal supportive care in oncology: benefits, limits, and future perspectives. Support Care Cancer. 2020 Oct;28(10):4589-4612. doi: 10.1007/s00520-020-05539-1. Epub 2020 Jun 12."
+          },
+          {
+            "pmid": "35039279",
+            "type": "BACKGROUND",
+            "citation": "Banerjee R, Huang CY, Dunn L, Knoche J, Ryan C, Brassil K, Jackson L, Patel D, Lo M, Arora S, Wong SW, Wolf J, Martin Iii T, Dhruva A, Shah N. Digital Life Coaching During Stem Cell Transplantation: Development and Usability Study. JMIR Form Res. 2022 Mar 4;6(3):e33701. doi: 10.2196/33701."
+          },
+          {
+            "pmid": "35394806",
+            "type": "BACKGROUND",
+            "citation": "Handley NR, Wen KY, Gomaa S, Brassil K, Shimada A, Leiby B, Jackson L, McMorris M, Calvaresi A, Dicker AP. A Pilot Feasibility Study of Digital Health Coaching for Men With Prostate Cancer. JCO Oncol Pract. 2022 Jul;18(7):e1132-e1140. doi: 10.1200/OP.21.00712. Epub 2022 Apr 8."
+          },
+          {
+            "pmid": "35404305",
+            "type": "BACKGROUND",
+            "citation": "Nguyen J, Maio V, Handley N. Improving Cancer Care Through Digital Health Coaching. Am J Med Qual. 2022 Jul-Aug 01;37(4):369-370. doi: 10.1097/JMQ.0000000000000059. Epub 2022 Apr 8. No abstract available."
+          },
+          {
+            "pmid": "1100130",
+            "type": "BACKGROUND",
+            "citation": "Pocock SJ, Simon R. Sequential treatment assignment with balancing for prognostic factors in the controlled clinical trial. Biometrics. 1975 Mar;31(1):103-15."
+          },
+          {
+            "pmid": "18929686",
+            "type": "BACKGROUND",
+            "citation": "Harris PA, Taylor R, Thielke R, Payne J, Gonzalez N, Conde JG. Research electronic data capture (REDCap)--a metadata-driven methodology and workflow process for providing translational research informatics support. J Biomed Inform. 2009 Apr;42(2):377-81. doi: 10.1016/j.jbi.2008.08.010. Epub 2008 Sep 30."
+          },
+          {
+            "pmid": "24114220",
+            "type": "BACKGROUND",
+            "citation": "Kurti AN, Dallery J. Internet-based contingency management increases walking in sedentary adults. J Appl Behav Anal. 2013 Fall;46(3):568-81. doi: 10.1002/jaba.58. Epub 2013 Aug 1."
+          },
+          {
+            "pmid": "26684758",
+            "type": "BACKGROUND",
+            "citation": "Evenson KR, Goto MM, Furberg RD. Systematic review of the validity and reliability of consumer-wearable activity trackers. Int J Behav Nutr Phys Act. 2015 Dec 18;12:159. doi: 10.1186/s12966-015-0314-1."
+          },
+          {
+            "pmid": "27232714",
+            "type": "BACKGROUND",
+            "citation": "Wallen MP, Gomersall SR, Keating SE, Wisloff U, Coombes JS. Accuracy of Heart Rate Watches: Implications for Weight Management. PLoS One. 2016 May 27;11(5):e0154420. doi: 10.1371/journal.pone.0154420. eCollection 2016."
+          },
+          {
+            "pmid": "26969518",
+            "type": "BACKGROUND",
+            "citation": "de Zambotti M, Baker FC, Willoughby AR, Godino JG, Wing D, Patrick K, Colrain IM. Measures of sleep and cardiac functioning during sleep using a multi-sensory commercially-available wristband in adolescents. Physiol Behav. 2016 May 1;158:143-9. doi: 10.1016/j.physbeh.2016.03.006. Epub 2016 Mar 9."
+          },
+          {
+            "pmid": "26464801",
+            "type": "BACKGROUND",
+            "citation": "Kooiman TJ, Dontje ML, Sprenger SR, Krijnen WP, van der Schans CP, de Groot M. Reliability and validity of ten consumer activity trackers. BMC Sports Sci Med Rehabil. 2015 Oct 12;7:24. doi: 10.1186/s13102-015-0018-5. eCollection 2015."
+          },
+          {
+            "pmid": "23851946",
+            "type": "BACKGROUND",
+            "citation": "Atallah L, Lo B, King R, Guang-Zhong Yang. Sensor positioning for activity recognition using wearable accelerometers. IEEE Trans Biomed Circuits Syst. 2011 Aug;5(4):320-9. doi: 10.1109/TBCAS.2011.2160540."
+          },
+          {
+            "pmid": "28252578",
+            "type": "BACKGROUND",
+            "citation": "Ames NJ, Ranucci A, Moriyama B, Wallen GR. The Human Microbiome and Understanding the 16S rRNA Gene in Translational Nursing Science. Nurs Res. 2017 Mar/Apr;66(2):184-197. doi: 10.1097/NNR.0000000000000212."
+          },
+          {
+            "pmid": "27148170",
+            "type": "BACKGROUND",
+            "citation": "Jovel J, Patterson J, Wang W, Hotte N, O'Keefe S, Mitchel T, Perry T, Kao D, Mason AL, Madsen KL, Wong GK. Characterization of the Gut Microbiome Using 16S or Shotgun Metagenomics. Front Microbiol. 2016 Apr 20;7:459. doi: 10.3389/fmicb.2016.00459. eCollection 2016."
+          },
+          {
+            "pmid": "32088365",
+            "type": "BACKGROUND",
+            "citation": "Amonoo HL, Kurukulasuriya C, Chilson K, Onstad L, Huffman JC, Lee SJ. Improving Quality of Life in Hematopoietic Stem Cell Transplantation Survivors Through a Positive Psychology Intervention. Biol Blood Marrow Transplant. 2020 Jun;26(6):1144-1153. doi: 10.1016/j.bbmt.2020.02.013. Epub 2020 Feb 20."
+          },
+          {
+            "pmid": "26970039",
+            "type": "BACKGROUND",
+            "citation": "Schalet BD, Hays RD, Jensen SE, Beaumont JL, Fries JF, Cella D. Validity of PROMIS physical function measured in diverse clinical samples. J Clin Epidemiol. 2016 May;73:112-8. doi: 10.1016/j.jclinepi.2015.08.039. Epub 2016 Mar 9."
+          },
+          {
+            "pmid": "30539735",
+            "type": "BACKGROUND",
+            "citation": "Reeve BB, Wang M, Weinfurt K, Flynn KE, Usinger DS, Chen RC. Psychometric Evaluation of PROMIS Sexual Function and Satisfaction Measures in a Longitudinal Population-Based Cohort of Men With Localized Prostate Cancer. J Sex Med. 2018 Dec;15(12):1792-1810. doi: 10.1016/j.jsxm.2018.09.015. Epub 2018 Oct 24."
+          },
+          {
+            "pmid": "19195044",
+            "type": "BACKGROUND",
+            "citation": "Jeffery DD, Tzeng JP, Keefe FJ, Porter LS, Hahn EA, Flynn KE, Reeve BB, Weinfurt KP. Initial report of the cancer Patient-Reported Outcomes Measurement Information System (PROMIS) sexual function committee: review of sexual function measures and domains used in oncology. Cancer. 2009 Mar 15;115(6):1142-53. doi: 10.1002/cncr.24134."
+          },
+          {
+            "pmid": "27716900",
+            "type": "BACKGROUND",
+            "citation": "de Souza JA, Yap BJ, Wroblewski K, Blinder V, Araujo FS, Hlubocky FJ, Nicholas LH, O'Connor JM, Brockstein B, Ratain MJ, Daugherty CK, Cella D. Measuring financial toxicity as a clinically relevant patient-reported outcome: The validation of the COmprehensive Score for financial Toxicity (COST). Cancer. 2017 Feb 1;123(3):476-484. doi: 10.1002/cncr.30369. Epub 2016 Oct 7."
+          },
+          {
+            "pmid": "33252169",
+            "type": "BACKGROUND",
+            "citation": "Wong A, Tayjasanant S, Rodriguez-Nunez A, Park M, Liu D, Zapata KP, Allo J, Frisbee-Hume S, Williams J, Bruera E. Edmonton Symptom Assessment Scale Time Duration of Self-Completion Versus Assisted Completion in Patients with Advanced Cancer: A Randomized Comparison. Oncologist. 2021 Feb;26(2):165-171. doi: 10.1002/onco.13619. Epub 2020 Dec 21."
+          },
+          {
+            "pmid": "28426375",
+            "type": "BACKGROUND",
+            "citation": "Jensen RE, Potosky AL, Moinpour CM, Lobo T, Cella D, Hahn EA, Thissen D, Smith AW, Ahn J, Luta G, Reeve BB. United States Population-Based Estimates of Patient-Reported Outcomes Measurement Information System Symptom and Functional Status Reference Values for Individuals With Cancer. J Clin Oncol. 2017 Jun 10;35(17):1913-1920. doi: 10.1200/JCO.2016.71.4410. Epub 2017 Apr 20."
+          }
+        ],
+        "seeAlsoLinks": [
+          {
+            "label": "National Cancer Institute Statistics and Graphs",
+            "url": "https://cancercontrol.cancer.gov/ocs/statistics"
+          }
+        ]
+      },
+      "ipdSharingStatementModule": {
+        "ipdSharing": "NO"
+      }
+    },
+    "derivedSection": {
+      "miscInfoModule": {
+        "versionHolder": "2026-10-23"
+      },
+      "conditionBrowseModule": {
+        "meshes": [
+          {
+            "id": "D010051",
+            "term": "Ovarian Neoplasms"
+          },
+          {
+            "id": "D001943",
+            "term": "Breast Neoplasms"
+          },
+          {
+            "id": "D008175",
+            "term": "Lung Neoplasms"
+          },
+          {
+            "id": "D013274",
+            "term": "Stomach Neoplasms"
+          },
+          {
+            "id": "D016889",
+            "term": "Endometrial Neoplasms"
+          },
+          {
+            "id": "D006258",
+            "term": "Head and Neck Neoplasms"
+          },
+          {
+            "id": "D011471",
+            "term": "Prostatic Neoplasms"
+          },
+          {
+            "id": "D009362",
+            "term": "Neoplasm Metastasis"
+          },
+          {
+            "id": "D009043",
+            "term": "Motor Activity"
+          }
+        ],
+        "ancestors": [
+          {
+            "id": "D004701",
+            "term": "Endocrine Gland Neoplasms"
+          },
+          {
+            "id": "D009371",
+            "term": "Neoplasms by Site"
+          },
+          {
+            "id": "D009369",
+            "term": "Neoplasms"
+          },
+          {
+            "id": "D010049",
+            "term": "Ovarian Diseases"
+          },
+          {
+            "id": "D000291",
+            "term": "Adnexal Diseases"
+          },
+          {
+            "id": "D005831",
+            "term": "Genital Diseases, Female"
+          },
+          {
+            "id": "D052776",
+            "term": "Female Urogenital Diseases"
+          },
+          {
+            "id": "D005261",
+            "term": "Female Urogenital Diseases and Pregnancy Complications"
+          },
+          {
+            "id": "D000091642",
+            "term": "Urogenital Diseases"
+          },
+          {
+            "id": "D005833",
+            "term": "Genital Neoplasms, Female"
+          },
+          {
+            "id": "D014565",
+            "term": "Urogenital Neoplasms"
+          },
+          {
+            "id": "D000091662",
+            "term": "Genital Diseases"
+          },
+          {
+            "id": "D004700",
+            "term": "Endocrine System Diseases"
+          },
+          {
+            "id": "D006058",
+            "term": "Gonadal Disorders"
+          },
+          {
+            "id": "D001941",
+            "term": "Breast Diseases"
+          },
+          {
+            "id": "D012871",
+            "term": "Skin Diseases"
+          },
+          {
+            "id": "D017437",
+            "term": "Skin and Connective Tissue Diseases"
+          },
+          {
+            "id": "D012142",
+            "term": "Respiratory Tract Neoplasms"
+          },
+          {
+            "id": "D013899",
+            "term": "Thoracic Neoplasms"
+          },
+          {
+            "id": "D008171",
+            "term": "Lung Diseases"
+          },
+          {
+            "id": "D012140",
+            "term": "Respiratory Tract Diseases"
+          },
+          {
+            "id": "D005770",
+            "term": "Gastrointestinal Neoplasms"
+          },
+          {
+            "id": "D004067",
+            "term": "Digestive System Neoplasms"
+          },
+          {
+            "id": "D004066",
+            "term": "Digestive System Diseases"
+          },
+          {
+            "id": "D005767",
+            "term": "Gastrointestinal Diseases"
+          },
+          {
+            "id": "D013272",
+            "term": "Stomach Diseases"
+          },
+          {
+            "id": "D014594",
+            "term": "Uterine Neoplasms"
+          },
+          {
+            "id": "D014591",
+            "term": "Uterine Diseases"
+          },
+          {
+            "id": "D005834",
+            "term": "Genital Neoplasms, Male"
+          },
+          {
+            "id": "D005832",
+            "term": "Genital Diseases, Male"
+          },
+          {
+            "id": "D011469",
+            "term": "Prostatic Diseases"
+          },
+          {
+            "id": "D052801",
+            "term": "Male Urogenital Diseases"
+          },
+          {
+            "id": "D009385",
+            "term": "Neoplastic Processes"
+          },
+          {
+            "id": "D010335",
+            "term": "Pathologic Processes"
+          },
+          {
+            "id": "D013568",
+            "term": "Pathological Conditions, Signs and Symptoms"
+          },
+          {
+            "id": "D001519",
+            "term": "Behavior"
+          }
+        ]
+      }
+    },
+    "hasResults": false
+  },
+  "fetchedAt": "2026-10-24T21:14:25.832Z"
+}

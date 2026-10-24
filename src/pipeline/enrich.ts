@@ -6,8 +6,8 @@
  * Source text is never modified; explanations are additive (brief §D, §F).
  */
 
-import type { Criterion, Trial } from "../contract/types.js";
-import { CURATED, type CuratedExplanation } from "../data/curated.js";
+import type { Criterion, PlainLanguageSummary, Trial } from "../contract/types.js";
+import { CURATED, STUDY_SUMMARIES, type CuratedExplanation } from "../data/curated.js";
 
 function findExplanation(
   criterion: Criterion,
@@ -33,10 +33,24 @@ function normalize(s: string): string {
     .trim();
 }
 
-/** Return a new Trial with curated explanations attached where available. */
+/**
+ * Return a new Trial with curated content attached where available:
+ *  - plain-language explanations on matching criteria, and
+ *  - a curated plain-language study summary (additive; original description is
+ *    preserved elsewhere in the Trial).
+ */
 export function enrichTrial(trial: Trial): Trial {
   const entries = CURATED[trial.nctId] ?? [];
-  if (entries.length === 0) return trial;
+
+  const summaryEntry = STUDY_SUMMARIES[trial.nctId];
+  const plainLanguageSummary: PlainLanguageSummary | null = summaryEntry
+    ? { en: summaryEntry.summaryEn, es: summaryEntry.summaryEs, reviewed: summaryEntry.reviewed }
+    : null;
+
+  // Nothing to attach at the criterion level — but a summary may still apply.
+  if (entries.length === 0) {
+    return { ...trial, plainLanguageSummary };
+  }
 
   const criteria = trial.criteria.map((c) => {
     const e = findExplanation(c, entries);
@@ -49,5 +63,5 @@ export function enrichTrial(trial: Trial): Trial {
     } satisfies Criterion;
   });
 
-  return { ...trial, criteria };
+  return { ...trial, criteria, plainLanguageSummary };
 }

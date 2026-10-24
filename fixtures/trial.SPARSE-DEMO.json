@@ -40,5 +40,6 @@
     "fetchedAt": "2026-10-24T00:00:00.000Z",
     "staleThresholdDays": 120,
     "stale": true
-  }
+  },
+  "plainLanguageSummary": null
 }

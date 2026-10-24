@@ -89,6 +89,17 @@ export interface FeTrial {
   sourceUrl: string;
   criteria: FeCriterion[];
   dataOrigin: FeDataOrigin;
+  /**
+   * Optional curated plain-language summary of the study description. Additive;
+   * the original `description` is always still present and shown. `null` when
+   * no curated summary exists.
+   */
+  plainLanguageSummary: {
+    en: string;
+    es: string | null;
+    /** false = drafted/unreviewed; the UI labels it accordingly. */
+    reviewed: boolean;
+  } | null;
 }
 
 export interface FeTrialSummary {

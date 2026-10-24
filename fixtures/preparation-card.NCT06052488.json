@@ -1,0 +1,114 @@
+{
+  "nctId": "NCT06052488",
+  "title": "Strength After Breast Cancer",
+  "recruitmentStatus": "RECRUITING",
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488",
+  "freshness": {
+    "lastRegistryUpdate": "2025-10-20",
+    "stale": true,
+    "note": "This registry listing has not been updated recently; verify details with the study team."
+  },
+  "languageNote": "An explicit language requirement was found in the listing (see evidence). A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team.",
+  "groups": {
+    "self_answer": [
+      {
+        "id": "NCT06052488-inclusion-0",
+        "sourceText": "* ≥18 years of age",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT06052488",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      }
+    ],
+    "check_records": [],
+    "ask_study_team": [
+      {
+        "id": "NCT06052488-inclusion-1",
+        "sourceText": "* Diagnosed with Stage I-III breast cancer, having completed primary cancer treatment (e.g., surgery, chemotherapy, radiation therapy); hormonal therapies and adjuvant targeted therapies will be permitted",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT06052488",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT06052488-exclusion-1",
+        "sourceText": "* Non-English speaking",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT06052488",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "cannot_assess": [
+      {
+        "id": "NCT06052488-exclusion-0",
+        "sourceText": "* Any injury or medical condition that would prohibit being able to safely perform exercise as indicated by the Physical Activity Readiness Questionnaire (i.e., atrial fibrillation, chest pain or angina, uncontrolled high blood pressure or hypertension, loss of balance due to dizziness in the past 12 months, or loss of consciousness in the past 12 months).",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT06052488",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT06052488#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold",
+          "ambiguous_wording"
+        ]
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Stephen Wechsler, DPT, PhD",
+      "role": "CONTACT",
+      "phone": "774-217-3221",
+      "email": "swechsler@mghihp.edu"
+    },
+    {
+      "name": "Kathleen Lyons, ScD, OTR/L",
+      "role": "CONTACT",
+      "phone": null,
+      "email": "klyons2@mghihp.edu"
+    }
+  ],
+  "disclaimers": [
+    "Visit Ready does not decide whether you qualify for this study. There is no eligibility score.",
+    "Do not get new medical tests just to use this tool. Bring records you already have.",
+    "A Spanish interface here does not mean the study can serve Spanish-speaking participants. Confirm with the study team.",
+    "Recruitment status and contacts come from the public registry and may be out of date — verify with the study team."
+  ]
+}
