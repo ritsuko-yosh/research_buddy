@@ -1,101 +1,174 @@
-# Visit Ready — Data Pipeline (Person B)
+# Visit Ready
 
-**Visit Ready** is a multilingual clinical trial navigation and preparation tool
-(Hackachusetts 2026). It helps patients find relevant studies, understand
-complex eligibility requirements, and prepare focused questions for study
-coordinators — **without ever predicting eligibility or producing a match score.**
+**A multilingual clinical trial navigation and preparation tool.**
+*Hackachusetts 2026 — Challenge track: **Healthcare & Biotech***
 
-This package is the **data/backend foundation** (Person B). Person A builds the
-frontend and imports the shared contract and fixtures from here.
+Visit Ready helps patients find relevant clinical trials, understand complicated
+eligibility requirements, check language and recruitment details, and prepare
+focused questions for the study team — **without ever predicting eligibility or
+producing a match score.**
 
-## What this does
+- **Team:** Owen Gachuhi, Ritsuko Yoshida
+- **Repository:** https://github.com/ritsuko-yosh/research_buddy
+- **Data source:** ClinicalTrials.gov API v2 (public, no API key)
 
-1. **Find** — search ClinicalTrials.gov API v2 by condition + Massachusetts
-   location, or look up a study by NCT id.
-2. **Understand** — preserve original eligibility criteria verbatim with
-   source-linked, plain-language explanations (English + prepared Spanish).
-3. **Organize** — a conservative four-category **Verification Map**:
-   `self_answer` · `check_records` · `ask_study_team` · `cannot_assess`.
-4. **Check accessibility** — explicit language-requirement detection and registry
-   freshness / staleness.
-5. **Prepare** — a preparation card and a ready-to-copy coordinator inquiry.
+---
 
-## Safety boundaries (non-negotiable)
+## The problem
 
-No eligibility verdict · no match score · no silent omission of source criteria ·
-no invented contacts/status/language support · translated UI ≠ language support ·
-no recommendation to get new tests · missing info stays explicitly unknown.
-See [`.kiro/steering/safety.md`](.kiro/steering/safety.md).
+Finding and understanding clinical trials is hard. Listings use dense medical
+language, lab thresholds, and nested inclusion/exclusion logic. Patients with
+limited English face added barriers, and after finding a study it is often
+unclear what to do next — which questions they can answer themselves, which to
+check in their records, and which need the research team. Visit Ready bridges the
+gap between **finding** a trial and **knowing what to do next**.
 
-## Shared contract (Person A ↔ Person B)
+## What Visit Ready does
 
-`src/contract/types.ts` is the single source of truth for `Trial` and
-`Criterion`. Import it directly. Bump `CONTRACT_VERSION` on breaking changes and
-coordinate. A ready fixture is committed so Person A can build immediately:
+1. **Find** — search real studies by condition (focused on Massachusetts), or
+   look up a study by its NCT ID.
+2. **Understand** — show every original registry criterion verbatim, with
+   source-linked plain-language explanations (English and prepared Spanish).
+3. **Organize** — group each requirement in a conservative four-category
+   **Verification Map**:
+   - **You can answer** (`self_answer`)
+   - **Check existing records** (`check_records`)
+   - **Ask the study team** (`ask_study_team`)
+   - **Cannot assess from public information** (`cannot_assess`)
+4. **Check accessibility** — detect explicit language requirements, show registry
+   freshness/staleness, and surface real study contacts.
+5. **Prepare** — generate a printable preparation card and a ready-to-copy
+   coordinator message the patient sends themselves.
 
-- `fixtures/trial.NCT02896335.json` — a normalized real study (detail view).
-- `fixtures/preparation-card.NCT02896335.json`
-- `fixtures/coordinator-inquiry.NCT02896335.{en,es}.txt`
-- `fixtures/search-results.json` — real MA studies as `TrialSummary` cards (demo
-  study pinned first) for the results-list UI.
-- `fixtures/search-results.empty.json` — zero-result empty state.
-- `fixtures/trial.SPARSE-DEMO.json` — an intentionally sparse study (no contacts/
-  locations, `not_stated` language, `unsegmentable` criterion, stale listing) for
-  designing missing-data / empty states.
+## What Visit Ready deliberately does NOT do
 
-Rebuild the list/sparse fixtures with `npx tsx scripts/build-search-fixtures.ts`.
+No eligibility verdict · no match score · no diagnosis · no silent omission of
+source criteria · no invented contacts/status/language support · a translated
+interface never implies the study serves that language · never recommends
+getting new medical tests · never sends messages automatically · missing
+information stays explicitly unknown. These boundaries are a core product and
+patient-safety decision — see [`.kiro/steering/safety.md`](.kiro/steering/safety.md).
 
-## Usage
+---
 
-```ts
-import { TrialService, buildPreparationCard, buildCoordinatorInquiry } from "visit-ready";
+## Architecture
 
-const svc = new TrialService();
+A single application with two cooperating parts in one repository:
 
-// Live lookup with automatic cache fallback for demo reliability
-const { trial, usedCache } = await svc.getTrialByNct("NCT02896335");
-
-// Condition + location search
-const results = await svc.searchTrials({
-  condition: "breast cancer",
-  location: "Massachusetts",
-  status: "RECRUITING",
-});
-
-// Offline demo path (uses the bundled cached record)
-const demo = svc.getCachedTrial("NCT02896335");
-const card = buildPreparationCard(demo, "en");
-const inquiry = buildCoordinatorInquiry(demo, "es");
 ```
+research_buddy/
+├─ src/              Data pipeline (TypeScript/Node, ESM)
+│  ├─ contract/      Shared Trial/Criterion contract (CONTRACT_VERSION 1.0.0)
+│  ├─ pipeline/      API client, normalize, Verification Map classifier,
+│  │                 language detection, enrichment, prep-card/inquiry builders
+│  ├─ browser/       Browser-safe (fs-free) live data source + mapping the
+│  │                 frontend consumes to go live
+│  └─ data/          Curated EN/ES explanations + cached demo records
+├─ frontend/         Patient web app (Vite + React + TypeScript)
+│  └─ src/data/adapter.ts   The single data seam (live in prod, fixtures in tests)
+├─ fixtures/         Normalized real-study fixtures for development
+├─ .kiro/            Specs, steering rules, and a safety-test hook (see below)
+└─ scripts/          Fixture builders, cache refresh, live verification
+```
+
+**Live data path (browser).** ClinicalTrials.gov API v2 is CORS-enabled and
+needs no key, so the frontend calls it directly in the browser. The response is
+run through the same pure pipeline the backend uses (`normalizeStudy`,
+`enrichTrial`, criterion classification, language detection) via the fs-free
+module in `src/browser/`, then mapped to the UI's view model. If a live lookup
+fails for a bundled demo study, it falls back to a cached record and labels the
+data origin as cached. The Node-only cache path (`src/pipeline/service.ts`,
+which reads disk) is never imported by the browser build.
+
+---
+
+## Getting started
+
+Requires **Node ≥ 20**.
+
+### 1. Data pipeline (root package)
+
+```bash
+npm install
+npm run typecheck     # tsc, no errors
+npm test              # Vitest — backend unit, integration, and property tests
+npm run build         # emit JS to dist/
+npm run verify-live   # exercise the live adapter against the real API (network)
+npm run refresh-cache # re-fetch demo studies and rebuild fixtures (network)
+```
+
+### 2. Frontend (patient web app)
+
+```bash
+cd frontend
+npm install
+npm run dev           # http://localhost:5173/  (live ClinicalTrials.gov data)
+npm run typecheck
+npm test              # Vitest + Testing Library + axe accessibility checks
+npm run build         # production build -> frontend/dist/
+npm run preview       # serve the production build locally
+```
+
+In development and production the app uses **live** registry data. Under the
+test runner it defaults to deterministic fixtures (and any caller can inject a
+data source into `<App dataSource={…} />`), so the suite runs offline.
+
+---
+
+## Testing
+
+| Suite | What it covers |
+|---|---|
+| Backend (root) | API field mapping, normalization, conservative classification, source fidelity, missing-data handling, language detection, live↔cache fallback, the browser live adapter + contract mapping, and property-based invariants. |
+| Frontend (`frontend/`) | The full patient journey (search → study → preparation), English/Spanish, honest translation labels, preservation of every registry criterion, and automated accessibility (axe) checks in both languages. |
+
+> Automated tests are engineering checks of application behavior and safety
+> invariants. They are **not** clinical validation of the explanations or
+> classifications.
 
 ## Demo studies
 
 Two real, recruiting Massachusetts studies ship with cached records and curated
-EN/ES explanations (`CURATED_DEMO_NCT_IDS`):
+English/Spanish explanations:
 
 - **`NCT02896335`** — *Palbociclib and Pembrolizumab In CNS Metastases* —
-  **recruiting at MGH Boston**, real contact, criteria exercising all four
+  recruiting at MGH Boston, real contact, criteria exercising all four
   Verification Map categories (including complex conditional CNS-lesion
   exclusions with exceptions for previously-treated lesions).
-- **`NCT04986579`** — *Scalp Cooling in MBC* — **recruiting at Brigham &
-  Women's / Dana-Farber (Boston)**, real contact, shorter clean criteria, and a
-  genuinely **stale** registry listing — useful for demonstrating the staleness
-  warning. Proves curated content is not a one-off hardcode.
+- **`NCT04986579`** — *Scalp Cooling in MBC* — recruiting at Brigham & Women's /
+  Dana-Farber (Boston), shorter clean criteria, and a genuinely stale registry
+  listing that exercises the staleness warning.
 
-## Commands
+---
 
-```bash
-npm install
-npm test            # vitest (49 tests)
-npm run typecheck
-npm run build
-npm run refresh-cache   # re-fetch the demo study and rebuild fixtures
-```
+## How we used Kiro
 
-## Data source
+Kiro was used throughout development, and the artifacts are committed in
+[`.kiro/`](.kiro/):
 
-ClinicalTrials.gov API v2 (`https://clinicaltrials.gov/api/v2/studies`), no API
-key. Field mapping verified against live responses.
+- **Specs** — [`/.kiro/specs/trial-data-pipeline/`](.kiro/specs/trial-data-pipeline)
+  holds the requirements, design, and task breakdown that guided the data
+  pipeline.
+- **Steering rules** — [`/.kiro/steering/safety.md`](.kiro/steering/safety.md)
+  encodes the non-negotiable patient-safety rules (no eligibility verdicts, no
+  silent omission of criteria, honest translation labels, etc.) and
+  [`/.kiro/steering/tech.md`](.kiro/steering/tech.md) records stack and contract
+  conventions. These steered implementation and review decisions.
+- **Agent hook** —
+  [`/.kiro/hooks/safety-tests-on-save.json`](.kiro/hooks/safety-tests-on-save.json)
+  runs the safety test suite automatically when pipeline/contract/data files are
+  saved, catching classification or safety regressions early.
+- **Agent-assisted implementation** — Kiro's agent helped verify the live
+  ClinicalTrials.gov v2 field structure, build and test the pipeline (including
+  property-based tests), reconcile the frontend/backend contract, and wire the
+  frontend to the live data source.
 
-> Automated tests here are engineering checks of pipeline behavior and safety
-> invariants. They are **not** clinical validation.
+Any documentation written after the corresponding code is labeled as
+retrospective within the relevant file; specs that guided development are not
+represented as having been written afterward.
+
+## License / data
+
+Study data is retrieved from the public ClinicalTrials.gov API v2. Visit Ready
+is a preparation tool, not medical advice, and does not make eligibility
+decisions.
