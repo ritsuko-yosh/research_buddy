@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run safety tests on pipeline change",
+      "trigger": "PostFileSave",
+      "description": "Runs the Vitest safety suite whenever pipeline, contract, or data source files change, to catch safety/classification regressions early.",
+      "matcher": "src/(pipeline|contract|data)/.*\\.ts$",
+      "action": {
+        "type": "command",
+        "command": "cd \"$(git rev-parse --show-toplevel 2>/dev/null || echo .)\" && npm run --silent test 2>&1 | tail -20",
+        "timeout": 120
+      }
+    }
+  ]
+}

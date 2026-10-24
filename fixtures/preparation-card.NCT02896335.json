@@ -1,0 +1,720 @@
+{
+  "nctId": "NCT02896335",
+  "title": "Palbociclib and Pembrolizumab In Central Nervous System Metastases",
+  "recruitmentStatus": "RECRUITING",
+  "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335",
+  "freshness": {
+    "lastRegistryUpdate": "2026-07-21",
+    "stale": false,
+    "note": "Registry listing updated recently."
+  },
+  "languageNote": "No explicit language requirement was found in the public registry listing. This is shown as \"not stated\" — it does not indicate whether any particular language is supported. A translated Visit Ready interface does NOT mean this study can serve participants in that language. Confirm available languages and interpreter support directly with the study team.",
+  "groups": {
+    "self_answer": [
+      {
+        "id": "NCT02896335-inclusion-4",
+        "sourceText": "* Age \\> 18 years. The toxicity of palbociclib in children is unknown.",
+        "section": "inclusion",
+        "explanationEn": "You must be older than 18 years of age to take part. This is something you can confirm yourself.",
+        "explanationEs": "Debe tener más de 18 años para participar. Esto es algo que usted mismo puede confirmar.",
+        "translationReviewed": true,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-8",
+        "sourceText": "* Ability to understand and the willingness to sign a written informed consent document.",
+        "section": "inclusion",
+        "explanationEn": "You need to be able to understand and willingly sign the written consent document. You can confirm your willingness yourself.",
+        "explanationEs": "Debe poder entender y firmar voluntariamente el documento de consentimiento por escrito. Usted mismo puede confirmar su disposición.",
+        "translationReviewed": true,
+        "category": "self_answer",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 8,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": []
+      }
+    ],
+    "check_records": [
+      {
+        "id": "NCT02896335-inclusion-2",
+        "sourceText": "* Participants must have measurable disease in the CNS, defined as at least one lesion that can be accurately measured in at least one dimension as ≥10 mm.",
+        "section": "inclusion",
+        "explanationEn": "The study requires at least one brain/spinal (CNS) lesion that can be measured, at least 10 mm in one dimension. Whether a lesion meets this is determined from your imaging by the study team — not something to self-assess.",
+        "explanationEs": "El estudio requiere al menos una lesión en el cerebro o la médula (SNC) que se pueda medir, de al menos 10 mm en una dimensión. Si una lesión cumple esto lo determina el equipo del estudio a partir de sus imágenes; no es algo que usted deba evaluar por su cuenta.",
+        "translationReviewed": true,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-12",
+        "sourceText": "* Stable dose of corticosteroids for at least 7 days.",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "check_records",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 12,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "medical_threshold"
+        ]
+      }
+    ],
+    "ask_study_team": [
+      {
+        "id": "NCT02896335-inclusion-0",
+        "sourceText": "* Participants must have histologically or cytologically confirmed disease from any solid tumor (Cohort 1)",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-1",
+        "sourceText": "* Participants must have histologically or cytologically confirmed disease from breast cancer or melanoma (Cohort 2).",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-3",
+        "sourceText": "* Participants must have progressive CNS lesions, as defined by one of the following:\n\n  * Patients may have multiple progressive CNS lesions, some of which have been treated by SRS or surgery. Patients are eligible if they have one or more un-treated (by surgery or SRS) progressive lesions that is measurable.\n  * Patients have measurable residual or progressive lesions after surgery.\n  * Patients who have had prior WBRT and/or SRS are eligible but there needs to be unequivocal evidence of progression of at least one lesion treated by radiation (e.g. tissue diagnosis). Biopsy can be considered for definitive diagnosis.\n  * Patients who have previously been treated with systemic therapy for CNS metastases are eligible.",
+        "section": "inclusion",
+        "explanationEn": "There are several ways a lesion can count as 'progressive', including lesions already treated by radiation (SRS/WBRT) or surgery under specific conditions. This has exceptions and is decided by the study team from your records.",
+        "explanationEs": "Hay varias formas en que una lesión puede considerarse 'progresiva', incluidas lesiones ya tratadas con radiación (SRS/WBRT) o cirugía bajo condiciones específicas. Esto tiene excepciones y lo decide el equipo del estudio a partir de sus registros.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic",
+          "exception_clause",
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-5",
+        "sourceText": "* ECOG performance status of 0, 1 or 2 (Karnofsky ≥ 60, see Appendix A).",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "external_reference",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-6",
+        "sourceText": "* Participants must have normal organ and marrow function as defined below:\n\n  * leukocytes ≥3,000/mcL\n  * absolute neutrophil count ≥1,500/mcL\n  * platelets ≥100,000/mcL\n  * hemoglobin ≥9g/dL\n  * total bilirubin \\< 1.5 x institutional upper limit of normal OR \\> 1.5 x institutional upper limit of normal allowed if direct bilirubin is within normal range.\n  * AST(SGOT)/ALT(SGPT) ≤2.5 × institutional upper limit of normal\n  * creatinine within normal institutional limits OR\n\n    * creatinine clearance ≥60 mL/min/1.73 m2 for participants with creatinine levels above institutional normal (Cohort 1)\n    * creatinine clearance ≥30 mL/min/1.73 m2 for participants with creatinine levels above institutional normal (Cohort 2)\n  * baseline QTc \\<480ms",
+        "section": "inclusion",
+        "explanationEn": "The study lists specific blood and organ lab values (for example platelets ≥100,000/mcL, hemoglobin ≥9 g/dL, creatinine clearance ≥60 or ≥30 mL/min depending on cohort). These are results that may already be in your medical records. Do not get new tests just to check this — bring existing results and ask the study team.",
+        "explanationEs": "El estudio enumera valores específicos de laboratorio de sangre y órganos (por ejemplo, plaquetas ≥100.000/mcL, hemoglobina ≥9 g/dL, aclaramiento de creatinina ≥60 o ≥30 mL/min según el grupo). Estos resultados pueden estar ya en sus registros médicos. No se haga pruebas nuevas solo para verificar esto; lleve los resultados existentes y pregunte al equipo del estudio.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 6,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic",
+          "exception_clause",
+          "cohort_dependent",
+          "institutional_reference",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-9",
+        "sourceText": "* Tissue from a prior biopsy or resection of intracranial or extracranial site (primary or metastatic site) for clinical genetic sequencing (at least one FFPE block or 15 unstained slides). Patients previously assessed for genetic sequencing who meet requirements of section 9.2.1 do not need to have additional tissue available for prospective genetic screening.",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 9,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history",
+          "external_reference"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-10",
+        "sourceText": "* Presence of alteration in CDK pathway in any biopsy or resection (amplifications in CDK4, CDK6, CCND1, CCND2, CCND3 or CCNE1 or loss of CDKN2A) as described in Section 9.2 using a CLIA-certified assay (Cohort 1 only).",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 10,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent",
+          "external_reference"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-11",
+        "sourceText": "* Patients with progressive extracranial disease will not be excluded.",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 11,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT02896335-inclusion-13",
+        "sourceText": "* Participants who are HBsAg positive are eligible if they have received HBV anti-viral therapy for at least 4 weeks, and have undetectable HBV viral load prior to enrollment\n\n  * Note: Participants should remain on anti-viral therapy throughout study intervention and follow local guidelines for HBV anti-viral therapy post completion of study intervention\n  * Hepatits B screening tests are not required unless:\n\n    * Known history of HBV infection\n    * As mandated by local health authority",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 13,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic",
+          "exception_clause",
+          "treatment_history",
+          "institutional_reference",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-inclusion-14",
+        "sourceText": "* Participants with a history of HCV infection are eligible if HCV viral load is undetectable at screening.\n\n  * Note: Participants must have completed curative anti-viral therapy at least 4 weeks prior to enrollment\n  * Heptatits C screening tests are not required unless:\n\n    * Known history of HCV infection\n    * As mandated by local health authority",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 14,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic",
+          "exception_clause",
+          "treatment_history",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-0",
+        "sourceText": "* Prior treatment with CDK4/6 inhibitor.",
+        "section": "exclusion",
+        "explanationEn": "If you have previously received a CDK4/6 inhibitor medication, that affects eligibility. Whether a past medication counts is a treatment-history question for the study team.",
+        "explanationEs": "Si anteriormente recibió un medicamento inhibidor de CDK4/6, eso afecta la elegibilidad. Si un medicamento anterior cuenta es una pregunta sobre el historial de tratamiento para el equipo del estudio.",
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 0,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-1",
+        "sourceText": "* Participants who have had chemotherapy, immunotherapy or radiotherapy within 2 weeks (6 weeks for nitrosoureas or mitomycin C) prior to entering the study or those who have ≥ grade 2 adverse events due to agents administered more than 2 weeks earlier.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 1,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-2",
+        "sourceText": "* Participants who are receiving any other investigational agents.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 2,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT02896335-exclusion-3",
+        "sourceText": "* Participants who are receiving other concurrent chemotherapies or immunotherapies for their cancer (except for patients who will receive letrozole, anastrozole, exemestane, tamoxifen, fulvestrant, trastuzumab, bisphosphonates, or ovarian suppression therapy)",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 3,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "exception_clause"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-4",
+        "sourceText": "* Leptomeningeal involvement of cancer (Cohort 1). Leptomeningeal involvement is allowed for Cohort 2.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 4,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-5",
+        "sourceText": "* History of allergic reactions attributed to compounds of similar chemical or biologic composition to palbociclib (including abemaciclib).",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 5,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-8",
+        "sourceText": "* Pregnant women are excluded from this study because the effect of palbociclib on a developing fetus is unknown. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with palbociclib, breastfeeding should be discontinued if the mother is treated with palbociclib.\n\nIf a participant inadvertently becomes pregnant while on treatment with pembrolizumab, the participant will be immediately discontinued from study intervention(s). The site will contact the participant at least monthly and document the participant's status until the pregnancy has been completed or terminated. The outcome of the pregnancy will be reported to Merck within 2 working days if the outcome is a serious adverse experience (e.g. death, abortion, congenital anomaly, or other disabling or life-threatening complication to the mother or newborn). The study Investigator will make every effort to obtain permission to follow the outcome of the pregnancy and report the condition of the fetus or newborn to Merck. If a male participant impregnates his female partner, the study personnel at the site must be informed immediately and the pregnancy must be reported to the Overall PI, Merck and Pfizer and followed as necessary.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 8,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic",
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-11",
+        "sourceText": "* Unable to undergo MRI scans.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 11,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": []
+      },
+      {
+        "id": "NCT02896335-exclusion-12",
+        "sourceText": "* QTc \\> 480 msec (based on the mean value of the triplicate ECGs), family or personal history of long or short QTc prolongation, or Torsade de Pointes (TdP).",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 12,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history",
+          "medical_threshold"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-13",
+        "sourceText": "* Uncontrolled electrolyte disorders that can compound the effects of QTc-prolonging drug (eg. hypocalcemia, hypokalemia, hypomagnesemia).",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 13,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "ambiguous_wording"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-14",
+        "sourceText": "* Active auto immune disease (Cohort 2)",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 14,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-15",
+        "sourceText": "* Patients with history of lung radiation (Cohort 2)",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 15,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent",
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-16",
+        "sourceText": "* Prior treatment with PD-1 or PD-L1 blocking agent (Cohort 2)",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 16,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent",
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-17",
+        "sourceText": "* History of allogenic transplant",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 17,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-18",
+        "sourceText": "* History of (non-infectious) pneumonitis/interstitial lung disease that required steroids or has current pneumonitis/interstitial lung disease",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 18,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-19",
+        "sourceText": "* History of Hepatitis B or known active Hepatitis C virus infection",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "ask_study_team",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 19,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history"
+        ]
+      }
+    ],
+    "cannot_assess": [
+      {
+        "id": "NCT02896335-inclusion-7",
+        "sourceText": "* The effects of palbociclib on the developing human fetus are unknown. For this reason, women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation. Should a woman become pregnant or suspect she is pregnant while she or her partner is participating in this study, she should inform her treating physician immediately. Men treated or enrolled on this protocol must also agree to use adequate contraception prior to the study, for the duration of study participation, and 6 months after completion of palbociclib administration.",
+        "section": "inclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "inclusion",
+          "index": 7,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "treatment_history",
+          "medical_threshold",
+          "ambiguous_wording"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-6",
+        "sourceText": "* Participants receiving any medications or substances that are moderate or strong inhibitors or inducers of CYP3A isoenzymes are ineligible. Lists including medications and substances known or with the potential to interact with the CYP3A isoenzymes are provided in Appendix C, and can also be found within section 5.4. Because the lists of these agents are constantly changing, it is important to regularly consult a frequently-updated list such as http://medicine.iupui.edu/clinpharm/ddis/table.aspx; medical reference texts such as the Physicians' Desk Reference may also provide this information. As part of the enrollment/informed consent procedures, the patient will be counseled on the risk of interactions with other agents, and what to do if new medications need to be prescribed or if the patient is considering a new over-the-counter medicine or herbal product.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 6,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "conditional_logic",
+          "external_reference"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-7",
+        "sourceText": "* Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 7,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "exception_clause",
+          "ambiguous_wording"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-9",
+        "sourceText": "* HIV-positive participants on combination antiretroviral therapy are ineligible because of the potential for pharmacokinetic interactions with palbociclib. In addition, these participants are at increased risk of lethal infections when treated with marrow-suppressive therapy. Appropriate studies will be undertaken in participants receiving combination antiretroviral therapy when indicated (Cohort 1). In Cohort 2, HIV-positive patients will NOT be permitted.",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 9,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "cohort_dependent",
+          "treatment_history",
+          "ambiguous_wording"
+        ]
+      },
+      {
+        "id": "NCT02896335-exclusion-10",
+        "sourceText": "* Current use of drugs that are known to prolong the QT interval (See Appendix C).",
+        "section": "exclusion",
+        "explanationEn": null,
+        "explanationEs": null,
+        "translationReviewed": false,
+        "category": "cannot_assess",
+        "sourceReference": {
+          "nctId": "NCT02896335",
+          "modulePath": "protocolSection.eligibilityModule.eligibilityCriteria",
+          "section": "exclusion",
+          "index": 10,
+          "sourceUrl": "https://clinicaltrials.gov/study/NCT02896335#eligibility"
+        },
+        "uncertaintyFlags": [
+          "external_reference"
+        ]
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Nancy Wang, MD, MPH",
+      "role": "CONTACT",
+      "phone": "617-724-8770",
+      "email": "Nwang6@mgb.org"
+    }
+  ],
+  "disclaimers": [
+    "Visit Ready does not decide whether you qualify for this study. There is no eligibility score.",
+    "Do not get new medical tests just to use this tool. Bring records you already have.",
+    "A Spanish interface here does not mean the study can serve Spanish-speaking participants. Confirm with the study team.",
+    "Recruitment status and contacts come from the public registry and may be out of date — verify with the study team."
+  ]
+}
