@@ -1,0 +1,285 @@
+import type {
+  RecruitmentStatus,
+  TranslationStatus,
+  VerificationCategory,
+} from '../types/trial';
+
+export type Locale = 'en' | 'es';
+
+/** Native language names, always shown in their own language. */
+export const LANGUAGE_NAMES: Record<Locale, string> = {
+  en: 'English',
+  es: 'Español',
+};
+
+/**
+ * Interface strings. The Spanish object is typed against the English one, so
+ * a missing or renamed key fails the typecheck.
+ *
+ * Spanish text was drafted for this prototype and has NOT been reviewed by a
+ * qualified Spanish-speaking reviewer. Treat it as machine-drafted until it is.
+ */
+const en = {
+  appName: 'Visit Ready',
+  tagline: 'Find a clinical trial, understand what it asks, and prepare for the first conversation.',
+  disclaimer:
+    'Visit Ready does not decide whether you qualify. It helps you prepare for the next step. The study team makes all eligibility decisions.',
+  footer: 'Preparation tool only. Not medical advice.',
+  skipToContent: 'Skip to main content',
+  languageLabel: 'Language',
+
+  registryHeading: 'Registry information',
+
+  searchHeading: 'Find a study in Massachusetts',
+  chooseCondition: 'Choose a condition',
+  conditionHelp: 'Pick the condition closest to your situation.',
+  orEnterNct: 'Or enter an NCT ID',
+  nctLabel: 'NCT ID',
+  nctHelp: 'The registry number on a study listing: the letters NCT followed by 8 digits.',
+  openStudy: 'Open study',
+  nctInvalid: 'Enter an NCT ID: the letters NCT followed by 8 digits.',
+  nctUnsupported: 'This study is not available in Visit Ready yet. Check the number or search by condition.',
+  nctLoading: 'Opening study…',
+  nctError: 'We could not open this study right now. Please try again.',
+
+  resultsHeading: 'Massachusetts studies',
+  resultsLoading: 'Loading studies…',
+  resultsEmpty: 'No Massachusetts studies were found for this condition in the current data.',
+  resultsError: 'We could not load studies right now.',
+  retry: 'Try again',
+  viewStudy: 'View study',
+
+  backToResults: 'Back to results',
+  backToStudy: 'Back to study',
+  statusLabel: 'Registry status',
+  massLocationsLabel: 'Massachusetts sites listed',
+  noMassLocations: 'No Massachusetts sites are listed in the registry.',
+  lastUpdatedLabel: 'Registry last updated',
+  retrievedLabel: 'Data retrieved',
+  dateNotListed: 'Not listed',
+  statusNote: 'Recruitment status can change. Confirm it with the study team before planning a visit.',
+  originLabel: 'Data source',
+  originLive: 'Live registry data',
+  originCached: 'Cached registry data',
+  originSample: 'Sample data for development only. This is not a real study.',
+  statusLabels: {
+    recruiting: 'Recruiting',
+    not_yet_recruiting: 'Not yet recruiting',
+    active_not_recruiting: 'Active, not recruiting',
+    completed: 'Completed',
+    terminated: 'Terminated',
+    withdrawn: 'Withdrawn',
+    other: 'Other',
+    unknown: 'Not listed in the registry',
+  } satisfies Record<RecruitmentStatus, string>,
+
+  aboutHeading: 'About this study',
+  descriptionUnavailable: 'A Spanish description is not available. The registry text is shown in English.',
+  noDescription: 'No description is listed in the registry.',
+
+  languageHeading: 'Language requirement',
+  langEnglishRequired: 'The registry lists an English-language requirement.',
+  langNoneStated:
+    'The registry does not state a language requirement. This does not confirm whether interpreters or translated materials are available.',
+  langAmbiguous: 'The registry wording about language is unclear. Please ask the study team.',
+  langNotListed:
+    'The registry does not list a language requirement. This does not confirm whether interpreters or translated materials are available.',
+  registryWording: 'Registry wording',
+
+  mapHeading: 'Verification Map',
+  mapIntro:
+    'Each requirement is grouped by what you can do next. This is not a decision about you. Every item keeps its original registry wording.',
+  categoryLabels: {
+    self_answer: 'You can answer',
+    check_records: 'Check existing records',
+    ask_study_team: 'Ask the study team',
+    cannot_assess: 'Cannot assess from public information',
+  } satisfies Record<VerificationCategory, string>,
+  categoryActions: {
+    self_answer: 'You may be able to answer this yourself. Check with the study team if you are unsure.',
+    check_records:
+      'You may find this in a medical record or a recent test result. Bring the information to the study team.',
+    ask_study_team: 'This needs the study team or your own doctor to explain. Add it to your questions.',
+    cannot_assess: 'The public information is not clear enough to assess. Ask the study team what this means.',
+  } satisfies Record<VerificationCategory, string>,
+  catEmpty: 'No items in this group.',
+  showAll: (count: number) => `Show all ${count} items`,
+  showFewer: 'Show fewer',
+  inclusion: 'Inclusion',
+  exclusion: 'Exclusion',
+  plainHeading: 'Plain-language summary',
+  noPlain: 'No plain-language summary is available for this item. Use the registry wording below.',
+  noSpanish: 'No Spanish explanation is available for this item. Use the registry wording below.',
+  sourceRef: 'Source',
+  uncertaintyHeading: 'Notes on uncertainty',
+  translationLabels: {
+    source: 'Original English',
+    machine_drafted_unreviewed: 'Machine-drafted. Not reviewed by a person.',
+    language_reviewed: 'Reviewed for language only. Not clinically reviewed.',
+    clinically_reviewed: 'Clinically reviewed',
+    unavailable: 'Translation unavailable',
+  } satisfies Record<TranslationStatus, string>,
+  registryCriteriaSummary: (count: number) => `Original registry criteria (${count})`,
+  prepareButton: 'Prepare questions for the study team',
+
+  prepHeading: 'Your preparation card',
+  prepIntro: 'Use this card to organize your questions. It does not decide whether you qualify.',
+  prepStudyLabel: 'Study',
+  prepGatherHeading: 'Things you can gather or check first',
+  prepAskHeading: 'Questions for the study team',
+  prepLanguageHeading: 'Language questions',
+  prepNone: 'None listed for this group.',
+  prepContactHeading: 'Study contact as listed',
+  contactNotListed: 'Contact not listed',
+  viewRegistry: 'View this study on ClinicalTrials.gov',
+  prepReminder: 'Confirm recruitment status with the study team before planning a visit.',
+  inquiryHeading: 'Coordinator message',
+  inquiryHint: 'You can copy this message and send it yourself. Visit Ready does not send messages for you.',
+  copyInquiry: 'Copy message',
+  copied: 'Message copied.',
+  copyFailed: 'Copying is not available here. Select the text and copy it manually.',
+  printCard: 'Print card',
+  markGathered: 'I have this or checked it',
+  markAsked: 'I plan to ask about this',
+  languageQuestion: 'Are interpreters or translated study materials available?',
+  inquiryLanguageSentence:
+    ' I also have questions about language support, such as whether interpreters or translated study materials are available.',
+  inquiryBody: ({ nctId, languageSentence }: { nctId: string; languageSentence: string }) =>
+    `Hello, I'm interested in learning more about study ${nctId}. Could you confirm whether the study is currently recruiting? I have a few questions about the participation requirements.${languageSentence} Thank you.`,
+};
+
+export type Messages = typeof en;
+
+const es: Messages = {
+  appName: 'Visit Ready',
+  tagline: 'Encuentre un estudio clínico, entienda lo que pide y prepárese para la primera conversación.',
+  disclaimer:
+    'Visit Ready no decide si usted cumple los requisitos. Le ayuda a prepararse para el siguiente paso. El equipo del estudio toma todas las decisiones sobre la elegibilidad.',
+  footer: 'Solo es una herramienta de preparación. No es consejo médico.',
+  skipToContent: 'Ir al contenido principal',
+  languageLabel: 'Idioma',
+
+  registryHeading: 'Información del registro',
+
+  searchHeading: 'Encuentre un estudio en Massachusetts',
+  chooseCondition: 'Elija una condición',
+  conditionHelp: 'Elija la condición que más se parezca a su situación.',
+  orEnterNct: 'O escriba un número NCT',
+  nctLabel: 'Número NCT',
+  nctHelp: 'El número de registro que aparece en la ficha de un estudio: las letras NCT seguidas de 8 dígitos.',
+  openStudy: 'Abrir estudio',
+  nctInvalid: 'Escriba un número NCT: las letras NCT seguidas de 8 dígitos.',
+  nctUnsupported: 'Este estudio todavía no está disponible en Visit Ready. Revise el número o busque por condición.',
+  nctLoading: 'Abriendo estudio…',
+  nctError: 'No pudimos abrir este estudio en este momento. Inténtelo de nuevo.',
+
+  resultsHeading: 'Estudios en Massachusetts',
+  resultsLoading: 'Cargando estudios…',
+  resultsEmpty: 'No encontramos estudios en Massachusetts para esta condición en los datos actuales.',
+  resultsError: 'No pudimos cargar los estudios en este momento.',
+  retry: 'Intentar de nuevo',
+  viewStudy: 'Ver estudio',
+
+  backToResults: 'Volver a los resultados',
+  backToStudy: 'Volver al estudio',
+  statusLabel: 'Estado en el registro',
+  massLocationsLabel: 'Sitios en Massachusetts registrados',
+  noMassLocations: 'El registro no indica sitios en Massachusetts.',
+  lastUpdatedLabel: 'Última actualización del registro',
+  retrievedLabel: 'Datos consultados',
+  dateNotListed: 'No indicada',
+  statusNote:
+    'El estado de reclutamiento puede cambiar. Confírmelo con el equipo del estudio antes de planear una visita.',
+  originLabel: 'Fuente de los datos',
+  originLive: 'Datos del registro en vivo',
+  originCached: 'Datos del registro guardados',
+  originSample: 'Datos de ejemplo solo para desarrollo. No es un estudio real.',
+  statusLabels: {
+    recruiting: 'Reclutando',
+    not_yet_recruiting: 'Aún no está reclutando',
+    active_not_recruiting: 'Activo, sin reclutar',
+    completed: 'Completado',
+    terminated: 'Terminado',
+    withdrawn: 'Retirado',
+    other: 'Otro',
+    unknown: 'No indicado en el registro',
+  } satisfies Record<RecruitmentStatus, string>,
+
+  aboutHeading: 'Acerca de este estudio',
+  descriptionUnavailable: 'No hay una descripción en español. El texto del registro se muestra en inglés.',
+  noDescription: 'El registro no incluye una descripción.',
+
+  languageHeading: 'Requisito de idioma',
+  langEnglishRequired: 'El registro indica que se requiere inglés.',
+  langNoneStated:
+    'El registro no indica un requisito de idioma. Esto no confirma si hay intérpretes o materiales traducidos.',
+  langAmbiguous: 'La redacción del registro sobre el idioma no es clara. Pregunte al equipo del estudio.',
+  langNotListed:
+    'El registro no indica un requisito de idioma. Esto no confirma si hay intérpretes o materiales traducidos.',
+  registryWording: 'Texto original del registro',
+
+  mapHeading: 'Mapa de verificación',
+  mapIntro:
+    'Cada requisito está agrupado según lo que puede hacer a continuación. Esto no es una decisión sobre usted. Cada elemento conserva el texto original del registro.',
+  categoryLabels: {
+    self_answer: 'Puede responderlo usted',
+    check_records: 'Revisar registros existentes',
+    ask_study_team: 'Preguntar al equipo del estudio',
+    cannot_assess: 'No se puede evaluar con la información pública',
+  } satisfies Record<VerificationCategory, string>,
+  categoryActions: {
+    self_answer: 'Quizás pueda responderlo usted mismo. Consúltelo con el equipo del estudio si tiene dudas.',
+    check_records:
+      'Es posible que esto aparezca en un expediente médico o en un resultado de prueba reciente. Lleve esa información al equipo del estudio.',
+    ask_study_team:
+      'Esto necesita que el equipo del estudio o su propio médico lo explique. Añádalo a sus preguntas.',
+    cannot_assess:
+      'La información pública no es suficientemente clara para evaluarlo. Pregunte al equipo del estudio qué significa.',
+  } satisfies Record<VerificationCategory, string>,
+  catEmpty: 'No hay elementos en este grupo.',
+  showAll: (count: number) => `Mostrar los ${count} elementos`,
+  showFewer: 'Mostrar menos',
+  inclusion: 'Inclusión',
+  exclusion: 'Exclusión',
+  plainHeading: 'Resumen en lenguaje sencillo',
+  noPlain: 'No hay un resumen en lenguaje sencillo para este elemento. Use el texto original del registro.',
+  noSpanish: 'No hay una explicación en español para este elemento. Use el texto original del registro.',
+  sourceRef: 'Fuente',
+  uncertaintyHeading: 'Notas sobre incertidumbre',
+  translationLabels: {
+    source: 'Original en inglés',
+    machine_drafted_unreviewed: 'Traducción automática. No revisada por una persona.',
+    language_reviewed: 'Revisada solo en cuanto al idioma. No revisada clínicamente.',
+    clinically_reviewed: 'Revisada clínicamente',
+    unavailable: 'Traducción no disponible',
+  } satisfies Record<TranslationStatus, string>,
+  registryCriteriaSummary: (count: number) => `Criterios originales del registro (${count})`,
+  prepareButton: 'Preparar preguntas para el equipo del estudio',
+
+  prepHeading: 'Su tarjeta de preparación',
+  prepIntro: 'Use esta tarjeta para organizar sus preguntas. No decide si usted cumple los requisitos.',
+  prepStudyLabel: 'Estudio',
+  prepGatherHeading: 'Cosas que puede reunir o revisar primero',
+  prepAskHeading: 'Preguntas para el equipo del estudio',
+  prepLanguageHeading: 'Preguntas sobre idioma',
+  prepNone: 'No hay elementos en este grupo.',
+  prepContactHeading: 'Contacto del estudio según el registro',
+  contactNotListed: 'Contacto no indicado',
+  viewRegistry: 'Ver este estudio en ClinicalTrials.gov',
+  prepReminder: 'Confirme el estado de reclutamiento con el equipo del estudio antes de planear una visita.',
+  inquiryHeading: 'Mensaje para el coordinador',
+  inquiryHint: 'Puede copiar este mensaje y enviarlo usted mismo. Visit Ready no envía mensajes por usted.',
+  copyInquiry: 'Copiar mensaje',
+  copied: 'Mensaje copiado.',
+  copyFailed: 'Copiar no está disponible aquí. Seleccione el texto y cópielo manualmente.',
+  printCard: 'Imprimir tarjeta',
+  markGathered: 'Ya lo tengo o ya lo revisé',
+  markAsked: 'Planeo preguntar sobre esto',
+  languageQuestion: '¿Hay intérpretes o materiales del estudio traducidos al español?',
+  inquiryLanguageSentence:
+    ' También quisiera saber si hay intérpretes o materiales del estudio traducidos al español.',
+  inquiryBody: ({ nctId, languageSentence }: { nctId: string; languageSentence: string }) =>
+    `Hola, me interesa obtener más información sobre el estudio ${nctId}. ¿Podría confirmar si el estudio está reclutando participantes actualmente? Tengo algunas preguntas sobre los requisitos de participación.${languageSentence} Muchas gracias.`,
+};
+
+export const messages: Record<Locale, Messages> = { en, es };
